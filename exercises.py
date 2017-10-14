@@ -80,7 +80,7 @@ angle = 25
 
 dprint('[{}] Beginning For Loop'.format(now()))
 for i in range(n_2):
-    print('[{}] Beginning Loop # {:d}'.format(now(),i+1))
+    dprint('[{}] Beginning Loop # {:d}'.format(now(),i+1))
     repMoverWithAngle(angle).apply(pose_mzn)
     angle = angle - 5
 
