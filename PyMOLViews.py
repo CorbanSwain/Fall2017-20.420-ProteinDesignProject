@@ -65,7 +65,7 @@ def saveIimage(name='UntiledImage',ray=1):
     print('Saving Done.')
 
 def printHeadder(number='?', title='Untitled Section'):
-    width = 7
+    width = 70
     print('\n' + '*'*width)
     print('  Section {:d}: {}  '.format(number,title).center(width,'*'))
     print('*'*width + '\n')
@@ -82,7 +82,7 @@ def selectProtein(name,obj):
     cmd.deselect()
 
 def selectLigand(name,obj,protein):
-    # FIXME - Could use something better to select the ligand ... LG1?
+    # FIXME - Could use something better to select the ligand .... LG1?
     cmd.select(name,'{} & !{}'.format(obj, protein))
     cmd.deselect()
     
