@@ -20,7 +20,7 @@ def initialize():
 def load():
     import subprocess
     ligandFile = 'pah_aligned'
-    debugHeader('CALLING OPEN BABEL')
+   debugHeader('CALLING OPEN BABEL')
     subprocess.call('babel {0}.pdb  {0}.mdl'.format(ligandFile), shell=True)
     debugHeader('MOLFILE 2 PARAMS')
     subprocess.call('molfile2params2/molfile_to_params.py --clobber {}.mdl'.format(ligandFile),\
@@ -160,6 +160,7 @@ def packMutant():
     pose_pack_mover = Pose()
     pose_pack_mover.assign(pose)
     pose_pack_mover.pdb_info().name('defined_pack_mover')
+    pose_pack_mover.pdb_info().
   
     outFile.write('Beginning Packing of Mutant: {}\n'.format(now()))
     debugHeader("Writing File")
@@ -197,55 +198,32 @@ def packMutant():
     outFile.write("Finished Packing of Mutant: {}\n".format(now()))
     # PyMOL> select my_ser, (resi 89+101+123+139+147) & defined_pack_mover
 
-def repeatMovers():
-    pose_repeat_pack_mover = Pose()
-    pose_repeat_pack_mover.assign(pose)
-    pose_repeat_pack_mover.pdb_info().name('repeat_packer')
-
-    kT = 1.0
-    movemap = MoveMap()
-    movemap.set_bb(True)
-    small_mover = rosetta.protocols.simple_moves.SmallMover(movemap, kT, 1)
-
-    mc = MonteCarlo(pose_repeat_pack_mover, scorefxn, kT)
-    trial_mover = TrialMover(small_mover, mc)
-
-    n = 20
-    repeat_mover = RepeatMover(trial_mover, n)
-
-    repeat_mover.apply(pose_repeat_pack_mover)
-
-    print('original: %s' % scorefxn(pose))
-    print('new: %s' % scorefxn(pose_repeat_pack_mover))
-    outFile.write('Original Score          : {}\n'.format(scorefxn(pose)))
-    outFile.write('New Repeat Movers Score : {}\n'.format(scorefxn(pose_repeat_pack_mover)))
-    # ^ all of this code computes, but it doesnt seem to do anything...not sure whats wrong.
     
 def main():
     # comment out sections you dont want to run...  for a given python
     # session, any function will run after all the previous functions
     # have run once
 
-    # debugHeader('Initialize')
-    # initialize()
-    # debugHeader('Load')
-    # load()
-    # debugHeader('Import PDB')
-    # importPdb()
-    # debugHeader('Print PyRosetta Dir')
-    # printpyrosedir()
-    # debugHeader('Send to PyMOL')
-    # sendtopymol()
-    # debugHeader('Show H Bonds')
-    # showhbonds()
-    # debugHeader('Find Minima')
-    # findmimima()
+    debugHeader('Initialize')
+    initialize()
+    debugHeader('Load')
+    load()
+    debugHeader('Import PDB')
+    importPdb()
+    debugHeader('Print PyRosetta Dir')
+    printpyrosedir()
+    debugHeader('Send to PyMOL')
+    sendtopymol()
+    debugHeader('Show H Bonds')
+    showhbonds()
+    debugHeader('Find Minima')
+    findmimima()
 
-    # # both of the fast relax sessions take a while...uncomment to run
-    # # debugHeader('Fast Relax 1')
-    # # fastrelax()
-    # debugHeader('Fast Relax 2')
-    # fastrelax2()
+    # both of the fast relax sessions take a while...uncomment to run
+    # debugHeader('Fast Relax 1')
+    # fastrelax()
+    debugHeader('Fast Relax 2')
+    fastrelax2()
 
     debugHeader('Mutate Residues')
     mutataRes()
@@ -260,4 +238,4 @@ def main():
 
 main()
 outFile.close()
-    
+
