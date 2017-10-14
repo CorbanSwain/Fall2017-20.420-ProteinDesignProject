@@ -3,6 +3,7 @@
 
 # from datetime import datetime
 from pyrosetta import *
+from datetime import datetime
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
 import os
@@ -10,17 +11,13 @@ import os
 def madeGlobal(varName):
     return varName in globals()
 
-def now(format=0,datetime=datetime):
-    if format == 0:
+def now(formatNum=0):
+    if formatNum == 0:
         return datetime.now().strftime('%H:%M:%S %m-%d-%y')
-    else:
+    elif formatNum == 1:
         return datetime.now().strftime('%y%m%d')
-
-def dprint(text):
-    text = ' {}  '.format(text)
-    print('[{}] {}'.format(now(),text.center(70,'*')))
-
-def log(text):
+    else:
+        return datetime.now().strftime('%H:%M:%S')
 
 def mkDir(directory):
     if not os.path.isdir(directory):
@@ -46,28 +43,46 @@ def setupCaches():
     if not madeGlobal('pdbCache'):
         global pdbCache
         pdbCache = os.path.join(cacheDir,'PDBs')
-    mkdir(pdbCache)
+    mkDir(pdbCache)
 
     global sesCache
     if madeGlobal('sesCache'):
         if now(1) in sesCache:
             return
-    sesCache = '{}_session_log.txt'.format{now(1)}
+    sesCache = '{}_session_log.txt'.format(now(1))
     sesCache = os.path.join(cacheDir,sesCache)
     if not isFile(sesCache):
-        with  open(sesCache,'w') as f:
+        with open(sesCache,'w') as f:
             f.writelines('{}\n\n'.format(sesCache))
             f.writelines('Protein Design Algorithm Trials, Session Log\nBegins: {}\n\n'\
                          .format(now())) 
 setupCaches()
     
-    
+def log(text):
+    with open(sesCache,'a') as f:
+        f.writelines('[{}] >  {}\n'.format(now(2),text))
+
+def logBegin():
+    with open(sesCache,'a') as f:
+        f.writelines('\n\n[{}] >  {}\n'.format(now(2),' Beginning Script '.center(70,'v')))
+
+def logEnd():
+    with open(sesCache,'a') as f:
+        f.writelines('[{}] >  {}\n\n'.format(now(2),' Script Complete! '.center(70,'^')))
+        
+def dprint(text):
+    log(text)
+    text = ' {} '.format(text)
+    print('[{}] {}'.format(now(),text.center(70,'*')))
+        
 def printScore(pose,title,scorefxn=defaultScorefxn):
     title = title + ' Score'
-    print('{} --> {:9.5f}'.format(title.lalign(30), scorefxn(pose_mzn)))
+    output = '{} --> {:11.5f}'.format(title.ljust(30), scorefxn(pose))
+    log(output)
+    print(output)
     
 def loadInPose(fileName):
-    dprint('Loading In `{}` and Creating Pose'.format(filename))
+    dprint('Loading In `{}` and Creating Pose'.format(fileName))
     params = ['LG.params']
     pose = Pose()
     generate_nonstandard_residue_set(pose, params)
@@ -94,7 +109,9 @@ def smallNShearMove(pose,\
                     n_moves=5,\
                     kT=1.0,\
                     angle=0):
-    dprint('Running Small and Shear Movers {:2d} Times'.format(repeats))
+    dprint('Running Small and Shear Movers'.format(repeats))
+    log('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:2d}'.\
+        format(repeats,n_moves,kT,angle))
     movemap = MoveMap()
     movemap.set_bb(True)
 
@@ -130,6 +147,7 @@ def createPyMolMover():
     return pymol
 
 def main():
+    logBegin()
     pymol = createPyMolMover()
 
     startPose = loadInPose('new_3vi8_complex.pdb')
@@ -149,13 +167,24 @@ def main():
     pymol.apply(fRelaxPose)
     
     minPose = poseFrom(startPose)
-    n1 = 5
-    angle = 25
-    
+
+    angle = 20
+    kT1 = [1000, 800, 500, 20, 20, 20]
+    kT2 = 10
+    repeats = 10
+    n_moves = 5
+
+    n1 = len(kT1) * 5
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
-        angle = angle - 5
-        smallNShearMove(minPose,angle=angle,kT=50)
+        mc = MonteCarlo(minPose, defaultScorefxn, kT2)
+        angle = angle - 1
+        smallNShearMove(minPose,\
+                        angle=angle, kT=kT1[i % len(kT1)],\
+                        repeats=repeats, n_moves=n_moves)
+        mc.boltzmann(minPose)
+        printScore(minPose,'Iteration # {:2d}'.format(i+1))
+        
 
     dprint('Done With Loop')
     pymol.apply(minPose)
@@ -163,7 +192,8 @@ def main():
     printScore(startPose,'Original')
     printScore(fRelaxPose,'Fast')
     printScore(minPose,'Minimization')
-
+    logEnd()
+    
 main()
 
  
