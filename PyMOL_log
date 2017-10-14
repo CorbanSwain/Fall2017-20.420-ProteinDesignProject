@@ -1,0 +1,26 @@
+util.cba(5270,"near_relaxed",_self=cmd)
+util.cba(144,"near_relaxed",_self=cmd)
+ray
+cmd.show("sticks"    ,"near_original")
+hide (hydro)
+cmd.show("spheres"   ,"lig_relaxed")
+cmd.show("nb_spheres","lig_original")
+cmd.show("spheres"   ,"lig_original")
+hide (hydro)
+cmd.hide("everything","lig_original")
+util.color_deep("wheat", 'lig_relaxed', 0)
+util.color_deep("salmon", 'lig_relaxed', 0)
+ray
+get view
+getview()
+get_view
+_ set_view (\
+_    -0.113475665,    0.939743817,    0.322399676,\
+_    -0.929277480,   -0.215191364,    0.300164282,\
+_     0.351477772,   -0.265553772,    0.897729993,\
+_     0.000084354,   -0.000419226,  -61.812778473,\
+_    10.476990700,    5.397646904,   -9.961334229,\
+_    26.753036499,   96.871490479,  -20.000000000 )
+cmd.hide("everything","lig_relaxed")
+cmd.show("spheres"   ,"lig_relaxed")
+set sphere_transparency, 0.5

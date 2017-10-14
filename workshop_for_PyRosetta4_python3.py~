@@ -1,0 +1,237 @@
+# ProdeinDesignScripts
+
+from pyrosetta import *
+
+def debugHeader(text):
+    print('\n{0} {1} {0}\n'.format('*'*15,text))     
+
+def initialize():
+    init()
+
+def load():
+    import subprocess
+    ligandFile = 'pah_aligned'
+    debugHeader('CALLING OPEN BABEL')
+    subprocess.call('babel {0}.pdb  {0}.mdl'.format(ligandFile), shell=True)
+    debugHeader('MOLFILE 2 PARAMS')
+    subprocess.call('molfile2params2/molfile_to_params.py --clobber {}.mdl'.format(ligandFile),\
+                    shell=True)
+
+def importPdb():
+    debugHeader('Running import.Pdb')
+    global pose, scorefxn, complexFile, pose2
+    complexFile = 'new_3vi8_complex'
+    params_list = ['LG.params']
+    pose = Pose()
+    debugHeader('Generating Nonstandard Res Set')
+    generate_nonstandard_residue_set(pose, params_list)
+    debugHeader('Generating Pose from File')
+    pose_from_file(pose,'{}.pdb'.format(complexFile))
+    print(pose)
+    scorefxn = get_fa_scorefxn()
+
+def printpyrosedir():
+    import os
+    print(os.path.dirname(rosetta.__file__))
+    # this prints: /library/python/3.6/site-packages/pyrosetta-4.0-py3.6-macosx-10.13-intel.egg/pyrosetta
+    # ^ dont use this
+    # ^ this is where python has loaded in pyrosetta4
+    # * didnt work for me ... may work for you
+    #
+    # instead use: /users/corbann.swain/applications/pyrosetta4.release.python36.mac.release-154
+    # ^ this is wherever you put the pyrosetta4 folder
+    #
+    # in pymol:
+    #
+    # pymol> cd /users/corbann.swain/applications/pyrosetta4.release.python36.mac.release-154
+    # pymol> run pymol-rosettaserver.py
+    #
+    # done in pymol.
+
+def sendtopymol():
+    global pymol
+    pymol = pymolmover()
+    pymol.apply(pose)
+
+    print('my score: %s' % scorefxn(pose))
+    pymol.send_energy(pose)
+
+def showhbonds():
+    pymol.send_hbonds(pose)
+
+def findmimima():
+    min_mover = rosetta.protocols.simple_moves.minmover()
+    move_map = movemap()
+    move_map.set_bb_true_range(40,130)
+    min_mover.movemap(move_map)
+    min_mover.score_function(scorefxn)
+
+    pose_min_move = pose()
+    pose_min_move.assign(pose)
+
+    observer = rosetta.protocols.moves.addpymolobserver(pose, true)
+
+    min_mover.apply(pose_min_move)
+
+    print('original energy: %.2f' % scorefxn(pose))
+    print('energy after min_mover: %.2f' % scorefxn(pose_min_move))
+    
+def fastrelax():
+    global fast_relax
+    fast_relax =rosetta.protocols.relax.fastrelax()
+    fast_relax.set_scorefxn(scorefxn)
+
+    pose_fast_relax = pose()
+    pose_fast_relax.assign(pose)
+
+    pose_fast_relax.pdb_info().name('fast_relax')
+    print(pose.pdb_info().name)
+    print(pose_fast_relax.pdb_info().name())
+
+    observer =rosetta.protocols.moves.addpymolobserver(pose_fast_relax, true)
+
+    fast_relax.apply(pose_fast_relax)
+
+    print('finished!')
+
+def fastrelax2():
+    pose_fast_relax = pose()
+    pose_fast_relax.assign(pose)
+    fast_relax.apply(pose_fast_relax)
+
+    print('original energy: %.2f' % scorefxn(pose))
+    print('energy after fast relax: %.2f' % scorefxn(pose_fast_relax))
+
+    pose_fast_relax.pdb_info().name('fast_relax_final')
+    pymol.apply(pose_fast_relax)
+    pymol.send_energy(pose_fast_relax)
+    
+def mutatares():
+    pose_pack_mover = pose()
+    pose_pack_mover.assign(pose)
+    pose_pack_mover.pdb_info().name('pack_mover')
+
+    task = standard_packer_task(pose_pack_mover)
+    task.temporarily_fix_everything()
+    task.temporarily_set_pack_residue(124, true)
+    task.temporarily_set_pack_residue(123, true)
+
+    pack_mover = rosetta.protocols.simple_moves.packrotamersmover(scorefxn, task)
+
+    observer = rosetta.protocols.moves.addpymolobserver(pose_pack_mover, true)
+    pack_mover.apply(pose_pack_mover)
+
+    print('original score: %s' % scorefxn(pose))
+    print('score after mutating 124, 123: %s' % scorefxn(pose_pack_mover))
+
+def controlmut():
+    from pyrosetta.toolbox import generate_resfile_from_pdb, generate_resfile_from_pose
+    # generate_resfile_from_pdb('2avx_pyrrolysine.pdb', 'my.resfile')
+    #  ^ causes error  excn_base::what()
+    # likely due to uncleaned file?
+    #
+    # what if we clean first ...
+    from pyrosetta.toolbox import cleanatom
+    cleanatom('2avx_pyrrolysine.pdb')
+    generate_resfile_from_pdb('2avx_pyrrolysine.clean.pdb','my2.resfile')
+    # ^ doesnt work either, causes error: error: unrecognized residue: lg1
+
+    # the following does work.
+    generate_resfile_from_pose(pose, 'my.resfile')
+
+def editresfile():
+    import re
+    global new_rfile
+    fname = 'my'
+    fext = 'resfile'
+    rfile = open('.'.join([fname, fext]))
+    text = rfile.read()
+    rfile.close()
+    res_to_mutate = [89, 101, 123, 139, 147]
+    reg = r'( *(%s)\s*a\s*)(\w+)( *)' % ' | '.join(map(str,res_to_mutate))
+    substr = r'\1pikaa stnq\4'
+    def subfun(m): return m.expand(substr)         
+    new_text = re.sub(reg,subfun,text)
+    new_rfile = open('.'.join([fname + '_mut', fext]),'w+')
+    new_rfile.write(new_text)
+    new_rfile.close()
+
+def packmutant():
+    pose_pack_mover = pose()
+    pose_pack_mover.assign(pose)
+    pose_pack_mover.pdb_info().name('defined_pack_mover')
+
+    observer = rosetta.protocols.moves.addpymolobserver(pose_pack_mover, true)
+
+    kt = 1.0
+    mc = montecarlo(pose_pack_mover, scorefxn, kt)
+
+    for i in range(11):
+        task = rosetta.core.pack.task.taskfactory.create_packer_task(pose_pack_mover)
+        rosetta.core.pack.task.parse_resfile(pose_pack_mover, task, new_rfile.name)
+        packer_task = rosetta.protocols.simple_moves.packrotamersmover(scorefxn, task)
+
+        min_mover = rosetta.protocols.simple_moves.minmover()
+        mm70150 = movemap()
+        mm70150.set_bb_true_range(70, 150)
+        min_mover.movemap(mm70150)
+        min_mover.score_function(scorefxn)
+
+        seq_mover = sequencemover()
+        seq_mover.add_mover(packer_task)
+        seq_mover.add_mover(min_mover)
+
+        trial_pack_min_mover = trialmover(seq_mover, mc)
+
+        trial_pack_min_mover.apply(pose_pack_mover)
+        print('score: %s' % scorefxn(pose_pack_mover))
+
+    # pymol> select my_ser, (resi 89+101+123+139+147) & defined_pack_mover
+
+def repeatmovers():
+    pose_repeat_pack_mover = pose()
+    pose_repeat_pack_mover.assign(pose)
+    pose_repeat_pack_mover.pdb_info().name('repeat_packer')
+
+    kt = 1.0
+    movemap = movemap()
+    movemap.set_bb(true)
+    small_mover = rosetta.protocols.simple_moves.smallmover(movemap, kt, 1)
+
+    mc = montecarlo(pose_repeat_pack_mover, scorefxn, kt)
+    trial_mover = trialmover(small_mover, mc)
+
+    n = 20
+    repeat_mover = repeatmover(trial_mover, n)
+
+    repeat_mover.apply(pose_repeat_pack_mover)
+
+    print('original: %s' % scorefxn(pose))
+    print('new: %s' % scorefxn(pose_repeat_pack_mover))
+    # ^ all of this code computes, but it doesnt seem to do anything...not sure whats wrong.
+    
+def main():
+    # comment out sections you dont want to run...  for a given python
+    # session, any function will run after all the previous functions
+    # have run once
+    
+    # initialize()
+    load()
+    importPdb()
+    # printpyrosedir()
+    # sendtopymol()
+    # showhbonds()
+    # findmimima()
+
+    # both of the fast relax sessions take a while...uncomment to run
+    # fastrelax()
+    # fastrelax2()
+    
+    # mutatares()
+    # controlmut()
+    # editresfile()
+    # packmutant()
+    # repeatmovers()
+
+main()
+    
