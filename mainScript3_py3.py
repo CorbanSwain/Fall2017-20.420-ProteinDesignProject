@@ -2,6 +2,7 @@ from datetime import datetime
 from pyrosetta import *
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
+import os
 
 def initialize():
     if 'didInit' in globals():
@@ -20,6 +21,10 @@ def dprint(text):
     text = ' {}  '.format(text)
     print('[{}] {}'.format(now(),text.center(70,'*')))
 
+def printScore(pose,title,scorefxn=defaultScorefxn):
+    title = title + ' Score'
+    print('{} --> {:9.5f}'.format(title.lalign(30), scorefxn(pose_mzn)))
+    
 def loadInPose():
     dprint('Loading In PDB, Creating Pose')
     complexFile = 'new_3vi8_complex.pdb'
@@ -29,7 +34,7 @@ def loadInPose():
     pose_from_file(pose,complexFile)
     return pose
 
-def poseFromPose(pose):
+def poseFrom(pose):
     newPose = Pose()
     newPose.assign(pose)
     return newPose
@@ -38,45 +43,47 @@ def namePose(pose,nameStr):
      pose.pdb_info().name(nameStr)
 
 def fastRelax(pose,scorefxn=defaultScorefxn):
-    dprint('[{}] Beginning Fast Relax'.format(now()))
+    dprint('Beginning Fast Relax')
     fast_relax = FastRelax()
     fast_relax.set_scorefxn(scorefxn) 
     fast_relax.apply(pose)
-    dprint('[{}] Done Fast Relax'.format(now()))
 
 def smallNShearMove(pose,\
-                    scorefxn=get_fa_scorefxn(),\
+                    scorefxn=defaultScorefxn,\
                     repeats=50,\
                     n_moves=5,\
                     kT=1.0,\
-                    angle=15):
+                    angle=0):
+    dprint('Running Small and Shear Movers {:2d} Times'.format(repeats))
     movemap = MoveMap()
     movemap.set_bb(True)
+
     min_mv = MinMover()
     min_mv.movemap(movemap)
     min_mv.score_function(scorefxn)
-    dprint('Setting Up Simple Movers')
+
     small_mv = SmallMover(movemap, kT, n_moves)
     shear_mv = ShearMover(movemap, kT, n_moves)
-    small_mv.angle_max('H', angle)
-    small_mv.angle_max('E', angle)
-    small_mv.angle_max('L', angle)
-    shear_mv.angle_max('H', angle)
-    shear_mv.angle_max('E', angle)
-    shear_mv.angle_max('L', angle)
-    dprint('Setting Up MonteCarlo')
-    mc = MonteCarlo(p, scorefxn, kT)
-    dprint('Building Sequence Mover')
+    if angle:
+        small_mv.angle_max('H', angle)
+        small_mv.angle_max('E', angle)
+        small_mv.angle_max('L', angle)
+        shear_mv.angle_max('H', angle)
+        shear_mv.angle_max('E', angle)
+        shear_mv.angle_max('L', angle)
+
+    mc = MonteCarlo(pose, scorefxn, kT)
+
     seq_mv = SequenceMover()
     seq_mv.add_mover(small_mv)
     seq_mv.add_mover(min_mv)
     seq_mv.add_mover(shear_mv)
     seq_mv.add_mover(min_mv)
-    dprint('Building Trial and Repeat Movers')
+
     trial_mv = TrialMover(seq_mv, mc)
     rep_mv = RepeatMover(trial_mv, repeats)
+
     rep_mv.apply(pose)
-    return rep_mv   
 
 def main():
     pymol = PyMOLMover()
@@ -86,27 +93,33 @@ def main():
     pymol.apply(startPose)
     namePose(startPose,'original')
 
-    fRelaxPose = poseFromPose(startPose)
-    namePose(fRelaxPose,'orig_relaxed')
-    fastRelax(fRelaxPose)
+    fRelaxFile = '3vi8_complex_fastRelaxed.pdb'
+    if os.path.isfile(fRelaxFile):
+        fRelaxPose = pose_from_pdb(fRelaxFile)
+    else:
+        fRelaxPose = poseFrom(startPose)
+        fastRelax(fRelaxPose)
+        fRelaxPose.dump_pdb(fRelaxFile)
+        namePose(fRelaxPose,'orig_relaxed')
+    pymol.apply(fRelaxPose)
 
-    dprint('Beginning For Loop')
+    minPose = poseFrom(startPose)
     n1 = 5
-    for i in range(n_1):
-        dprint('Beginning Loop # {:02d}'.format(i+1))
-        smallNShearMove(minPose)
+    angle = 25
+    
+    for i in range(n1):
+        dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
         angle = angle - 5
+        smallNShearMove(minPose,angle=angle)
 
-    dprint('[{}] Done With Loop'.format(now()))
-    pymol.apply(pose_mzn)
+    dprint('Done With Loop')
+    pymol.apply(minPose)
 
-    print('Original Score    : {:05f}'.format(scorefxn(pose)))
-    print('Fast Relax Score  : {:05f}'.format(scorefxn(relaxed_pose)))
-    print('Minimization Score: {:05f}'.format(scorefxn(pose_mzn)))
+    printScore(startPose,'Original')
+    printScore(fRelaxPose,'Fast')
+    printScore(minPose,'Minimization')
 
-
-
-
+main()
 
  
 
