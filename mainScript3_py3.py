@@ -1,4 +1,7 @@
-from datetime import datetime
+#!/usr/bin python3
+# mainScript3_py3.py
+
+# from datetime import datetime
 from pyrosetta import *
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
@@ -7,19 +10,9 @@ import os
 def madeGlobal(varName):
     return varName in globals()
 
-
-def initialize():
-    if not madeGlobal('didInit'):
-        init()
-        global didInit, defaultScorefxn
-        didInit = True
-        defaultScorefxn = get_fa_scorefxn()
-
-initialize()
-    
-def now(format=0):
+def now(format=0,datetime=datetime):
     if format == 0:
-        return datetime.now().strftime('[%H:%M:%S %m-%d-%y]')
+        return datetime.now().strftime('%H:%M:%S %m-%d-%y')
     else:
         return datetime.now().strftime('%y%m%d')
 
@@ -27,6 +20,48 @@ def dprint(text):
     text = ' {}  '.format(text)
     print('[{}] {}'.format(now(),text.center(70,'*')))
 
+def log(text):
+
+def mkDir(directory):
+    if not os.path.isdir(directory):
+        os.makedirs(directory)
+
+def isFile(fileName):
+    return os.path.isfile(fileName)
+
+def initialize():
+    if not madeGlobal('didInit'):
+        init()
+        global didInit, defaultScorefxn
+        didInit = True
+        defaultScorefxn = get_fa_scorefxn()
+initialize()
+
+def setupCaches():
+    if not madeGlobal('cacheDir'):
+        global cacheDir
+        cacheDir = 'AlgorithmCache'
+    mkDir(cacheDir)
+
+    if not madeGlobal('pdbCache'):
+        global pdbCache
+        pdbCache = os.path.join(cacheDir,'PDBs')
+    mkdir(pdbCache)
+
+    global sesCache
+    if madeGlobal('sesCache'):
+        if now(1) in sesCache:
+            return
+    sesCache = '{}_session_log.txt'.format{now(1)}
+    sesCache = os.path.join(cacheDir,sesCache)
+    if not isFile(sesCache):
+        with  open(sesCache,'w') as f:
+            f.writelines('{}\n\n'.format(sesCache))
+            f.writelines('Protein Design Algorithm Trials, Session Log\nBegins: {}\n\n'\
+                         .format(now())) 
+setupCaches()
+    
+    
 def printScore(pose,title,scorefxn=defaultScorefxn):
     title = title + ' Score'
     print('{} --> {:9.5f}'.format(title.lalign(30), scorefxn(pose_mzn)))
@@ -94,35 +129,6 @@ def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
 
-def mkDir(directory):
-    if not os.path.isdir(directory):
-        os.makedirs(directory)
-
-def isFile(fileName):
-    return os.path.isfile(fileName)
-
-def setupCaches():
-    if not madeGlobal('cacheDir'):
-        global cacheDir
-        cacheDir = 'AlgorithmCache'
-    mkDir(cacheDir)
-
-    if not madeGlobal('pdbCache'):
-        global pdbCache
-        pdbCache = os.path.join(cacheDir,'PDBs')
-    mkdir(pdbCache)
-
-    global sesCache
-    if madeGlobal('sesCache'):
-        if now(1) in sesCache:
-            return
-    sesCache = '{}_session_log.txt'.format{now(1)}
-    sesCache = os.path.join(cacheDir,sesCache)
-    if not isFile(sesCache):
-        with  open(sesCache,'w') as f:
-            f.writelines('{}\n\n'.format(sesCache))
-            f.writelines('Protein Design Algorithm Trials, Session Log\nBegins: {}\n\n'.format(now())) 
-
 def main():
     pymol = createPyMolMover()
 
@@ -149,7 +155,7 @@ def main():
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
         angle = angle - 5
-        smallNShearMove(minPose,angle=angle)
+        smallNShearMove(minPose,angle=angle,kT=50)
 
     dprint('Done With Loop')
     pymol.apply(minPose)
