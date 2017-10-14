@@ -20,7 +20,7 @@ def initialize():
 def load():
     import subprocess
     ligandFile = 'pah_aligned'
-   debugHeader('CALLING OPEN BABEL')
+    debugHeader('CALLING OPEN BABEL')
     subprocess.call('babel {0}.pdb  {0}.mdl'.format(ligandFile), shell=True)
     debugHeader('MOLFILE 2 PARAMS')
     subprocess.call('molfile2params2/molfile_to_params.py --clobber {}.mdl'.format(ligandFile),\
@@ -160,7 +160,6 @@ def packMutant():
     pose_pack_mover = Pose()
     pose_pack_mover.assign(pose)
     pose_pack_mover.pdb_info().name('defined_pack_mover')
-    pose_pack_mover.pdb_info().
   
     outFile.write('Beginning Packing of Mutant: {}\n'.format(now()))
     debugHeader("Writing File")
@@ -210,8 +209,6 @@ def main():
     load()
     debugHeader('Import PDB')
     importPdb()
-    debugHeader('Print PyRosetta Dir')
-    printpyrosedir()
     debugHeader('Send to PyMOL')
     sendtopymol()
     debugHeader('Show H Bonds')
