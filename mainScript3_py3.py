@@ -8,10 +8,7 @@ from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
 from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
 import os
-
-pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,\
-                 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
-firstResNum = 202
+import re
 
 def madeGlobal(varName):
     return varName in globals()
@@ -62,7 +59,45 @@ def setupCaches():
             f.writelines('Protein Design Algorithm Trials, Session Log\nBegins: {}\n\n'\
                          .format(now())) 
 setupCaches()
-    
+
+def makeSequenceGlobals():
+    if madeGlobal('madeSeqGlobals'):
+        if madeSeqGlobals == True:
+            return
+    global pocketResNums, firstResNum, oneIndexedRes,\
+        allAa, aaGroupings, adnlAa, conservMutMap, liberalMutMap, madeSeqGlobals
+    madeSeqGlobals = False
+    pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,\
+                     321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+    firstResNum = 202
+    oneIndexedRes = [i - firstResNum + 1 for i in pocketResNums]
+    allAa = ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']
+    print(len(allAa))
+    aaGroupings = [['A','I','L','M','V'],\
+                   ['F','W','Y'],\
+                   ['N','C','Q','T','S'],\
+                   ['D','E'],\
+                   ['R','H','K'],\
+                   ['G'],\
+                   ['P']]
+    adnlAa = [['F','W','Y','G'],\
+              ['A','I','L','M','V','G'],\
+              ['Y','W','G'],\
+              ['R','H','K','G'],\
+              ['D','E','G'],\
+              ['A','S'],\
+              ['G']]
+    conservMutMap = {}
+    liberalMutMap = {}
+    for i,aaList in enumerate(aaGroupings):
+        for j,aa in enumerate(aaList):
+            temp_list = list(aaList)
+            del temp_list[j]
+            conservMutMap[aa] = temp_list
+            liberalMutMap[aa] = list(temp_list) + adnlAa[i]
+    madeSeqGlobals = True
+makeSequenceGlobals()
+
 def log(text=''):
     with open(sesCache,'a') as f:
         f.writelines('[{}] >  {}\n'.format(now(2),text))
@@ -132,7 +167,6 @@ def minMove(pose,\
     
     
 def smallNShearMove(pose,\
-                    scorefxn=defaultScorefxn,\
                     repeats=50,\
                     n_moves=5,\
                     kT=1.0,\
@@ -145,15 +179,13 @@ def smallNShearMove(pose,\
 
     min_mv = MinMover()
     min_mv.movemap(movemap)
-    min_mv.score_function(scorefxn)
+    min_mv.score_function(defaultScorefxn)
 
     small_mv = SmallMover(movemap, kT, n_moves)
     shear_mv = ShearMover(movemap, kT, n_moves)
     if angle:
-        # small_mv.angle_max('H', angle)
         small_mv.angle_max('E', angle)
         small_mv.angle_max('L', angle)
-        # shear_mv.angle_max('H', angle)
         shear_mv.angle_max('E', angle)
         shear_mv.angle_max('L', angle)
 
@@ -170,6 +202,29 @@ def smallNShearMove(pose,\
 
     rep_mv.apply(pose)
 
+def smallNShearAnnealLoop(pose,cycles,kT):
+    angles = [5, 3, 3, 2] + [0.5,] * 4
+    kT2s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
+    annealTime = len(angles)
+    seqRepeats = 5
+    numSmallShearRepeats = 5
+    n1 = len(kT2s) * annealCycles
+    
+    dprint('Beginning Small/Shear Anneal Loop')
+
+    log(' `--> Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
+    for i in range(n1):
+        dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
+        mc = MonteCarlo(pose, defaultScorefxn, kT)
+        ind = i % annealTime
+        angle = angles[ind]
+        kT2 = kT2s[ind]
+        smallNShearMove(minPose,\
+                        angle=angle, kT=kT2,\
+                        repeats=seqRepeats, n_moves=numSmallShearRepeats)
+        mc.boltzmann(pose)
+        printScore(pose,'Iteration # {:2d}'.format(i+1))
+    
 def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
@@ -178,16 +233,13 @@ def controlMut():
     from pyrosetta.toolbox import generate_resfile_from_pose
     generate_resfile_from_pose(pose, 'my.resfile')
 
-def editResfile():
-    import re
-    global new_rfile
+def mutateResfile(res):
     fname = 'my'
     fext = 'resfile'
     rfile = open('.'.join([fname, fext]))
     text = rfile.read()
     rfile.close()
-    res_to_mutate = [279, 275, 241, 332, 330, 359, 354, 276, 333, 254, 321, 277, 354]
-    reg = r'( *(%s)\s*A\s*)(\w+)( *)' % ' | '.join(map(str,res_to_mutate))
+    reg = r'( *(%s)\s*A\s*)(\w+)( *)' % ' | '.join(map(str,res))
     subStr = r'\1PIKAA AGFSTND\4'
     def subFun(m): return m.expand(subStr)         
     new_text = re.sub(reg,subFun,text)
@@ -217,31 +269,10 @@ def main():
     
     minPose = poseFrom(fRelaxPose)
     namePose(minPose,'minimized')
-    
-    angles = [5, 3, 3, 2] + [0.5,] * 4
-    kT1s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
-    annealTime = len(angles)
-    annealCycles = 1
-    kT2 = 10.0
-    repeats = 5
-    numSmallShearRepeats = 5
-    
-    dprint('Beginning Small/Shear Anneal Loop')
-    n1 = len(kT1s) * annealCycles
-    log(' `--> Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
-    for i in range(n1):
-        dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
-        mc = MonteCarlo(minPose, defaultScorefxn, kT2)
-        ind = i % annealTime
-        angle = angles[ind]
-        kT = kT1s[ind]
-        smallNShearMove(minPose,\
-                        angle=angle, kT=kT,\
-                        repeats=repeats, n_moves=numSmallShearRepeats)
-        mc.boltzmann(minPose)
-        printScore(minPose,'Iteration # {:2d}'.format(i+1))
-        
-    dprint('Done With Loop')
+
+    annealCycles = 2
+    kT = 10.0
+    smallNShearAnnealLoop(minPose,annealCycles,kT)
 
     n2 = 200
     kT3 = 0.1
@@ -249,7 +280,6 @@ def main():
     printScore(minPose,'After {} Min Cycles'.format(n2))
     pymol.apply(minPose)
 
-    log()
     printScore(startPose,'Original')
     printScore(fRelaxPose,'Fast Relax')
     printScore(minPose,'Minimization Protocol')
