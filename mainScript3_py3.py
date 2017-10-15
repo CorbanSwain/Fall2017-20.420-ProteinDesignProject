@@ -198,8 +198,8 @@ def main():
     repeats = 10
     n_moves = 5
 
-    dprint('Beginning Small Shear Anneal Loop')
-    n1 = len(kT1) * 4
+    dprint('Beginning Small/Shear Anneal Loop')
+    n1 = len(kT1) * 5
     log('Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
@@ -208,7 +208,7 @@ def main():
         angle = angles[ind]
         kT = kT1s[ind]
         smallNShearMove(minPose,\
-                        angle=angle, kT=kT1[i % len(kT1)],\
+                        angle=angle, kT=kT,\
                         repeats=repeats, n_moves=n_moves)
         mc.boltzmann(minPose)
         printScore(minPose,'Iteration # {:2d}'.format(i+1))
