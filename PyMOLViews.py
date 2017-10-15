@@ -4,7 +4,7 @@ import pymol
 resi_first = 202
 resi_last = 468
 resi_pocket = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,\
-               321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+               321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358] 
 sel_pocket = '(resi {})'.format('+'.join([str(num) for num in resi_pocket]))
 
 views = {'pocket_1':'''\
@@ -82,7 +82,7 @@ def selectProtein(name,obj):
     cmd.deselect()
 
 def selectLigand(name,obj,protein):
-    # FIXME - Could use something better to select the ligand .... LG1?
+    # FIXME - Could use something better to select the ligand ... LG1?
     cmd.select(name,'{} & !{}'.format(obj, protein))
     cmd.deselect()
     
