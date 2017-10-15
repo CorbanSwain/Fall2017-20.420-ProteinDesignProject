@@ -4,6 +4,7 @@
 # from datetime import datetime
 from pyrosetta import *
 from datetime import datetime
+from pyrosetta.toolbox import generate_resfile_from_pose
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
 from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
@@ -31,7 +32,8 @@ def isFile(fileName):
 def initialize():
     if not madeGlobal('didInit'):
         init()
-        global didInit, defaultScorefxn
+        global didInit, defaultScorefxn, proteinName
+        proteinName = '3vi8_BPDE'
         didInit = True
         defaultScorefxn = get_fa_scorefxn()
 initialize()
@@ -71,7 +73,8 @@ def makeSequenceGlobals():
                      321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
     firstResNum = 202
     oneIndexedRes = [i - firstResNum + 1 for i in pocketResNums]
-    allAa = ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']
+    allAa = ['A','C','D','E','F','G','H','I','K','L',\
+             'M','N','P','Q','R','S','T','V','W','Y']
     print(len(allAa))
     aaGroupings = [['A','I','L','M','V'],\
                    ['F','W','Y'],\
@@ -94,7 +97,7 @@ def makeSequenceGlobals():
             temp_list = list(aaList)
             del temp_list[j]
             conservMutMap[aa] = temp_list
-            liberalMutMap[aa] = list(temp_list) + adnlAa[i]
+            liberalMutMap[aa] = temp_list + adnlAa[i]
     madeSeqGlobals = True
 makeSequenceGlobals()
 
@@ -162,9 +165,7 @@ def minMove(pose,\
     trial_mv = TrialMover(min_mv,mc)
     rep_mv = RepeatMover(trial_mv,repeats)
 
-    rep_mv.apply(pose)
-    
-    
+    rep_mv.apply(pose)   
     
 def smallNShearMove(pose,\
                     repeats=50,\
@@ -202,7 +203,7 @@ def smallNShearMove(pose,\
 
     rep_mv.apply(pose)
 
-def smallNShearAnnealLoop(pose,cycles,kT):
+def smallNShearAnnealLoop(pose,cycles,kT1):
     angles = [5, 3, 3, 2] + [0.5,] * 4
     kT2s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
     annealTime = len(angles)
@@ -215,11 +216,11 @@ def smallNShearAnnealLoop(pose,cycles,kT):
     log(' `--> Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
-        mc = MonteCarlo(pose, defaultScorefxn, kT)
+        mc = MonteCarlo(pose, defaultScorefxn, kT1)
         ind = i % annealTime
         angle = angles[ind]
         kT2 = kT2s[ind]
-        smallNShearMove(minPose,\
+        smallNShearMove(pose,\
                         angle=angle, kT=kT2,\
                         repeats=seqRepeats, n_moves=numSmallShearRepeats)
         mc.boltzmann(pose)
@@ -229,23 +230,37 @@ def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
 
-def controlMut():
-    from pyrosetta.toolbox import generate_resfile_from_pose
-    generate_resfile_from_pose(pose, 'my.resfile')
-
-def mutateResfile(res):
-    fname = 'my'
+def generateResfile(pose,name=proteinName):
     fext = 'resfile'
-    rfile = open('.'.join([fname, fext]))
-    text = rfile.read()
-    rfile.close()
-    reg = r'( *(%s)\s*A\s*)(\w+)( *)' % ' | '.join(map(str,res))
-    subStr = r'\1PIKAA AGFSTND\4'
-    def subFun(m): return m.expand(subStr)         
+    fname = '.'.join([name,fext])
+    generate_resfile_from_pose(pose, fname)
+
+def mutateResfile(pose,\
+                  nameout='MUT',\
+                  namein=proteinName,\
+                  residues=pocketResNums,\
+                  liberal=False):
+    fext = 'resfile'
+    with open('.'.join([namein, fext])) as rfile:
+        text = rfile.read()
+
+    if liberal: mutDict = liberalMutMap
+    else: mutDict = conservMutMap
+    reg = r'(?P<num>{})(?P<chain>\s+\w\s+)(?P<cmds>\w+)'.\
+          format('|'.join(['{:3d}'.format(r) for r in residues]))
+    def subFun(m):
+        num = int(m.group('num').strip())
+        chain = m.group('chain').strip()
+        poseNum = pose.pdb_info().pdb2pose(chain,num)
+        aa = pose.residue(poseNum).name1()
+        mutRes = mutDict[aa]
+        return '{:3d}  {}  PIKAA {}'.format(num,chain,''.join(mutRes))
+         
     new_text = re.sub(reg,subFun,text)
-    new_rfile = open('.'.join([fname + '_MUT2', fext]),'w+')
-    new_rfile.write(new_text)
-    new_rfile.close()
+    fnameOut = '.'.join(['{}_{}'.format(namein, nameout), fext]) 
+    with open(fnameOut, 'w+') as new_rfile:
+        new_rfile.write(new_text)
+    return fnameOut
 
 def main():
     logBegin()
