@@ -101,3 +101,4 @@ Begins: 00:02:14 10-15-17
 [00:22:39] >  Minimization Protocol Score    -->  -762.09686
 [00:22:39] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+[03:03:39] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
