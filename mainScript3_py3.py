@@ -6,7 +6,12 @@ from pyrosetta import *
 from datetime import datetime
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
+from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
 import os
+
+pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,\
+                 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+firstResNum = 202
 
 def madeGlobal(varName):
     return varName in globals()
@@ -106,9 +111,9 @@ def fastRelax(pose,scorefxn=defaultScorefxn):
 def minMove(pose,\
             scorefxn=defaultScorefxn,\
             repeats=10,
-            kT=5):
+            kT=1):
     dprint('Perfoming A Minimization Loop')
-    log('Num Repeats: {:4d} | kT: {:9.2f}'.\
+    log(' `--> Num Repeats: {:4d} | kT: {:9.2f}'.\
         format(repeats,kT))
     movemap = MoveMap()
     movemap.set_bb(True)
@@ -133,7 +138,7 @@ def smallNShearMove(pose,\
                     kT=1.0,\
                     angle=0):
     dprint('Running Small and Shear Movers'.format(repeats))
-    log('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:4.1f}'.\
+    log(' `--> Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:4.1f}'.\
         format(repeats,n_moves,kT,angle))
     movemap = MoveMap()
     movemap.set_bb(True)
@@ -145,10 +150,10 @@ def smallNShearMove(pose,\
     small_mv = SmallMover(movemap, kT, n_moves)
     shear_mv = ShearMover(movemap, kT, n_moves)
     if angle:
-        small_mv.angle_max('H', angle)
+        # small_mv.angle_max('H', angle)
         small_mv.angle_max('E', angle)
         small_mv.angle_max('L', angle)
-        shear_mv.angle_max('H', angle)
+        # shear_mv.angle_max('H', angle)
         shear_mv.angle_max('E', angle)
         shear_mv.angle_max('L', angle)
 
@@ -169,14 +174,35 @@ def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
 
+def controlMut():
+    from pyrosetta.toolbox import generate_resfile_from_pose
+    generate_resfile_from_pose(pose, 'my.resfile')
+
+def editResfile():
+    import re
+    global new_rfile
+    fname = 'my'
+    fext = 'resfile'
+    rfile = open('.'.join([fname, fext]))
+    text = rfile.read()
+    rfile.close()
+    res_to_mutate = [279, 275, 241, 332, 330, 359, 354, 276, 333, 254, 321, 277, 354]
+    reg = r'( *(%s)\s*A\s*)(\w+)( *)' % ' | '.join(map(str,res_to_mutate))
+    subStr = r'\1PIKAA AGFSTND\4'
+    def subFun(m): return m.expand(subStr)         
+    new_text = re.sub(reg,subFun,text)
+    new_rfile = open('.'.join([fname + '_MUT2', fext]),'w+')
+    new_rfile.write(new_text)
+    new_rfile.close()
+
 def main():
     logBegin()
     pymol = createPyMolMover()
 
     startPose = loadInPose('new_3vi8_complex.pdb')
     print('Num Residues: {:d}'.format(startPose.total_residue()))
-    pymol.apply(startPose)
     namePose(startPose,'original')
+    pymol.apply(startPose)
 
     fRelaxFile = '3vi8_complex_fastRelaxed.pdb'
     fRelaxFile = os.path.join(pdbCache,fRelaxFile)
@@ -186,21 +212,23 @@ def main():
         fRelaxPose = poseFrom(startPose)
         fastRelax(fRelaxPose)
         fRelaxPose.dump_pdb(fRelaxFile)
-        namePose(fRelaxPose,'orig_relaxed')
+    namePose(fRelaxPose,'orig_relaxed')
     pymol.apply(fRelaxPose)
     
-    minPose = poseFrom(startPose)
-
-    angles = [20.0, 18.0, 18.0, 10.0] + [4.0,] * 4
-    kT1s = [1000.0, 800.0, 800.0, 500.0] + [20,] * 4
+    minPose = poseFrom(fRelaxPose)
+    namePose(minPose,'minimized')
+    
+    angles = [5, 3, 3, 2] + [0.5,] * 4
+    kT1s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
     annealTime = len(angles)
+    annealCycles = 1
     kT2 = 10.0
-    repeats = 10
-    n_moves = 5
-
+    repeats = 5
+    numSmallShearRepeats = 5
+    
     dprint('Beginning Small/Shear Anneal Loop')
-    n1 = len(kT1s) * 5
-    log('Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
+    n1 = len(kT1s) * annealCycles
+    log(' `--> Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
         mc = MonteCarlo(minPose, defaultScorefxn, kT2)
@@ -209,21 +237,22 @@ def main():
         kT = kT1s[ind]
         smallNShearMove(minPose,\
                         angle=angle, kT=kT,\
-                        repeats=repeats, n_moves=n_moves)
+                        repeats=repeats, n_moves=numSmallShearRepeats)
         mc.boltzmann(minPose)
         printScore(minPose,'Iteration # {:2d}'.format(i+1))
         
     dprint('Done With Loop')
 
     n2 = 200
-    minMove(minPose,repeats=n2)
+    kT3 = 0.1
+    minMove(minPose,repeats=n2,kT=kT3)
     printScore(minPose,'After {} Min Cycles'.format(n2))
     pymol.apply(minPose)
 
     log()
     printScore(startPose,'Original')
-    printScore(fRelaxPose,'Fast')
-    printScore(minPose,'Minimization')
+    printScore(fRelaxPose,'Fast Relax')
+    printScore(minPose,'Minimization Protocol')
     logEnd()
     
 main()
