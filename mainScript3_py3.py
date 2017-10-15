@@ -58,7 +58,7 @@ def setupCaches():
                          .format(now())) 
 setupCaches()
     
-def log(text):
+def log(text=''):
     with open(sesCache,'a') as f:
         f.writelines('[{}] >  {}\n'.format(now(2),text))
 
@@ -103,6 +103,29 @@ def fastRelax(pose,scorefxn=defaultScorefxn):
     fast_relax.set_scorefxn(scorefxn) 
     fast_relax.apply(pose)
 
+def minMove(pose,\
+            scorefxn=defaultScorefxn,\
+            repeats=10,
+            kT=5):
+    dprint('Perfoming A Minimization Loop')
+    log('Num Repeats: {:4d} | kT: {:9.2f}'.\
+        format(repeats,kT))
+    movemap = MoveMap()
+    movemap.set_bb(True)
+    
+    min_mv = MinMover()
+    min_mv.movemap(movemap)
+    min_mv.score_function(scorefxn)
+
+    mc = MonteCarlo(pose,scorefxn,kT)
+
+    trial_mv = TrialMover(min_mv,mc)
+    rep_mv = RepeatMover(trial_mv,repeats)
+
+    rep_mv.apply(pose)
+    
+    
+    
 def smallNShearMove(pose,\
                     scorefxn=defaultScorefxn,\
                     repeats=50,\
@@ -110,7 +133,7 @@ def smallNShearMove(pose,\
                     kT=1.0,\
                     angle=0):
     dprint('Running Small and Shear Movers'.format(repeats))
-    log('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:2d}'.\
+    log('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:4.1f}'.\
         format(repeats,n_moves,kT,angle))
     movemap = MoveMap()
     movemap.set_bb(True)
@@ -168,27 +191,36 @@ def main():
     
     minPose = poseFrom(startPose)
 
-    angle = 20
-    kT1 = [1000, 800, 500, 20, 20, 20]
-    kT2 = 10
+    angles = [20.0, 18.0, 18.0, 10.0] + [4.0,] * 4
+    kT1s = [1000.0, 800.0, 800.0, 500.0] + [20,] * 4
+    annealTime = len(angles)
+    kT2 = 10.0
     repeats = 10
     n_moves = 5
 
-    n1 = len(kT1) * 5
+    dprint('Beginning Small Shear Anneal Loop')
+    n1 = len(kT1) * 4
+    log('Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
         mc = MonteCarlo(minPose, defaultScorefxn, kT2)
-        angle = angle - 1
+        ind = i % annealTime
+        angle = angles[ind]
+        kT = kT1s[ind]
         smallNShearMove(minPose,\
                         angle=angle, kT=kT1[i % len(kT1)],\
                         repeats=repeats, n_moves=n_moves)
         mc.boltzmann(minPose)
         printScore(minPose,'Iteration # {:2d}'.format(i+1))
         
-
     dprint('Done With Loop')
+
+    n2 = 200
+    minMove(minPose,repeats=n2)
+    printScore(minPose,'After {} Min Cycles'.format(n2))
     pymol.apply(minPose)
 
+    log()
     printScore(startPose,'Original')
     printScore(fRelaxPose,'Fast')
     printScore(minPose,'Minimization')
