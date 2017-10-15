@@ -1,0 +1,1072 @@
+AlgorithmCache/171014_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 17:41:40 10-14-17
+
+[17:46:16] >  Loading In `new_3vi8_complex.pdb` and Creating Pose 
+[17:46:17] >  Beginning Fast Relax 
+[17:52:38] >  Beginning Loop #  1/ 5 
+[17:52:38] >  Running Small and Shear Movers 50 Times 
+[17:55:17] >  Beginning Loop #  2/ 5 
+[17:55:17] >  Running Small and Shear Movers 50 Times 
+[17:56:26] >  Beginning Loop #  3/ 5 
+[17:56:26] >  Running Small and Shear Movers 50 Times 
+[17:57:24] >  Beginning Loop #  4/ 5 
+[17:57:24] >  Running Small and Shear Movers 50 Times 
+[17:58:17] >  Beginning Loop #  5/ 5 
+[17:58:17] >  Running Small and Shear Movers 50 Times 
+[17:59:08] >  Done With Loop 
+
+
+[18:09:47] > vvvvvvvvvvv Beginning Script vvvvvvvvvvv
+[18:09:47] >  Loading In `new_3vi8_complex.pdb` and Creating Pose 
+[18:09:48] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose 
+[18:09:49] >  Beginning Loop #  1/ 5 
+[18:09:49] >  Running Small and Shear Movers 50 Times 
+[18:10:57] >  Beginning Loop #  2/ 5 
+[18:10:57] >  Running Small and Shear Movers 50 Times 
+[18:12:09] >  Beginning Loop #  3/ 5 
+[18:12:09] >  Running Small and Shear Movers 50 Times 
+[18:13:32] >  Beginning Loop #  4/ 5 
+[18:13:32] >  Running Small and Shear Movers 50 Times 
+[18:14:37] >  Beginning Loop #  5/ 5 
+[18:14:37] >  Running Small and Shear Movers 50 Times 
+[18:15:35] >  Done With Loop 
+
+
+[18:24:32] >  vvvvvvvvvvv Beginning Script vvvvvvvvvvv
+[18:24:32] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:24:34] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:24:35] >  Beginning Loop #  1/ 5
+[18:24:35] >  Running Small and Shear Movers
+[18:24:35] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT: 10000.00 | Angl Rng: 20
+[18:24:42] >  Beginning Loop #  2/ 5
+[18:24:42] >  Running Small and Shear Movers
+[18:24:42] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:  1000.00 | Angl Rng: 15
+[18:24:49] >  Beginning Loop #  3/ 5
+[18:24:49] >  Running Small and Shear Movers
+[18:24:49] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:   100.00 | Angl Rng: 10
+[18:24:57] >  Beginning Loop #  4/ 5
+[18:24:57] >  Running Small and Shear Movers
+[18:24:57] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:    10.00 | Angl Rng:  5
+[18:25:04] >  Beginning Loop #  5/ 5
+[18:25:04] >  Running Small and Shear Movers
+[18:25:04] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:     1.00 | Angl Rng:  0
+[18:25:11] >  Done With Loop
+
+
+[18:25:40] >  vvvvvvvvvvv Beginning Script vvvvvvvvvvv
+[18:25:40] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:25:41] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:25:42] >  Beginning Loop #  1/ 5
+[18:25:42] >  Running Small and Shear Movers
+[18:25:43] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT: 10000.00 | Angl Rng: 20
+[18:25:50] >  Beginning Loop #  2/ 5
+[18:25:50] >  Running Small and Shear Movers
+[18:25:50] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:  1000.00 | Angl Rng: 15
+[18:25:56] >  Beginning Loop #  3/ 5
+[18:25:56] >  Running Small and Shear Movers
+[18:25:56] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:   100.00 | Angl Rng: 10
+[18:26:01] >  Beginning Loop #  4/ 5
+[18:26:01] >  Running Small and Shear Movers
+[18:26:01] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:    10.00 | Angl Rng:  5
+[18:26:06] >  Beginning Loop #  5/ 5
+[18:26:06] >  Running Small and Shear Movers
+[18:26:06] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:     1.00 | Angl Rng:  0
+[18:26:11] >  Done With Loop
+
+
+[18:26:56] >  vvvvvvvvvvv Beginning Script vvvvvvvvvvv
+[18:26:56] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:26:57] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:26:58] >  Beginning Loop #  1/ 5
+[18:26:58] >  Running Small and Shear Movers
+[18:26:58] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT: 10000.00 | Angl Rng: 20
+[18:27:03] >  Beginning Loop #  2/ 5
+[18:27:03] >  Running Small and Shear Movers
+[18:27:03] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:  1000.00 | Angl Rng: 15
+[18:27:06] >  Beginning Loop #  3/ 5
+[18:27:06] >  Running Small and Shear Movers
+[18:27:06] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:   100.00 | Angl Rng: 10
+[18:27:10] >  Beginning Loop #  4/ 5
+[18:27:10] >  Running Small and Shear Movers
+[18:27:10] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:    10.00 | Angl Rng:  5
+[18:27:14] >  Beginning Loop #  5/ 5
+[18:27:14] >  Running Small and Shear Movers
+[18:27:14] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:     1.00 | Angl Rng:  0
+[18:27:18] >  Done With Loop
+[18:27:18] >  Original Score                 --> 363.60845
+[18:27:18] >  Fast Score                     --> -762.59235
+[18:27:18] >  Minimization Score             --> 176.29557
+[18:27:18] >  ^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^
+
+
+
+[18:29:17] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[18:29:17] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:29:18] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:29:19] >  Beginning Loop #  1/ 5
+[18:29:19] >  Running Small and Shear Movers
+[18:29:19] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT: 10000.00 | Angl Rng: 20
+[18:29:25] >  Beginning Loop #  2/ 5
+[18:29:25] >  Running Small and Shear Movers
+[18:29:25] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:  1000.00 | Angl Rng: 15
+[18:29:29] >  Beginning Loop #  3/ 5
+[18:29:29] >  Running Small and Shear Movers
+[18:29:29] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:   100.00 | Angl Rng: 10
+[18:29:34] >  Beginning Loop #  4/ 5
+[18:29:34] >  Running Small and Shear Movers
+[18:29:34] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:    10.00 | Angl Rng:  5
+[18:29:38] >  Beginning Loop #  5/ 5
+[18:29:38] >  Running Small and Shear Movers
+[18:29:38] >  Num Repeats:    5 | Num Sml/Shr Moves:    5 | kT:     1.00 | Angl Rng:  0
+[18:29:42] >  Done With Loop
+[18:29:42] >  Original Score                 -->   363.60845
+[18:29:42] >  Fast Score                     -->  -762.59235
+[18:29:42] >  Minimization Score             -->   131.95153
+[18:29:42] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[18:32:27] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[18:32:27] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:32:28] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:32:29] >  Beginning Loop #  1/10
+[18:32:29] >  Running Small and Shear Movers
+[18:32:29] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT: 100000.00 | Angl Rng: 22
+[18:32:51] >  Beginning Loop #  2/10
+[18:32:51] >  Running Small and Shear Movers
+[18:32:51] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT: 10000.00 | Angl Rng: 19
+[18:33:11] >  Beginning Loop #  3/10
+[18:33:11] >  Running Small and Shear Movers
+[18:33:11] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:  1000.00 | Angl Rng: 16
+[18:33:31] >  Beginning Loop #  4/10
+[18:33:31] >  Running Small and Shear Movers
+[18:33:31] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:   100.00 | Angl Rng: 13
+[18:33:50] >  Beginning Loop #  5/10
+[18:33:50] >  Running Small and Shear Movers
+[18:33:50] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:    10.00 | Angl Rng: 10
+[18:34:11] >  Beginning Loop #  6/10
+[18:34:11] >  Running Small and Shear Movers
+[18:34:11] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:     1.00 | Angl Rng:  7
+[18:34:32] >  Beginning Loop #  7/10
+[18:34:32] >  Running Small and Shear Movers
+[18:34:32] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:     0.10 | Angl Rng:  4
+[18:34:51] >  Beginning Loop #  8/10
+[18:34:51] >  Running Small and Shear Movers
+[18:34:51] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:     0.01 | Angl Rng:  1
+[18:35:09] >  Beginning Loop #  9/10
+[18:35:09] >  Running Small and Shear Movers
+[18:35:09] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:     0.00 | Angl Rng: -2
+[18:35:27] >  Beginning Loop # 10/10
+[18:35:27] >  Running Small and Shear Movers
+[18:35:27] >  Num Repeats:   25 | Num Sml/Shr Moves:   50 | kT:     0.00 | Angl Rng: -5
+[18:35:46] >  Done With Loop
+[18:35:46] >  Original Score                 -->   363.60845
+[18:35:46] >  Fast Score                     -->  -762.59235
+[18:35:46] >  Minimization Score             -->   391.00405
+[18:35:46] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[18:50:09] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[18:50:09] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[18:50:10] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[18:50:12] >  Beginning Loop #  1/10
+[18:50:12] >  Running Small and Shear Movers
+[18:50:12] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:  10000.00 | Angl Rng: 17
+[18:50:34] >  Iteration #  1 Score           -->   251.36382
+[18:50:34] >  Beginning Loop #  2/10
+[18:50:34] >  Running Small and Shear Movers
+[18:50:34] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:   2000.00 | Angl Rng: 14
+[18:50:54] >  Iteration #  2 Score           -->   280.71862
+[18:50:54] >  Beginning Loop #  3/10
+[18:50:54] >  Running Small and Shear Movers
+[18:50:54] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:    400.00 | Angl Rng: 11
+[18:51:14] >  Iteration #  3 Score           -->   236.91795
+[18:51:14] >  Beginning Loop #  4/10
+[18:51:14] >  Running Small and Shear Movers
+[18:51:14] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:     80.00 | Angl Rng:  8
+[18:51:36] >  Iteration #  4 Score           -->   245.45026
+[18:51:36] >  Beginning Loop #  5/10
+[18:51:36] >  Running Small and Shear Movers
+[18:51:36] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:     16.00 | Angl Rng:  5
+[18:51:58] >  Iteration #  5 Score           -->   207.26545
+[18:51:58] >  Beginning Loop #  6/10
+[18:51:58] >  Running Small and Shear Movers
+[18:51:58] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:      3.20 | Angl Rng:  2
+[18:52:21] >  Iteration #  6 Score           -->   188.63003
+[18:52:21] >  Beginning Loop #  7/10
+[18:52:21] >  Running Small and Shear Movers
+[18:52:21] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:      0.64 | Angl Rng: -1
+[18:52:45] >  Iteration #  7 Score           -->   171.00066
+[18:52:45] >  Beginning Loop #  8/10
+[18:52:45] >  Running Small and Shear Movers
+[18:52:45] >  Num Repeats:   25 | Num Sml/Shr Moves:    5 | kT:      0.13 | Angl Rng: -4
+
+
+[19:03:09] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:03:09] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:03:10] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:03:12] >  Beginning Loop #  1/10
+
+
+[19:03:24] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:03:24] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:03:26] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:03:27] >  Beginning Loop #  1/10
+[19:03:27] >  Running Small and Shear Movers
+[19:03:27] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:  10000.00 | Angl Rng: 19
+
+
+[19:04:50] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:04:50] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:04:52] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:04:53] >  Beginning Loop #  1/10
+[19:04:53] >  Running Small and Shear Movers
+[19:04:53] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:  10000.00 | Angl Rng: 19
+
+
+[19:05:33] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:05:33] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:05:35] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:05:36] >  Beginning Loop #  1/10
+[19:05:36] >  Running Small and Shear Movers
+[19:05:36] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:  10000.00 | Angl Rng: 19
+[19:05:44] >  Iteration #  1 Score           -->   250.10778
+[19:05:44] >  Beginning Loop #  2/10
+[19:05:44] >  Running Small and Shear Movers
+[19:05:44] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   2000.00 | Angl Rng: 18
+[19:05:55] >  Iteration #  2 Score           -->   423.47995
+[19:05:55] >  Beginning Loop #  3/10
+[19:05:55] >  Running Small and Shear Movers
+[19:05:55] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    400.00 | Angl Rng: 17
+[19:06:04] >  Iteration #  3 Score           -->   238.74378
+[19:06:04] >  Beginning Loop #  4/10
+[19:06:04] >  Running Small and Shear Movers
+[19:06:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     80.00 | Angl Rng: 16
+[19:06:12] >  Iteration #  4 Score           -->   286.40373
+[19:06:12] >  Beginning Loop #  5/10
+[19:06:12] >  Running Small and Shear Movers
+[19:06:12] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     16.00 | Angl Rng: 15
+[19:06:20] >  Iteration #  5 Score           -->   295.19249
+[19:06:20] >  Beginning Loop #  6/10
+[19:06:20] >  Running Small and Shear Movers
+[19:06:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      3.20 | Angl Rng: 14
+[19:06:29] >  Iteration #  6 Score           -->   295.19249
+[19:06:29] >  Beginning Loop #  7/10
+[19:06:29] >  Running Small and Shear Movers
+[19:06:29] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.64 | Angl Rng: 13
+[19:06:37] >  Iteration #  7 Score           -->   275.15985
+[19:06:37] >  Beginning Loop #  8/10
+[19:06:37] >  Running Small and Shear Movers
+[19:06:37] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.13 | Angl Rng: 12
+[19:06:45] >  Iteration #  8 Score           -->   250.24848
+[19:06:45] >  Beginning Loop #  9/10
+[19:06:45] >  Running Small and Shear Movers
+[19:06:45] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.03 | Angl Rng: 11
+[19:06:55] >  Iteration #  9 Score           -->   249.37785
+[19:06:55] >  Beginning Loop # 10/10
+[19:06:55] >  Running Small and Shear Movers
+[19:06:55] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.01 | Angl Rng: 10
+[19:07:05] >  Iteration # 10 Score           -->   244.67366
+[19:07:05] >  Done With Loop
+[19:07:05] >  Original Score                 -->   363.60845
+[19:07:05] >  Fast Score                     -->  -762.59235
+[19:07:05] >  Minimization Score             -->   244.67366
+[19:07:05] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[19:07:39] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:07:39] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:07:40] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:07:42] >  Beginning Loop #  1/10
+[19:07:42] >  Running Small and Shear Movers
+[19:07:42] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 19
+[19:07:51] >  Iteration #  1 Score           -->   210.40157
+[19:07:51] >  Beginning Loop #  2/10
+[19:07:51] >  Running Small and Shear Movers
+[19:07:51] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    200.00 | Angl Rng: 18
+[19:07:59] >  Iteration #  2 Score           -->   210.40157
+[19:07:59] >  Beginning Loop #  3/10
+[19:07:59] >  Running Small and Shear Movers
+[19:07:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     40.00 | Angl Rng: 17
+[19:08:07] >  Iteration #  3 Score           -->   213.47166
+[19:08:07] >  Beginning Loop #  4/10
+[19:08:08] >  Running Small and Shear Movers
+[19:08:08] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      8.00 | Angl Rng: 16
+[19:08:16] >  Iteration #  4 Score           -->   200.52526
+[19:08:16] >  Beginning Loop #  5/10
+[19:08:16] >  Running Small and Shear Movers
+[19:08:16] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      1.60 | Angl Rng: 15
+[19:08:24] >  Iteration #  5 Score           -->   177.65498
+[19:08:24] >  Beginning Loop #  6/10
+[19:08:24] >  Running Small and Shear Movers
+[19:08:24] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.32 | Angl Rng: 14
+[19:08:33] >  Iteration #  6 Score           -->   160.26339
+[19:08:33] >  Beginning Loop #  7/10
+[19:08:33] >  Running Small and Shear Movers
+[19:08:33] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.06 | Angl Rng: 13
+[19:08:42] >  Iteration #  7 Score           -->   147.52464
+[19:08:42] >  Beginning Loop #  8/10
+[19:08:42] >  Running Small and Shear Movers
+[19:08:42] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.01 | Angl Rng: 12
+[19:08:51] >  Iteration #  8 Score           -->   140.25948
+[19:08:51] >  Beginning Loop #  9/10
+[19:08:51] >  Running Small and Shear Movers
+[19:08:51] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.00 | Angl Rng: 11
+[19:09:00] >  Iteration #  9 Score           -->   132.44256
+[19:09:00] >  Beginning Loop # 10/10
+[19:09:00] >  Running Small and Shear Movers
+[19:09:00] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:      0.00 | Angl Rng: 10
+[19:09:10] >  Iteration # 10 Score           -->   131.44856
+[19:09:10] >  Done With Loop
+[19:09:11] >  Original Score                 -->   363.60845
+[19:09:11] >  Fast Score                     -->  -762.59235
+[19:09:11] >  Minimization Score             -->   131.44856
+[19:09:11] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[19:16:13] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:16:13] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:16:14] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:16:16] >  Beginning Loop #  1/30
+[19:16:16] >  Running Small and Shear Movers
+[19:16:16] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 19
+[19:16:30] >  Iteration #  1 Score           -->   363.60845
+[19:16:30] >  Beginning Loop #  2/30
+[19:16:30] >  Running Small and Shear Movers
+[19:16:30] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18
+[19:16:43] >  Iteration #  2 Score           -->   363.60845
+[19:16:43] >  Beginning Loop #  3/30
+[19:16:43] >  Running Small and Shear Movers
+[19:16:43] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 17
+[19:16:56] >  Iteration #  3 Score           -->   363.60845
+[19:16:56] >  Beginning Loop #  4/30
+[19:16:56] >  Running Small and Shear Movers
+[19:16:56] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 16
+[19:17:10] >  Iteration #  4 Score           -->   363.60845
+[19:17:10] >  Beginning Loop #  5/30
+[19:17:10] >  Running Small and Shear Movers
+[19:17:10] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 15
+[19:17:24] >  Iteration #  5 Score           -->   363.60845
+[19:17:24] >  Beginning Loop #  6/30
+[19:17:24] >  Running Small and Shear Movers
+[19:17:24] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 14
+[19:17:39] >  Iteration #  6 Score           -->   363.60845
+[19:17:39] >  Beginning Loop #  7/30
+[19:17:39] >  Running Small and Shear Movers
+[19:17:39] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 13
+[19:17:55] >  Iteration #  7 Score           -->   363.60845
+[19:17:55] >  Beginning Loop #  8/30
+[19:17:55] >  Running Small and Shear Movers
+[19:17:55] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 12
+[19:18:10] >  Iteration #  8 Score           -->   357.67526
+[19:18:10] >  Beginning Loop #  9/30
+[19:18:11] >  Running Small and Shear Movers
+[19:18:11] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 11
+[19:18:26] >  Iteration #  9 Score           -->   357.67526
+[19:18:26] >  Beginning Loop # 10/30
+[19:18:26] >  Running Small and Shear Movers
+[19:18:26] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 10
+[19:18:43] >  Iteration # 10 Score           -->   353.15349
+[19:18:43] >  Beginning Loop # 11/30
+[19:18:43] >  Running Small and Shear Movers
+[19:18:43] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  9
+[19:18:59] >  Iteration # 11 Score           -->   353.15349
+[19:18:59] >  Beginning Loop # 12/30
+[19:18:59] >  Running Small and Shear Movers
+[19:18:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  8
+[19:19:14] >  Iteration # 12 Score           -->   340.83844
+[19:19:14] >  Beginning Loop # 13/30
+[19:19:14] >  Running Small and Shear Movers
+[19:19:14] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  7
+[19:19:29] >  Iteration # 13 Score           -->   340.83844
+[19:19:29] >  Beginning Loop # 14/30
+[19:19:29] >  Running Small and Shear Movers
+[19:19:29] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  6
+[19:19:47] >  Iteration # 14 Score           -->   340.83844
+[19:19:47] >  Beginning Loop # 15/30
+[19:19:47] >  Running Small and Shear Movers
+[19:19:47] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  5
+[19:20:03] >  Iteration # 15 Score           -->   340.83844
+[19:20:03] >  Beginning Loop # 16/30
+[19:20:03] >  Running Small and Shear Movers
+[19:20:03] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4
+[19:20:20] >  Iteration # 16 Score           -->   301.95602
+[19:20:20] >  Beginning Loop # 17/30
+[19:20:20] >  Running Small and Shear Movers
+[19:20:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  3
+[19:20:36] >  Iteration # 17 Score           -->   321.60290
+[19:20:36] >  Beginning Loop # 18/30
+[19:20:36] >  Running Small and Shear Movers
+[19:20:36] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  2
+[19:20:52] >  Iteration # 18 Score           -->   300.23466
+[19:20:52] >  Beginning Loop # 19/30
+[19:20:52] >  Running Small and Shear Movers
+[19:20:52] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  1
+[19:21:07] >  Iteration # 19 Score           -->   203.53756
+[19:21:07] >  Beginning Loop # 20/30
+[19:21:07] >  Running Small and Shear Movers
+[19:21:07] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  0
+[19:21:23] >  Iteration # 20 Score           -->   203.53756
+[19:21:23] >  Beginning Loop # 21/30
+[19:21:23] >  Running Small and Shear Movers
+[19:21:23] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: -1
+[19:21:44] >  Iteration # 21 Score           -->   152.58963
+[19:21:44] >  Beginning Loop # 22/30
+[19:21:44] >  Running Small and Shear Movers
+[19:21:44] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -2
+[19:22:06] >  Iteration # 22 Score           -->   122.22868
+[19:22:06] >  Beginning Loop # 23/30
+[19:22:06] >  Running Small and Shear Movers
+[19:22:06] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -3
+[19:22:27] >  Iteration # 23 Score           -->   103.30461
+[19:22:27] >  Beginning Loop # 24/30
+[19:22:27] >  Running Small and Shear Movers
+[19:22:27] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -4
+[19:22:49] >  Iteration # 24 Score           -->    93.42004
+[19:22:49] >  Beginning Loop # 25/30
+[19:22:49] >  Running Small and Shear Movers
+[19:22:49] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: -5
+[19:23:10] >  Iteration # 25 Score           -->    83.20784
+[19:23:10] >  Beginning Loop # 26/30
+[19:23:10] >  Running Small and Shear Movers
+[19:23:10] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: -6
+[19:23:31] >  Iteration # 26 Score           -->    72.06948
+[19:23:31] >  Beginning Loop # 27/30
+[19:23:31] >  Running Small and Shear Movers
+[19:23:31] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: -7
+[19:23:53] >  Iteration # 27 Score           -->    63.48969
+[19:23:53] >  Beginning Loop # 28/30
+[19:23:53] >  Running Small and Shear Movers
+[19:23:53] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -8
+[19:24:07] >  Iteration # 28 Score           -->    54.89630
+[19:24:07] >  Beginning Loop # 29/30
+[19:24:07] >  Running Small and Shear Movers
+[19:24:07] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -9
+[19:24:21] >  Iteration # 29 Score           -->    46.69830
+[19:24:21] >  Beginning Loop # 30/30
+[19:24:21] >  Running Small and Shear Movers
+[19:24:21] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: -10
+[19:24:35] >  Iteration # 30 Score           -->    38.77353
+[19:24:35] >  Done With Loop
+[19:24:35] >  Original Score                 -->   363.60845
+[19:24:35] >  Fast Score                     -->  -762.59235
+[19:24:35] >  Minimization Score             -->    38.77353
+[19:24:35] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[19:37:43] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:37:43] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:37:44] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:37:46] >  Beginning Small Shear Loop
+[19:37:46] >  Cycles: 25 | kT: 10.0
+[19:37:46] >  Beginning Loop #  1/25
+[19:37:46] >  Running Small and Shear Movers
+[19:37:46] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 19
+[19:37:59] >  Iteration #  1 Score           -->   363.60845
+[19:37:59] >  Beginning Loop #  2/25
+[19:37:59] >  Running Small and Shear Movers
+[19:37:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 18
+[19:38:07] >  Iteration #  2 Score           -->   252.93567
+[19:38:07] >  Beginning Loop #  3/25
+[19:38:07] >  Running Small and Shear Movers
+[19:38:07] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 17
+[19:38:15] >  Iteration #  3 Score           -->   252.93567
+[19:38:15] >  Beginning Loop #  4/25
+[19:38:15] >  Running Small and Shear Movers
+[19:38:15] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 16
+[19:38:22] >  Iteration #  4 Score           -->   218.93398
+[19:38:22] >  Beginning Loop #  5/25
+[19:38:22] >  Running Small and Shear Movers
+[19:38:22] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 15
+[19:38:30] >  Iteration #  5 Score           -->   218.93398
+[19:38:30] >  Beginning Loop #  6/25
+[19:38:30] >  Running Small and Shear Movers
+[19:38:30] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 14
+[19:38:38] >  Iteration #  6 Score           -->   218.93398
+[19:38:38] >  Beginning Loop #  7/25
+[19:38:38] >  Running Small and Shear Movers
+[19:38:38] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 13
+[19:38:46] >  Iteration #  7 Score           -->   218.93398
+[19:38:46] >  Beginning Loop #  8/25
+[19:38:46] >  Running Small and Shear Movers
+[19:38:46] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 12
+[19:38:53] >  Iteration #  8 Score           -->   225.43607
+[19:38:53] >  Beginning Loop #  9/25
+[19:38:53] >  Running Small and Shear Movers
+[19:38:53] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 11
+[19:39:01] >  Iteration #  9 Score           -->   216.65491
+[19:39:01] >  Beginning Loop # 10/25
+[19:39:01] >  Running Small and Shear Movers
+[19:39:01] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 10
+[19:39:09] >  Iteration # 10 Score           -->   216.65491
+[19:39:09] >  Beginning Loop # 11/25
+[19:39:09] >  Running Small and Shear Movers
+[19:39:09] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  9
+[19:39:17] >  Iteration # 11 Score           -->   216.65491
+[19:39:17] >  Beginning Loop # 12/25
+[19:39:17] >  Running Small and Shear Movers
+[19:39:17] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  8
+[19:39:26] >  Iteration # 12 Score           -->   224.16984
+[19:39:26] >  Beginning Loop # 13/25
+[19:39:26] >  Running Small and Shear Movers
+[19:39:26] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  7
+[19:39:35] >  Iteration # 13 Score           -->   214.29220
+[19:39:35] >  Beginning Loop # 14/25
+[19:39:35] >  Running Small and Shear Movers
+[19:39:35] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  6
+[19:39:43] >  Iteration # 14 Score           -->   209.95422
+[19:39:43] >  Beginning Loop # 15/25
+[19:39:43] >  Running Small and Shear Movers
+[19:39:43] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  5
+[19:39:53] >  Iteration # 15 Score           -->   206.06712
+[19:39:53] >  Beginning Loop # 16/25
+[19:39:53] >  Running Small and Shear Movers
+[19:39:53] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  4
+[19:40:02] >  Iteration # 16 Score           -->   203.40477
+[19:40:02] >  Beginning Loop # 17/25
+[19:40:02] >  Running Small and Shear Movers
+[19:40:02] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  3
+[19:40:11] >  Iteration # 17 Score           -->   195.19236
+[19:40:11] >  Beginning Loop # 18/25
+[19:40:11] >  Running Small and Shear Movers
+[19:40:11] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  2
+[19:40:20] >  Iteration # 18 Score           -->   190.41124
+[19:40:20] >  Beginning Loop # 19/25
+[19:40:20] >  Running Small and Shear Movers
+[19:40:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  1
+[19:40:29] >  Iteration # 19 Score           -->   180.88279
+[19:40:29] >  Beginning Loop # 20/25
+[19:40:29] >  Running Small and Shear Movers
+[19:40:29] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:40:39] >  Iteration # 20 Score           -->   180.88279
+[19:40:39] >  Beginning Loop # 21/25
+[19:40:39] >  Running Small and Shear Movers
+[19:40:39] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  0
+[19:40:49] >  Iteration # 21 Score           -->   198.35570
+[19:40:49] >  Beginning Loop # 22/25
+[19:40:49] >  Running Small and Shear Movers
+[19:40:49] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  0
+[19:40:58] >  Iteration # 22 Score           -->   204.68046
+[19:40:58] >  Beginning Loop # 23/25
+[19:40:58] >  Running Small and Shear Movers
+[19:40:58] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:41:07] >  Iteration # 23 Score           -->   215.28464
+[19:41:07] >  Beginning Loop # 24/25
+[19:41:07] >  Running Small and Shear Movers
+[19:41:07] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:41:17] >  Iteration # 24 Score           -->   215.28464
+[19:41:17] >  Beginning Loop # 25/25
+[19:41:17] >  Running Small and Shear Movers
+[19:41:17] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:41:26] >  Iteration # 25 Score           -->   217.51964
+[19:41:26] >  Done With Loop
+[19:41:26] >  Perfoming A Minimization Loop
+[19:41:26] >  Num Repeats:   10 | kT:      5.00
+[19:41:31] >  After 25 Min Cycles Score      -->   212.78931
+[19:41:31] >  Original Score                 -->   363.60845
+[19:41:31] >  Fast Score                     -->  -762.59235
+[19:41:31] >  Minimization Score             -->   212.78931
+[19:41:31] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[19:42:30] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:42:30] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:42:31] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:42:32] >  Beginning Small Shear Loop
+[19:42:32] >  Cycles: 35 | kT: 10.0
+[19:42:32] >  Beginning Loop #  1/35
+[19:42:32] >  Running Small and Shear Movers
+[19:42:32] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 19
+[19:42:43] >  Iteration #  1 Score           -->   188.69764
+[19:42:43] >  Beginning Loop #  2/35
+[19:42:43] >  Running Small and Shear Movers
+[19:42:43] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18
+[19:42:51] >  Iteration #  2 Score           -->   186.71327
+[19:42:51] >  Beginning Loop #  3/35
+[19:42:51] >  Running Small and Shear Movers
+[19:42:51] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 17
+[19:42:59] >  Iteration #  3 Score           -->   186.71327
+[19:42:59] >  Beginning Loop #  4/35
+[19:42:59] >  Running Small and Shear Movers
+[19:42:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 16
+[19:43:10] >  Iteration #  4 Score           -->   186.71327
+[19:43:10] >  Beginning Loop #  5/35
+[19:43:10] >  Running Small and Shear Movers
+[19:43:10] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 15
+[19:43:18] >  Iteration #  5 Score           -->   181.42857
+[19:43:18] >  Beginning Loop #  6/35
+[19:43:18] >  Running Small and Shear Movers
+[19:43:18] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 14
+[19:43:27] >  Iteration #  6 Score           -->   181.42857
+[19:43:27] >  Beginning Loop #  7/35
+[19:43:27] >  Running Small and Shear Movers
+[19:43:27] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 13
+[19:43:35] >  Iteration #  7 Score           -->   190.95424
+[19:43:35] >  Beginning Loop #  8/35
+[19:43:35] >  Running Small and Shear Movers
+[19:43:35] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 12
+[19:43:44] >  Iteration #  8 Score           -->   190.95424
+[19:43:44] >  Beginning Loop #  9/35
+[19:43:44] >  Running Small and Shear Movers
+[19:43:44] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 11
+[19:43:53] >  Iteration #  9 Score           -->   190.95424
+[19:43:53] >  Beginning Loop # 10/35
+[19:43:53] >  Running Small and Shear Movers
+[19:43:53] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 10
+[19:44:04] >  Iteration # 10 Score           -->   190.95424
+[19:44:04] >  Beginning Loop # 11/35
+[19:44:04] >  Running Small and Shear Movers
+[19:44:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  9
+[19:44:12] >  Iteration # 11 Score           -->   167.81823
+[19:44:12] >  Beginning Loop # 12/35
+[19:44:12] >  Running Small and Shear Movers
+[19:44:12] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  8
+[19:44:20] >  Iteration # 12 Score           -->   165.56316
+[19:44:20] >  Beginning Loop # 13/35
+[19:44:20] >  Running Small and Shear Movers
+[19:44:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  7
+[19:44:31] >  Iteration # 13 Score           -->   160.38275
+[19:44:31] >  Beginning Loop # 14/35
+[19:44:31] >  Running Small and Shear Movers
+[19:44:31] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  6
+[19:44:41] >  Iteration # 14 Score           -->   159.42150
+[19:44:41] >  Beginning Loop # 15/35
+[19:44:41] >  Running Small and Shear Movers
+[19:44:41] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  5
+[19:44:52] >  Iteration # 15 Score           -->   164.90074
+[19:44:52] >  Beginning Loop # 16/35
+[19:44:52] >  Running Small and Shear Movers
+[19:44:52] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  4
+[19:45:02] >  Iteration # 16 Score           -->   162.18804
+[19:45:02] >  Beginning Loop # 17/35
+[19:45:02] >  Running Small and Shear Movers
+[19:45:02] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  3
+[19:45:13] >  Iteration # 17 Score           -->   153.34841
+[19:45:13] >  Beginning Loop # 18/35
+[19:45:13] >  Running Small and Shear Movers
+[19:45:13] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  2
+[19:45:23] >  Iteration # 18 Score           -->   149.36791
+[19:45:23] >  Beginning Loop # 19/35
+[19:45:23] >  Running Small and Shear Movers
+[19:45:23] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  1
+[19:45:33] >  Iteration # 19 Score           -->   143.90357
+[19:45:33] >  Beginning Loop # 20/35
+[19:45:33] >  Running Small and Shear Movers
+[19:45:33] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:45:43] >  Iteration # 20 Score           -->   143.90357
+[19:45:43] >  Beginning Loop # 21/35
+[19:45:44] >  Running Small and Shear Movers
+[19:45:44] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:45:54] >  Iteration # 21 Score           -->   143.90357
+[19:45:54] >  Beginning Loop # 22/35
+[19:45:54] >  Running Small and Shear Movers
+[19:45:54] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  0
+[19:46:04] >  Iteration # 22 Score           -->   170.85373
+[19:46:04] >  Beginning Loop # 23/35
+[19:46:04] >  Running Small and Shear Movers
+[19:46:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  0
+[19:46:14] >  Iteration # 23 Score           -->   170.85373
+[19:46:14] >  Beginning Loop # 24/35
+[19:46:14] >  Running Small and Shear Movers
+[19:46:14] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  0
+[19:46:24] >  Iteration # 24 Score           -->   170.85373
+[19:46:24] >  Beginning Loop # 25/35
+[19:46:24] >  Running Small and Shear Movers
+[19:46:24] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  0
+[19:46:34] >  Iteration # 25 Score           -->   164.39702
+[19:46:34] >  Beginning Loop # 26/35
+[19:46:34] >  Running Small and Shear Movers
+[19:46:34] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:46:44] >  Iteration # 26 Score           -->   164.39702
+[19:46:44] >  Beginning Loop # 27/35
+[19:46:44] >  Running Small and Shear Movers
+[19:46:44] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:46:54] >  Iteration # 27 Score           -->   164.39702
+[19:46:54] >  Beginning Loop # 28/35
+[19:46:54] >  Running Small and Shear Movers
+[19:46:54] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:47:04] >  Iteration # 28 Score           -->   164.39702
+[19:47:04] >  Beginning Loop # 29/35
+[19:47:04] >  Running Small and Shear Movers
+[19:47:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  0
+[19:47:15] >  Iteration # 29 Score           -->   164.39702
+[19:47:15] >  Beginning Loop # 30/35
+[19:47:15] >  Running Small and Shear Movers
+[19:47:15] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  0
+[19:47:25] >  Iteration # 30 Score           -->   164.39702
+[19:47:25] >  Beginning Loop # 31/35
+[19:47:25] >  Running Small and Shear Movers
+[19:47:25] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  0
+[19:47:36] >  Iteration # 31 Score           -->   164.39702
+[19:47:36] >  Beginning Loop # 32/35
+[19:47:36] >  Running Small and Shear Movers
+[19:47:36] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  0
+[19:47:48] >  Iteration # 32 Score           -->   164.39702
+[19:47:48] >  Beginning Loop # 33/35
+[19:47:48] >  Running Small and Shear Movers
+[19:47:48] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:48:04] >  Iteration # 33 Score           -->   164.39702
+[19:48:04] >  Beginning Loop # 34/35
+[19:48:04] >  Running Small and Shear Movers
+[19:48:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:48:21] >  Iteration # 34 Score           -->   164.39702
+[19:48:21] >  Beginning Loop # 35/35
+[19:48:21] >  Running Small and Shear Movers
+[19:48:21] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  0
+[19:48:34] >  Iteration # 35 Score           -->   164.39702
+[19:48:34] >  Done With Loop
+[19:48:34] >  Perfoming A Minimization Loop
+[19:48:34] >  Num Repeats:  200 | kT:      5.00
+[19:50:23] >  After 200 Min Cycles Score     -->   139.56515
+[19:50:24] >  Original Score                 -->   363.60845
+[19:50:24] >  Fast Score                     -->  -762.59235
+[19:50:24] >  Minimization Score             -->   139.56515
+[19:50:24] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[19:53:57] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[19:53:57] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[19:53:58] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[19:53:59] >  Beginning Small Shear Loop
+[19:53:59] >  Cycles: 35 | kT: 10.0
+[19:53:59] >  Beginning Loop #  1/35
+[19:53:59] >  Running Small and Shear Movers
+[19:53:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 19.3
+[19:54:11] >  Iteration #  1 Score           -->   238.89288
+[19:54:11] >  Beginning Loop #  2/35
+[19:54:11] >  Running Small and Shear Movers
+[19:54:11] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.7
+[19:54:20] >  Iteration #  2 Score           -->   252.08345
+[19:54:20] >  Beginning Loop #  3/35
+[19:54:20] >  Running Small and Shear Movers
+[19:54:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[19:54:29] >  Iteration #  3 Score           -->   251.74801
+[19:54:29] >  Beginning Loop #  4/35
+[19:54:29] >  Running Small and Shear Movers
+[19:54:29] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 17.3
+[19:54:37] >  Iteration #  4 Score           -->   251.74801
+[19:54:37] >  Beginning Loop #  5/35
+[19:54:37] >  Running Small and Shear Movers
+[19:54:37] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 16.7
+[19:54:46] >  Iteration #  5 Score           -->   251.74801
+[19:54:46] >  Beginning Loop #  6/35
+[19:54:46] >  Running Small and Shear Movers
+[19:54:46] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 16.0
+[19:54:55] >  Iteration #  6 Score           -->   207.81168
+[19:54:55] >  Beginning Loop #  7/35
+[19:54:55] >  Running Small and Shear Movers
+[19:54:55] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 15.3
+[19:55:03] >  Iteration #  7 Score           -->   207.81168
+[19:55:03] >  Beginning Loop #  8/35
+[19:55:03] >  Running Small and Shear Movers
+[19:55:03] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 14.7
+[19:55:12] >  Iteration #  8 Score           -->   207.81168
+[19:55:12] >  Beginning Loop #  9/35
+[19:55:12] >  Running Small and Shear Movers
+[19:55:12] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 14.0
+[19:55:21] >  Iteration #  9 Score           -->   207.81168
+[19:55:21] >  Beginning Loop # 10/35
+[19:55:21] >  Running Small and Shear Movers
+[19:55:21] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 13.3
+[19:55:30] >  Iteration # 10 Score           -->   207.81168
+[19:55:30] >  Beginning Loop # 11/35
+[19:55:30] >  Running Small and Shear Movers
+[19:55:30] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 12.7
+[19:55:39] >  Iteration # 11 Score           -->   213.60560
+[19:55:39] >  Beginning Loop # 12/35
+[19:55:39] >  Running Small and Shear Movers
+[19:55:39] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 12.0
+[19:55:47] >  Iteration # 12 Score           -->   212.04103
+[19:55:47] >  Beginning Loop # 13/35
+[19:55:47] >  Running Small and Shear Movers
+[19:55:47] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 11.3
+[19:55:57] >  Iteration # 13 Score           -->   212.04103
+[19:55:57] >  Beginning Loop # 14/35
+[19:55:57] >  Running Small and Shear Movers
+[19:55:57] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng: 10.7
+[19:56:06] >  Iteration # 14 Score           -->   212.04103
+[19:56:06] >  Beginning Loop # 15/35
+[19:56:06] >  Running Small and Shear Movers
+[19:56:06] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 10.0
+[19:56:14] >  Iteration # 15 Score           -->   211.86468
+[19:56:14] >  Beginning Loop # 16/35
+[19:56:15] >  Running Small and Shear Movers
+[19:56:15] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  9.3
+[19:56:23] >  Iteration # 16 Score           -->   208.08755
+[19:56:23] >  Beginning Loop # 17/35
+[19:56:23] >  Running Small and Shear Movers
+[19:56:23] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  8.7
+[19:56:32] >  Iteration # 17 Score           -->   199.28621
+[19:56:32] >  Beginning Loop # 18/35
+[19:56:32] >  Running Small and Shear Movers
+[19:56:32] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  8.0
+[19:56:41] >  Iteration # 18 Score           -->   205.86954
+[19:56:41] >  Beginning Loop # 19/35
+[19:56:41] >  Running Small and Shear Movers
+[19:56:41] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  7.3
+[19:56:50] >  Iteration # 19 Score           -->   193.21478
+[19:56:50] >  Beginning Loop # 20/35
+[19:56:50] >  Running Small and Shear Movers
+[19:56:50] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  6.7
+[19:57:00] >  Iteration # 20 Score           -->   193.21478
+[19:57:00] >  Beginning Loop # 21/35
+[19:57:00] >  Running Small and Shear Movers
+[19:57:00] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  6.0
+[19:57:09] >  Iteration # 21 Score           -->   193.21478
+[19:57:09] >  Beginning Loop # 22/35
+[19:57:09] >  Running Small and Shear Movers
+[19:57:09] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  5.3
+[19:57:20] >  Iteration # 22 Score           -->   193.21478
+[19:57:20] >  Beginning Loop # 23/35
+[19:57:20] >  Running Small and Shear Movers
+[19:57:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  4.7
+[19:57:29] >  Iteration # 23 Score           -->   193.21478
+[19:57:29] >  Beginning Loop # 24/35
+[19:57:29] >  Running Small and Shear Movers
+[19:57:29] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  4.7
+[19:57:40] >  Iteration # 24 Score           -->   193.21478
+[19:57:40] >  Beginning Loop # 25/35
+[19:57:40] >  Running Small and Shear Movers
+[19:57:40] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  4.7
+[19:57:49] >  Iteration # 25 Score           -->   193.21478
+[19:57:49] >  Beginning Loop # 26/35
+[19:57:49] >  Running Small and Shear Movers
+[19:57:49] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:57:59] >  Iteration # 26 Score           -->   191.41132
+[19:57:59] >  Beginning Loop # 27/35
+[19:57:59] >  Running Small and Shear Movers
+[19:57:59] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:58:08] >  Iteration # 27 Score           -->   189.91277
+[19:58:08] >  Beginning Loop # 28/35
+[19:58:08] >  Running Small and Shear Movers
+[19:58:08] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:58:19] >  Iteration # 28 Score           -->   189.91277
+[19:58:19] >  Beginning Loop # 29/35
+[19:58:19] >  Running Small and Shear Movers
+[19:58:19] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng:  4.7
+[19:58:30] >  Iteration # 29 Score           -->   182.03898
+[19:58:30] >  Beginning Loop # 30/35
+[19:58:30] >  Running Small and Shear Movers
+[19:58:30] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  4.7
+[19:58:41] >  Iteration # 30 Score           -->   182.03898
+[19:58:41] >  Beginning Loop # 31/35
+[19:58:41] >  Running Small and Shear Movers
+[19:58:41] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng:  4.7
+[19:58:52] >  Iteration # 31 Score           -->   182.03898
+[19:58:52] >  Beginning Loop # 32/35
+[19:58:52] >  Running Small and Shear Movers
+[19:58:52] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng:  4.7
+[19:59:03] >  Iteration # 32 Score           -->   187.31800
+[19:59:03] >  Beginning Loop # 33/35
+[19:59:03] >  Running Small and Shear Movers
+[19:59:03] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:59:14] >  Iteration # 33 Score           -->   188.41946
+[19:59:14] >  Beginning Loop # 34/35
+[19:59:14] >  Running Small and Shear Movers
+[19:59:14] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:59:25] >  Iteration # 34 Score           -->   188.41946
+[19:59:25] >  Beginning Loop # 35/35
+[19:59:25] >  Running Small and Shear Movers
+[19:59:25] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.7
+[19:59:36] >  Iteration # 35 Score           -->   186.25264
+[19:59:36] >  Done With Loop
+[19:59:36] >  Perfoming A Minimization Loop
+[19:59:36] >  Num Repeats:  200 | kT:      5.00
+[20:01:20] >  After 200 Min Cycles Score     -->   158.74245
+[20:01:20] >  
+[20:01:20] >  Original Score                 -->   363.60845
+[20:01:20] >  Fast Score                     -->  -762.59235
+[20:01:20] >  Minimization Score             -->   158.74245
+[20:01:20] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[20:04:50] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[20:04:50] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[20:04:51] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[20:04:52] >  Beginning Small/Shear Anneal Loop
+
+
+[20:05:06] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[20:05:06] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[20:05:07] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[20:05:08] >  Beginning Small/Shear Anneal Loop
+[20:05:08] >  Cycles: 40 | kT: 10.0
+[20:05:08] >  Beginning Loop #  1/40
+[20:05:08] >  Running Small and Shear Movers
+[20:05:08] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 20.0
+[20:05:22] >  Iteration #  1 Score           -->   363.60845
+[20:05:22] >  Beginning Loop #  2/40
+[20:05:22] >  Running Small and Shear Movers
+[20:05:22] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:05:32] >  Iteration #  2 Score           -->   263.87499
+[20:05:32] >  Beginning Loop #  3/40
+[20:05:32] >  Running Small and Shear Movers
+[20:05:32] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:05:40] >  Iteration #  3 Score           -->   215.18295
+[20:05:40] >  Beginning Loop #  4/40
+[20:05:40] >  Running Small and Shear Movers
+[20:05:40] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 10.0
+[20:05:48] >  Iteration #  4 Score           -->   205.60752
+[20:05:48] >  Beginning Loop #  5/40
+[20:05:48] >  Running Small and Shear Movers
+[20:05:48] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:05:56] >  Iteration #  5 Score           -->   170.42442
+[20:05:56] >  Beginning Loop #  6/40
+[20:05:56] >  Running Small and Shear Movers
+[20:05:56] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:06:04] >  Iteration #  6 Score           -->   138.72519
+[20:06:04] >  Beginning Loop #  7/40
+[20:06:04] >  Running Small and Shear Movers
+[20:06:04] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:06:14] >  Iteration #  7 Score           -->   141.54053
+[20:06:14] >  Beginning Loop #  8/40
+[20:06:14] >  Running Small and Shear Movers
+[20:06:14] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:06:23] >  Iteration #  8 Score           -->   138.15950
+[20:06:23] >  Beginning Loop #  9/40
+[20:06:23] >  Running Small and Shear Movers
+[20:06:23] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 20.0
+[20:06:32] >  Iteration #  9 Score           -->   138.15950
+[20:06:32] >  Beginning Loop # 10/40
+[20:06:32] >  Running Small and Shear Movers
+[20:06:32] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:06:40] >  Iteration # 10 Score           -->   138.15950
+[20:06:40] >  Beginning Loop # 11/40
+[20:06:40] >  Running Small and Shear Movers
+[20:06:40] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:06:48] >  Iteration # 11 Score           -->   138.15950
+[20:06:48] >  Beginning Loop # 12/40
+[20:06:48] >  Running Small and Shear Movers
+[20:06:48] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 10.0
+[20:06:57] >  Iteration # 12 Score           -->   138.15950
+[20:06:57] >  Beginning Loop # 13/40
+[20:06:57] >  Running Small and Shear Movers
+[20:06:57] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:07:06] >  Iteration # 13 Score           -->   138.15950
+[20:07:06] >  Beginning Loop # 14/40
+[20:07:06] >  Running Small and Shear Movers
+[20:07:06] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:07:14] >  Iteration # 14 Score           -->   128.72431
+[20:07:14] >  Beginning Loop # 15/40
+[20:07:14] >  Running Small and Shear Movers
+[20:07:14] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:07:24] >  Iteration # 15 Score           -->   128.72431
+[20:07:24] >  Beginning Loop # 16/40
+[20:07:24] >  Running Small and Shear Movers
+[20:07:24] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:07:34] >  Iteration # 16 Score           -->   133.95108
+[20:07:34] >  Beginning Loop # 17/40
+[20:07:34] >  Running Small and Shear Movers
+[20:07:34] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 20.0
+[20:07:42] >  Iteration # 17 Score           -->   133.95108
+[20:07:42] >  Beginning Loop # 18/40
+[20:07:42] >  Running Small and Shear Movers
+[20:07:42] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:07:50] >  Iteration # 18 Score           -->   133.95108
+[20:07:50] >  Beginning Loop # 19/40
+[20:07:50] >  Running Small and Shear Movers
+[20:07:50] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:07:57] >  Iteration # 19 Score           -->   133.95108
+[20:07:57] >  Beginning Loop # 20/40
+[20:07:57] >  Running Small and Shear Movers
+[20:07:57] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 10.0
+[20:08:06] >  Iteration # 20 Score           -->   133.95108
+[20:08:06] >  Beginning Loop # 21/40
+[20:08:06] >  Running Small and Shear Movers
+[20:08:06] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:08:16] >  Iteration # 21 Score           -->   133.95108
+[20:08:16] >  Beginning Loop # 22/40
+[20:08:16] >  Running Small and Shear Movers
+[20:08:16] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:08:26] >  Iteration # 22 Score           -->   146.82253
+[20:08:26] >  Beginning Loop # 23/40
+[20:08:26] >  Running Small and Shear Movers
+[20:08:26] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:08:36] >  Iteration # 23 Score           -->   135.84103
+[20:08:36] >  Beginning Loop # 24/40
+[20:08:36] >  Running Small and Shear Movers
+[20:08:36] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:08:45] >  Iteration # 24 Score           -->   142.73782
+[20:08:45] >  Beginning Loop # 25/40
+[20:08:45] >  Running Small and Shear Movers
+[20:08:45] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 20.0
+[20:08:54] >  Iteration # 25 Score           -->   142.73782
+[20:08:54] >  Beginning Loop # 26/40
+[20:08:54] >  Running Small and Shear Movers
+[20:08:54] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:09:02] >  Iteration # 26 Score           -->   142.73782
+[20:09:02] >  Beginning Loop # 27/40
+[20:09:02] >  Running Small and Shear Movers
+[20:09:02] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:09:11] >  Iteration # 27 Score           -->   142.73782
+[20:09:11] >  Beginning Loop # 28/40
+[20:09:11] >  Running Small and Shear Movers
+[20:09:11] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 10.0
+[20:09:20] >  Iteration # 28 Score           -->   142.73782
+[20:09:20] >  Beginning Loop # 29/40
+[20:09:20] >  Running Small and Shear Movers
+[20:09:20] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:09:30] >  Iteration # 29 Score           -->   143.88635
+[20:09:30] >  Beginning Loop # 30/40
+[20:09:30] >  Running Small and Shear Movers
+[20:09:30] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:09:40] >  Iteration # 30 Score           -->   143.88635
+[20:09:40] >  Beginning Loop # 31/40
+[20:09:40] >  Running Small and Shear Movers
+[20:09:40] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:09:51] >  Iteration # 31 Score           -->   147.54275
+[20:09:51] >  Beginning Loop # 32/40
+[20:09:51] >  Running Small and Shear Movers
+[20:09:51] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:10:01] >  Iteration # 32 Score           -->   151.02432
+[20:10:01] >  Beginning Loop # 33/40
+[20:10:01] >  Running Small and Shear Movers
+[20:10:01] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:   1000.00 | Angl Rng: 20.0
+[20:10:09] >  Iteration # 33 Score           -->   151.02432
+[20:10:09] >  Beginning Loop # 34/40
+[20:10:09] >  Running Small and Shear Movers
+[20:10:09] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:10:17] >  Iteration # 34 Score           -->   151.02432
+[20:10:17] >  Beginning Loop # 35/40
+[20:10:17] >  Running Small and Shear Movers
+[20:10:17] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    800.00 | Angl Rng: 18.0
+[20:10:26] >  Iteration # 35 Score           -->   151.02432
+[20:10:26] >  Beginning Loop # 36/40
+[20:10:26] >  Running Small and Shear Movers
+[20:10:26] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:    500.00 | Angl Rng: 10.0
+[20:10:34] >  Iteration # 36 Score           -->   157.01414
+[20:10:34] >  Beginning Loop # 37/40
+[20:10:34] >  Running Small and Shear Movers
+[20:10:34] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:10:43] >  Iteration # 37 Score           -->   156.90594
+[20:10:43] >  Beginning Loop # 38/40
+[20:10:43] >  Running Small and Shear Movers
+[20:10:43] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:10:52] >  Iteration # 38 Score           -->   150.15199
+[20:10:52] >  Beginning Loop # 39/40
+[20:10:52] >  Running Small and Shear Movers
+[20:10:52] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:11:02] >  Iteration # 39 Score           -->   146.72543
+[20:11:02] >  Beginning Loop # 40/40
+[20:11:02] >  Running Small and Shear Movers
+[20:11:02] >  Num Repeats:   10 | Num Sml/Shr Moves:    5 | kT:     20.00 | Angl Rng:  4.0
+[20:11:11] >  Iteration # 40 Score           -->   146.72543
+[20:11:11] >  Done With Loop
+[20:11:11] >  Perfoming A Minimization Loop
+[20:11:11] >  Num Repeats:  200 | kT:      5.00
+[20:12:38] >  After 200 Min Cycles Score     -->   130.11831
+[20:12:38] >  
+[20:12:39] >  Original Score                 -->   363.60845
+[20:12:39] >  Fast Score                     -->  -762.59235
+[20:12:39] >  Minimization Score             -->   130.11831
+[20:12:39] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

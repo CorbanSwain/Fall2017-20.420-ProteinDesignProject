@@ -199,7 +199,7 @@ def main():
     n_moves = 5
 
     dprint('Beginning Small/Shear Anneal Loop')
-    n1 = len(kT1) * 5
+    n1 = len(kT1s) * 5
     log('Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
     for i in range(n1):
         dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
