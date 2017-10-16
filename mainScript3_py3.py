@@ -1,4 +1,4 @@
-#!/usr/bin python3
+#!/usr/local/bin python3.6
 # mainScript3_py3.py
 
 # from datetime import datetime
@@ -146,86 +146,121 @@ def fastRelax(pose,scorefxn=defaultScorefxn):
     fast_relax.set_scorefxn(scorefxn) 
     fast_relax.apply(pose)
 
-def minMove(pose,\
-            scorefxn=defaultScorefxn,\
-            repeats=10,
-            kT=1):
-    dprint('Perfoming A Minimization Loop')
-    log(' `--> Num Repeats: {:4d} | kT: {:9.2f}'.\
-        format(repeats,kT))
-    movemap = MoveMap()
-    movemap.set_bb(True)
-    
-    min_mv = MinMover()
-    min_mv.movemap(movemap)
-    min_mv.score_function(scorefxn)
+class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
+    scorefxn = defaultScorefxn
+    def __init__(self):
+        pass
+    def __str__(self):
+        return 'A Custom Mover'
+    def get_name(self):
+        return self.__class__.__name__
 
-    mc = MonteCarlo(pose,scorefxn,kT)
+class RepMinMover(CustomMover):
+    def __init__(self,repeats=10,kT=1.0):
+        self.repeats = repeats
+        self.kT = kT
+        
+    def apply(self,pose):
+        dprint('Perfoming A Minimization Loop')
+        log(' `--> Num Repeats: {:4d} | kT: {:9.2f}'.\
+            format(self.repeats,self.kT))
+        movemap = MoveMap()
+        movemap.set_bb(True)
+        min_mv = MinMover()
+        min_mv.movemap(movemap)
+        min_mv.score_function(self.scorefxn)
+        mc = MonteCarlo(pose,self.scorefxn,self.kT)
+        trial_mv = TrialMover(min_mv,mc)
+        rep_mv = RepeatMover(trial_mv,self.repeats)
+        rep_mv.apply(pose)   
 
-    trial_mv = TrialMover(min_mv,mc)
-    rep_mv = RepeatMover(trial_mv,repeats)
+class SmallShearMover(CustomMover):
+    def __init__(self,\
+                 repeats=50,\
+                 n_moves=5,\
+                 kT=1.0,\
+                 angle=None):
+        self.repeats = repeats
+        self.n_moves = n_moves
+        self.kT = kT
+        self.angle = angle
 
-    rep_mv.apply(pose)   
-    
-def smallNShearMove(pose,\
-                    repeats=50,\
-                    n_moves=5,\
-                    kT=1.0,\
-                    angle=0):
-    dprint('Running Small and Shear Movers'.format(repeats))
-    log(' `--> Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | kT: {:9.2f} | Angl Rng: {:4.1f}'.\
-        format(repeats,n_moves,kT,angle))
-    movemap = MoveMap()
-    movemap.set_bb(True)
+    def __str__(self):
+        return ('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | '
+                'kT: {:9.2f} | Angl Rng: {:4.1f}').\
+                format(self.repeats,self.n_moves,self.kT,self.angle)
+        
+    def apply(self, pose):
+        dprint('Running Small and Shear Movers'.format(repeats))
+        log(' `--> {}'.format(str(self)))
+        movemap = MoveMap()
+        movemap.set_bb(True)
 
-    min_mv = MinMover()
-    min_mv.movemap(movemap)
-    min_mv.score_function(defaultScorefxn)
+        min_mv = MinMover()
+        min_mv.movemap(movemap)
+        min_mv.score_function(self.scorefxn)
 
-    small_mv = SmallMover(movemap, kT, n_moves)
-    shear_mv = ShearMover(movemap, kT, n_moves)
-    if angle:
-        small_mv.angle_max('E', angle)
-        small_mv.angle_max('L', angle)
-        shear_mv.angle_max('E', angle)
-        shear_mv.angle_max('L', angle)
+        small_mv = SmallMover(movemap, self.kT, self.n_moves)
+        shear_mv = ShearMover(movemap, self.kT, self.n_moves)
+        if self.angle is not None:
+            small_mv.angle_max('E', self.angle)
+            small_mv.angle_max('L', self.angle)
+            shear_mv.angle_max('E', self.angle)
+            shear_mv.angle_max('L', self.angle)
 
-    mc = MonteCarlo(pose, scorefxn, kT)
+        mc = MonteCarlo(pose, scorefxn, self.kT)
 
-    seq_mv = SequenceMover()
-    seq_mv.add_mover(small_mv)
-    seq_mv.add_mover(min_mv)
-    seq_mv.add_mover(shear_mv)
-    seq_mv.add_mover(min_mv)
+        seq_mv = SequenceMover()
+        seq_mv.add_mover(small_mv)
+        seq_mv.add_mover(min_mv)
+        seq_mv.add_mover(shear_mv)
+        seq_mv.add_mover(min_mv)
 
-    trial_mv = TrialMover(seq_mv, mc)
-    rep_mv = RepeatMover(trial_mv, repeats)
+        trial_mv = TrialMover(seq_mv, mc)
+        rep_mv = RepeatMover(trial_mv, self.repeats)
 
-    rep_mv.apply(pose)
+        rep_mv.apply(pose)
 
-def smallNShearAnnealLoop(pose,cycles,kT1):
-    angles = [5, 3, 3, 2] + [0.5,] * 4
-    kT2s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
-    annealTime = len(angles)
-    seqRepeats = 5
-    numSmallShearRepeats = 5
-    n1 = len(kT2s) * annealCycles
-    
-    dprint('Beginning Small/Shear Anneal Loop')
+class AnnealLoopMover(CustomMover):
+    def __init__(self,cycles=2,kT=10,heat_time=3,
+                 anneal_time=4,angle_max=4.0,kT_max=100.0):
+        self.cycles = cycles
+        self.kT = kT
+        self.heat_time = heat_time
+        self.anneal_time = anneal_time
+        self.angle_max = angle_mac
+        self.kT_max = kT_max
 
-    log(' `--> Cycles: {:2d} | kT: {:3.1f}'.format(n1,kT2))
-    for i in range(n1):
-        dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
-        mc = MonteCarlo(pose, defaultScorefxn, kT1)
-        ind = i % annealTime
-        angle = angles[ind]
-        kT2 = kT2s[ind]
-        smallNShearMove(pose,\
-                        angle=angle, kT=kT2,\
-                        repeats=seqRepeats, n_moves=numSmallShearRepeats)
-        mc.boltzmann(pose)
-        printScore(pose,'Iteration # {:2d}'.format(i+1))
-    
+    def __str__(self):
+        return ('Cycles: {:2d} | kT: {:3.1f} | '
+                'Heat Time: {:2d} | Anneal Time: {:2d} | '
+                'Max Angle: {:4.1f} | Max kT: {:6.1f}').\
+                format(self.cycles, self.kT,
+                       self.heat_time, self.anneal_time,
+                       self.angle_max, self.kT_max)
+        
+    def apply(self,pose):
+        angles = [5, 3, 3, 2] + [0.5,] * 4
+        kT2s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
+        annealTime = len(angles)
+        seqRepeats = 5
+        numSmallShearRepeats = 5
+        n1 = len(kT2s) * annealCycles
+
+        dprint('Beginning Anneal Loop')
+        log(' `--> {}'.format(str(self)))
+        for i in range(n1):
+            dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
+            mc = MonteCarlo(pose, defaultScorefxn, kT1)
+            ind = i % annealTime
+            angle = angles[ind]
+            kT2 = kT2s[ind]
+            ss_mv = SmallShearMover(seqRepeats,numSmallShearRepeats,kT,angle)
+            ss_mv.apply(pose)
+            mc.boltzmann(pose)
+            printScore(pose,'Iteration # {:2d}'.format(i+1))
+
+            
 def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
@@ -240,14 +275,16 @@ def mutateResfile(pose,\
                   namein=proteinName,\
                   residues=pocketResNums,\
                   liberal=False):
-    fext = 'resfile'
-    with open('.'.join([namein, fext])) as rfile:
-        text = rfile.read()
+    fExt = 'resfile'
+    with open('.'.join([namein, fExt])) as rFile:
+        text = rFile.read()
 
     if liberal: mutDict = liberalMutMap
     else: mutDict = conservMutMap
-    reg = r'(?P<num>{})(?P<chain>\s+\w\s+)(?P<cmds>\w+)'.\
-          format('|'.join(['{:3d}'.format(r) for r in residues]))
+    pipedRes = '|'.join( ['{:3d}'.format(r) for r in residues])
+    reg = (r'(?P<num>{})'
+           '(?P<chain>\s+\w\s+)'
+           '(?P<cmds>\w+)').format(pipedRes)
     def subFun(m):
         num = int(m.group('num').strip())
         chain = m.group('chain').strip()
@@ -256,11 +293,26 @@ def mutateResfile(pose,\
         mutRes = mutDict[aa]
         return '{:3d}  {}  PIKAA {}'.format(num,chain,''.join(mutRes))
          
-    new_text = re.sub(reg,subFun,text)
+    newText = re.sub(reg,subFun,text)
     fnameOut = '.'.join(['{}_{}'.format(namein, nameout), fext]) 
-    with open(fnameOut, 'w+') as new_rfile:
-        new_rfile.write(new_text)
+    with open(fnameOut, 'w+') as newResfile:
+        newResfile.write(newText)
+    log('Creating {} to mutating residues #\'s {}'.format(fnameOut,pipedRes))
     return fnameOut
+
+def mutationLoop():
+    # Randomly sample 4 residues from the pocket residues
+    # 6 times, so all that  pocket residues are used once
+    # ^ do this n1 times
+    # Create n1*6 Decoys
+    # for each decoy create a mover that:
+    #   1. mutates the specified residues with resfile
+    #   1. minimize
+    #   1. repack rotomers for all pocket residues
+    #   1. minimize
+    #   1. do small/shear anneal loop
+    #   1. minimize
+    # apply each specific mover to its decoy
 
 def main():
     logBegin()
