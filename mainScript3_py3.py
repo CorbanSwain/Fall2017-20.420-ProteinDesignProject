@@ -1,17 +1,20 @@
 #!/usr/local/bin python3.6
 # mainScript3_py3.py
-
-# from datetime import datetime
-from pyrosetta import *
-from datetime import datetime
-from pyrosetta.toolbox import generate_resfile_from_pose
-from pyrosetta.rosetta.protocols.simple_moves import *
-from pyrosetta.rosetta.protocols.relax import FastRelax
-from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
+v
 import os
 import re
 import random
 import pprint
+from datetime import datetime
+
+from pyrosetta import *
+from pyrosetta.toolbox import generate_resfile_from_pose
+from pyrosetta.rosetta.protocols.simple_moves import *
+from pyrosetta.rosetta.protocols.relax import FastRelax
+from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
+from pyrosetta.rosetta.core.pack.task.TaskFactory import create_packer_task
+from pyrosetta.rosetta.core.pack.task import parse_resfile
+
 
 def madeGlobal(varName):
     return varName in globals()
@@ -288,7 +291,17 @@ class AnnealLoopMover(CustomMover):
             ss_mv.apply(pose)
             mc.boltzmann(pose)
             printScore(pose,'Iteration # {:2d}'.format(i+1))
-           
+class MutantPackMover(CustomMover):
+
+
+    def __init__(self):
+        self.resfile = None
+        pass
+
+    def apply(self,pose):
+        task = 
+
+            
 def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
@@ -301,12 +314,12 @@ class ResfileBuilder:
     chain = 'A'
     line_fmt = '{:3d}  {}  {}\n'
     
-    def __init__(self,filename,pose):
-        self.filename = filename
+    def __init__(self):
+        self.filename = []
         self.packable_residues = []
         self.mutable_residues = []
         self.mut_liberal = False
-        self.pose = pose
+        self.pose = []
         mkDir(self.resfile_dir)
 
     def getMutDict(self):
@@ -357,6 +370,7 @@ def mutationLoop():
     # Randomly sample 4 residues from the pocket residues
     # 6 times, so all that  pocket residues are used once
     # ^ do this n1 times
+    pose = Pose()
     resPerDecoy = 4
     rand_samples = []
     n1 = 2
@@ -366,6 +380,15 @@ def mutationLoop():
             smp, remaining_res = rand_sample(resPerDecoy,remaining_res)
             rand_samples.append(smp)
 
+    r_builder = ResfileBuilder()
+    mut_files = []
+    for sample in rand_sample:
+        r_builder.mutable_residues = sample
+        r_builder.filename = 'MUT_{}'.format('-'.join([str(i) for i in sample]))
+        mut_files.append(r_builder.filename)
+        r_builder.pose = pose
+        r_builder.build()
+        
     # Create n1*6 Decoys
     ndecoys = len(rand_samples)
     mkDir('Decoys')
@@ -373,7 +396,10 @@ def mutationLoop():
     file_template.format(now(1))
     jd = PyJobDistributor(file_template,ndecoys,defaultScorefxn)
     while not jd.job_complete:
-        pose.
+        new_pose.assign(pose)
+        # Mover
+        jd.output_decoy(pose)
+        
     # for each decoy create a mover that:
     #   1. mutates the specified residues with resfile
     #   1. minimize
