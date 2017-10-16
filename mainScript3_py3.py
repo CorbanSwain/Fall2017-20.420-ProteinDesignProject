@@ -62,6 +62,7 @@ def setupCaches():
                          .format(now())) 
 setupCaches()
 
+# FIXME - Integrate into ResfileBuilder Class
 def makeSequenceGlobals():
     if madeGlobal('madeSeqGlobals'):
         if madeSeqGlobals == True:
@@ -103,7 +104,8 @@ makeSequenceGlobals()
 
 def log(text=''):
     with open(sesCache,'a') as f:
-        f.writelines('[{}] >  {}\n'.format(now(2),text))
+        for line in text.splitlines():
+            f.writelines('[{}] >  {}\n'.format(now(2),line))
 
 def logBegin():
     with open(sesCache,'a') as f:
@@ -151,21 +153,41 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     def __init__(self):
         pass
     def __str__(self):
-        return 'A Custom Mover'
+        info = []
+        for key,val in self.__dict__.items():
+            infoStr = '{}:'.format(key)
+            if isinstance(val,int):
+                infoStr += '{:2d}'
+            elif isinstance(val,float):
+                infoStr += '{7.1f}'
+            else:
+                infoStr += '{}'
+            infoStr.format(val)
+            info.append(infoStr)
+        return ' | '.join(info)
+    
     def get_name(self):
         return self.__class__.__name__
 
 class RepMinMover(CustomMover):
-    def __init__(self,repeats=10,kT=1.0):
-        self.repeats = repeats
-        self.kT = kT
+    def __init__(self):
+        self.repeats = 10
+        self.kT = 1.0
+        self.bb_range = None
+
+    def __str__(self):
+        return 'Num Repeats: {:4d} | kT: {:9.2f}'.\
+            format(self.repeats,self.kT)
         
     def apply(self,pose):
         dprint('Perfoming A Minimization Loop')
-        log(' `--> Num Repeats: {:4d} | kT: {:9.2f}'.\
-            format(self.repeats,self.kT))
+        log( '`--> {}'.format(self))
         movemap = MoveMap()
-        movemap.set_bb(True)
+        if self.bb_range is None:
+            movemap.set_bb(True)
+        else:
+            begin, end = self.bb_range
+            movemap.set_bb_true_range(begin,end)
         min_mv = MinMover()
         min_mv.movemap(movemap)
         min_mv.score_function(self.scorefxn)
@@ -175,15 +197,12 @@ class RepMinMover(CustomMover):
         rep_mv.apply(pose)   
 
 class SmallShearMover(CustomMover):
-    def __init__(self,\
-                 repeats=50,\
-                 n_moves=5,\
-                 kT=1.0,\
-                 angle=None):
-        self.repeats = repeats
-        self.n_moves = n_moves
-        self.kT = kT
-        self.angle = angle
+    def __init__(self):
+        self.repeats = 50
+        self.n_moves =5
+        self.kT = 1.0
+        self.angle = None
+        self.bb_range = None
 
     def __str__(self):
         return ('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | '
@@ -192,9 +211,13 @@ class SmallShearMover(CustomMover):
         
     def apply(self, pose):
         dprint('Running Small and Shear Movers'.format(repeats))
-        log(' `--> {}'.format(str(self)))
+        log(' `--> {}'.format(self))
         movemap = MoveMap()
-        movemap.set_bb(True)
+        if self.bb_range is None:
+            movemap.set_bb(True)
+        else:
+            begin, end = self.bb_range
+            movemap.set_bb_true_range(begin,end)
 
         min_mv = MinMover()
         min_mv.movemap(movemap)
@@ -208,68 +231,125 @@ class SmallShearMover(CustomMover):
             shear_mv.angle_max('E', self.angle)
             shear_mv.angle_max('L', self.angle)
 
-        mc = MonteCarlo(pose, scorefxn, self.kT)
+        mc = MonteCarlo(pose, self.scorefxn, self.kT)
 
-        seq_mv = SequenceMover()
-        seq_mv.add_mover(small_mv)
-        seq_mv.add_mover(min_mv)
-        seq_mv.add_mover(shear_mv)
-        seq_mv.add_mover(min_mv)
-
-        trial_mv = TrialMover(seq_mv, mc)
-        rep_mv = RepeatMover(trial_mv, self.repeats)
-
+        seq_A = SequenceMover()
+        seq_A.add_mover(small_mv)
+        seq_A.add_mover(min_mv)
+        trial_A = TrialMover(seq_A, mc)
+        seq_B = SequenceMover()
+        seq_B.add_mover(shear_mv)
+        seq_B.add_mover(min_mv)
+        trial_B = TrialMover(seq_B, mc)
+        seq_total = SequenceMover()
+        seq_total.add_mover(trial_A)
+        seq_total.add_mover(trial_B)
+        rep_mv = RepeatMover(seq_total, self.repeats)
         rep_mv.apply(pose)
 
 class AnnealLoopMover(CustomMover):
-    def __init__(self,cycles=2,kT=10,heat_time=3,
-                 anneal_time=4,angle_max=4.0,kT_max=100.0):
-        self.cycles = cycles
-        self.kT = kT
-        self.heat_time = heat_time
-        self.anneal_time = anneal_time
-        self.angle_max = angle_mac
-        self.kT_max = kT_max
-
-    def __str__(self):
-        return ('Cycles: {:2d} | kT: {:3.1f} | '
-                'Heat Time: {:2d} | Anneal Time: {:2d} | '
-                'Max Angle: {:4.1f} | Max kT: {:6.1f}').\
-                format(self.cycles, self.kT,
-                       self.heat_time, self.anneal_time,
-                       self.angle_max, self.kT_max)
-        
+    def __init__(self):
+        self.cycles = 2
+        self.kT = 10
+        self.heat_time = 3
+        self.anneal_time = 4
+        self.angle_max = 4.0
+        self.kT_max = 100.0
+        self.seqRepeats = 5
+        self.numSmallShearRepeats = 5
+        self.kT_ratio = 20
+        self.angle_ratio = 10
+        self.bb_range = None
+                
     def apply(self,pose):
-        angles = [5, 3, 3, 2] + [0.5,] * 4
-        kT2s = [100.0, 50.0, 50.0, 30.0] + [5,] * 4
-        annealTime = len(angles)
-        seqRepeats = 5
-        numSmallShearRepeats = 5
-        n1 = len(kT2s) * annealCycles
-
+        angles = ([self.angle_max] * self.heat_time
+                  + [self.angle_max / self.angle_ratio] * self.anneal_time)
+        kT2s = ([self.kT_max] * self.heat_time
+                + [self.kT_max / self.kT_ratio] * self.anneal_time)
+        cycleLen = len(angles)
+        n1 = cycleLen* self.cycles
+ 
+        ss_mv = SmallShearMover(self.seqRepeats,
+                                self.numSmallShearRepeats,
+                                kT,angle)
+        if self.bb_range is not None:
+            ss_mv.bb_range = self.bb_range
+        mc = MonteCarlo(pose, scorefxn, self.kT)
         dprint('Beginning Anneal Loop')
-        log(' `--> {}'.format(str(self)))
+        log(' `--> {}'.format(self))
         for i in range(n1):
             dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
-            mc = MonteCarlo(pose, defaultScorefxn, kT1)
-            ind = i % annealTime
+            ind = i % cycleLen
             angle = angles[ind]
             kT2 = kT2s[ind]
-            ss_mv = SmallShearMover(seqRepeats,numSmallShearRepeats,kT,angle)
+            ss_mv.angle = angle
+            ss_mv.kT = kT2
             ss_mv.apply(pose)
             mc.boltzmann(pose)
             printScore(pose,'Iteration # {:2d}'.format(i+1))
-
-            
+           
 def createPyMolMover():
     pymol = PyMOLMover()
     return pymol
 
+class ResfileBuilder:
+    resfile_dir = 'Resfiles'
+    resfile_ext = 'resfile'
+    rotamer_tag = 'NATAA'
+    mutate_tag = 'PIKAA {}'
+    chain = 'A'
+    line_fmt = '{:3d}  {}  {}\n'
+    
+    def __init__(self,filename,pose):
+        self.filename = filename
+        self.packable_residues = []
+        self.mutable_residues = []
+        self.mut_liberal = False
+        self.pose = pose
+        mkDir(self.resfile_dir)
+
+    def getMutDict(self):
+        if self.mut_liberal: return liberalMutMap
+        else: return conservMutMap 
+
+    def getFullFilename(self):
+        extFilename = '.'.join(self.filename,self.resfile_ext)
+        
+    def getResfilePath(self):
+        return os.path.join(self.resfile_dir,self.getFullFilename())
+
+    def getFileHeader(self):
+        text = ('# {}\n'.format(self.getFullFilename())
+                + 'NATAA\nSTART\n\n'
+                + '# Auto Generated Resfile by ResfileBuilder class\n' 
+                + '# {}\n\n'.format(now()))
+        return text
+    
+    def build(self):
+        with open(self.getResfilePath(),'w') as rfile:
+            rfile.write(self.getFileHeader())
+            rfile.write('# Packable Residues:\n')
+            for res in self.packable_residues:
+                line = self.line_fmt.format(res, self.chain, self.rotamer_tag)
+                rfile.write(line)
+            rfile.write('# Mutable Residues:\n')                
+            for res in self.mutable_residues:
+                line = self.line_fmt.format(res, self.chain, self.rotamer_tag)
+                poseNum = self.pose.pdb_info().pdb2pose(self.chain,res)
+                aa = self.pose.residue(poseNum).name1()
+                mutRes = mutDict[aa]
+                line.format(''.join(mutRes))
+                rfile.write(line)
+            
+
+# Depricated
 def generateResfile(pose,name=proteinName):
     fext = 'resfile'
     fname = '.'.join([name,fext])
     generate_resfile_from_pose(pose, fname)
+    return fname
 
+# Depreicated
 def mutateResfile(pose,\
                   nameout='MUT',\
                   namein=proteinName,\
@@ -313,7 +393,8 @@ def mutationLoop():
     #   1. do small/shear anneal loop
     #   1. minimize
     # apply each specific mover to its decoy
-
+    pass
+ 
 def main():
     logBegin()
     pymol = createPyMolMover()
