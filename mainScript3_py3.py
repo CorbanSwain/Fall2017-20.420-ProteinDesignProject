@@ -10,6 +10,7 @@ from pyrosetta.rosetta.protocols.relax import FastRelax
 from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
 import os
 import re
+import random
 
 def madeGlobal(varName):
     return varName in globals()
@@ -65,12 +66,11 @@ setupCaches()
 # FIXME - Integrate into ResfileBuilder Class
 def makeSequenceGlobals():
     if madeGlobal('madeSeqGlobals'):
-        if madeSeqGlobals == True:
             return
     global pocketResNums, firstResNum, oneIndexedRes,\
         allAa, aaGroupings, adnlAa, conservMutMap, liberalMutMap, madeSeqGlobals
-    madeSeqGlobals = False
-    pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,\
+    
+    pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,
                      321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
     firstResNum = 202
     oneIndexedRes = [i - firstResNum + 1 for i in pocketResNums]
@@ -320,7 +320,7 @@ class ResfileBuilder:
 
     def getFileHeader(self):
         text = ('# {}\n'.format(self.getFullFilename())
-                + 'NATAA\nSTART\n\n'
+                + 'NATRO\nSTART\n\n'
                 + '# Auto Generated Resfile by ResfileBuilder class\n' 
                 + '# {}\n\n'.format(now()))
         return text
@@ -334,56 +334,37 @@ class ResfileBuilder:
                 rfile.write(line)
             rfile.write('# Mutable Residues:\n')                
             for res in self.mutable_residues:
-                line = self.line_fmt.format(res, self.chain, self.rotamer_tag)
+                line = self.line_fmt.format(res, self.chain, self.mutate_tag)
                 poseNum = self.pose.pdb_info().pdb2pose(self.chain,res)
                 aa = self.pose.residue(poseNum).name1()
                 mutRes = mutDict[aa]
                 line.format(''.join(mutRes))
                 rfile.write(line)
-            
 
-# Depricated
-def generateResfile(pose,name=proteinName):
-    fext = 'resfile'
-    fname = '.'.join([name,fext])
-    generate_resfile_from_pose(pose, fname)
-    return fname
+def rand_sample(n,lst):
+    length = len(lst)
+    temp_list = list(lst)
+    sample = []
+    for i in range(n):
+        ind = random.randint(0, length - 1 - i)
+        sample.append(temp_list[ind])
+        del temp_list[ind]
 
-# Depreicated
-def mutateResfile(pose,\
-                  nameout='MUT',\
-                  namein=proteinName,\
-                  residues=pocketResNums,\
-                  liberal=False):
-    fExt = 'resfile'
-    with open('.'.join([namein, fExt])) as rFile:
-        text = rFile.read()
-
-    if liberal: mutDict = liberalMutMap
-    else: mutDict = conservMutMap
-    pipedRes = '|'.join( ['{:3d}'.format(r) for r in residues])
-    reg = (r'(?P<num>{})'
-           '(?P<chain>\s+\w\s+)'
-           '(?P<cmds>\w+)').format(pipedRes)
-    def subFun(m):
-        num = int(m.group('num').strip())
-        chain = m.group('chain').strip()
-        poseNum = pose.pdb_info().pdb2pose(chain,num)
-        aa = pose.residue(poseNum).name1()
-        mutRes = mutDict[aa]
-        return '{:3d}  {}  PIKAA {}'.format(num,chain,''.join(mutRes))
-         
-    newText = re.sub(reg,subFun,text)
-    fnameOut = '.'.join(['{}_{}'.format(namein, nameout), fext]) 
-    with open(fnameOut, 'w+') as newResfile:
-        newResfile.write(newText)
-    log('Creating {} to mutating residues #\'s {}'.format(fnameOut,pipedRes))
-    return fnameOut
+    return sample,temp_list
 
 def mutationLoop():
     # Randomly sample 4 residues from the pocket residues
     # 6 times, so all that  pocket residues are used once
     # ^ do this n1 times
+    resPerDecoy = 4
+    rand_samples = []
+    n1 = 2
+    for i in range(n1):
+        remaining_res = list(pocketResNums)
+        while len(remaining_res) >= 4:
+            smp, remaining_res = rand_sample(resPerDecoy,remaining_res)
+            rand_samples.append(smp)
+
     # Create n1*6 Decoys
     # for each decoy create a mover that:
     #   1. mutates the specified residues with resfile
