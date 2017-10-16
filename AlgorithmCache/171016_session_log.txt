@@ -1,0 +1,6 @@
+AlgorithmCache/171016_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 09:15:38 10-16-17
+
+[09:15:51] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
