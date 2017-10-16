@@ -4,3 +4,8 @@ Protein Design Algorithm Trials, Session Log
 Begins: 09:15:38 10-16-17
 
 [09:15:51] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[15:07:08] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[15:07:08] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[15:07:10] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
