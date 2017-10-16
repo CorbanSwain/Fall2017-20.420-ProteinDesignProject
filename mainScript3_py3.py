@@ -11,6 +11,7 @@ from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
 import os
 import re
 import random
+import pprint
 
 def madeGlobal(varName):
     return varName in globals()
@@ -366,6 +367,13 @@ def mutationLoop():
             rand_samples.append(smp)
 
     # Create n1*6 Decoys
+    ndecoys = len(rand_samples)
+    mkDir('Decoys')
+    file_template = os.path.join('Decoys','output-{}')
+    file_template.format(now(1))
+    jd = PyJobDistributor(file_template,ndecoys,defaultScorefxn)
+    while not jd.job_complete:
+        pose.
     # for each decoy create a mover that:
     #   1. mutates the specified residues with resfile
     #   1. minimize
