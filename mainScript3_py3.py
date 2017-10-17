@@ -162,6 +162,8 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     def __str__(self):
         info = []
         for key,val in self.__dict__.items():
+            if (key in ['movemap','annealLoop']): continue
+            
             infoStr = '{}: '.format(key)
             if isinstance(val,int):
                 infoStr += '{:2d}'
@@ -207,6 +209,7 @@ class RepMinMover(CustomMover):
         self.chi_all = False
         self.chi_range = None
         self.chi_res = None
+        self.movemap = None
         
     def setMovemapBB(self,movemap,pose):
         movemap.set_bb(False)
@@ -238,6 +241,7 @@ class RepMinMover(CustomMover):
         movemap = MoveMap()
         self.setMovemapBB(movemap,pose)
         self.setMovemapChi(movemap,pose)
+        self.movemap = movemap
         min_mv = MinMover()
         min_mv.movemap(movemap)
         min_mv.score_function(self.scorefxn)
@@ -259,7 +263,7 @@ class SmallShearMover(CustomMover):
         self.bb_range = None
         
     def apply(self, pose):
-        dprint('Running Small and Shear Movers'.format(repeats))
+        dprint('Running Small and Shear Movers'.format(self.repeats))
         log(' `--> {}'.format(self))
 
         min_mv = RepMinMover()
@@ -268,7 +272,8 @@ class SmallShearMover(CustomMover):
         else:
             min_mv.bb_range = self.bb_range
         min_mv.repeats = 2
-        
+
+        movemap = min_mv.movemap
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
         shear_mv = ShearMover(movemap, self.kT, self.n_moves)
         if self.angle is not None:
@@ -330,7 +335,7 @@ class AnnealLoopMover(CustomMover):
         mc = MonteCarlo(pose, self.scorefxn, self.kT)
        
         for i in range(n):
-            dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
+            dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n))
             ind = i % cycleLen
             angle = angles[ind]
             kT2 = kT2s[ind]
@@ -374,7 +379,7 @@ class ResfileBuilder:
         self.packable_residues = []
         self.mutable_residues = []
         self.mut_liberal = False
-        self.pose = []
+        self.pose = None
         mkDir(self.resfile_dir)
 
     def getMutDict(self):
@@ -464,6 +469,7 @@ class ResfileBuilder:
         builder = cls()
         builder.mutable_residues = residues
         builder.filename = 'decoy-{:02d}.{:02d}'.format(identifier,cycle)
+        print('ResfileBuilder.resfileFromDecoySpecs: pose --> {}'.format(pose))
         builder.pose = pose
         builder.build()
         return builder.getResfilePath()    
