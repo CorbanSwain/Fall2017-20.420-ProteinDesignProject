@@ -510,6 +510,10 @@ class MutationMinimizationMover(CustomMover):
                 self.identifier, i+1, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
+            dprint('')
+            print(('MutationMinimizationMover.apply: sending pose'
+                  ' to Resfile Builder\n -----> {}').format(pose))
+            dprint('')
             r_file = ResfileBuilder.resfileFromDecoySpecs(
                 pose, mut_residues,
                 self.identifier, i)

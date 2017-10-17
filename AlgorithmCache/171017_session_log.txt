@@ -42792,3 +42792,94 @@ Begins: 07:07:52 10-17-17
 [08:57:10] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
 [08:57:44] >  MMM  0 - Loop  1/ 4
 [08:57:44] >  ResfileBuilder.build: Writing File --> decoy-00.01
+
+
+[09:03:24] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[09:03:24] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[09:03:24] >  Random Samples Arr:
+[09:03:24] >  [[[273, 334, 241, 325],
+[09:03:24] >    [275, 279, 339, 344],
+[09:03:24] >    [275, 344, 279, 358],
+[09:03:24] >    [358, 332, 275, 255]],
+[09:03:24] >   [[255, 354, 250, 358],
+[09:03:24] >    [247, 321, 276, 272],
+[09:03:24] >    [339, 321, 355, 250],
+[09:03:24] >    [250, 333, 251, 254]]]
+[09:03:24] >  Making Job Distributor
+[09:03:24] >  Beginning Decoy # 1
+[09:03:24] >  MMM  0 - Beginning Mutation Minimization Mover
+[09:03:24] >   `--> mut_pattern: [[273, 334, 241, 325], [275, 279, 339, 344], [275, 344, 279, 358], [358, 332, 275, 255]] | kT:     1.0 | identifier:  0
+[09:03:24] >  MMM  0 - Loop  1/ 4
+[09:03:24] >  ResfileBuilder.build: Writing File --> decoy-00.00
+[09:03:24] >  MMM Pre Mutation Mover Score   -->   363.60845
+[09:03:24] >  Performing Mutant Pack Mover
+[09:03:24] >   `--> resfile: Resfiles/decoy-00.00.resfile
+[09:03:25] >  Perfoming A Minimization Loop  50
+[09:03:25] >  `--> repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[09:03:31] >  Beginning Anneal Mover
+[09:03:31] >   `--> cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (241, 358)
+[09:03:31] >  Beginning Loop #  1/14
+[09:03:31] >  Running Small and Shear Movers
+[09:03:31] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:03:42] >  Iteration #  1 Score           -->    87.57034
+[09:03:42] >  Beginning Loop #  2/14
+[09:03:42] >  Running Small and Shear Movers
+[09:03:42] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:03:52] >  Iteration #  2 Score           -->    87.57034
+[09:03:52] >  Beginning Loop #  3/14
+[09:03:52] >  Running Small and Shear Movers
+[09:03:52] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:04:04] >  Iteration #  3 Score           -->    87.57034
+[09:04:04] >  Beginning Loop #  4/14
+[09:04:04] >  Running Small and Shear Movers
+[09:04:04] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:04:15] >  Iteration #  4 Score           -->    70.02483
+[09:04:15] >  Beginning Loop #  5/14
+[09:04:15] >  Running Small and Shear Movers
+[09:04:15] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:04:26] >  Iteration #  5 Score           -->    58.72744
+[09:04:26] >  Beginning Loop #  6/14
+[09:04:26] >  Running Small and Shear Movers
+[09:04:26] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:04:37] >  Iteration #  6 Score           -->    66.65155
+[09:04:37] >  Beginning Loop #  7/14
+[09:04:37] >  Running Small and Shear Movers
+[09:04:37] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:04:48] >  Iteration #  7 Score           -->    62.08310
+[09:04:48] >  Beginning Loop #  8/14
+[09:04:48] >  Running Small and Shear Movers
+[09:04:48] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:04:58] >  Iteration #  8 Score           -->    62.08310
+[09:04:58] >  Beginning Loop #  9/14
+[09:04:58] >  Running Small and Shear Movers
+[09:04:58] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:05:09] >  Iteration #  9 Score           -->    62.08310
+[09:05:09] >  Beginning Loop # 10/14
+[09:05:09] >  Running Small and Shear Movers
+[09:05:09] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[09:05:20] >  Iteration # 10 Score           -->    62.08310
+[09:05:20] >  Beginning Loop # 11/14
+[09:05:20] >  Running Small and Shear Movers
+[09:05:20] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:05:31] >  Iteration # 11 Score           -->    52.80873
+[09:05:31] >  Beginning Loop # 12/14
+[09:05:31] >  Running Small and Shear Movers
+[09:05:31] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:05:42] >  Iteration # 12 Score           -->    52.57717
+[09:05:42] >  Beginning Loop # 13/14
+[09:05:42] >  Running Small and Shear Movers
+[09:05:42] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:05:53] >  Iteration # 13 Score           -->    52.57717
+[09:05:53] >  Beginning Loop # 14/14
+[09:05:53] >  Running Small and Shear Movers
+[09:05:53] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[09:06:04] >  Iteration # 14 Score           -->    52.57717
+[09:06:04] >  Perfoming A Minimization Loop  50
+[09:06:04] >  `--> repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[09:06:11] >  Performing Mutant Pack Mover
+[09:06:11] >   `--> resfile: Resfiles/ligand_rotamer.resfile
+[09:06:11] >  Perfoming A Minimization Loop  50
+[09:06:11] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[09:06:46] >  MMM Post Mutation Mover Score  -->     0.00000
+[09:06:46] >  MMM  0 - Loop  2/ 4
+[09:06:46] >  ResfileBuilder.build: Writing File --> decoy-00.01
