@@ -258,7 +258,10 @@ class SmallShearMover(CustomMover):
         log(' `--> {}'.format(self))
 
         min_mv = RepMinMover()
-        min_mv.bb_range = self.bb_range
+        if self.bb_range is None:
+            min_mv.bb_all = True
+        else:
+            min_mv.bb_range = self.bb_range
         min_mv.repeats = 2
         
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
@@ -303,23 +306,24 @@ class AnnealLoopMover(CustomMover):
         self.bb_range = None
                 
     def apply(self,pose):
+         dprint('Beginning Anneal Loop')
+        log(' `--> {}'.format(self))
         angles = ([self.angle_max] * self.heat_time
                   + [self.angle_max / self.angle_ratio] * self.anneal_time)
         kT2s = ([self.kT_max] * self.heat_time
                 + [self.kT_max / self.kT_ratio] * self.anneal_time)
         cycleLen = len(angles)
-        n1 = cycleLen* self.cycles
+        n = cycleLen* self.cycles
  
         ss_mv = SmallShearMover()
         ss_mv.repeats = self.seqRepeats
         ss_mv.n_moves = self.numSmallShearRepeats
-
         if self.bb_range is not None:
             ss_mv.bb_range = self.bb_range
+            
         mc = MonteCarlo(pose, scorefxn, self.kT)
-        dprint('Beginning Anneal Loop')
-        log(' `--> {}'.format(self))
-        for i in range(n1):
+       
+        for i in range(n):
             dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n1))
             ind = i % cycleLen
             angle = angles[ind]
@@ -465,13 +469,13 @@ class MutationMinimizationMover(CustomMover):
 
 
     decoy_count = 0
+    annealLoop = None
 
     def __init__(self):
         self.mut_pattern = [[]]
         self.kT = 1.0
-        self.annealLoop = None
         self.identifier = MutationLoopMover.decoy_count
-        MutationLoopAssemblyMover.decoy_count += 1
+        MutationMinimizationMover.decoy_count += 1
         
     def apply(self, pose):
         dprint(('MMM {:2d} - Beginning Mutation '
@@ -514,6 +518,7 @@ class MutationMinimizationMover(CustomMover):
             trial_mv = TrialMover(seq_mv, mc)
             scorefxn(pose)
             trial_mv.apply(pose)
+        FastRelaxMover().apply(pose)
 
         @staticmethod
         def randSample(n,lst):
@@ -533,19 +538,15 @@ def main():
     original_pdb_file = 'new_3vi8_complex.pdb'
     startPose = loadInPose(original_pdb_file)
     
-    # Randomly sample 4 residues from the pocket residues
-    # 6 times, so all that  pocket residues are used once
-    # ^ do this n1 times
-    pose = poseFrom(startPose)
-    numDecoys = 8
-    resPerDecoy = [4,2,2,2]
+    numDecoys = 1
+    resPerDecoy = [4,4,4,4]
     rand_samples = [[] for __ in range(numDecoys)]
     for i, num_res in enumerate(resPerDecoy):
         remaining_res = []
         for decoyNum in numDecoys:
             if len(remaining_res) < num_res:
                 remaining_res = list(pocketResNums)
-            if i == 0:
+            if True:
                 smp, remaining_res = MutationMinimizationMover.\
                                      randSample(num_res, remaining_res)
             else:
@@ -554,16 +555,22 @@ def main():
             rand_samples[decoyNum].append(smp)
 
     annealLoop_mv = AnnealLoopMover()
-    annealLoop_mv.bb
-    
+    annealLoop_mv.bb_range = (pocketResNums[0], pocketResNums[-1])
+    MutationMinimizationMover.annealLoop = annealLoop_mv
+
     mkDir('Decoys')
     file_template = os.path.join('Decoys','output-{}')
     file_template.format(now(1))
     jd = PyJobDistributor(file_template,numDecoys,defaultScorefxn)
+    working_pose = Pose()
+    ind = 0
     while not jd.job_complete:
-        new_pose.assign(pose)
-        
-        jd.output_decoy(pose)
+        working_pose.assign(pose)
+        mm_mv = MutationMinimizationMover()
+        mm_mv.mut_pattern = rand_samples[ind]
+        mm_mv.apply(working_pose)
+        jd.output_decoy(working_pose)
+        ind += 1
 
 if __name__ == '__main__':
     logBegin()
