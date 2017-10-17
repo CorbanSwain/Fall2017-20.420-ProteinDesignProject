@@ -443,28 +443,28 @@ class MutationLoopMover(CustomMover):
     #   1. minimize
     # apply each specific mover to its decoy
 
-def mutationLoop():
-    # Randomly sample 4 residues from the pocket residues
-    # 6 times, so all that  pocket residues are used once
-    # ^ do this n1 times
-    pose = Pose()
-    resPerDecoy = 4
-    rand_samples = []
-    n1 = 2
-    for i in range(n1):
-        remaining_res = list(pocketResNums)
-        while len(remaining_res) >= 4:
-            smp, remaining_res = rand_sample(resPerDecoy,remaining_res)
-            rand_samples.append(smp)
+    def mutationLoop():
+        # Randomly sample 4 residues from the pocket residues
+        # 6 times, so all that  pocket residues are used once
+        # ^ do this n1 times
+        pose = Pose()
+        resPerDecoy = 4
+        rand_samples = []
+        n1 = 2
+        for i in range(n1):
+            remaining_res = list(pocketResNums)
+            while len(remaining_res) >= 4:
+                smp, remaining_res = rand_sample(resPerDecoy,remaining_res)
+                rand_samples.append(smp)
 
-    r_builder = ResfileBuilder()
-    mut_files = []
-    for sample in rand_sample:
-        r_builder.mutable_residues = sample
-        r_builder.filename = 'MUT_{}'.format('-'.join([str(i) for i in sample]))
-        mut_files.append(r_builder.filename)
-        r_builder.pose = pose
-        r_builder.build()
+        r_builder = ResfileBuilder()
+        mut_files = []
+        for sample in rand_sample:
+            r_builder.mutable_residues = sample
+            r_builder.filename = 'MUT_{}'.format('-'.join([str(i) for i in sample]))
+            mut_files.append(r_builder.filename)
+            r_builder.pose = pose
+            r_builder.build()
         
     # Create n1*6 Decoys
 
