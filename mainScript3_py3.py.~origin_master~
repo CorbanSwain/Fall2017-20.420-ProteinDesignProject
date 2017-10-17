@@ -178,48 +178,18 @@ class RepMinMover(CustomMover):
     def __init__(self):
         self.repeats = 10
         self.kT = 1.0
-        self.bb_all = False
         self.bb_range = None
-        self.bb_res = None
-        self.chi_all = False
-        self.chi_range = None
-        self.chi_res = None
-        
+
     def __str__(self):
         return 'Num Repeats: {:4d} | kT: {:9.2f}'.\
             format(self.repeats,self.kT)
-
-    def setMovemapBB(self,movemap):
-        movemap.set_bb(False)
-        if self.bb_res is not None:
-            for i in self.bb_res:
-                pose_i = pose.pdb_info().pdb2pose(i,'A')
-                movemap.set_bb(pose_i,True)
-        elif self.bb_range is not None:
-            begin, end = self.bb_range
-            movemap.set_bb_true_range(begin,end)
-        elif self.bb_all:
-            movemap.set_bb(True) 
-
-    def setMovemapChi(self,movemap):
-        movemap.set_chi(False)
-        if self.chi_res is not None:
-            for i in self.chi_res:
-                pose_i = pose.pdb_info().pdb2pose(i,'A')
-                movemap.set_chi(pose_i,True)
-        elif self.chi_range is not None:
-            begin, end = self.chi_range
-            movemap.set_chi_true_range(begin,end)
-        elif self.chi_all:
-            movemap.set_chi(True) 
-            
+        
     def apply(self,pose):
         dprint('Perfoming A Minimization Loop')
         log( '`--> {}'.format(self))
         movemap = MoveMap()
-        if self.bb_res is not None:
-            for res in self.bb_res:
-                
+        if self.bb_range is None:
+            movemap.set_bb(True)
         else:
             begin, end = self.bb_range
             movemap.set_bb_true_range(begin,end)
@@ -343,8 +313,6 @@ def createPyMolMover():
     return pymol
 
 class ResfileBuilder:
-
-    
     resfile_dir = 'Resfiles'
     resfile_ext = 'resfile'
     rotamer_tag = 'NATAA'
@@ -465,25 +433,17 @@ class MutationLoopMover(CustomMover):
 
 
     def __init__(self):
-        self.num_mutation_cycles = 2
-        self.res_per_cycle = 4
-        self.annealLoop = AnnealLoopMover()
         
-        
-      def apply(self, pose=Pose()):
-           
-          # for each decoy create a mover that:
-          #   1. mutates the specified residues with resfile
-          #   1. repack rotomers for all pocket residues, use movemap with MinMover
+    # for each decoy create a mover that:
+    #   1. mutates the specified residues with resfile
+    #   1. minimize
+    #   1. repack rotomers for all pocket residues
+    #   1. minimize
+    #   1. do small/shear anneal loop
+    #   1. minimize
+    # apply each specific mover to its decoy
 
-          
-          #   1. do small/shear anneal loop
-          self.annealLoop
-          #   1. minimize pocket rotamers
-          #   1. minimize backmobe
-          # apply each specific mover to its decoy
-
-    def mutationGenerator():
+    def mutationLoop():
         # Randomly sample 4 residues from the pocket residues
         # 6 times, so all that  pocket residues are used once
         # ^ do this n1 times
