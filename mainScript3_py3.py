@@ -236,8 +236,9 @@ class RepMinMover(CustomMover):
             movemap.set_chi(True) 
             
     def apply(self,pose):
-        dprint('Perfoming A Minimization Loop {:3d}'.format(self.repeats))
-        log( '`--> {}'.format(self))
+        if self.repeats > 10:
+            dprint('Perfoming A Minimization Loop {:3d}'.format(self.repeats))
+            log( '`--> {}'.format(self))
         movemap = MoveMap()
         self.setMovemapBB(movemap,pose)
         self.setMovemapChi(movemap,pose)
@@ -271,7 +272,7 @@ class SmallShearMover(CustomMover):
             min_mv.bb_all = True
         else:
             min_mv.bb_range = self.bb_range
-        min_mv.repeats = 2
+        min_mv.repeats = 10
 
         movemap = min_mv.movemap
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
@@ -317,7 +318,7 @@ class AnnealLoopMover(CustomMover):
         self.bb_range = None
                 
     def apply(self,pose):
-        dprint('Beginning Anneal Loop')
+        dprint('Beginning Anneal Mover')
         log(' `--> {}'.format(self))
         angles = ([self.angle_max] * self.heat_time
                   + [self.angle_max / self.angle_ratio] * self.anneal_time)
@@ -506,7 +507,7 @@ class MutationMinimizationMover(CustomMover):
         n = len(self.mut_pattern)
         for i, mut_residues in enumerate(self.mut_pattern):
             log('MMM {:2d} - Loop {:2d}/{:2d}'.format(
-                self.identifier, i, n))
+                self.identifier, i+1, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
             r_file = ResfileBuilder.resfileFromDecoySpecs(
@@ -517,7 +518,7 @@ class MutationMinimizationMover(CustomMover):
             #   2. repacks rotomers for all pocket residues, use movemap with MinMover
             repack_mv = RepMinMover()
             repack_mv.chi_res = pocketResNums
-            repack_mv.repeats = 10
+            repack_mv.repeats = 50
             #   3. do small/shear anneal loop
             anneal_mv = self.annealLoop
             #   4. minimize pocket rotamers (same as 2)
@@ -537,8 +538,9 @@ class MutationMinimizationMover(CustomMover):
             seq_mv.add_mover(lig_mv)
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
-            printScore(pose, 'MMMPre Mutation Mover')
+            printScore(pose, 'MMM Pre Mutation Mover')
             trial_mv.apply(pose)
+            printScore(pose, 'MMM Post Mutation Mover')
         FastRelaxMover().apply(pose)
 
     @staticmethod
@@ -593,11 +595,11 @@ def main():
         mm_mv = MutationMinimizationMover()
         mm_mv.mut_pattern = rand_samples[ind]
         mm_mv.apply(working_pose)
-        jd.output_decoy(working_pose)
         ind += 1
         print('main: JD In Progress: ', jd.current_in_progress_name)
         print('main: JD Complete? ', jd.job_complete)
         if jd.job_complete: break
+        jd.output_decoy(working_pose)
 
 if __name__=='__main__':
     logBegin()
