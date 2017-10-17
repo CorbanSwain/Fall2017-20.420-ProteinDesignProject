@@ -63,8 +63,8 @@ def setupCaches():
     if not isFile(sesCache):
         with open(sesCache,'w') as f:
             f.writelines('{}\n\n'.format(sesCache))
-            f.writelines('Protein Design Algorithm Trials, Session Log\nBegins: {}\n\n'\
-                         .format(now())) 
+            f.writelines(('Protein Design Algorithm Trials, '
+                          'Session Log\nBegins: {}\n\n').format(now())) 
 setupCaches()
 
 # FIXME - Integrate into ResfileBuilder Class
@@ -192,7 +192,7 @@ class FastRelaxMover(CustomMover):
     
     
 class RepMinMover(CustomMover):
-
+    chain = 'A'
 
     def __init__(self):
         self.repeats = 10
@@ -208,7 +208,7 @@ class RepMinMover(CustomMover):
         movemap.set_bb(False)
         if self.bb_res is not None:
             for i in self.bb_res:
-                pose_i = pose.pdb_info().pdb2pose(i,'A')
+                pose_i = pose.pdb_info().pdb2pose(i,self.chain)
                 movemap.set_bb(pose_i,True)
         elif self.bb_range is not None:
             begin, end = self.bb_range
@@ -220,7 +220,7 @@ class RepMinMover(CustomMover):
         movemap.set_chi(False)
         if self.chi_res is not None:
             for i in self.chi_res:
-                pose_i = pose.pdb_info().pdb2pose(i,'A')
+                pose_i = pose.pdb_info().pdb2pose(i,self.chain)
                 movemap.set_chi(pose_i,True)
         elif self.chi_range is not None:
             begin, end = self.chi_range
@@ -310,9 +310,10 @@ class AnnealLoopMover(CustomMover):
         cycleLen = len(angles)
         n1 = cycleLen* self.cycles
  
-        ss_mv = SmallShearMover(self.seqRepeats,
-                                self.numSmallShearRepeats,
-                                kT,angle)
+        ss_mv = SmallShearMover()
+        ss_mv.repeats = self.seqRepeats
+        ss_mv.n_moves = self.numSmallShearRepeats
+
         if self.bb_range is not None:
             ss_mv.bb_range = self.bb_range
         mc = MonteCarlo(pose, scorefxn, self.kT)
@@ -495,6 +496,9 @@ class MutationMinimizationMover(CustomMover):
             #   3. do small/shear anneal loop
             anneal_mv = self.annealLoop
             #   4. minimize pocket rotamers (same as 2)
+            #   5. pack ligand
+            lig_mv = MutantPackMover()
+            lig_mv.resfile = ResfileBuilder.ligandRotamerResfile()
             #   5. minimize backmobe
             min_mv = RepMinMover()
             min_mv.bb_all = True
@@ -505,6 +509,7 @@ class MutationMinimizationMover(CustomMover):
             seq_mv.add_mover(repack_mv)
             seq_mv.add_mover(anneal_mv)
             seq_mv.add_mover(repack_mv)
+            seq_mv.add_mover(lig_mv)
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
             scorefxn(pose)
@@ -519,44 +524,45 @@ class MutationMinimizationMover(CustomMover):
                 ind = random.randint(0, length - 1 - i)
                 sample.append(temp_list[ind])
                 del temp_list[ind]
-
             return sample, temp_list
 
         
         
 
 def main():
-
+    original_pdb_file = 'new_3vi8_complex.pdb'
+    startPose = loadInPose(original_pdb_file)
+    
     # Randomly sample 4 residues from the pocket residues
-        # 6 times, so all that  pocket residues are used once
-        # ^ do this n1 times
-        pose = Pose()
-        resPerDecoy = 4
-        rand_samples = []
-        n1 = 2
-        for i in range(n1):
-            remaining_res = list(pocketResNums)
-            while len(remaining_res) >= 4:
-                smp, remaining_res = rand_sample(resPerDecoy,remaining_res)
-                rand_samples.append(smp)
+    # 6 times, so all that  pocket residues are used once
+    # ^ do this n1 times
+    pose = poseFrom(startPose)
+    numDecoys = 8
+    resPerDecoy = [4,2,2,2]
+    rand_samples = [[] for __ in range(numDecoys)]
+    for i, num_res in enumerate(resPerDecoy):
+        remaining_res = []
+        for decoyNum in numDecoys:
+            if len(remaining_res) < num_res:
+                remaining_res = list(pocketResNums)
+            if i == 0:
+                smp, remaining_res = MutationMinimizationMover.\
+                                     randSample(num_res, remaining_res)
+            else:
+                smp, __ = MutationMinimizationMover.\
+                          randSample(num_res, pocketResNums)
+            rand_samples[decoyNum].append(smp)
 
-        r_builder = ResfileBuilder()
-        mut_files = []
-        for sample in rand_sample:
-            r_builder.mutable_residues = sample
-            r_builder.filename = 'MUT_{}'.format('-'.join([str(i) for i in sample]))
-            mut_files.append(r_builder.filename)
-            r_builder.pose = pose
-            r_builder.build()
-    ndecoys = len(rand_samples)
+    annealLoop_mv = AnnealLoopMover()
+    annealLoop_mv.bb
+    
     mkDir('Decoys')
     file_template = os.path.join('Decoys','output-{}')
     file_template.format(now(1))
-    jd = PyJobDistributor(file_template,ndecoys,defaultScorefxn)
+    jd = PyJobDistributor(file_template,numDecoys,defaultScorefxn)
     while not jd.job_complete:
         new_pose.assign(pose)
-        # apply each specific mover to its decoy
-        # Mover
+        
         jd.output_decoy(pose)
 
 if __name__ == '__main__':
