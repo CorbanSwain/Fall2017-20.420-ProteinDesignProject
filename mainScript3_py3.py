@@ -12,8 +12,7 @@ from pyrosetta.toolbox import generate_resfile_from_pose
 from pyrosetta.rosetta.protocols.simple_moves import *
 from pyrosetta.rosetta.protocols.relax import FastRelax
 from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
-from pyrosetta.rosetta.core.pack.task import TaskFactory,
-parse_resfile
+from pyrosetta.rosetta.core.pack.task import TaskFactory
 from pyrosetta.rosetta.core.pack.task import parse_resfile
 
 
@@ -319,6 +318,7 @@ class ResfileBuilder:
     rotamer_tag = 'NATAA'
     mutate_tag = 'PIKAA {}'
     chain = 'A'
+    ligand_chain = 'X'
     line_fmt = '{:3d}  {}  {}\n'
     
     def __init__(self):
@@ -377,7 +377,8 @@ class ResfileBuilder:
         builder = cls()
         print('ResfileBuilder.pocketRotamerResfile: name --> {}'.format(name))
         builder.filename = name
-        print('ResfileBuilder.pocketRotamerResfile: builder.filename --> {}'.format(builder.filename))
+        print('ResfileBuilder.pocketRotamerResfile: builder.filename --> {}'.\
+              format(builder.filename))
         builder.packable_residues = pocketResNums
         builder.build()
         return builder.getResfilePath()
@@ -391,9 +392,23 @@ class ResfileBuilder:
             return filepath
         builder = cls()
         builder.filename = name
-        builder.packable_resdues = range(firstResNum, lastResNum + 1)
+        builder.packable_residues = range(firstResNum, lastResNum + 1)
         builder.build()
         return builder.getResfilePath()
+
+    @classmethod
+    def ligandRotamerResfile(cls):
+        name = 'ligand_rotamer'
+        filepath = ResfileBuilder.resfilePath(name)
+        if os.path.isfile(filepath):
+            return filepath
+        builder = cls()
+        builder.filename = name
+        builder.packable_residues = [1]
+        builder.chain = 'X'
+        builder.build()
+        return builder.getResfilePath()
+        
 
     @staticmethod
     def resfilePath(filename):
@@ -413,6 +428,20 @@ def rand_sample(n,lst):
         del temp_list[ind]
 
     return sample,temp_list
+
+class MutationLoopMover(CustomMover):
+
+
+    def __init__(self):
+        
+    # for each decoy create a mover that:
+    #   1. mutates the specified residues with resfile
+    #   1. minimize
+    #   1. repack rotomers for all pocket residues
+    #   1. minimize
+    #   1. do small/shear anneal loop
+    #   1. minimize
+    # apply each specific mover to its decoy
 
 def mutationLoop():
     # Randomly sample 4 residues from the pocket residues
@@ -438,6 +467,10 @@ def mutationLoop():
         r_builder.build()
         
     # Create n1*6 Decoys
+
+
+def main():
+    logBegin()
     ndecoys = len(rand_samples)
     mkDir('Decoys')
     file_template = os.path.join('Decoys','output-{}')
@@ -447,56 +480,11 @@ def mutationLoop():
         new_pose.assign(pose)
         # Mover
         jd.output_decoy(pose)
-        
-    # for each decoy create a mover that:
-    #   1. mutates the specified residues with resfile
-    #   1. minimize
-    #   1. repack rotomers for all pocket residues
-    #   1. minimize
-    #   1. do small/shear anneal loop
-    #   1. minimize
-    # apply each specific mover to its decoy
-    pass
- 
-def main():
-    logBegin()
-    # pymol = createPyMolMover()
 
-    # startPose = loadInPose('new_3vi8_complex.pdb')
-    # print('Num Residues: {:d}'.format(startPose.total_residue()))
-    # namePose(startPose,'original')
-    # pymol.apply(startPose)
-
-    # fRelaxFile = '3vi8_complex_fastRelaxed.pdb'
-    # fRelaxFile = os.path.join(pdbCache,fRelaxFile)
-    # if os.path.isfile(fRelaxFile):
-    #     fRelaxPose = loadInPose(fRelaxFile)
-    # else:
-    #     fRelaxPose = poseFrom(startPose)
-    #     fastRelax(fRelaxPose)
-    #     fRelaxPose.dump_pdb(fRelaxFile)
-    # namePose(fRelaxPose,'orig_relaxed')
-    # pymol.apply(fRelaxPose)
-    
-    # minPose = poseFrom(fRelaxPose)
-    # namePose(minPose,'minimized')
-
-    # annealCycles = 2
-    # kT = 10.0
-    # smallNShearAnnealLoop(minPose,annealCycles,kT)
-
-    # n2 = 200
-    # kT3 = 0.1
-    # minMove(minPose,repeats=n2,kT=kT3)
-    # printScore(minPose,'After {} Min Cycles'.format(n2))
-    # pymol.apply(minPose)
-
-    # printScore(startPose,'Original')
-    # printScore(fRelaxPose,'Fast Relax')
-    # printScore(minPose,'Minimization Protocol')
     logEnd()
-    
-main()
+
+if __name__ == '__main__':
+    main()
 
  
 
