@@ -168,7 +168,8 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
                 infoStr += '{:7.1f}'
             else:
                 infoStr += '{}'
-            # print('Val: {} | InfoStr.format: {}'.format(val,infoStr.format(val)))
+            # print('Val: {} | InfoStr.format: {}'.\
+            #       format(val,infoStr.format(val)))
             infoStr = infoStr.format(val)
             info.append(infoStr)
         return ' | '.join(info)
@@ -470,30 +471,49 @@ def rand_sample(n,lst):
 
     return sample,temp_list
 
+
 class MutationLoopAssemblyMover(CustomMover):
+
+
     decoy_count = 0
 
     def __init__(self):
         self.mut_pattern = [[]]
         self.kT = 1.0
-        self.annealLoop = AnnealLoopMover()
+        self.annealLoop = None
         self.identifier = MutationLoopMover.decoy_count
-        self.decoy_count += 1
+        MutationLoopAssemblyMover.decoy_count += 1
         
-    def apply(self, pose=Pose()):
-        for mut_residues in mut_pattern:
-            for res in mut_residues:
-                
-          # for each decoy create a mover that:
-          #   1. mutates the specified residues with resfile
-          #   1. repack rotomers for all pocket residues, use movemap with MinMover
+    def apply(self, pose):
+        mc = MonteCarlo(self.scorefxn, self.kT)
+        for i, mut_residues in enumerate(mut_pattern):
+            # for each decoy create a mover that:
+            #   1. mutates the specified residues with resfile
+            r_file = ResfileBuilder.resfileFromDecoySpecs(
+                self.pose, mut_residues,
+                self.identifier, i)
+            mut_mv = MutantPackMover()
+            mut_mv.resfile = r_file 
+            #   2. repacks rotomers for all pocket residues, use movemap with MinMover
+            repack_mv = RepMinMover()
+            repack_mv.chi_res = pocketResNums
+            repack_mv.repeats = 10
+            #   3. do small/shear anneal loop
+            anneal_mv = self.annealLoop
+            #   4. minimize pocket rotamers (same as 2)
+            #   5. minimize backmobe
+            min_mv = RepMinMover()
+            min_mv.bb_all = True
+            min_mv.repeats = 50
 
-          
-          #   1. do small/shear anneal loop
-          self.annealLoop
-          #   1. minimize pocket rotamers
-          #   1. minimize backmobe
-          # apply each specific mover to its decoy
+            seq_mv = SequenceMover()
+            seq_mv.add_mover(mut_mv)
+            seq_mv.add_mover(repack_mv)
+            seq_mv.add_mover(anneal_mv)
+            seq_mv.add_mover(repack_mv)
+            seq_mv.add_mover(min_mv)
+            trial_mv = TrialMover(seq_mv, mc)
+            trial_mv.apply(pose)
 
 
         
@@ -529,6 +549,7 @@ def main():
     jd = PyJobDistributor(file_template,ndecoys,defaultScorefxn)
     while not jd.job_complete:
         new_pose.assign(pose)
+        # apply each specific mover to its decoy
         # Mover
         jd.output_decoy(pose)
 
