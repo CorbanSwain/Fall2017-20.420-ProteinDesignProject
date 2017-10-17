@@ -1,0 +1,402 @@
+AlgorithmCache/171017_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 07:07:52 10-17-17
+
+
+
+[07:11:29] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:11:29] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:12:56] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:12:56] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:13:37] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:13:37] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:14:31] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:14:31] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:14:53] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:14:53] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:15:25] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:15:25] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+
+
+[07:16:02] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:16:02] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:16:03] >  Random Samples Arr:
+[07:16:03] >  [[[355, 344, 333, 332],
+[07:16:03] >    [279, 250, 254, 272],
+[07:16:03] >    [276, 333, 332, 255],
+[07:16:03] >    [354, 330, 280, 273]]]
+[07:16:03] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[07:21:29] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:21:29] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:21:30] >  Random Samples Arr:
+[07:21:30] >  [[[247, 254, 272, 355],
+[07:21:30] >    [332, 251, 333, 343],
+[07:21:30] >    [343, 276, 325, 354],
+[07:21:30] >    [273, 334, 325, 250]]]
+[07:21:30] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[07:22:20] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:22:20] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:22:21] >  Random Samples Arr:
+[07:22:21] >  [[[272, 276, 358, 343],
+[07:22:21] >    [334, 272, 330, 339],
+[07:22:21] >    [333, 332, 321, 325],
+[07:22:21] >    [273, 247, 275, 280]]]
+[07:22:21] >  Making Job Distributor
+[07:22:21] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[07:24:10] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:24:10] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:24:11] >  Random Samples Arr:
+[07:24:11] >  [[[325, 355, 339, 272],
+[07:24:11] >    [251, 354, 344, 330],
+[07:24:11] >    [321, 280, 332, 344],
+[07:24:11] >    [280, 279, 250, 254]]]
+[07:24:11] >  Making Job Distributor
+[07:24:11] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[07:26:31] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:26:31] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:26:32] >  Random Samples Arr:
+[07:26:32] >  [[[339, 247, 272, 255],
+[07:26:32] >    [354, 280, 251, 339],
+[07:26:32] >    [330, 254, 280, 339],
+[07:26:32] >    [339, 272, 273, 279]]]
+[07:26:32] >  Making Job Distributor
+
+
+[07:26:55] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:26:55] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:26:55] >  Random Samples Arr:
+[07:26:55] >  [[[247, 355, 325, 273],
+[07:26:55] >    [343, 344, 339, 321],
+[07:26:55] >    [241, 255, 325, 330],
+[07:26:55] >    [343, 358, 272, 334]]]
+[07:26:55] >  Making Job Distributor
+[07:26:55] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[07:30:09] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:30:09] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:30:10] >  Random Samples Arr:
+[07:30:10] >  [[[330, 280, 339, 334],
+[07:30:10] >    [325, 276, 275, 321],
+[07:30:10] >    [250, 358, 330, 332],
+[07:30:10] >    [251, 358, 280, 276]],
+[07:30:10] >   [[241, 272, 250, 251],
+[07:30:10] >    [273, 358, 255, 254],
+[07:30:10] >    [273, 275, 321, 355],
+[07:30:10] >    [354, 250, 321, 254]]]
+[07:30:10] >  Making Job Distributor
+[07:30:10] >  Beginning Decoy # 1
+
+
+[07:30:34] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:30:34] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:30:34] >  Random Samples Arr:
+[07:30:34] >  [[[273, 355, 339, 276],
+[07:30:34] >    [334, 250, 330, 273],
+[07:30:34] >    [254, 325, 279, 355],
+[07:30:34] >    [333, 321, 254, 250]],
+[07:30:34] >   [[241, 343, 354, 321],
+[07:30:34] >    [355, 321, 247, 275],
+[07:30:34] >    [343, 339, 321, 241],
+[07:30:34] >    [272, 279, 273, 241]]]
+[07:30:34] >  Making Job Distributor
+[07:30:34] >  Beginning Decoy # 1
+
+
+[07:31:05] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:31:05] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:31:05] >  Random Samples Arr:
+[07:31:05] >  [[[330, 280, 279, 321],
+[07:31:05] >    [344, 251, 280, 343],
+[07:31:05] >    [330, 344, 255, 279],
+[07:31:05] >    [339, 334, 321, 255]],
+[07:31:05] >   [[255, 333, 254, 325],
+[07:31:05] >    [241, 332, 358, 250],
+[07:31:05] >    [250, 280, 251, 354],
+[07:31:05] >    [276, 273, 251, 355]]]
+[07:31:05] >  Making Job Distributor
+[07:31:05] >  Beginning Decoy # 1
+[07:31:05] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:31:05] >   `--> ['mut_pattern: [[330, 280, 279, 321], [344, 251, 280, 343], [330, 344, 255, '
+[07:31:05] >   '279], [339, 334, 321, 255]]',
+[07:31:05] >   'kT:     1.0',
+[07:31:05] >   'identifier:  0']
+
+
+[07:32:26] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:32:26] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:32:27] >  Random Samples Arr:
+[07:32:27] >  [[[251, 339, 275, 343],
+[07:32:27] >    [276, 280, 273, 251],
+[07:32:27] >    [339, 321, 325, 344],
+[07:32:27] >    [330, 339, 355, 241]],
+[07:32:27] >   [[333, 344, 247, 279],
+[07:32:27] >    [241, 254, 321, 354],
+[07:32:27] >    [250, 358, 276, 334],
+[07:32:27] >    [275, 272, 255, 358]]]
+[07:32:27] >  Making Job Distributor
+[07:32:27] >  Beginning Decoy # 1
+[07:32:27] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:32:27] >   `--> ['mut_pattern: [[251, 339, 275, 343], [276, 280, 273, 251], [339, 321, 325, '
+[07:32:27] >   '344], [330, 339, 355, 241]]',
+[07:32:27] >   'kT:     1.0',
+[07:32:27] >   'identifier:  0']
+[07:32:27] >  MMM  0 - Loop  0/ 4
+
+
+[07:35:16] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:35:16] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:35:17] >  Random Samples Arr:
+[07:35:17] >  [[[334, 254, 250, 273],
+[07:35:17] >    [280, 325, 330, 251],
+[07:35:17] >    [279, 332, 247, 339],
+[07:35:17] >    [354, 343, 334, 254]],
+[07:35:17] >   [[279, 247, 339, 276],
+[07:35:17] >    [334, 344, 250, 255],
+[07:35:17] >    [354, 358, 241, 251],
+[07:35:17] >    [344, 330, 325, 333]]]
+[07:35:17] >  Making Job Distributor
+[07:35:17] >  Beginning Decoy # 1
+[07:35:17] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:35:17] >   `--> ['mut_pattern: [[334, 254, 250, 273], [280, 325, 330, 251], [279, 332, 247, '
+[07:35:17] >   '339], [354, 343, 334, 254]]',
+[07:35:17] >   'kT:     1.0',
+[07:35:17] >   'identifier:  0']
+[07:35:17] >  MMM  0 - Loop  0/ 4
+[07:35:17] >  ResfileBuilder.build: Writing File --> decoy00.00
+
+
+[07:36:45] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:36:45] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:36:45] >  Random Samples Arr:
+[07:36:45] >  [[[339, 280, 254, 334],
+[07:36:45] >    [272, 333, 358, 241],
+[07:36:45] >    [280, 358, 344, 354],
+[07:36:45] >    [321, 354, 343, 330]],
+[07:36:45] >   [[250, 358, 255, 273],
+[07:36:45] >    [325, 355, 344, 275],
+[07:36:45] >    [334, 325, 272, 255],
+[07:36:45] >    [333, 241, 332, 250]]]
+[07:36:45] >  Making Job Distributor
+[07:36:45] >  Beginning Decoy # 1
+[07:36:45] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:36:45] >   `--> ['mut_pattern: [[339, 280, 254, 334], [272, 333, 358, 241], [280, 358, 344, '
+[07:36:45] >   '354], [321, 354, 343, 330]]',
+[07:36:45] >   'kT:     1.0',
+[07:36:45] >   'identifier:  0']
+[07:36:45] >  MMM  0 - Loop  0/ 4
+[07:36:45] >  ResfileBuilder.build: Writing File --> decoy00.00
+
+
+[07:40:57] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:40:57] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:40:58] >  Random Samples Arr:
+[07:40:58] >  [[[354, 255, 343, 251],
+[07:40:58] >    [279, 255, 241, 333],
+[07:40:58] >    [280, 344, 273, 339],
+[07:40:58] >    [276, 358, 354, 255]],
+[07:40:58] >   [[321, 276, 254, 339],
+[07:40:58] >    [254, 339, 344, 247],
+[07:40:58] >    [251, 250, 334, 275],
+[07:40:58] >    [332, 250, 247, 330]]]
+[07:40:58] >  Making Job Distributor
+[07:40:58] >  Beginning Decoy # 1
+[07:40:58] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:40:58] >   `--> ['mut_pattern: [[354, 255, 343, 251], [279, 255, 241, 333], [280, 344, 273, '
+[07:40:58] >   '339], [276, 358, 354, 255]]',
+[07:40:58] >   'kT:     1.0',
+[07:40:58] >   'identifier:  0']
+[07:40:58] >  MMM  0 - Loop  0/ 4
+[07:40:58] >  ResfileBuilder.build: Writing File --> decoy-00.00
+
+
+[07:41:29] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:41:29] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:41:29] >  Random Samples Arr:
+[07:41:29] >  [[[279, 276, 272, 333],
+[07:41:29] >    [321, 254, 344, 275],
+[07:41:29] >    [280, 344, 355, 321],
+[07:41:29] >    [273, 247, 344, 358]],
+[07:41:29] >   [[280, 358, 241, 275],
+[07:41:29] >    [255, 280, 343, 339],
+[07:41:29] >    [241, 354, 325, 339],
+[07:41:29] >    [325, 355, 330, 333]]]
+[07:41:29] >  Making Job Distributor
+[07:41:29] >  Beginning Decoy # 1
+[07:41:29] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:41:29] >   `--> ['mut_pattern: [[279, 276, 272, 333], [321, 254, 344, 275], [280, 344, 355, '
+[07:41:29] >   '321], [273, 247, 344, 358]]',
+[07:41:29] >   'kT:     1.0',
+[07:41:29] >   'identifier:  0']
+[07:41:29] >  MMM  0 - Loop  0/ 4
+[07:41:29] >  ResfileBuilder.build: Writing File --> decoy-00.00
+
+
+[07:51:26] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:51:26] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:51:27] >  Random Samples Arr:
+[07:51:27] >  [[[332, 272, 250, 354],
+[07:51:27] >    [334, 333, 358, 254],
+[07:51:27] >    [358, 251, 355, 279],
+[07:51:27] >    [333, 276, 280, 332]],
+[07:51:27] >   [[255, 358, 241, 334],
+[07:51:27] >    [280, 325, 247, 339],
+[07:51:27] >    [255, 275, 344, 330],
+[07:51:27] >    [325, 250, 339, 344]]]
+
+
+[07:53:45] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:53:45] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:53:45] >  Random Samples Arr:
+[07:53:45] >  [[[254, 343, 358, 344],
+[07:53:45] >    [334, 273, 358, 275],
+[07:53:45] >    [354, 321, 273, 343],
+[07:53:45] >    [276, 321, 250, 344]],
+[07:53:45] >   [[280, 332, 321, 330],
+[07:53:45] >    [333, 247, 354, 241],
+[07:53:45] >    [332, 355, 254, 334],
+[07:53:45] >    [275, 251, 333, 280]]]
+[07:53:45] >  Making Job Distributor
+[07:53:45] >  Beginning Decoy # 1
+[07:53:45] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:53:45] >   `--> ['mut_pattern: [[254, 343, 358, 344], [334, 273, 358, 275], [354, 321, 273, '
+[07:53:45] >   '343], [276, 321, 250, 344]]',
+[07:53:45] >   'kT:     1.0',
+[07:53:45] >   'identifier:  0']
+[07:53:45] >  MMM  0 - Loop  0/ 4
+[07:53:45] >  ResfileBuilder.build: Writing File --> decoy-00.00
+
+
+[07:55:58] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:55:58] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:55:59] >  Random Samples Arr:
+[07:55:59] >  [[[355, 332, 276, 325],
+[07:55:59] >    [254, 255, 344, 276],
+[07:55:59] >    [254, 325, 272, 279],
+[07:55:59] >    [272, 279, 344, 250]],
+[07:55:59] >   [[273, 280, 255, 343],
+[07:55:59] >    [333, 279, 325, 330],
+[07:55:59] >    [241, 332, 251, 275],
+[07:55:59] >    [241, 334, 280, 276]]]
+[07:55:59] >  Making Job Distributor
+[07:55:59] >  Beginning Decoy # 1
+[07:55:59] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:55:59] >   `--> ['mut_pattern: [[355, 332, 276, 325], [254, 255, 344, 276], [254, 325, 272, '
+[07:55:59] >   '279], [272, 279, 344, 250]]',
+[07:55:59] >   'kT:     1.0',
+[07:55:59] >   'identifier:  0']
+[07:55:59] >  MMM  0 - Loop  0/ 4
+[07:55:59] >  ResfileBuilder.build: Writing File --> decoy-00.00
+[07:55:59] >  Pre Mutation Mover Score       -->   363.60845
+[07:55:59] >  Perfoming A Minimization Loop
+[07:55:59] >  `--> ['repeats: 10',
+[07:55:59] >   'kT:     1.0',
+[07:55:59] >   'bb_all:  0',
+[07:55:59] >   'bb_range: None',
+[07:55:59] >   'bb_res: None',
+[07:55:59] >   'chi_all:  0',
+[07:55:59] >   'chi_range: None',
+[07:55:59] >   'chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, '
+[07:55:59] >   '325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]']
+
+
+[07:56:57] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:56:57] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:56:57] >  Random Samples Arr:
+[07:56:57] >  [[[343, 275, 280, 276],
+[07:56:57] >    [321, 343, 355, 334],
+[07:56:57] >    [273, 355, 255, 280],
+[07:56:57] >    [276, 280, 272, 332]],
+[07:56:57] >   [[241, 247, 279, 254],
+[07:56:57] >    [241, 354, 330, 325],
+[07:56:57] >    [241, 250, 276, 247],
+[07:56:57] >    [330, 255, 354, 279]]]
+[07:56:57] >  Making Job Distributor
+[07:56:57] >  Beginning Decoy # 1
+[07:56:57] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:56:57] >   `--> ['mut_pattern: [[343, 275, 280, 276], [321, 343, 355, 334], [273, 355, 255, '
+[07:56:57] >   '280], [276, 280, 272, 332]]',
+[07:56:57] >   'kT:     1.0',
+[07:56:57] >   'identifier:  0']
+[07:56:57] >  MMM  0 - Loop  0/ 4
+[07:56:57] >  ResfileBuilder.build: Writing File --> decoy-00.00
+[07:56:57] >  Pre Mutation Mover Score       -->   363.60845
+[07:56:57] >  Perfoming A Minimization Loop
+[07:56:57] >  `--> ['repeats: 10',
+[07:56:57] >   'kT:     1.0',
+[07:56:57] >   'bb_all:  0',
+[07:56:57] >   'bb_range: None',
+[07:56:57] >   'bb_res: None',
+[07:56:57] >   'chi_all:  0',
+[07:56:57] >   'chi_range: None',
+[07:56:57] >   'chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, '
+[07:56:57] >   '325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]']
+
+
+[07:58:11] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[07:58:11] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[07:58:12] >  Random Samples Arr:
+[07:58:12] >  [[[355, 280, 276, 255],
+[07:58:12] >    [254, 344, 358, 321],
+[07:58:12] >    [355, 250, 255, 276],
+[07:58:12] >    [325, 344, 334, 254]],
+[07:58:12] >   [[344, 325, 273, 241],
+[07:58:12] >    [272, 355, 279, 241],
+[07:58:12] >    [251, 247, 334, 254],
+[07:58:12] >    [343, 330, 273, 339]]]
+[07:58:12] >  Making Job Distributor
+[07:58:12] >  Beginning Decoy # 1
+[07:58:12] >  MMM  0 - Beginning Mutation Minimization Mover
+[07:58:12] >   `--> ['mut_pattern: [[355, 280, 276, 255], [254, 344, 358, 321], [355, 250, 255, '
+[07:58:12] >   '276], [325, 344, 334, 254]]',
+[07:58:12] >   'kT:     1.0',
+[07:58:12] >   'identifier:  0']
+[07:58:12] >  MMM  0 - Loop  0/ 4
+[07:58:12] >  ResfileBuilder.build: Writing File --> decoy-00.00
+[07:58:12] >  Pre Mutation Mover Score       -->   363.60845
+[07:58:12] >  Perfoming A Minimization Loop
+[07:58:12] >  `--> ['repeats: 10',
+[07:58:12] >   'kT:     1.0',
+[07:58:12] >   'bb_all:  0',
+[07:58:12] >   'bb_range: None',
+[07:58:12] >   'bb_res: None',
+[07:58:12] >   'chi_all:  0',
+[07:58:12] >   'chi_range: None',
+[07:58:12] >   'chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, '
+[07:58:12] >   '325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]']
+[07:58:13] >  Beginning Anneal Loop
+[07:58:13] >   `--> ['cycles:  2',
+[07:58:13] >   'kT: 10',
+[07:58:13] >   'heat_time:  3',
+[07:58:13] >   'anneal_time:  4',
+[07:58:13] >   'angle_max:     4.0',
+[07:58:13] >   'kT_max:   100.0',
+[07:58:13] >   'seqRepeats:  5',
+[07:58:13] >   'numSmallShearRepeats:  5',
+[07:58:13] >   'kT_ratio: 20',
+[07:58:13] >   'angle_ratio: 10',
+[07:58:13] >   'bb_range: (241, 358)']
