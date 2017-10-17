@@ -383,7 +383,7 @@ class ResfileBuilder:
         return text
     
     def build(self):
-        print('ResfileBuilder.build: filename --> {}'.format(self.filename))
+        dprint('ResfileBuilder.build: Writing File --> {}'.format(self.filename))
         with open(self.getResfilePath(),'w') as rfile:
             rfile.write(self.getFileHeader())
             if len(self.packable_residues) > 0:
@@ -458,21 +458,9 @@ class ResfileBuilder:
         if not filename.endswith(suffix):
             filename += suffix
         return os.path.join(ResfileBuilder.resfile_dir,filename)
-        
-
-def rand_sample(n,lst):
-    length = len(lst)
-    temp_list = list(lst)
-    sample = []
-    for i in range(n):
-        ind = random.randint(0, length - 1 - i)
-        sample.append(temp_list[ind])
-        del temp_list[ind]
-
-    return sample,temp_list
 
 
-class MutationLoopAssemblyMover(CustomMover):
+class MutationMinimizationMover(CustomMover):
 
 
     decoy_count = 0
@@ -485,8 +473,14 @@ class MutationLoopAssemblyMover(CustomMover):
         MutationLoopAssemblyMover.decoy_count += 1
         
     def apply(self, pose):
+        dprint(('MMM {:2d} - Beginning Mutation '
+                'Minimization Mover').format(self.identifier))
+        log(' `--> {}'.format(self))
         mc = MonteCarlo(self.scorefxn, self.kT)
+        n = len(self.mut_pattern)
         for i, mut_residues in enumerate(mut_pattern):
+            log('MMM {:2d} - Loop {:2d}/{:2d}'.format(
+                self.identifier, i, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
             r_file = ResfileBuilder.resfileFromDecoySpecs(
@@ -513,8 +507,20 @@ class MutationLoopAssemblyMover(CustomMover):
             seq_mv.add_mover(repack_mv)
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
+            scorefxn(pose)
             trial_mv.apply(pose)
 
+        @staticmethod
+        def randSample(n,lst):
+            length = len(lst)
+            temp_list = list(lst)
+            sample = []
+            for i in range(n):
+                ind = random.randint(0, length - 1 - i)
+                sample.append(temp_list[ind])
+                del temp_list[ind]
+
+            return sample, temp_list
 
         
         
