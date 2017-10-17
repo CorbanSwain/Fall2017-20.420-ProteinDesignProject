@@ -147,34 +147,52 @@ def poseFrom(pose):
 def namePose(pose,nameStr):
      pose.pdb_info().name(nameStr)
 
-def fastRelax(pose,scorefxn=defaultScorefxn):
-    dprint('Beginning Fast Relax')
-    fast_relax = FastRelax()
-    fast_relax.set_scorefxn(scorefxn) 
-    fast_relax.apply(pose)
+
+def createPyMolMover():
+    pymol = PyMOLMover()
+    return pymol
+
 
 class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     scorefxn = defaultScorefxn
     def __init__(self):
         pass
+    
     def __str__(self):
         info = []
         for key,val in self.__dict__.items():
-            infoStr = '{}:'.format(key)
+            infoStr = '{}: '.format(key)
             if isinstance(val,int):
                 infoStr += '{:2d}'
             elif isinstance(val,float):
-                infoStr += '{7.1f}'
+                infoStr += '{:7.1f}'
             else:
                 infoStr += '{}'
-            infoStr.format(val)
+            # print('Val: {} | InfoStr.format: {}'.format(val,infoStr.format(val)))
+            infoStr = infoStr.format(val)
             info.append(infoStr)
         return ' | '.join(info)
     
     def get_name(self):
         return self.__class__.__name__
 
+
+class FastRelaxMover(CustomMover):
+
+    
+    def __init__(self):
+        pass
+
+    def apply(self,pose):
+        dprint('Beginning Fast Relax')
+        fast_relax = FastRelax()
+        fast_relax.set_scorefxn(self.scorefxn) 
+        fast_relax.apply(pose)
+    
+    
 class RepMinMover(CustomMover):
+
+
     def __init__(self):
         self.repeats = 10
         self.kT = 1.0
@@ -185,10 +203,6 @@ class RepMinMover(CustomMover):
         self.chi_range = None
         self.chi_res = None
         
-    def __str__(self):
-        return 'Num Repeats: {:4d} | kT: {:9.2f}'.\
-            format(self.repeats,self.kT)
-
     def setMovemapBB(self,movemap):
         movemap.set_bb(False)
         if self.bb_res is not None:
@@ -217,12 +231,8 @@ class RepMinMover(CustomMover):
         dprint('Perfoming A Minimization Loop')
         log( '`--> {}'.format(self))
         movemap = MoveMap()
-        if self.bb_res is not None:
-            for res in self.bb_res:
-                
-        else:
-            begin, end = self.bb_range
-            movemap.set_bb_true_range(begin,end)
+        self.setMovemapBB(movemap)
+        self.setMovemapChi(movemap)
         min_mv = MinMover()
         min_mv.movemap(movemap)
         min_mv.score_function(self.scorefxn)
@@ -231,33 +241,25 @@ class RepMinMover(CustomMover):
         rep_mv = RepeatMover(trial_mv,self.repeats)
         rep_mv.apply(pose)   
 
+        
 class SmallShearMover(CustomMover):
+
+
     def __init__(self):
         self.repeats = 50
         self.n_moves =5
         self.kT = 1.0
         self.angle = None
         self.bb_range = None
-
-    def __str__(self):
-        return ('Num Repeats: {:4d} | Num Sml/Shr Moves: {:4d} | '
-                'kT: {:9.2f} | Angl Rng: {:4.1f}').\
-                format(self.repeats,self.n_moves,self.kT,self.angle)
         
     def apply(self, pose):
         dprint('Running Small and Shear Movers'.format(repeats))
         log(' `--> {}'.format(self))
-        movemap = MoveMap()
-        if self.bb_range is None:
-            movemap.set_bb(True)
-        else:
-            begin, end = self.bb_range
-            movemap.set_bb_true_range(begin,end)
 
-        min_mv = MinMover()
-        min_mv.movemap(movemap)
-        min_mv.score_function(self.scorefxn)
-
+        min_mv = RepMinMover()
+        min_mv.bb_range = self.bb_range
+        min_mv.repeats = 2
+        
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
         shear_mv = ShearMover(movemap, self.kT, self.n_moves)
         if self.angle is not None:
@@ -282,7 +284,10 @@ class SmallShearMover(CustomMover):
         rep_mv = RepeatMover(seq_total, self.repeats)
         rep_mv.apply(pose)
 
+        
 class AnnealLoopMover(CustomMover):
+
+
     def __init__(self):
         self.cycles = 2
         self.kT = 10
@@ -337,10 +342,6 @@ class MutantPackMover(CustomMover):
         pack_mv = PackRotamersMover(self.scorefxn, task)
         pack_mv.apply(pose)
 
-            
-def createPyMolMover():
-    pymol = PyMOLMover()
-    return pymol
 
 class ResfileBuilder:
 
@@ -441,7 +442,15 @@ class ResfileBuilder:
         builder.build()
         return builder.getResfilePath()
         
-
+    @classmethod
+    def resfileFromDecoySpecs(cls,pose,residues,identifier,cycle)
+        builder = cls()
+        builder.mutable_residues = residues
+        builder.filename = 'decoy{:02d}.{:02d}'.format(identifier,cycle)
+        builder.pose = pose
+        builder.build()
+        return builder.getResfilePath()    
+    
     @staticmethod
     def resfilePath(filename):
         suffix = '.' + ResfileBuilder.resfile_ext
@@ -461,17 +470,20 @@ def rand_sample(n,lst):
 
     return sample,temp_list
 
-class MutationLoopMover(CustomMover):
-
+class MutationLoopAssemblyMover(CustomMover):
+    decoy_count = 0
 
     def __init__(self):
-        self.num_mutation_cycles = 2
-        self.res_per_cycle = 4
+        self.mut_pattern = [[]]
+        self.kT = 1.0
         self.annealLoop = AnnealLoopMover()
+        self.identifier = MutationLoopMover.decoy_count
+        self.decoy_count += 1
         
-        
-      def apply(self, pose=Pose()):
-           
+    def apply(self, pose=Pose()):
+        for mut_residues in mut_pattern:
+            for res in mut_residues:
+                
           # for each decoy create a mover that:
           #   1. mutates the specified residues with resfile
           #   1. repack rotomers for all pocket residues, use movemap with MinMover
@@ -483,8 +495,13 @@ class MutationLoopMover(CustomMover):
           #   1. minimize backmobe
           # apply each specific mover to its decoy
 
-    def mutationGenerator():
-        # Randomly sample 4 residues from the pocket residues
+
+        
+        
+
+def main():
+
+    # Randomly sample 4 residues from the pocket residues
         # 6 times, so all that  pocket residues are used once
         # ^ do this n1 times
         pose = Pose()
@@ -505,12 +522,6 @@ class MutationLoopMover(CustomMover):
             mut_files.append(r_builder.filename)
             r_builder.pose = pose
             r_builder.build()
-        
-    # Create n1*6 Decoys
-
-
-def main():
-    logBegin()
     ndecoys = len(rand_samples)
     mkDir('Decoys')
     file_template = os.path.join('Decoys','output-{}')
@@ -521,10 +532,10 @@ def main():
         # Mover
         jd.output_decoy(pose)
 
-    logEnd()
-
 if __name__ == '__main__':
+    logBegin()
     main()
+    logEnd()
 
  
 
