@@ -41277,3 +41277,1426 @@ Begins: 07:07:52 10-17-17
 [08:15:33] >   'chi_res: None']
 [08:16:08] >  MMM  0 - Loop  1/ 4
 [08:16:08] >  ResfileBuilder.build: Writing File --> decoy-00.01
+
+
+[08:28:15] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[08:28:15] >  Loading In `new_3vi8_complex.pdb` and Creating Pose
+[08:28:16] >  Random Samples Arr:
+[08:28:16] >  [[[254, 321, 330, 325],
+[08:28:16] >    [358, 325, 273, 334],
+[08:28:16] >    [330, 332, 358, 251],
+[08:28:16] >    [255, 358, 247, 241]],
+[08:28:16] >   [[339, 358, 280, 276],
+[08:28:16] >    [279, 272, 255, 254],
+[08:28:16] >    [334, 254, 276, 321],
+[08:28:16] >    [344, 354, 330, 280]]]
+[08:28:16] >  Making Job Distributor
+[08:28:16] >  Beginning Decoy # 1
+[08:28:16] >  MMM  0 - Beginning Mutation Minimization Mover
+[08:28:16] >   `--> mut_pattern: [[254, 321, 330, 325], [358, 325, 273, 334], [330, 332, 358, 251], [255, 358, 247, 241]] | kT:     1.0 | identifier:  0
+[08:28:16] >  MMM  0 - Loop  0/ 4
+[08:28:16] >  ResfileBuilder.build: Writing File --> decoy-00.00
+[08:28:16] >  ResfileBuilder.build: Writing File --> ligand_rotamer
+[08:28:16] >  MMMPre Mutation Mover Score    -->   363.60845
+[08:28:16] >  Performing Mutant Pack Mover
+[08:28:16] >   `--> resfile: Resfiles/decoy-00.00.resfile
+[08:28:16] >  Perfoming A Minimization Loop  10
+[08:28:16] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:28:18] >  Beginning Anneal Loop
+[08:28:18] >   `--> cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (241, 358)
+[08:28:18] >  Beginning Loop #  1/14
+[08:28:18] >  Running Small and Shear Movers
+[08:28:18] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:18] >  Perfoming A Minimization Loop   2
+[08:28:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:18] >  Perfoming A Minimization Loop   2
+[08:28:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:18] >  Perfoming A Minimization Loop   2
+[08:28:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:19] >  Perfoming A Minimization Loop   2
+[08:28:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:19] >  Perfoming A Minimization Loop   2
+[08:28:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:19] >  Perfoming A Minimization Loop   2
+[08:28:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:19] >  Perfoming A Minimization Loop   2
+[08:28:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:20] >  Perfoming A Minimization Loop   2
+[08:28:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:20] >  Perfoming A Minimization Loop   2
+[08:28:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:20] >  Perfoming A Minimization Loop   2
+[08:28:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:21] >  Iteration #  1 Score           -->    83.33755
+[08:28:21] >  Beginning Loop #  2/14
+[08:28:21] >  Running Small and Shear Movers
+[08:28:21] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:21] >  Perfoming A Minimization Loop   2
+[08:28:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:21] >  Perfoming A Minimization Loop   2
+[08:28:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:21] >  Perfoming A Minimization Loop   2
+[08:28:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:22] >  Perfoming A Minimization Loop   2
+[08:28:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:22] >  Perfoming A Minimization Loop   2
+[08:28:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:22] >  Perfoming A Minimization Loop   2
+[08:28:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:22] >  Perfoming A Minimization Loop   2
+[08:28:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:23] >  Perfoming A Minimization Loop   2
+[08:28:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:23] >  Perfoming A Minimization Loop   2
+[08:28:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:23] >  Perfoming A Minimization Loop   2
+[08:28:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:24] >  Iteration #  2 Score           -->    58.37525
+[08:28:24] >  Beginning Loop #  3/14
+[08:28:24] >  Running Small and Shear Movers
+[08:28:24] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:24] >  Perfoming A Minimization Loop   2
+[08:28:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:24] >  Perfoming A Minimization Loop   2
+[08:28:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:24] >  Perfoming A Minimization Loop   2
+[08:28:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:25] >  Perfoming A Minimization Loop   2
+[08:28:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:25] >  Perfoming A Minimization Loop   2
+[08:28:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:25] >  Perfoming A Minimization Loop   2
+[08:28:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:26] >  Perfoming A Minimization Loop   2
+[08:28:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:26] >  Perfoming A Minimization Loop   2
+[08:28:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:26] >  Perfoming A Minimization Loop   2
+[08:28:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:27] >  Perfoming A Minimization Loop   2
+[08:28:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:27] >  Iteration #  3 Score           -->    58.37525
+[08:28:27] >  Beginning Loop #  4/14
+[08:28:27] >  Running Small and Shear Movers
+[08:28:27] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:27] >  Perfoming A Minimization Loop   2
+[08:28:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:27] >  Perfoming A Minimization Loop   2
+[08:28:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:28] >  Perfoming A Minimization Loop   2
+[08:28:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:28] >  Perfoming A Minimization Loop   2
+[08:28:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:29] >  Perfoming A Minimization Loop   2
+[08:28:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:29] >  Perfoming A Minimization Loop   2
+[08:28:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:29] >  Perfoming A Minimization Loop   2
+[08:28:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:30] >  Perfoming A Minimization Loop   2
+[08:28:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:30] >  Perfoming A Minimization Loop   2
+[08:28:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:30] >  Perfoming A Minimization Loop   2
+[08:28:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:31] >  Iteration #  4 Score           -->    55.80659
+[08:28:31] >  Beginning Loop #  5/14
+[08:28:31] >  Running Small and Shear Movers
+[08:28:31] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:31] >  Perfoming A Minimization Loop   2
+[08:28:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:31] >  Perfoming A Minimization Loop   2
+[08:28:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:31] >  Perfoming A Minimization Loop   2
+[08:28:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:31] >  Perfoming A Minimization Loop   2
+[08:28:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:32] >  Perfoming A Minimization Loop   2
+[08:28:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:32] >  Perfoming A Minimization Loop   2
+[08:28:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:32] >  Perfoming A Minimization Loop   2
+[08:28:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:33] >  Perfoming A Minimization Loop   2
+[08:28:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:33] >  Perfoming A Minimization Loop   2
+[08:28:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:33] >  Perfoming A Minimization Loop   2
+[08:28:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:34] >  Iteration #  5 Score           -->    53.84333
+[08:28:34] >  Beginning Loop #  6/14
+[08:28:34] >  Running Small and Shear Movers
+[08:28:34] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:34] >  Perfoming A Minimization Loop   2
+[08:28:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:34] >  Perfoming A Minimization Loop   2
+[08:28:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:34] >  Perfoming A Minimization Loop   2
+[08:28:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:34] >  Perfoming A Minimization Loop   2
+[08:28:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:35] >  Perfoming A Minimization Loop   2
+[08:28:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:35] >  Perfoming A Minimization Loop   2
+[08:28:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:35] >  Perfoming A Minimization Loop   2
+[08:28:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:36] >  Perfoming A Minimization Loop   2
+[08:28:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:36] >  Perfoming A Minimization Loop   2
+[08:28:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:36] >  Perfoming A Minimization Loop   2
+[08:28:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:37] >  Iteration #  6 Score           -->    50.14771
+[08:28:37] >  Beginning Loop #  7/14
+[08:28:37] >  Running Small and Shear Movers
+[08:28:37] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:37] >  Perfoming A Minimization Loop   2
+[08:28:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:37] >  Perfoming A Minimization Loop   2
+[08:28:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:37] >  Perfoming A Minimization Loop   2
+[08:28:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:38] >  Perfoming A Minimization Loop   2
+[08:28:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:38] >  Perfoming A Minimization Loop   2
+[08:28:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:38] >  Perfoming A Minimization Loop   2
+[08:28:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:38] >  Perfoming A Minimization Loop   2
+[08:28:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:39] >  Perfoming A Minimization Loop   2
+[08:28:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:39] >  Perfoming A Minimization Loop   2
+[08:28:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:39] >  Perfoming A Minimization Loop   2
+[08:28:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:40] >  Iteration #  7 Score           -->    42.46339
+[08:28:40] >  Beginning Loop #  8/14
+[08:28:40] >  Running Small and Shear Movers
+[08:28:40] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:40] >  Perfoming A Minimization Loop   2
+[08:28:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:40] >  Perfoming A Minimization Loop   2
+[08:28:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:40] >  Perfoming A Minimization Loop   2
+[08:28:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:41] >  Perfoming A Minimization Loop   2
+[08:28:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:41] >  Perfoming A Minimization Loop   2
+[08:28:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:41] >  Perfoming A Minimization Loop   2
+[08:28:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:42] >  Perfoming A Minimization Loop   2
+[08:28:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:42] >  Perfoming A Minimization Loop   2
+[08:28:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:42] >  Perfoming A Minimization Loop   2
+[08:28:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:42] >  Perfoming A Minimization Loop   2
+[08:28:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:43] >  Iteration #  8 Score           -->    42.46339
+[08:28:43] >  Beginning Loop #  9/14
+[08:28:43] >  Running Small and Shear Movers
+[08:28:43] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:43] >  Perfoming A Minimization Loop   2
+[08:28:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:43] >  Perfoming A Minimization Loop   2
+[08:28:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:43] >  Perfoming A Minimization Loop   2
+[08:28:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:44] >  Perfoming A Minimization Loop   2
+[08:28:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:44] >  Perfoming A Minimization Loop   2
+[08:28:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:44] >  Perfoming A Minimization Loop   2
+[08:28:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:45] >  Perfoming A Minimization Loop   2
+[08:28:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:45] >  Perfoming A Minimization Loop   2
+[08:28:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:45] >  Perfoming A Minimization Loop   2
+[08:28:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:45] >  Perfoming A Minimization Loop   2
+[08:28:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:46] >  Iteration #  9 Score           -->    42.46339
+[08:28:46] >  Beginning Loop # 10/14
+[08:28:46] >  Running Small and Shear Movers
+[08:28:46] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:28:46] >  Perfoming A Minimization Loop   2
+[08:28:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:46] >  Perfoming A Minimization Loop   2
+[08:28:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:46] >  Perfoming A Minimization Loop   2
+[08:28:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:47] >  Perfoming A Minimization Loop   2
+[08:28:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:47] >  Perfoming A Minimization Loop   2
+[08:28:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:47] >  Perfoming A Minimization Loop   2
+[08:28:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:48] >  Perfoming A Minimization Loop   2
+[08:28:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:48] >  Perfoming A Minimization Loop   2
+[08:28:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:48] >  Perfoming A Minimization Loop   2
+[08:28:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:49] >  Perfoming A Minimization Loop   2
+[08:28:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:49] >  Iteration # 10 Score           -->    42.46339
+[08:28:49] >  Beginning Loop # 11/14
+[08:28:49] >  Running Small and Shear Movers
+[08:28:49] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:49] >  Perfoming A Minimization Loop   2
+[08:28:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:49] >  Perfoming A Minimization Loop   2
+[08:28:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:49] >  Perfoming A Minimization Loop   2
+[08:28:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:50] >  Perfoming A Minimization Loop   2
+[08:28:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:50] >  Perfoming A Minimization Loop   2
+[08:28:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:50] >  Perfoming A Minimization Loop   2
+[08:28:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:51] >  Perfoming A Minimization Loop   2
+[08:28:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:51] >  Perfoming A Minimization Loop   2
+[08:28:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:51] >  Perfoming A Minimization Loop   2
+[08:28:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:52] >  Perfoming A Minimization Loop   2
+[08:28:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:52] >  Iteration # 11 Score           -->    47.89775
+[08:28:52] >  Beginning Loop # 12/14
+[08:28:52] >  Running Small and Shear Movers
+[08:28:52] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:52] >  Perfoming A Minimization Loop   2
+[08:28:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:52] >  Perfoming A Minimization Loop   2
+[08:28:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:53] >  Perfoming A Minimization Loop   2
+[08:28:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:53] >  Perfoming A Minimization Loop   2
+[08:28:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:53] >  Perfoming A Minimization Loop   2
+[08:28:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:53] >  Perfoming A Minimization Loop   2
+[08:28:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:54] >  Perfoming A Minimization Loop   2
+[08:28:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:54] >  Perfoming A Minimization Loop   2
+[08:28:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:54] >  Perfoming A Minimization Loop   2
+[08:28:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:55] >  Perfoming A Minimization Loop   2
+[08:28:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:55] >  Iteration # 12 Score           -->    43.87186
+[08:28:55] >  Beginning Loop # 13/14
+[08:28:55] >  Running Small and Shear Movers
+[08:28:55] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:55] >  Perfoming A Minimization Loop   2
+[08:28:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:55] >  Perfoming A Minimization Loop   2
+[08:28:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:56] >  Perfoming A Minimization Loop   2
+[08:28:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:56] >  Perfoming A Minimization Loop   2
+[08:28:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:56] >  Perfoming A Minimization Loop   2
+[08:28:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:56] >  Perfoming A Minimization Loop   2
+[08:28:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:57] >  Perfoming A Minimization Loop   2
+[08:28:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:57] >  Perfoming A Minimization Loop   2
+[08:28:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:57] >  Perfoming A Minimization Loop   2
+[08:28:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:58] >  Perfoming A Minimization Loop   2
+[08:28:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:58] >  Iteration # 13 Score           -->    41.51724
+[08:28:58] >  Beginning Loop # 14/14
+[08:28:58] >  Running Small and Shear Movers
+[08:28:58] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:28:58] >  Perfoming A Minimization Loop   2
+[08:28:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:58] >  Perfoming A Minimization Loop   2
+[08:28:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:59] >  Perfoming A Minimization Loop   2
+[08:28:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:59] >  Perfoming A Minimization Loop   2
+[08:28:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:59] >  Perfoming A Minimization Loop   2
+[08:28:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:28:59] >  Perfoming A Minimization Loop   2
+[08:28:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:00] >  Perfoming A Minimization Loop   2
+[08:29:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:00] >  Perfoming A Minimization Loop   2
+[08:29:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:00] >  Perfoming A Minimization Loop   2
+[08:29:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:01] >  Perfoming A Minimization Loop   2
+[08:29:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:01] >  Iteration # 14 Score           -->    40.49856
+[08:29:01] >  Perfoming A Minimization Loop  10
+[08:29:01] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:29:02] >  Performing Mutant Pack Mover
+[08:29:02] >   `--> resfile: Resfiles/ligand_rotamer.resfile
+[08:29:02] >  Perfoming A Minimization Loop  50
+[08:29:02] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:37] >  MMM  0 - Loop  1/ 4
+[08:29:37] >  ResfileBuilder.build: Writing File --> decoy-00.01
+[08:29:37] >  MMMPre Mutation Mover Score    -->    -6.99682
+[08:29:37] >  Performing Mutant Pack Mover
+[08:29:37] >   `--> resfile: Resfiles/decoy-00.01.resfile
+[08:29:37] >  Perfoming A Minimization Loop  10
+[08:29:37] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:29:39] >  Beginning Anneal Loop
+[08:29:39] >   `--> cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (241, 358)
+[08:29:39] >  Beginning Loop #  1/14
+[08:29:39] >  Running Small and Shear Movers
+[08:29:39] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:29:39] >  Perfoming A Minimization Loop   2
+[08:29:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:39] >  Perfoming A Minimization Loop   2
+[08:29:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:39] >  Perfoming A Minimization Loop   2
+[08:29:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:40] >  Perfoming A Minimization Loop   2
+[08:29:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:40] >  Perfoming A Minimization Loop   2
+[08:29:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:40] >  Perfoming A Minimization Loop   2
+[08:29:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:41] >  Perfoming A Minimization Loop   2
+[08:29:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:41] >  Perfoming A Minimization Loop   2
+[08:29:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:41] >  Perfoming A Minimization Loop   2
+[08:29:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:41] >  Perfoming A Minimization Loop   2
+[08:29:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:42] >  Iteration #  1 Score           -->    -2.87083
+[08:29:42] >  Beginning Loop #  2/14
+[08:29:42] >  Running Small and Shear Movers
+[08:29:42] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:29:42] >  Perfoming A Minimization Loop   2
+[08:29:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:42] >  Perfoming A Minimization Loop   2
+[08:29:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:42] >  Perfoming A Minimization Loop   2
+[08:29:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:43] >  Perfoming A Minimization Loop   2
+[08:29:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:43] >  Perfoming A Minimization Loop   2
+[08:29:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:43] >  Perfoming A Minimization Loop   2
+[08:29:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:44] >  Perfoming A Minimization Loop   2
+[08:29:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:44] >  Perfoming A Minimization Loop   2
+[08:29:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:44] >  Perfoming A Minimization Loop   2
+[08:29:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:45] >  Perfoming A Minimization Loop   2
+[08:29:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:45] >  Iteration #  2 Score           -->    -2.87083
+[08:29:45] >  Beginning Loop #  3/14
+[08:29:45] >  Running Small and Shear Movers
+[08:29:45] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:29:45] >  Perfoming A Minimization Loop   2
+[08:29:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:45] >  Perfoming A Minimization Loop   2
+[08:29:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:45] >  Perfoming A Minimization Loop   2
+[08:29:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:46] >  Perfoming A Minimization Loop   2
+[08:29:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:46] >  Perfoming A Minimization Loop   2
+[08:29:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:46] >  Perfoming A Minimization Loop   2
+[08:29:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:47] >  Perfoming A Minimization Loop   2
+[08:29:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:47] >  Perfoming A Minimization Loop   2
+[08:29:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:47] >  Perfoming A Minimization Loop   2
+[08:29:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:47] >  Perfoming A Minimization Loop   2
+[08:29:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:48] >  Iteration #  3 Score           -->    -2.87083
+[08:29:48] >  Beginning Loop #  4/14
+[08:29:48] >  Running Small and Shear Movers
+[08:29:48] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:29:48] >  Perfoming A Minimization Loop   2
+[08:29:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:48] >  Perfoming A Minimization Loop   2
+[08:29:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:48] >  Perfoming A Minimization Loop   2
+[08:29:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:49] >  Perfoming A Minimization Loop   2
+[08:29:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:49] >  Perfoming A Minimization Loop   2
+[08:29:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:49] >  Perfoming A Minimization Loop   2
+[08:29:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:50] >  Perfoming A Minimization Loop   2
+[08:29:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:50] >  Perfoming A Minimization Loop   2
+[08:29:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:50] >  Perfoming A Minimization Loop   2
+[08:29:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:50] >  Perfoming A Minimization Loop   2
+[08:29:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:51] >  Iteration #  4 Score           -->    -2.87083
+[08:29:51] >  Beginning Loop #  5/14
+[08:29:51] >  Running Small and Shear Movers
+[08:29:51] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:29:51] >  Perfoming A Minimization Loop   2
+[08:29:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:51] >  Perfoming A Minimization Loop   2
+[08:29:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:51] >  Perfoming A Minimization Loop   2
+[08:29:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:52] >  Perfoming A Minimization Loop   2
+[08:29:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:52] >  Perfoming A Minimization Loop   2
+[08:29:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:52] >  Perfoming A Minimization Loop   2
+[08:29:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:53] >  Perfoming A Minimization Loop   2
+[08:29:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:53] >  Perfoming A Minimization Loop   2
+[08:29:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:53] >  Perfoming A Minimization Loop   2
+[08:29:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:53] >  Perfoming A Minimization Loop   2
+[08:29:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:54] >  Iteration #  5 Score           -->     3.63798
+[08:29:54] >  Beginning Loop #  6/14
+[08:29:54] >  Running Small and Shear Movers
+[08:29:54] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:29:54] >  Perfoming A Minimization Loop   2
+[08:29:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:54] >  Perfoming A Minimization Loop   2
+[08:29:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:54] >  Perfoming A Minimization Loop   2
+[08:29:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:55] >  Perfoming A Minimization Loop   2
+[08:29:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:55] >  Perfoming A Minimization Loop   2
+[08:29:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:55] >  Perfoming A Minimization Loop   2
+[08:29:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:56] >  Perfoming A Minimization Loop   2
+[08:29:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:56] >  Perfoming A Minimization Loop   2
+[08:29:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:56] >  Perfoming A Minimization Loop   2
+[08:29:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:56] >  Perfoming A Minimization Loop   2
+[08:29:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:57] >  Iteration #  6 Score           -->     5.11662
+[08:29:57] >  Beginning Loop #  7/14
+[08:29:57] >  Running Small and Shear Movers
+[08:29:57] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:29:57] >  Perfoming A Minimization Loop   2
+[08:29:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:57] >  Perfoming A Minimization Loop   2
+[08:29:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:57] >  Perfoming A Minimization Loop   2
+[08:29:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:58] >  Perfoming A Minimization Loop   2
+[08:29:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:58] >  Perfoming A Minimization Loop   2
+[08:29:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:58] >  Perfoming A Minimization Loop   2
+[08:29:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:59] >  Perfoming A Minimization Loop   2
+[08:29:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:59] >  Perfoming A Minimization Loop   2
+[08:29:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:29:59] >  Perfoming A Minimization Loop   2
+[08:29:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:00] >  Perfoming A Minimization Loop   2
+[08:30:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:00] >  Iteration #  7 Score           -->     2.16733
+[08:30:00] >  Beginning Loop #  8/14
+[08:30:00] >  Running Small and Shear Movers
+[08:30:00] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:30:00] >  Perfoming A Minimization Loop   2
+[08:30:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:00] >  Perfoming A Minimization Loop   2
+[08:30:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:01] >  Perfoming A Minimization Loop   2
+[08:30:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:01] >  Perfoming A Minimization Loop   2
+[08:30:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:01] >  Perfoming A Minimization Loop   2
+[08:30:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:01] >  Perfoming A Minimization Loop   2
+[08:30:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:02] >  Perfoming A Minimization Loop   2
+[08:30:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:02] >  Perfoming A Minimization Loop   2
+[08:30:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:02] >  Perfoming A Minimization Loop   2
+[08:30:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:03] >  Perfoming A Minimization Loop   2
+[08:30:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:03] >  Iteration #  8 Score           -->     2.91196
+[08:30:03] >  Beginning Loop #  9/14
+[08:30:03] >  Running Small and Shear Movers
+[08:30:03] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:30:03] >  Perfoming A Minimization Loop   2
+[08:30:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:03] >  Perfoming A Minimization Loop   2
+[08:30:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:04] >  Perfoming A Minimization Loop   2
+[08:30:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:04] >  Perfoming A Minimization Loop   2
+[08:30:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:04] >  Perfoming A Minimization Loop   2
+[08:30:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:05] >  Perfoming A Minimization Loop   2
+[08:30:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:05] >  Perfoming A Minimization Loop   2
+[08:30:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:05] >  Perfoming A Minimization Loop   2
+[08:30:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:05] >  Perfoming A Minimization Loop   2
+[08:30:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:06] >  Perfoming A Minimization Loop   2
+[08:30:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:06] >  Iteration #  9 Score           -->     2.91196
+[08:30:06] >  Beginning Loop # 10/14
+[08:30:06] >  Running Small and Shear Movers
+[08:30:06] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:30:06] >  Perfoming A Minimization Loop   2
+[08:30:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:06] >  Perfoming A Minimization Loop   2
+[08:30:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:07] >  Perfoming A Minimization Loop   2
+[08:30:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:07] >  Perfoming A Minimization Loop   2
+[08:30:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:07] >  Perfoming A Minimization Loop   2
+[08:30:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:08] >  Perfoming A Minimization Loop   2
+[08:30:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:08] >  Perfoming A Minimization Loop   2
+[08:30:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:08] >  Perfoming A Minimization Loop   2
+[08:30:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:09] >  Perfoming A Minimization Loop   2
+[08:30:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:09] >  Perfoming A Minimization Loop   2
+[08:30:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:09] >  Iteration # 10 Score           -->     2.91196
+[08:30:09] >  Beginning Loop # 11/14
+[08:30:09] >  Running Small and Shear Movers
+[08:30:09] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:30:09] >  Perfoming A Minimization Loop   2
+[08:30:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:09] >  Perfoming A Minimization Loop   2
+[08:30:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:10] >  Perfoming A Minimization Loop   2
+[08:30:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:10] >  Perfoming A Minimization Loop   2
+[08:30:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:10] >  Perfoming A Minimization Loop   2
+[08:30:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:11] >  Perfoming A Minimization Loop   2
+[08:30:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:11] >  Perfoming A Minimization Loop   2
+[08:30:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:11] >  Perfoming A Minimization Loop   2
+[08:30:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:12] >  Perfoming A Minimization Loop   2
+[08:30:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:12] >  Perfoming A Minimization Loop   2
+[08:30:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:12] >  Iteration # 11 Score           -->     2.91196
+[08:30:12] >  Beginning Loop # 12/14
+[08:30:12] >  Running Small and Shear Movers
+[08:30:12] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:30:12] >  Perfoming A Minimization Loop   2
+[08:30:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:13] >  Perfoming A Minimization Loop   2
+[08:30:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:13] >  Perfoming A Minimization Loop   2
+[08:30:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:13] >  Perfoming A Minimization Loop   2
+[08:30:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:13] >  Perfoming A Minimization Loop   2
+[08:30:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:14] >  Perfoming A Minimization Loop   2
+[08:30:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:14] >  Perfoming A Minimization Loop   2
+[08:30:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:14] >  Perfoming A Minimization Loop   2
+[08:30:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:15] >  Perfoming A Minimization Loop   2
+[08:30:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:15] >  Perfoming A Minimization Loop   2
+[08:30:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:15] >  Iteration # 12 Score           -->     2.91196
+[08:30:15] >  Beginning Loop # 13/14
+[08:30:15] >  Running Small and Shear Movers
+[08:30:15] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:30:15] >  Perfoming A Minimization Loop   2
+[08:30:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:16] >  Perfoming A Minimization Loop   2
+[08:30:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:16] >  Perfoming A Minimization Loop   2
+[08:30:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:16] >  Perfoming A Minimization Loop   2
+[08:30:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:16] >  Perfoming A Minimization Loop   2
+[08:30:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:17] >  Perfoming A Minimization Loop   2
+[08:30:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:17] >  Perfoming A Minimization Loop   2
+[08:30:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:17] >  Perfoming A Minimization Loop   2
+[08:30:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:18] >  Perfoming A Minimization Loop   2
+[08:30:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:18] >  Perfoming A Minimization Loop   2
+[08:30:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:18] >  Iteration # 13 Score           -->     1.54510
+[08:30:18] >  Beginning Loop # 14/14
+[08:30:18] >  Running Small and Shear Movers
+[08:30:18] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:30:18] >  Perfoming A Minimization Loop   2
+[08:30:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:19] >  Perfoming A Minimization Loop   2
+[08:30:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:19] >  Perfoming A Minimization Loop   2
+[08:30:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:19] >  Perfoming A Minimization Loop   2
+[08:30:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:19] >  Perfoming A Minimization Loop   2
+[08:30:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:20] >  Perfoming A Minimization Loop   2
+[08:30:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:20] >  Perfoming A Minimization Loop   2
+[08:30:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:20] >  Perfoming A Minimization Loop   2
+[08:30:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:21] >  Perfoming A Minimization Loop   2
+[08:30:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:21] >  Perfoming A Minimization Loop   2
+[08:30:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:21] >  Iteration # 14 Score           -->     1.54510
+[08:30:21] >  Perfoming A Minimization Loop  10
+[08:30:21] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:30:23] >  Performing Mutant Pack Mover
+[08:30:23] >   `--> resfile: Resfiles/ligand_rotamer.resfile
+[08:30:23] >  Perfoming A Minimization Loop  50
+[08:30:23] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:57] >  MMM  0 - Loop  2/ 4
+[08:30:57] >  ResfileBuilder.build: Writing File --> decoy-00.02
+[08:30:57] >  MMMPre Mutation Mover Score    -->   -18.77864
+[08:30:57] >  Performing Mutant Pack Mover
+[08:30:57] >   `--> resfile: Resfiles/decoy-00.02.resfile
+[08:30:57] >  Perfoming A Minimization Loop  10
+[08:30:57] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:30:59] >  Beginning Anneal Loop
+[08:30:59] >   `--> cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (241, 358)
+[08:30:59] >  Beginning Loop #  1/14
+[08:30:59] >  Running Small and Shear Movers
+[08:30:59] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:30:59] >  Perfoming A Minimization Loop   2
+[08:30:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:59] >  Perfoming A Minimization Loop   2
+[08:30:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:30:59] >  Perfoming A Minimization Loop   2
+[08:30:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:00] >  Perfoming A Minimization Loop   2
+[08:31:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:00] >  Perfoming A Minimization Loop   2
+[08:31:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:00] >  Perfoming A Minimization Loop   2
+[08:31:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:01] >  Perfoming A Minimization Loop   2
+[08:31:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:01] >  Perfoming A Minimization Loop   2
+[08:31:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:01] >  Perfoming A Minimization Loop   2
+[08:31:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:01] >  Perfoming A Minimization Loop   2
+[08:31:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:02] >  Iteration #  1 Score           -->    14.98200
+[08:31:02] >  Beginning Loop #  2/14
+[08:31:02] >  Running Small and Shear Movers
+[08:31:02] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:31:02] >  Perfoming A Minimization Loop   2
+[08:31:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:02] >  Perfoming A Minimization Loop   2
+[08:31:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:02] >  Perfoming A Minimization Loop   2
+[08:31:02] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:03] >  Perfoming A Minimization Loop   2
+[08:31:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:03] >  Perfoming A Minimization Loop   2
+[08:31:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:03] >  Perfoming A Minimization Loop   2
+[08:31:03] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:04] >  Perfoming A Minimization Loop   2
+[08:31:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:04] >  Perfoming A Minimization Loop   2
+[08:31:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:04] >  Perfoming A Minimization Loop   2
+[08:31:04] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:05] >  Perfoming A Minimization Loop   2
+[08:31:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:05] >  Iteration #  2 Score           -->    14.98200
+[08:31:05] >  Beginning Loop #  3/14
+[08:31:05] >  Running Small and Shear Movers
+[08:31:05] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:31:05] >  Perfoming A Minimization Loop   2
+[08:31:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:05] >  Perfoming A Minimization Loop   2
+[08:31:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:05] >  Perfoming A Minimization Loop   2
+[08:31:05] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:06] >  Perfoming A Minimization Loop   2
+[08:31:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:06] >  Perfoming A Minimization Loop   2
+[08:31:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:06] >  Perfoming A Minimization Loop   2
+[08:31:06] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:07] >  Perfoming A Minimization Loop   2
+[08:31:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:07] >  Perfoming A Minimization Loop   2
+[08:31:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:07] >  Perfoming A Minimization Loop   2
+[08:31:07] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:08] >  Perfoming A Minimization Loop   2
+[08:31:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:08] >  Iteration #  3 Score           -->    14.98200
+[08:31:08] >  Beginning Loop #  4/14
+[08:31:08] >  Running Small and Shear Movers
+[08:31:08] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:08] >  Perfoming A Minimization Loop   2
+[08:31:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:08] >  Perfoming A Minimization Loop   2
+[08:31:08] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:09] >  Perfoming A Minimization Loop   2
+[08:31:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:09] >  Perfoming A Minimization Loop   2
+[08:31:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:09] >  Perfoming A Minimization Loop   2
+[08:31:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:09] >  Perfoming A Minimization Loop   2
+[08:31:09] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:10] >  Perfoming A Minimization Loop   2
+[08:31:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:10] >  Perfoming A Minimization Loop   2
+[08:31:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:10] >  Perfoming A Minimization Loop   2
+[08:31:10] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:11] >  Perfoming A Minimization Loop   2
+[08:31:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:11] >  Iteration #  4 Score           -->    14.98200
+[08:31:11] >  Beginning Loop #  5/14
+[08:31:11] >  Running Small and Shear Movers
+[08:31:11] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:11] >  Perfoming A Minimization Loop   2
+[08:31:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:11] >  Perfoming A Minimization Loop   2
+[08:31:11] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:12] >  Perfoming A Minimization Loop   2
+[08:31:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:12] >  Perfoming A Minimization Loop   2
+[08:31:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:12] >  Perfoming A Minimization Loop   2
+[08:31:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:12] >  Perfoming A Minimization Loop   2
+[08:31:12] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:13] >  Perfoming A Minimization Loop   2
+[08:31:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:13] >  Perfoming A Minimization Loop   2
+[08:31:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:13] >  Perfoming A Minimization Loop   2
+[08:31:13] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:14] >  Perfoming A Minimization Loop   2
+[08:31:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:14] >  Iteration #  5 Score           -->    16.27063
+[08:31:14] >  Beginning Loop #  6/14
+[08:31:14] >  Running Small and Shear Movers
+[08:31:14] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:14] >  Perfoming A Minimization Loop   2
+[08:31:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:14] >  Perfoming A Minimization Loop   2
+[08:31:14] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:15] >  Perfoming A Minimization Loop   2
+[08:31:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:15] >  Perfoming A Minimization Loop   2
+[08:31:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:15] >  Perfoming A Minimization Loop   2
+[08:31:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:15] >  Perfoming A Minimization Loop   2
+[08:31:15] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:16] >  Perfoming A Minimization Loop   2
+[08:31:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:16] >  Perfoming A Minimization Loop   2
+[08:31:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:16] >  Perfoming A Minimization Loop   2
+[08:31:16] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:17] >  Perfoming A Minimization Loop   2
+[08:31:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:17] >  Iteration #  6 Score           -->    17.43117
+[08:31:17] >  Beginning Loop #  7/14
+[08:31:17] >  Running Small and Shear Movers
+[08:31:17] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:17] >  Perfoming A Minimization Loop   2
+[08:31:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:17] >  Perfoming A Minimization Loop   2
+[08:31:17] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:18] >  Perfoming A Minimization Loop   2
+[08:31:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:18] >  Perfoming A Minimization Loop   2
+[08:31:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:18] >  Perfoming A Minimization Loop   2
+[08:31:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:18] >  Perfoming A Minimization Loop   2
+[08:31:18] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:19] >  Perfoming A Minimization Loop   2
+[08:31:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:19] >  Perfoming A Minimization Loop   2
+[08:31:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:19] >  Perfoming A Minimization Loop   2
+[08:31:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:20] >  Perfoming A Minimization Loop   2
+[08:31:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:20] >  Iteration #  7 Score           -->    20.88950
+[08:31:20] >  Beginning Loop #  8/14
+[08:31:20] >  Running Small and Shear Movers
+[08:31:20] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:31:20] >  Perfoming A Minimization Loop   2
+[08:31:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:20] >  Perfoming A Minimization Loop   2
+[08:31:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:20] >  Perfoming A Minimization Loop   2
+[08:31:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:21] >  Perfoming A Minimization Loop   2
+[08:31:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:21] >  Perfoming A Minimization Loop   2
+[08:31:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:21] >  Perfoming A Minimization Loop   2
+[08:31:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:22] >  Perfoming A Minimization Loop   2
+[08:31:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:22] >  Perfoming A Minimization Loop   2
+[08:31:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:22] >  Perfoming A Minimization Loop   2
+[08:31:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:23] >  Perfoming A Minimization Loop   2
+[08:31:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:23] >  Iteration #  8 Score           -->    20.88950
+[08:31:23] >  Beginning Loop #  9/14
+[08:31:23] >  Running Small and Shear Movers
+[08:31:23] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:31:23] >  Perfoming A Minimization Loop   2
+[08:31:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:23] >  Perfoming A Minimization Loop   2
+[08:31:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:24] >  Perfoming A Minimization Loop   2
+[08:31:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:24] >  Perfoming A Minimization Loop   2
+[08:31:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:24] >  Perfoming A Minimization Loop   2
+[08:31:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:24] >  Perfoming A Minimization Loop   2
+[08:31:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:25] >  Perfoming A Minimization Loop   2
+[08:31:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:25] >  Perfoming A Minimization Loop   2
+[08:31:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:25] >  Perfoming A Minimization Loop   2
+[08:31:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:26] >  Perfoming A Minimization Loop   2
+[08:31:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:26] >  Iteration #  9 Score           -->    20.88950
+[08:31:26] >  Beginning Loop # 10/14
+[08:31:26] >  Running Small and Shear Movers
+[08:31:26] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:31:26] >  Perfoming A Minimization Loop   2
+[08:31:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:26] >  Perfoming A Minimization Loop   2
+[08:31:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:27] >  Perfoming A Minimization Loop   2
+[08:31:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:27] >  Perfoming A Minimization Loop   2
+[08:31:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:27] >  Perfoming A Minimization Loop   2
+[08:31:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:28] >  Perfoming A Minimization Loop   2
+[08:31:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:28] >  Perfoming A Minimization Loop   2
+[08:31:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:28] >  Perfoming A Minimization Loop   2
+[08:31:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:28] >  Perfoming A Minimization Loop   2
+[08:31:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:29] >  Perfoming A Minimization Loop   2
+[08:31:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:29] >  Iteration # 10 Score           -->    20.88950
+[08:31:29] >  Beginning Loop # 11/14
+[08:31:29] >  Running Small and Shear Movers
+[08:31:29] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:29] >  Perfoming A Minimization Loop   2
+[08:31:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:29] >  Perfoming A Minimization Loop   2
+[08:31:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:30] >  Perfoming A Minimization Loop   2
+[08:31:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:30] >  Perfoming A Minimization Loop   2
+[08:31:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:30] >  Perfoming A Minimization Loop   2
+[08:31:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:31] >  Perfoming A Minimization Loop   2
+[08:31:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:31] >  Perfoming A Minimization Loop   2
+[08:31:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:31] >  Perfoming A Minimization Loop   2
+[08:31:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:31] >  Perfoming A Minimization Loop   2
+[08:31:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:32] >  Perfoming A Minimization Loop   2
+[08:31:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:32] >  Iteration # 11 Score           -->    33.40575
+[08:31:32] >  Beginning Loop # 12/14
+[08:31:32] >  Running Small and Shear Movers
+[08:31:32] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:32] >  Perfoming A Minimization Loop   2
+[08:31:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:32] >  Perfoming A Minimization Loop   2
+[08:31:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:33] >  Perfoming A Minimization Loop   2
+[08:31:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:33] >  Perfoming A Minimization Loop   2
+[08:31:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:33] >  Perfoming A Minimization Loop   2
+[08:31:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:34] >  Perfoming A Minimization Loop   2
+[08:31:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:34] >  Perfoming A Minimization Loop   2
+[08:31:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:34] >  Perfoming A Minimization Loop   2
+[08:31:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:34] >  Perfoming A Minimization Loop   2
+[08:31:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:35] >  Perfoming A Minimization Loop   2
+[08:31:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:35] >  Iteration # 12 Score           -->    27.77534
+[08:31:35] >  Beginning Loop # 13/14
+[08:31:35] >  Running Small and Shear Movers
+[08:31:35] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:35] >  Perfoming A Minimization Loop   2
+[08:31:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:35] >  Perfoming A Minimization Loop   2
+[08:31:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:36] >  Perfoming A Minimization Loop   2
+[08:31:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:36] >  Perfoming A Minimization Loop   2
+[08:31:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:36] >  Perfoming A Minimization Loop   2
+[08:31:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:37] >  Perfoming A Minimization Loop   2
+[08:31:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:37] >  Perfoming A Minimization Loop   2
+[08:31:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:37] >  Perfoming A Minimization Loop   2
+[08:31:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:38] >  Perfoming A Minimization Loop   2
+[08:31:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:38] >  Perfoming A Minimization Loop   2
+[08:31:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:38] >  Iteration # 13 Score           -->    22.01485
+[08:31:38] >  Beginning Loop # 14/14
+[08:31:38] >  Running Small and Shear Movers
+[08:31:38] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:31:38] >  Perfoming A Minimization Loop   2
+[08:31:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:38] >  Perfoming A Minimization Loop   2
+[08:31:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:39] >  Perfoming A Minimization Loop   2
+[08:31:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:39] >  Perfoming A Minimization Loop   2
+[08:31:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:39] >  Perfoming A Minimization Loop   2
+[08:31:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:40] >  Perfoming A Minimization Loop   2
+[08:31:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:40] >  Perfoming A Minimization Loop   2
+[08:31:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:40] >  Perfoming A Minimization Loop   2
+[08:31:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:41] >  Perfoming A Minimization Loop   2
+[08:31:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:41] >  Perfoming A Minimization Loop   2
+[08:31:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:31:41] >  Iteration # 14 Score           -->    24.03434
+[08:31:41] >  Perfoming A Minimization Loop  10
+[08:31:41] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:31:43] >  Performing Mutant Pack Mover
+[08:31:43] >   `--> resfile: Resfiles/ligand_rotamer.resfile
+[08:31:43] >  Perfoming A Minimization Loop  50
+[08:31:43] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:17] >  MMM  0 - Loop  3/ 4
+[08:32:17] >  ResfileBuilder.build: Writing File --> decoy-00.03
+[08:32:17] >  MMMPre Mutation Mover Score    -->   -18.77864
+[08:32:17] >  Performing Mutant Pack Mover
+[08:32:17] >   `--> resfile: Resfiles/decoy-00.03.resfile
+[08:32:18] >  Perfoming A Minimization Loop  10
+[08:32:18] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:32:19] >  Beginning Anneal Loop
+[08:32:19] >   `--> cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (241, 358)
+[08:32:19] >  Beginning Loop #  1/14
+[08:32:19] >  Running Small and Shear Movers
+[08:32:19] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:19] >  Perfoming A Minimization Loop   2
+[08:32:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:19] >  Perfoming A Minimization Loop   2
+[08:32:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:19] >  Perfoming A Minimization Loop   2
+[08:32:19] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:20] >  Perfoming A Minimization Loop   2
+[08:32:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:20] >  Perfoming A Minimization Loop   2
+[08:32:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:20] >  Perfoming A Minimization Loop   2
+[08:32:20] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:21] >  Perfoming A Minimization Loop   2
+[08:32:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:21] >  Perfoming A Minimization Loop   2
+[08:32:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:21] >  Perfoming A Minimization Loop   2
+[08:32:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:21] >  Perfoming A Minimization Loop   2
+[08:32:21] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:22] >  Iteration #  1 Score           -->    -8.38161
+[08:32:22] >  Beginning Loop #  2/14
+[08:32:22] >  Running Small and Shear Movers
+[08:32:22] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:22] >  Perfoming A Minimization Loop   2
+[08:32:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:22] >  Perfoming A Minimization Loop   2
+[08:32:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:22] >  Perfoming A Minimization Loop   2
+[08:32:22] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:23] >  Perfoming A Minimization Loop   2
+[08:32:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:23] >  Perfoming A Minimization Loop   2
+[08:32:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:23] >  Perfoming A Minimization Loop   2
+[08:32:23] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:24] >  Perfoming A Minimization Loop   2
+[08:32:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:24] >  Perfoming A Minimization Loop   2
+[08:32:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:24] >  Perfoming A Minimization Loop   2
+[08:32:24] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:25] >  Perfoming A Minimization Loop   2
+[08:32:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:25] >  Iteration #  2 Score           -->    -8.38161
+[08:32:25] >  Beginning Loop #  3/14
+[08:32:25] >  Running Small and Shear Movers
+[08:32:25] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:25] >  Perfoming A Minimization Loop   2
+[08:32:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:25] >  Perfoming A Minimization Loop   2
+[08:32:25] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:26] >  Perfoming A Minimization Loop   2
+[08:32:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:26] >  Perfoming A Minimization Loop   2
+[08:32:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:26] >  Perfoming A Minimization Loop   2
+[08:32:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:26] >  Perfoming A Minimization Loop   2
+[08:32:26] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:27] >  Perfoming A Minimization Loop   2
+[08:32:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:27] >  Perfoming A Minimization Loop   2
+[08:32:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:27] >  Perfoming A Minimization Loop   2
+[08:32:27] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:28] >  Perfoming A Minimization Loop   2
+[08:32:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:28] >  Iteration #  3 Score           -->    -8.38161
+[08:32:28] >  Beginning Loop #  4/14
+[08:32:28] >  Running Small and Shear Movers
+[08:32:28] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:28] >  Perfoming A Minimization Loop   2
+[08:32:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:28] >  Perfoming A Minimization Loop   2
+[08:32:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:28] >  Perfoming A Minimization Loop   2
+[08:32:28] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:29] >  Perfoming A Minimization Loop   2
+[08:32:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:29] >  Perfoming A Minimization Loop   2
+[08:32:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:29] >  Perfoming A Minimization Loop   2
+[08:32:29] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:30] >  Perfoming A Minimization Loop   2
+[08:32:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:30] >  Perfoming A Minimization Loop   2
+[08:32:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:30] >  Perfoming A Minimization Loop   2
+[08:32:30] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:31] >  Perfoming A Minimization Loop   2
+[08:32:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:31] >  Iteration #  4 Score           -->    -8.38161
+[08:32:31] >  Beginning Loop #  5/14
+[08:32:31] >  Running Small and Shear Movers
+[08:32:31] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:31] >  Perfoming A Minimization Loop   2
+[08:32:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:31] >  Perfoming A Minimization Loop   2
+[08:32:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:31] >  Perfoming A Minimization Loop   2
+[08:32:31] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:32] >  Perfoming A Minimization Loop   2
+[08:32:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:32] >  Perfoming A Minimization Loop   2
+[08:32:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:32] >  Perfoming A Minimization Loop   2
+[08:32:32] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:33] >  Perfoming A Minimization Loop   2
+[08:32:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:33] >  Perfoming A Minimization Loop   2
+[08:32:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:33] >  Perfoming A Minimization Loop   2
+[08:32:33] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:34] >  Perfoming A Minimization Loop   2
+[08:32:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:34] >  Iteration #  5 Score           -->    -8.38161
+[08:32:34] >  Beginning Loop #  6/14
+[08:32:34] >  Running Small and Shear Movers
+[08:32:34] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:34] >  Perfoming A Minimization Loop   2
+[08:32:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:34] >  Perfoming A Minimization Loop   2
+[08:32:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:34] >  Perfoming A Minimization Loop   2
+[08:32:34] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:35] >  Perfoming A Minimization Loop   2
+[08:32:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:35] >  Perfoming A Minimization Loop   2
+[08:32:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:35] >  Perfoming A Minimization Loop   2
+[08:32:35] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:36] >  Perfoming A Minimization Loop   2
+[08:32:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:36] >  Perfoming A Minimization Loop   2
+[08:32:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:36] >  Perfoming A Minimization Loop   2
+[08:32:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:36] >  Perfoming A Minimization Loop   2
+[08:32:36] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:37] >  Iteration #  6 Score           -->    -7.37101
+[08:32:37] >  Beginning Loop #  7/14
+[08:32:37] >  Running Small and Shear Movers
+[08:32:37] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:37] >  Perfoming A Minimization Loop   2
+[08:32:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:37] >  Perfoming A Minimization Loop   2
+[08:32:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:37] >  Perfoming A Minimization Loop   2
+[08:32:37] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:38] >  Perfoming A Minimization Loop   2
+[08:32:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:38] >  Perfoming A Minimization Loop   2
+[08:32:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:38] >  Perfoming A Minimization Loop   2
+[08:32:38] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:39] >  Perfoming A Minimization Loop   2
+[08:32:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:39] >  Perfoming A Minimization Loop   2
+[08:32:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:39] >  Perfoming A Minimization Loop   2
+[08:32:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:39] >  Perfoming A Minimization Loop   2
+[08:32:39] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:40] >  Iteration #  7 Score           -->    -7.37101
+[08:32:40] >  Beginning Loop #  8/14
+[08:32:40] >  Running Small and Shear Movers
+[08:32:40] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:40] >  Perfoming A Minimization Loop   2
+[08:32:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:40] >  Perfoming A Minimization Loop   2
+[08:32:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:40] >  Perfoming A Minimization Loop   2
+[08:32:40] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:41] >  Perfoming A Minimization Loop   2
+[08:32:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:41] >  Perfoming A Minimization Loop   2
+[08:32:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:41] >  Perfoming A Minimization Loop   2
+[08:32:41] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:42] >  Perfoming A Minimization Loop   2
+[08:32:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:42] >  Perfoming A Minimization Loop   2
+[08:32:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:42] >  Perfoming A Minimization Loop   2
+[08:32:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:42] >  Perfoming A Minimization Loop   2
+[08:32:42] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:43] >  Iteration #  8 Score           -->    -7.37101
+[08:32:43] >  Beginning Loop #  9/14
+[08:32:43] >  Running Small and Shear Movers
+[08:32:43] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:43] >  Perfoming A Minimization Loop   2
+[08:32:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:43] >  Perfoming A Minimization Loop   2
+[08:32:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:43] >  Perfoming A Minimization Loop   2
+[08:32:43] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:44] >  Perfoming A Minimization Loop   2
+[08:32:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:44] >  Perfoming A Minimization Loop   2
+[08:32:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:44] >  Perfoming A Minimization Loop   2
+[08:32:44] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:45] >  Perfoming A Minimization Loop   2
+[08:32:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:45] >  Perfoming A Minimization Loop   2
+[08:32:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:45] >  Perfoming A Minimization Loop   2
+[08:32:45] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:46] >  Perfoming A Minimization Loop   2
+[08:32:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:46] >  Iteration #  9 Score           -->    -7.37101
+[08:32:46] >  Beginning Loop # 10/14
+[08:32:46] >  Running Small and Shear Movers
+[08:32:46] >   `--> repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: (241, 358)
+[08:32:46] >  Perfoming A Minimization Loop   2
+[08:32:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:46] >  Perfoming A Minimization Loop   2
+[08:32:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:46] >  Perfoming A Minimization Loop   2
+[08:32:46] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:47] >  Perfoming A Minimization Loop   2
+[08:32:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:47] >  Perfoming A Minimization Loop   2
+[08:32:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:47] >  Perfoming A Minimization Loop   2
+[08:32:47] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:48] >  Perfoming A Minimization Loop   2
+[08:32:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:48] >  Perfoming A Minimization Loop   2
+[08:32:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:48] >  Perfoming A Minimization Loop   2
+[08:32:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:48] >  Perfoming A Minimization Loop   2
+[08:32:48] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:49] >  Iteration # 10 Score           -->    -7.37101
+[08:32:49] >  Beginning Loop # 11/14
+[08:32:49] >  Running Small and Shear Movers
+[08:32:49] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:49] >  Perfoming A Minimization Loop   2
+[08:32:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:49] >  Perfoming A Minimization Loop   2
+[08:32:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:49] >  Perfoming A Minimization Loop   2
+[08:32:49] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:50] >  Perfoming A Minimization Loop   2
+[08:32:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:50] >  Perfoming A Minimization Loop   2
+[08:32:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:50] >  Perfoming A Minimization Loop   2
+[08:32:50] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:51] >  Perfoming A Minimization Loop   2
+[08:32:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:51] >  Perfoming A Minimization Loop   2
+[08:32:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:51] >  Perfoming A Minimization Loop   2
+[08:32:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:51] >  Perfoming A Minimization Loop   2
+[08:32:51] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:52] >  Iteration # 11 Score           -->    -3.76174
+[08:32:52] >  Beginning Loop # 12/14
+[08:32:52] >  Running Small and Shear Movers
+[08:32:52] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:52] >  Perfoming A Minimization Loop   2
+[08:32:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:52] >  Perfoming A Minimization Loop   2
+[08:32:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:52] >  Perfoming A Minimization Loop   2
+[08:32:52] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:53] >  Perfoming A Minimization Loop   2
+[08:32:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:53] >  Perfoming A Minimization Loop   2
+[08:32:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:53] >  Perfoming A Minimization Loop   2
+[08:32:53] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:54] >  Perfoming A Minimization Loop   2
+[08:32:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:54] >  Perfoming A Minimization Loop   2
+[08:32:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:54] >  Perfoming A Minimization Loop   2
+[08:32:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:54] >  Perfoming A Minimization Loop   2
+[08:32:54] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:55] >  Iteration # 12 Score           -->    -0.34655
+[08:32:55] >  Beginning Loop # 13/14
+[08:32:55] >  Running Small and Shear Movers
+[08:32:55] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:55] >  Perfoming A Minimization Loop   2
+[08:32:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:55] >  Perfoming A Minimization Loop   2
+[08:32:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:55] >  Perfoming A Minimization Loop   2
+[08:32:55] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:56] >  Perfoming A Minimization Loop   2
+[08:32:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:56] >  Perfoming A Minimization Loop   2
+[08:32:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:56] >  Perfoming A Minimization Loop   2
+[08:32:56] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:57] >  Perfoming A Minimization Loop   2
+[08:32:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:57] >  Perfoming A Minimization Loop   2
+[08:32:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:57] >  Perfoming A Minimization Loop   2
+[08:32:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:57] >  Perfoming A Minimization Loop   2
+[08:32:57] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:58] >  Iteration # 13 Score           -->    -0.34655
+[08:32:58] >  Beginning Loop # 14/14
+[08:32:58] >  Running Small and Shear Movers
+[08:32:58] >   `--> repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: (241, 358)
+[08:32:58] >  Perfoming A Minimization Loop   2
+[08:32:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:58] >  Perfoming A Minimization Loop   2
+[08:32:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:58] >  Perfoming A Minimization Loop   2
+[08:32:58] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:59] >  Perfoming A Minimization Loop   2
+[08:32:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:59] >  Perfoming A Minimization Loop   2
+[08:32:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:32:59] >  Perfoming A Minimization Loop   2
+[08:32:59] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:00] >  Perfoming A Minimization Loop   2
+[08:33:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:00] >  Perfoming A Minimization Loop   2
+[08:33:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:00] >  Perfoming A Minimization Loop   2
+[08:33:00] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:01] >  Perfoming A Minimization Loop   2
+[08:33:01] >  `--> repeats:  2 | kT:     1.0 | bb_all:  0 | bb_range: (241, 358) | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:01] >  Iteration # 14 Score           -->    -0.44915
+[08:33:01] >  Perfoming A Minimization Loop  10
+[08:33:01] >  `--> repeats: 10 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[08:33:02] >  Performing Mutant Pack Mover
+[08:33:02] >   `--> resfile: Resfiles/ligand_rotamer.resfile
+[08:33:02] >  Perfoming A Minimization Loop  50
+[08:33:02] >  `--> repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[08:33:36] >  Beginning Fast Relax

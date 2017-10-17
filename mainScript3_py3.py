@@ -175,8 +175,8 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
             #       format(val,infoStr.format(val)))
             infoStr = infoStr.format(val)
             info.append(infoStr)
-        # return ' | '.join(info)
-        return pprint.pformat(info)
+        return ' | '.join(info)
+        # return pprint.pformat(info)
     
     def get_name(self):
         return self.__class__.__name__
@@ -236,7 +236,7 @@ class RepMinMover(CustomMover):
             movemap.set_chi(True) 
             
     def apply(self,pose):
-        dprint('Perfoming A Minimization Loop')
+        dprint('Perfoming A Minimization Loop {:3d}'.format(self.repeats))
         log( '`--> {}'.format(self))
         movemap = MoveMap()
         self.setMovemapBB(movemap,pose)
@@ -354,6 +354,8 @@ class MutantPackMover(CustomMover):
         self.resfile = None
 
     def apply(self,pose):
+        dprint('Performing Mutant Pack Mover')
+        log(' `--> {}'.format(self))
         task = TaskFactory.create_packer_task(pose)
         parse_resfile(pose, task, self.resfile)
         pack_mv = PackRotamersMover(self.scorefxn, task)
@@ -419,7 +421,7 @@ class ResfileBuilder:
                 poseNum = self.pose.pdb_info().pdb2pose(self.chain,res)
                 aa = self.pose.residue(poseNum).name1()
                 mutRes = mutDict[aa]
-                line.format(''.join(mutRes))
+                line = line.format(''.join(mutRes))
                 rfile.write(line)
 
     @classmethod
@@ -469,7 +471,8 @@ class ResfileBuilder:
         builder = cls()
         builder.mutable_residues = residues
         builder.filename = 'decoy-{:02d}.{:02d}'.format(identifier,cycle)
-        print('ResfileBuilder.resfileFromDecoySpecs: pose --> {}'.format(pose))
+        print('ResfileBuilder.resfileFromDecoySpecs:',
+              ' pose --> {}'.format(pose))
         builder.pose = pose
         builder.build()
         return builder.getResfilePath()    
@@ -534,7 +537,7 @@ class MutationMinimizationMover(CustomMover):
             seq_mv.add_mover(lig_mv)
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
-            printScore(pose, 'Pre Mutation Mover')
+            printScore(pose, 'MMMPre Mutation Mover')
             trial_mv.apply(pose)
         FastRelaxMover().apply(pose)
 
