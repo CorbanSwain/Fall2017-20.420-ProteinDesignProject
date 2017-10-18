@@ -590,8 +590,8 @@ class MutationMinimizationMover(CustomMover):
                        'Mut & Min #{:02d}'.format(i+1),
                        self.identifier)
             
-        #self.fast_relax_mv.apply(pose)
-        #printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
+        self.fast_relax_mv.apply(pose)
+        printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
 
     @staticmethod
     def randSample(n,lst):
@@ -642,8 +642,8 @@ def setup():
         fRelaxPose.dump_pdb(fRelaxFile)
         namePose(fRelaxPose,'orig_relaxed')
 
-    numDecoys = 2
-    resPerDecoyList = [2]
+    numDecoys = 16
+    resPerDecoyList = [4,4,4,4]
     rand_samples = MutationMinimizationMover.makeMutPattern(
         numDecoys, resPerDecoyList)
     log('Random Samples Arr:')
@@ -666,8 +666,9 @@ def setup():
     
 def main():
     dateId, origPose, fastRelaxedPose, mm_mvs = setup()
-    startPose = fastRelaxedPose
-    
+    startPose = origPose
+    printScore(origPose,'Original Pose')
+    printScore(fastRelaxedPose,'Fast Relaxed Pose')
     file_template = os.path.join('Decoys',dateId,
                                  'output-{}-DEC'.format(dateId))
     jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
@@ -676,7 +677,7 @@ def main():
     working_pose = Pose()
     ind = 0 
     breakOnNext = False
-    ## Single Stream
+    ## Single Stream Version
     # while True:
     #     if ind > len(mm_mvs):
     #         raise IndexError('Ran out or MM Movers before '
@@ -690,31 +691,31 @@ def main():
     #     ind += 1
     #     if breakOnNext: break
     #     if jd.job_complete: breakOnNext = True
-    # dprint('Finished!')
-    # log('Score Log --v--v--v')
-    # log(pprint.pformat(scoreDict),noStamp=True)
 
 
-    ## MC
-
-    working_poses = [poseFrom(startPose) for __ in range(mm_mvs)]
+    ## MC Version
+    n = len(mm_mvs)
+    working_poses = [poseFrom(startPose) for __ in range(n)]
 
     def run(i):
-        if i> len(mm_mvs):
+        if i > n:
             raise IndexError('Calling for a MM Mover outside '
                              'of the declared range')
         
         dprint('Beginning Decoy # {:d}'.format(i + 1))
         mm_mvs[i].apply(working_poses[i])
 
-    parmap(run,range(mm_mvs))
+    parmap(run,range(n))
         
     while True:
         jd.output_decoy(working_poses[ind])
         ind += 1
         if breakOnNext: break
         if jd.job_complete: breakOnNext = True                    
-    
+
+    dprint('Finished!')
+    log('Score Log --v--v--v')
+    log(pprint.pformat(scoreDict),noStamp=True)
 
 if __name__ == '__main__':
     logBegin()
