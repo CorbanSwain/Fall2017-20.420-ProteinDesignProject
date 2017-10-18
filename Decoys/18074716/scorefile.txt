@@ -1,0 +1,3 @@
+Beginning Score Log For Decoys: 18074716
+
+NOID|00363.60845|NOID - Original Pose Score|07:47:17NOID|-0762.59235|NOID - Fast Relaxed Pose Score|07:47:17

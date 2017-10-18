@@ -57,6 +57,8 @@ def setupCaches():
         pdbCache = os.path.join(cacheDir,'PDBs')
     mkDir(pdbCache)
 
+    global dec_dir
+    
     global sesCache
     if madeGlobal('sesCache'):
         if now(1) in sesCache:
@@ -67,7 +69,9 @@ def setupCaches():
         with open(sesCache,'w') as f:
             f.writelines('{}\n\n'.format(sesCache))
             f.writelines(('Protein Design Algorithm Trials, '
-                          'Session Log\nBegins: {}\n\n').format(now())) 
+                          'Session Log\nBegins: {}\n\n').format(now()))
+
+
 setupCaches()
 
 # FIXME - Integrate into ResfileBuilder Class
@@ -137,6 +141,11 @@ def printScore(pose,title,identifier='NOID',scorefxn=defaultScorefxn):
     score = scorefxn(pose)
     output = '{} --> {:11.5f}'.format(title.ljust(40), score)
     log(output)
+    with open(dec_dir,'a') as f:
+        f.write('{}|{:011.5f}|{}|{}\n'.format(identifier,
+                                            score,
+                                            title,
+                                            now(2)))
     if identifier in scoreDict:
         scoreDict[identifier].append((score, title))
     else:
@@ -505,11 +514,12 @@ class ResfileBuilder:
         return builder.getResfilePath()
         
     @classmethod
-    def resfileFromDecoySpecs(cls, pose, residues, identifier, cycle):
+    def resfileFromDecoySpecs(cls, pose, residues, liberal, identifier, cycle):
         builder = cls()
         builder.mutable_residues = residues
         builder.filename = 'decoy-{}.{:02d}'.format(identifier,cycle)
         builder.pose = pose
+        builder.mut_liberal = liberal
         builder.build()
         return builder.getResfilePath()    
     
@@ -532,6 +542,7 @@ class MutationMinimizationMover(CustomMover):
         self.mut_pattern = [[]]
         self.kT = 1.0
         self.identifier = MutationMinimizationMover.decoy_count
+        self.liberal = []
         MutationMinimizationMover.decoy_count += 1
         
     def apply(self, pose):
@@ -540,13 +551,13 @@ class MutationMinimizationMover(CustomMover):
         log(' `--> {}'.format(self))
         mc = MonteCarlo(pose, self.scorefxn, self.kT)
         n = len(self.mut_pattern)
-        for i, mut_residues in enumerate(self.mut_pattern):
+        for i,mut_residues in enumerate(self.mut_pattern):
             log('MMM.ID {} - Loop {:2d}/{:2d}'.format(
                 self.identifier, i+1, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
             r_file = ResfileBuilder.resfileFromDecoySpecs(
-                pose, mut_residues,
+                pose, mut_residues, self.liberal[i],
                 self.identifier, i)
             mut_mv = MutantPackMover()
             mut_mv.resfile = r_file
@@ -572,7 +583,7 @@ class MutationMinimizationMover(CustomMover):
             min_mv.identifier = self.identifier
 
             # debug assignments
-            debug = False
+            debug = True
             if debug:
                 min_mv.repeats, repack_mv.repeats = (1, 1)
                 SmallShearMover.min_repeats = 1
@@ -590,8 +601,8 @@ class MutationMinimizationMover(CustomMover):
                        'Mut & Min #{:02d}'.format(i+1),
                        self.identifier)
             
-        self.fast_relax_mv.apply(pose)
-        printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
+        # self.fast_relax_mv.apply(pose)
+        # printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
 
     @staticmethod
     def randSample(n,lst):
@@ -607,7 +618,7 @@ class MutationMinimizationMover(CustomMover):
     @staticmethod
     def makeMutPattern(numDecoys, resPerDecoyList):
         rand_samples = [[] for __ in range(numDecoys)]
-        for i, num_res in enumerate(resPerDecoyList):
+        for i,(num_res, __) in enumerate(resPerDecoyList):
             remaining_res = []
             for decoyNum in range(numDecoys):
                 if len(remaining_res) < num_res:
@@ -642,8 +653,12 @@ def setup():
         fRelaxPose.dump_pdb(fRelaxFile)
         namePose(fRelaxPose,'orig_relaxed')
 
-    numDecoys = 16
-    resPerDecoyList = [4,4,4,4]
+    numDecoys = 3
+    resPerDecoyList = [
+        (4, True), (4, True),
+        (2, False), (2, False),
+        (2, False), (2, False),
+    ]
     rand_samples = MutationMinimizationMover.makeMutPattern(
         numDecoys, resPerDecoyList)
     log('Random Samples Arr:')
@@ -655,12 +670,18 @@ def setup():
     mm_mvs = []
     for i in range(numDecoys):
         mm_mv = MutationMinimizationMover()
+        mm_mv.liberal = [boool for (__, boool) in resPerDecoyList]
         mm_mv.identifier =  date_id  + '-' + 'DEC_{:02d}'.format(i)
         mm_mv.mut_pattern = rand_samples[i]
         mm_mvs.append(mm_mv)
 
     mkDir('Decoys')
     mkDir(os.path.join('Decoys',date_id))
+
+    global dec_dir
+    dec_dir = os.path.join('Decoys',date_id,'scorefile.txt')
+    with open(dec_dir,'w') as f:
+        f.write('Beginning Score Log For Decoys: {}\n\n'.format(date_id))
     
     return (date_id, origPose, fastRelaxedPose, mm_mvs)
     
@@ -671,9 +692,9 @@ def main():
     printScore(fastRelaxedPose,'Fast Relaxed Pose')
     file_template = os.path.join('Decoys',dateId,
                                  'output-{}-DEC'.format(dateId))
-    jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
-    print('main: JD sequence = ',jd.sequence)
-    jd.native_pose = startPose
+    # jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
+    # print('main: JD sequence = ',jd.sequence)
+    # jd.native_pose = startPose
     working_pose = Pose()
     ind = 0 
     breakOnNext = False
@@ -695,23 +716,23 @@ def main():
 
     ## MC Version
     n = len(mm_mvs)
-    working_poses = [poseFrom(startPose) for __ in range(n)]
+    # working_poses = [poseFrom(startPose) for __ in range(n)]
 
     def run(i):
-        if i > n:
-            raise IndexError('Calling for a MM Mover outside '
-                             'of the declared range')
-        
-        dprint('Beginning Decoy # {:d}'.format(i + 1))
-        mm_mvs[i].apply(working_poses[i])
+        pose = poseFrom(startPose)
+        dprint('Beginning Decoy # {:d}'.format(i))
+        mm_mvs[i].apply(pose)
+        fname = file_template + '_{:02d}'.format(i)
+        pose.dump_scored_pdb(fname,defaultScorefxn)
 
     parmap(run,range(n))
         
-    while True:
-        jd.output_decoy(working_poses[ind])
-        ind += 1
-        if breakOnNext: break
-        if jd.job_complete: breakOnNext = True                    
+    # while True:
+    #     jd.output_decoy(working_poses[ind])
+    #     ind += 1
+    #     if breakOnNext: break
+    #     if jd.job_complete: breakOnNext = True   
+        
 
     dprint('Finished!')
     log('Score Log --v--v--v')
