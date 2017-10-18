@@ -653,7 +653,7 @@ def setup():
         fRelaxPose.dump_pdb(fRelaxFile)
         namePose(fRelaxPose,'orig_relaxed')
 
-    numDecoys = 3
+    numDecoys = 16
     resPerDecoyList = [
         (4, True), (4, True),
         (2, False), (2, False),

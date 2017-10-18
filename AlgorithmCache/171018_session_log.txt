@@ -7880,3 +7880,81 @@ Begins: 01:06:31 10-18-17
           (-762.5923498164782, 'NOID - Fast Relaxed Pose Score')]}
 [08:02:02] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
+[08:11:14] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[08:11:14] >  Setting Things Up
+[08:11:14] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[08:11:15] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[08:11:15] >  Random Samples Arr:
+[[[275, 343, 254, 358],
+  [333, 339, 343, 358],
+  [276, 344],
+  [276, 354],
+  [343, 276],
+  [255, 344]],
+ [[334, 250, 321, 354],
+  [247, 279, 254, 272],
+  [254, 325],
+  [358, 273],
+  [358, 330],
+  [321, 250]],
+ [[325, 333, 255, 279],
+  [276, 354, 273, 255],
+  [255, 343],
+  [333, 334],
+  [344, 355],
+  [279, 272]]]
+[08:11:15] >  NOID - Original Pose Score               -->   363.60845
+[08:11:15] >  NOID - Fast Relaxed Pose Score           -->  -762.59235
+[08:11:16] >  Beginning Decoy # 2
+[08:11:16] >  Beginning Decoy # 1
+[08:11:16] >  Beginning Decoy # 0
+[08:11:16] >  MMM.ID 18081114-DEC_02 - Beginning Mutation Minimization Mover
+[08:11:16] >  MMM.ID 18081114-DEC_01 - Beginning Mutation Minimization Mover
+[08:11:16] >  MMM.ID 18081114-DEC_00 - Beginning Mutation Minimization Mover
+[08:11:16] >   `--> identifier: 18081114-DEC_02 | mut_pattern: [[325, 333, 255, 279], [276, 354, 273, 255], [255, 343], [333, 334], [344, 355], [279, 272]] | kT:     1.0
+[08:11:16] >   | liberal: [True, True, False, False, False, False]
+[08:11:16] >   `--> identifier: 18081114-DEC_01 | mut_pattern: [[334, 250, 321, 354], [247, 279, 254, 272], [254, 325], [358, 273], [358, 330], [321, 250]] | kT:     1.0
+[08:11:16] >   | liberal: [True, True, False, False, False, False]
+[08:11:16] >   `--> identifier: 18081114-DEC_00 | mut_pattern: [[275, 343, 254, 358], [333, 339, 343, 358], [276, 344], [276, 354], [343, 276], [255, 344]] | kT:     1.0
+[08:11:16] >   | liberal: [True, True, False, False, False, False]
+[08:11:16] >  MMM.ID 18081114-DEC_02 - Loop  1/ 6
+[08:11:16] >  ResfileBuilder.build: Writing File --> decoy-18081114-DEC_02.00
+[08:11:16] >  MMM.ID 18081114-DEC_01 - Loop  1/ 6
+[08:11:16] >  ResfileBuilder.build: Writing File --> decoy-18081114-DEC_01.00
+[08:11:16] >  MMM.ID 18081114-DEC_00 - Loop  1/ 6
+[08:11:16] >  ResfileBuilder.build: Writing File --> decoy-18081114-DEC_00.00
+[08:11:16] >  Beginning Mutant Pack Mover
+[08:11:16] >   `--> identifier: 18081114-DEC_01 | resfile: Resfiles/decoy-18081114-DEC_01.00.resfile
+[08:11:16] >  Beginning Mutant Pack Mover
+[08:11:16] >   `--> identifier: 18081114-DEC_02 | resfile: Resfiles/decoy-18081114-DEC_02.00.resfile
+[08:11:16] >  Beginning Mutant Pack Mover
+[08:11:16] >   `--> identifier: 18081114-DEC_00 | resfile: Resfiles/decoy-18081114-DEC_00.00.resfile
+[08:11:16] >  18081114-DEC_01 - Mutant Pack Score      -->   357.50018
+[08:11:16] >  Perfoming A Minimization Loop  50
+[08:11:16] >  `--> identifier: 18081114-DEC_01 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[08:11:16] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[08:11:16] >  18081114-DEC_02 - Mutant Pack Score      -->   367.46163
+[08:11:16] >  Perfoming A Minimization Loop  50
+[08:11:16] >  `--> identifier: 18081114-DEC_02 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[08:11:16] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[08:11:16] >  18081114-DEC_00 - Mutant Pack Score      -->   370.69345
+[08:11:16] >  Perfoming A Minimization Loop  50
+[08:11:16] >  `--> identifier: 18081114-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[08:11:16] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[08:11:23] >  18081114-DEC_02 - Minimization Loop Score -->    84.07576
+[08:11:23] >  Beginning Anneal Loop Mover
+[08:11:23] >   `--> identifier: 18081114-DEC_02 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[08:11:23] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[08:11:23] >  18081114-DEC_01 - Minimization Loop Score -->    90.73058
+[08:11:23] >  Beginning Anneal Loop Mover
+[08:11:23] >   `--> identifier: 18081114-DEC_01 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[08:11:23] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[08:11:23] >  18081114-DEC_00 - Minimization Loop Score -->    93.10868
+[08:11:23] >  Beginning Anneal Loop Mover
+[08:11:23] >   `--> identifier: 18081114-DEC_00 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[08:11:23] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[08:11:38] >  18081114-DEC_02 - Anneal Loop [HEAT]  1/14 Score -->    84.07576
+[08:11:39] >  18081114-DEC_01 - Anneal Loop [HEAT]  1/14 Score -->    90.73058
+[08:11:39] >  18081114-DEC_00 - Anneal Loop [HEAT]  1/14 Score -->    77.31248

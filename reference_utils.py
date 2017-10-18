@@ -12,7 +12,7 @@ def funmap(f, q_in, q_out):
     return
 
 
-def parmap(f, X, nprocs=(multiprocessing.cpu_count() - 1)):
+def parmap(f, X, nprocs=(multiprocessing.cpu_count())):
     q_in = multiprocessing.Queue(1)
     q_out = multiprocessing.Queue()
     proc = [multiprocessing.Process(target=funmap, args=(f, q_in, q_out)) for _ in range(nprocs)]
