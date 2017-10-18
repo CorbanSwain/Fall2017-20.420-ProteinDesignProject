@@ -14,6 +14,7 @@ from pyrosetta.rosetta.protocols.relax import FastRelax
 from pyrosetta.rosetta.protocols.moves import AddPyMOLObserver
 from pyrosetta.rosetta.core.pack.task import TaskFactory
 from pyrosetta.rosetta.core.pack.task import parse_resfile
+from reference_utils import funmap, parmap
 
 
 def madeGlobal(varName):
@@ -129,7 +130,7 @@ def logEnd():
 def dprint(text):
     log(text)
     text = ' {} '.format(text)
-    print('[{}] {}'.format(now(),text.center(70,'*')))
+    print('[{}] {}'.format(now(),text.center(100,'*')))
         
 def printScore(pose,title,identifier='NOID',scorefxn=defaultScorefxn):
     title = identifier + ' - ' + title + ' Score'
@@ -144,9 +145,7 @@ def printScore(pose,title,identifier='NOID',scorefxn=defaultScorefxn):
     
 def loadInPose(fileName):
     fileName = os.path.join(pdbCache,fileName)
-    if os.path.isfile(fileName):
-        pose = loadInPose(fileName)
-    else:
+    if not os.path.isfile(fileName):
         raise FileExistsError(fileName + ' is not a file')
     dprint('Loading In `{}` and Creating Pose'.format(fileName))
     params = ['LG.params']
@@ -180,6 +179,7 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     
     def __str__(self):
         info = []
+        n = len(self.__dict__)
         for key,val in self.__dict__.items():
             if (key in ['movemap']):
                 continue
@@ -193,15 +193,15 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
                 infoStr += '{}'
 
             didFormat = False
-            if key in ['bb_range', 'chi_range']:
-                if val not None:
+            if key in ['bb_res', 'chi_res']:
+                if val is not None:
                     if len(val) > 0:
-                        infoStr.format('SpecRes')
+                        infoStr = infoStr.format('SpecRes')
                         didFormat = True
             if not didFormat:
                 infoStr = infoStr.format(val)
             info.append(infoStr)
-
+        info[n//2] = info[n//2] + '\n'
         return ' | '.join(info)
 
     
@@ -508,9 +508,7 @@ class ResfileBuilder:
     def resfileFromDecoySpecs(cls, pose, residues, identifier, cycle):
         builder = cls()
         builder.mutable_residues = residues
-        builder.filename = 'decoy-{:02d}.{:02d}'.format(identifier,cycle)
-        print('ResfileBuilder.resfileFromDecoySpecs:',
-              ' pose --> {}'.format(pose))
+        builder.filename = 'decoy-{}.{:02d}'.format(identifier,cycle)
         builder.pose = pose
         builder.build()
         return builder.getResfilePath()    
@@ -537,13 +535,13 @@ class MutationMinimizationMover(CustomMover):
         MutationMinimizationMover.decoy_count += 1
         
     def apply(self, pose):
-        dprint(('MMM.ID {:2d} - Beginning Mutation '
+        dprint(('MMM.ID {} - Beginning Mutation '
                 'Minimization Mover').format(self.identifier))
         log(' `--> {}'.format(self))
         mc = MonteCarlo(pose, self.scorefxn, self.kT)
         n = len(self.mut_pattern)
         for i, mut_residues in enumerate(self.mut_pattern):
-            log('MMM {:2d} - Loop {:2d}/{:2d}'.format(
+            log('MMM.ID {} - Loop {:2d}/{:2d}'.format(
                 self.identifier, i+1, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
@@ -551,7 +549,8 @@ class MutationMinimizationMover(CustomMover):
                 pose, mut_residues,
                 self.identifier, i)
             mut_mv = MutantPackMover()
-            mut_mv.resfile = r_file 
+            mut_mv.resfile = r_file
+            mut_mv.identifier = self.identifier
             #   2. repacks rotomers for all pocket residues, use movemap with MinMover
             repack_mv = RepMinMover()
             repack_mv.chi_res = pocketResNums
@@ -588,11 +587,11 @@ class MutationMinimizationMover(CustomMover):
             trial_mv = TrialMover(seq_mv, mc)
             trial_mv.apply(pose)
             printScore(pose,
-                       'Mut & Min #{:02d}'.format(i),
+                       'Mut & Min #{:02d}'.format(i+1),
                        self.identifier)
             
-        self.fast_relax_mv.apply(pose)
-        printScore(pose,'Mut & Min, FastRelaxed',identifier)
+        #self.fast_relax_mv.apply(pose)
+        #printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
 
     @staticmethod
     def randSample(n,lst):
@@ -608,7 +607,7 @@ class MutationMinimizationMover(CustomMover):
     @staticmethod
     def makeMutPattern(numDecoys, resPerDecoyList):
         rand_samples = [[] for __ in range(numDecoys)]
-        for i, num_res in enumerate(resPerDecoy):
+        for i, num_res in enumerate(resPerDecoyList):
             remaining_res = []
             for decoyNum in range(numDecoys):
                 if len(remaining_res) < num_res:
@@ -619,7 +618,7 @@ class MutationMinimizationMover(CustomMover):
                 else:
                     smp, __ = MutationMinimizationMover.\
                               randSample(num_res, pocketResNums)
-                    rand_samples[decoyNum].append(smp)
+                rand_samples[decoyNum].append(smp)
         return rand_samples
 
 def setup():
@@ -632,18 +631,19 @@ def setup():
         namePose(origPose,'original')
     except FileExistsError as err:
         print('setup: Failed, cannot load in initial pose')
+        raise
 
     fast_relaxed_pdb_file = '3vi8_complex_fastRelaxed.pdb'
     try:
         fastRelaxedPose = loadInPose(fast_relaxed_pdb_file)
     except FileExistsError as err:
-        fastRelaxedPose = poseFrom(startPose)
+        fastRelaxedPose = poseFrom(origPose)
         fastRelax(fRelaxPose)
         fRelaxPose.dump_pdb(fRelaxFile)
         namePose(fRelaxPose,'orig_relaxed')
 
-    numDecoys = 1
-    resPerDecoyList = [1]
+    numDecoys = 2
+    resPerDecoyList = [2]
     rand_samples = MutationMinimizationMover.makeMutPattern(
         numDecoys, resPerDecoyList)
     log('Random Samples Arr:')
@@ -660,6 +660,7 @@ def setup():
         mm_mvs.append(mm_mv)
 
     mkDir('Decoys')
+    mkDir(os.path.join('Decoys',date_id))
     
     return (date_id, origPose, fastRelaxedPose, mm_mvs)
     
@@ -667,31 +668,59 @@ def main():
     dateId, origPose, fastRelaxedPose, mm_mvs = setup()
     startPose = fastRelaxedPose
     
-    file_template = os.path.join('Decoys',
+    file_template = os.path.join('Decoys',dateId,
                                  'output-{}-DEC'.format(dateId))
     jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
     print('main: JD sequence = ',jd.sequence)
+    jd.native_pose = startPose
     working_pose = Pose()
+    ind = 0 
+    breakOnNext = False
+    ## Single Stream
+    # while True:
+    #     if ind > len(mm_mvs):
+    #         raise IndexError('Ran out or MM Movers before '
+    #                          'the end of the job distributor.')
+        
+    #     dprint('Beginning Decoy # {:d}'.format(ind + 1))
+    #     print('main: JD  sequence ', jd.sequence) # debug
+    #     working_pose.assign(startPose)
+    #     mm_mvs[ind].apply(working_pose)
+    #     jd.output_decoy(working_pose)
+    #     ind += 1
+    #     if breakOnNext: break
+    #     if jd.job_complete: breakOnNext = True
+    # dprint('Finished!')
+    # log('Score Log --v--v--v')
+    # log(pprint.pformat(scoreDict),noStamp=True)
 
-    ind = 0
-    while not jd.job_complete:
-        if ind < len(mm_mvs):
-            print('main: ERROR! Ran out or MM Movers before '
-                  'the ent of the job distributor')
-        dprint('Beginning Decoy # {:d}'.format(ind + 1))
-        print('main: JD  sequence ', jd.sequence)
-        working_pose.assign(startPose)
-        # mm_mv.apply(working_pose)
-        jd.output_decoy(working_pose)
+
+    ## MC
+
+    working_poses = [poseFrom(startPose) for __ in range(mm_mvs)]
+
+    def run(i):
+        if i> len(mm_mvs):
+            raise IndexError('Calling for a MM Mover outside '
+                             'of the declared range')
+        
+        dprint('Beginning Decoy # {:d}'.format(i + 1))
+        mm_mvs[i].apply(working_poses[i])
+
+    parmap(run,range(mm_mvs))
+        
+    while True:
+        jd.output_decoy(working_poses[ind])
         ind += 1
-    dprint('Finished!')
-    log('Score Log --v--v--v')
-    log(pprint.pformat(scoreDict),noStamp=True)
+        if breakOnNext: break
+        if jd.job_complete: breakOnNext = True                    
+    
 
 if __name__ == '__main__':
     logBegin()
     main()
     logEnd()
+
 
  
 

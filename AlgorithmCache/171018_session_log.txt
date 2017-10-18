@@ -1,0 +1,577 @@
+AlgorithmCache/171018_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 01:06:31 10-18-17
+
+
+
+[01:06:31] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:06:31] >  Setting Things Up
+
+
+[01:10:09] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:10:09] >  Setting Things Up
+
+
+[01:16:06] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:16:06] >  Setting Things Up
+
+
+[01:17:25] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:17:25] >  Setting Things Up
+[01:17:25] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:17:26] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+
+
+[01:19:22] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:19:22] >  Setting Things Up
+[01:19:22] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:19:22] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+
+
+[01:19:37] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:19:37] >  Setting Things Up
+[01:19:37] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:19:38] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:19:39] >  Random Samples Arr:
+[[]]
+[01:19:39] >  Finished!
+[01:19:39] >  Score Log --v--v--v
+{}
+[01:19:39] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[01:20:16] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:20:16] >  Setting Things Up
+[01:20:16] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:20:17] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:20:17] >  Random Samples Arr:
+[[]]
+[01:20:17] >  Finished!
+[01:20:17] >  Score Log --v--v--v
+{}
+[01:20:17] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[01:30:59] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:30:59] >  Setting Things Up
+[01:30:59] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:31:00] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:31:01] >  Random Samples Arr:
+[[]]
+
+
+[01:31:40] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:31:40] >  Setting Things Up
+[01:31:40] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:31:41] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:31:42] >  Random Samples Arr:
+[[]]
+[01:31:42] >  Beginning Decoy # 1
+[01:31:42] >  Finished!
+[01:31:42] >  Score Log --v--v--v
+{}
+[01:31:42] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[01:34:34] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:34:34] >  Setting Things Up
+[01:34:34] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:34:35] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:34:36] >  Random Samples Arr:
+[[], []]
+[01:34:36] >  Beginning Decoy # 1
+
+
+[01:34:59] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:34:59] >  Setting Things Up
+[01:34:59] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:35:00] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:35:01] >  Random Samples Arr:
+[[], []]
+[01:35:01] >  Beginning Decoy # 1
+
+
+[01:36:08] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:36:08] >  Setting Things Up
+[01:36:08] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:36:09] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:36:09] >  Random Samples Arr:
+[[], []]
+[01:36:09] >  Beginning Decoy # 1
+[01:36:09] >  MMM.ID 18013608-DEC_00 - Beginning Mutation Minimization Mover
+[01:36:09] >   `--> identifier: 18013608-DEC_00 | mut_pattern: [] | kT:     1.0
+[01:36:09] >  Beginning Fast Relax
+
+
+[01:48:18] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:48:18] >  Setting Things Up
+[01:48:18] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:48:18] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:48:19] >  Random Samples Arr:
+[[[273, 339, 321, 241]], [[279, 332, 250, 334]]]
+[01:48:19] >  Beginning Decoy # 1
+[01:48:19] >  MMM.ID 18014818-DEC_00 - Beginning Mutation Minimization Mover
+[01:48:19] >   `--> identifier: 18014818-DEC_00 | mut_pattern: [[273, 339, 321, 241]] | kT:     1.0
+
+
+[01:49:06] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:49:06] >  Setting Things Up
+[01:49:06] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:49:07] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:49:07] >  Random Samples Arr:
+[[[272, 339, 247, 355]], [[254, 255, 275, 358]]]
+[01:49:07] >  Beginning Decoy # 1
+[01:49:07] >  MMM.ID 18014906-DEC_00 - Beginning Mutation Minimization Mover
+[01:49:07] >   `--> identifier: 18014906-DEC_00 | mut_pattern: [[272, 339, 247, 355]] | kT:     1.0
+[01:49:08] >  MMM.ID 18014906-DEC_00 - Loop  1/ 1
+
+
+[01:50:35] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[01:50:35] >  Setting Things Up
+[01:50:35] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[01:50:36] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[01:50:36] >  Random Samples Arr:
+[[[276, 355, 251, 339]], [[275, 325, 279, 247]]]
+[01:50:36] >  Beginning Decoy # 1
+[01:50:36] >  MMM.ID 18015035-DEC_00 - Beginning Mutation Minimization Mover
+[01:50:36] >   `--> identifier: 18015035-DEC_00 | mut_pattern: [[276, 355, 251, 339]] | kT:     1.0
+[01:50:36] >  MMM.ID 18015035-DEC_00 - Loop  1/ 1
+[01:50:36] >  ResfileBuilder.build: Writing File --> decoy-18015035-DEC_00.00
+[01:50:36] >  Beginning Mutant Pack Mover
+[01:50:36] >   `--> identifier: NO_ID | resfile: Resfiles/decoy-18015035-DEC_00.00.resfile
+[01:50:36] >  NO_ID - Mutant Pack Score                -->  -758.38474
+[01:50:36] >  Perfoming A Minimization Loop  50
+[01:50:36] >  `--> identifier: 18015035-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[01:50:43] >  18015035-DEC_00 - Minimization Loop Score -->  -759.06243
+[01:50:43] >  Beginning Anneal Loop Mover
+[01:50:43] >   `--> identifier: 18015035-DEC_00 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0 | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: {}
+[01:50:43] >  Beginning Small & Shear Movers
+[01:50:43] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:50:58] >  18015035-DEC_00 - Small & Shear Move Score -->  -731.77621
+[01:50:58] >  18015035-DEC_00 - Anneal Loop [HEAT]  1/14 Score -->  -759.06243
+[01:50:58] >  Beginning Small & Shear Movers
+[01:50:58] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:51:14] >  18015035-DEC_00 - Small & Shear Move Score -->  -186.77423
+[01:51:14] >  18015035-DEC_00 - Anneal Loop [HEAT]  2/14 Score -->  -759.06243
+[01:51:14] >  Beginning Small & Shear Movers
+[01:51:14] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:51:30] >  18015035-DEC_00 - Small & Shear Move Score -->  -623.34691
+[01:51:30] >  18015035-DEC_00 - Anneal Loop [HEAT]  3/14 Score -->  -759.06243
+[01:51:30] >  Beginning Small & Shear Movers
+[01:51:30] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:51:45] >  18015035-DEC_00 - Small & Shear Move Score -->  -753.09699
+[01:51:45] >  18015035-DEC_00 - Anneal Loop [COOL]  4/14 Score -->  -753.09699
+[01:51:45] >  Beginning Small & Shear Movers
+[01:51:45] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:52:00] >  18015035-DEC_00 - Small & Shear Move Score -->  -751.38182
+[01:52:00] >  18015035-DEC_00 - Anneal Loop [COOL]  5/14 Score -->  -753.09699
+[01:52:00] >  Beginning Small & Shear Movers
+[01:52:00] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:52:16] >  18015035-DEC_00 - Small & Shear Move Score -->  -746.41877
+[01:52:16] >  18015035-DEC_00 - Anneal Loop [COOL]  6/14 Score -->  -746.41877
+[01:52:16] >  Beginning Small & Shear Movers
+[01:52:16] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:52:31] >  18015035-DEC_00 - Small & Shear Move Score -->  -746.83522
+[01:52:31] >  18015035-DEC_00 - Anneal Loop [COOL]  7/14 Score -->  -746.83522
+[01:52:31] >  Beginning Small & Shear Movers
+[01:52:31] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:52:47] >  18015035-DEC_00 - Small & Shear Move Score -->  -661.71873
+[01:52:47] >  18015035-DEC_00 - Anneal Loop [HEAT]  8/14 Score -->  -746.83522
+[01:52:47] >  Beginning Small & Shear Movers
+[01:52:47] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:53:02] >  18015035-DEC_00 - Small & Shear Move Score -->  -739.48528
+[01:53:02] >  18015035-DEC_00 - Anneal Loop [HEAT]  9/14 Score -->  -739.48528
+[01:53:02] >  Beginning Small & Shear Movers
+[01:53:02] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0 | angle:     4.0 | bb_range: {}
+[01:53:19] >  18015035-DEC_00 - Small & Shear Move Score -->  -694.74980
+[01:53:19] >  18015035-DEC_00 - Anneal Loop [HEAT] 10/14 Score -->  -739.48528
+[01:53:19] >  Beginning Small & Shear Movers
+[01:53:19] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:53:34] >  18015035-DEC_00 - Small & Shear Move Score -->  -742.53187
+[01:53:34] >  18015035-DEC_00 - Anneal Loop [COOL] 11/14 Score -->  -742.53187
+[01:53:34] >  Beginning Small & Shear Movers
+[01:53:34] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:53:50] >  18015035-DEC_00 - Small & Shear Move Score -->  -730.99103
+[01:53:50] >  18015035-DEC_00 - Anneal Loop [COOL] 12/14 Score -->  -730.99103
+[01:53:50] >  Beginning Small & Shear Movers
+[01:53:50] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:54:05] >  18015035-DEC_00 - Small & Shear Move Score -->  -725.63118
+[01:54:05] >  18015035-DEC_00 - Anneal Loop [COOL] 13/14 Score -->  -725.63118
+[01:54:05] >  Beginning Small & Shear Movers
+[01:54:05] >   `--> identifier: 18015035-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0 | angle:     0.4 | bb_range: {}
+[01:54:21] >  18015035-DEC_00 - Small & Shear Move Score -->  -732.17926
+[01:54:21] >  18015035-DEC_00 - Anneal Loop [COOL] 14/14 Score -->  -732.17926
+[01:54:21] >  Perfoming A Minimization Loop  50
+[01:54:21] >  `--> identifier: 18015035-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280, 321, 325, 330, 332, 333, 334, 339, 343, 344, 354, 355, 358]
+[01:54:28] >  18015035-DEC_00 - Minimization Loop Score -->  -734.09012
+[01:54:28] >  Beginning Mutant Pack Mover
+[01:54:28] >   `--> identifier: 18015035-DEC_00 | resfile: Resfiles/ligand_rotamer.resfile
+[01:54:28] >  18015035-DEC_00 - Mutant Pack Score      -->  -734.08329
+[01:54:28] >  Perfoming A Minimization Loop  50
+[01:54:28] >  `--> identifier: 18015035-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None | chi_all:  0 | chi_range: None | chi_res: None
+[01:55:02] >  18015035-DEC_00 - Minimization Loop Score -->  -754.70863
+[01:55:02] >  18015035-DEC_00 - Mut & Min #00 Score    -->  -762.59235
+[01:55:02] >  Beginning Fast Relax
+
+
+[02:08:05] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[02:08:05] >  Setting Things Up
+[02:08:05] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[02:08:05] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[02:08:06] >  Random Samples Arr:
+[[[333, 321]], [[250, 272]]]
+[02:08:06] >  Beginning Decoy # 1
+[02:08:06] >  MMM.ID 18020805-DEC_00 - Beginning Mutation Minimization Mover
+[02:08:06] >   `--> identifier: 18020805-DEC_00 | mut_pattern: [[333, 321]]
+[02:08:06] >   | kT:     1.0
+[02:08:06] >  MMM.ID 18020805-DEC_00 - Loop  1/ 1
+[02:08:06] >  ResfileBuilder.build: Writing File --> decoy-18020805-DEC_00.00
+[02:08:06] >  Beginning Mutant Pack Mover
+[02:08:06] >   `--> identifier: NO_ID | resfile: Resfiles/decoy-18020805-DEC_00.00.resfile
+[02:08:06] >  NO_ID - Mutant Pack Score                -->  -727.04457
+[02:08:06] >  Perfoming A Minimization Loop  50
+[02:08:06] >  `--> identifier: 18020805-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[02:08:06] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[02:08:13] >  18020805-DEC_00 - Minimization Loop Score -->  -731.61301
+[02:08:13] >  Beginning Anneal Loop Mover
+[02:08:13] >   `--> identifier: 18020805-DEC_00 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[02:08:13] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[02:08:13] >  Beginning Small & Shear Movers
+[02:08:13] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:08:13] >   | angle:     4.0 | bb_range: (231, 368)
+[02:08:27] >  18020805-DEC_00 - Small & Shear Move Score -->  -602.25577
+[02:08:28] >  18020805-DEC_00 - Anneal Loop [HEAT]  1/14 Score -->  -731.61301
+[02:08:28] >  Beginning Small & Shear Movers
+[02:08:28] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:08:28] >   | angle:     4.0 | bb_range: (231, 368)
+[02:08:42] >  18020805-DEC_00 - Small & Shear Move Score -->  -644.72389
+[02:08:42] >  18020805-DEC_00 - Anneal Loop [HEAT]  2/14 Score -->  -731.61301
+[02:08:42] >  Beginning Small & Shear Movers
+[02:08:42] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:08:42] >   | angle:     4.0 | bb_range: (231, 368)
+[02:08:58] >  18020805-DEC_00 - Small & Shear Move Score -->  -668.60287
+[02:08:58] >  18020805-DEC_00 - Anneal Loop [HEAT]  3/14 Score -->  -731.61301
+[02:08:58] >  Beginning Small & Shear Movers
+[02:08:58] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:08:58] >   | angle:     0.4 | bb_range: (231, 368)
+[02:09:13] >  18020805-DEC_00 - Small & Shear Move Score -->  -728.20414
+[02:09:13] >  18020805-DEC_00 - Anneal Loop [COOL]  4/14 Score -->  -731.61301
+[02:09:13] >  Beginning Small & Shear Movers
+[02:09:13] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:09:13] >   | angle:     0.4 | bb_range: (231, 368)
+[02:09:28] >  18020805-DEC_00 - Small & Shear Move Score -->  -725.09117
+[02:09:28] >  18020805-DEC_00 - Anneal Loop [COOL]  5/14 Score -->  -731.61301
+[02:09:28] >  Beginning Small & Shear Movers
+[02:09:28] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:09:28] >   | angle:     0.4 | bb_range: (231, 368)
+[02:09:43] >  18020805-DEC_00 - Small & Shear Move Score -->  -724.03988
+[02:09:43] >  18020805-DEC_00 - Anneal Loop [COOL]  6/14 Score -->  -731.61301
+[02:09:43] >  Beginning Small & Shear Movers
+[02:09:43] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:09:43] >   | angle:     0.4 | bb_range: (231, 368)
+[02:09:58] >  18020805-DEC_00 - Small & Shear Move Score -->  -727.33845
+[02:09:58] >  18020805-DEC_00 - Anneal Loop [COOL]  7/14 Score -->  -731.61301
+[02:09:58] >  Beginning Small & Shear Movers
+[02:09:58] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:09:58] >   | angle:     4.0 | bb_range: (231, 368)
+[02:10:15] >  18020805-DEC_00 - Small & Shear Move Score -->  -653.19757
+[02:10:15] >  18020805-DEC_00 - Anneal Loop [HEAT]  8/14 Score -->  -731.61301
+[02:10:15] >  Beginning Small & Shear Movers
+[02:10:15] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:10:15] >   | angle:     4.0 | bb_range: (231, 368)
+[02:10:30] >  18020805-DEC_00 - Small & Shear Move Score -->  -577.79778
+[02:10:30] >  18020805-DEC_00 - Anneal Loop [HEAT]  9/14 Score -->  -731.61301
+[02:10:30] >  Beginning Small & Shear Movers
+[02:10:30] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:10:30] >   | angle:     4.0 | bb_range: (231, 368)
+[02:10:46] >  18020805-DEC_00 - Small & Shear Move Score -->  -681.83588
+[02:10:46] >  18020805-DEC_00 - Anneal Loop [HEAT] 10/14 Score -->  -731.61301
+[02:10:46] >  Beginning Small & Shear Movers
+[02:10:46] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:10:46] >   | angle:     0.4 | bb_range: (231, 368)
+[02:11:01] >  18020805-DEC_00 - Small & Shear Move Score -->  -723.32640
+[02:11:01] >  18020805-DEC_00 - Anneal Loop [COOL] 11/14 Score -->  -731.61301
+[02:11:01] >  Beginning Small & Shear Movers
+[02:11:01] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:11:01] >   | angle:     0.4 | bb_range: (231, 368)
+[02:11:15] >  18020805-DEC_00 - Small & Shear Move Score -->  -730.99125
+[02:11:15] >  18020805-DEC_00 - Anneal Loop [COOL] 12/14 Score -->  -731.61301
+[02:11:15] >  Beginning Small & Shear Movers
+[02:11:15] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:11:15] >   | angle:     0.4 | bb_range: (231, 368)
+[02:11:30] >  18020805-DEC_00 - Small & Shear Move Score -->  -723.99509
+[02:11:30] >  18020805-DEC_00 - Anneal Loop [COOL] 13/14 Score -->  -723.99509
+[02:11:30] >  Beginning Small & Shear Movers
+[02:11:30] >   `--> identifier: 18020805-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:11:30] >   | angle:     0.4 | bb_range: (231, 368)
+[02:11:45] >  18020805-DEC_00 - Small & Shear Move Score -->  -721.05111
+[02:11:45] >  18020805-DEC_00 - Anneal Loop [COOL] 14/14 Score -->  -721.05111
+[02:11:45] >  Perfoming A Minimization Loop  50
+[02:11:45] >  `--> identifier: 18020805-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[02:11:45] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[02:11:52] >  18020805-DEC_00 - Minimization Loop Score -->  -722.59889
+[02:11:52] >  Beginning Mutant Pack Mover
+[02:11:52] >   `--> identifier: 18020805-DEC_00 | resfile: Resfiles/ligand_rotamer.resfile
+[02:11:52] >  18020805-DEC_00 - Mutant Pack Score      -->  -722.32941
+[02:11:52] >  Perfoming A Minimization Loop  50
+[02:11:52] >  `--> identifier: 18020805-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[02:11:52] >   | chi_all:  0 | chi_range: None | chi_res: None
+[02:12:26] >  18020805-DEC_00 - Minimization Loop Score -->  -731.08270
+[02:12:26] >  18020805-DEC_00 - Mut & Min #00 Score    -->  -762.59235
+[02:12:26] >  Beginning Fast Relax
+[02:18:42] >  18020805-DEC_00 - Mut & Min, FastRelaxed Score -->  -769.55785
+[02:18:42] >  Finished!
+[02:18:42] >  Score Log --v--v--v
+{'18020805-DEC_00': [(-731.6130064758229,
+                      '18020805-DEC_00 - Minimization Loop Score'),
+                     (-602.2557691312118,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT]  1/14 Score'),
+                     (-644.7238890483516,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT]  2/14 Score'),
+                     (-668.6028683894791,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT]  3/14 Score'),
+                     (-728.2041406795839,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL]  4/14 Score'),
+                     (-725.0911694704643,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL]  5/14 Score'),
+                     (-724.0398835856911,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL]  6/14 Score'),
+                     (-727.3384504362541,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL]  7/14 Score'),
+                     (-653.1975667978622,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT]  8/14 Score'),
+                     (-577.797776482783,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT]  9/14 Score'),
+                     (-681.8358848833526,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [HEAT] 10/14 Score'),
+                     (-723.3263981732598,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL] 11/14 Score'),
+                     (-730.9912493204088,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-731.6130064758231,
+                      '18020805-DEC_00 - Anneal Loop [COOL] 12/14 Score'),
+                     (-723.9950929622113,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-723.9950929622113,
+                      '18020805-DEC_00 - Anneal Loop [COOL] 13/14 Score'),
+                     (-721.051111335663,
+                      '18020805-DEC_00 - Small & Shear Move Score'),
+                     (-721.051111335663,
+                      '18020805-DEC_00 - Anneal Loop [COOL] 14/14 Score'),
+                     (-722.5988883628,
+                      '18020805-DEC_00 - Minimization Loop Score'),
+                     (-722.3294104124781,
+                      '18020805-DEC_00 - Mutant Pack Score'),
+                     (-731.0827026511773,
+                      '18020805-DEC_00 - Minimization Loop Score'),
+                     (-762.5923498164782,
+                      '18020805-DEC_00 - Mut & Min #00 Score'),
+                     (-769.557845055546,
+                      '18020805-DEC_00 - Mut & Min, FastRelaxed Score')],
+ 'NO_ID': [(-727.044574639325, 'NO_ID - Mutant Pack Score')]}
+[02:18:42] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[02:28:45] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[02:28:45] >  Setting Things Up
+[02:28:45] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[02:28:46] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[02:28:47] >  Random Samples Arr:
+[[[272, 332]], [[280, 275]]]
+[02:28:47] >  Beginning Decoy # 1
+[02:28:47] >  MMM.ID 18022845-DEC_00 - Beginning Mutation Minimization Mover
+[02:28:47] >   `--> identifier: 18022845-DEC_00 | mut_pattern: [[272, 332]]
+[02:28:47] >   | kT:     1.0
+[02:28:47] >  MMM.ID 18022845-DEC_00 - Loop  1/ 1
+[02:28:47] >  ResfileBuilder.build: Writing File --> decoy-18022845-DEC_00.00
+[02:28:47] >  Beginning Mutant Pack Mover
+[02:28:47] >   `--> identifier: 18022845-DEC_00 | resfile: Resfiles/decoy-18022845-DEC_00.00.resfile
+[02:28:47] >  18022845-DEC_00 - Mutant Pack Score      -->  -752.79588
+[02:28:47] >  Perfoming A Minimization Loop  50
+[02:28:47] >  `--> identifier: 18022845-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[02:28:47] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[02:28:53] >  18022845-DEC_00 - Minimization Loop Score -->  -754.20137
+[02:28:53] >  Beginning Anneal Loop Mover
+[02:28:53] >   `--> identifier: 18022845-DEC_00 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[02:28:53] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[02:28:53] >  Beginning Small & Shear Movers
+[02:28:53] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:28:53] >   | angle:     4.0 | bb_range: (231, 368)
+[02:29:08] >  18022845-DEC_00 - Small & Shear Move Score -->  -667.17506
+[02:29:08] >  18022845-DEC_00 - Anneal Loop [HEAT]  1/14 Score -->  -754.20137
+[02:29:08] >  Beginning Small & Shear Movers
+[02:29:08] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:29:08] >   | angle:     4.0 | bb_range: (231, 368)
+[02:29:23] >  18022845-DEC_00 - Small & Shear Move Score -->  -718.63485
+[02:29:23] >  18022845-DEC_00 - Anneal Loop [HEAT]  2/14 Score -->  -754.20137
+[02:29:23] >  Beginning Small & Shear Movers
+[02:29:23] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:29:23] >   | angle:     4.0 | bb_range: (231, 368)
+[02:29:39] >  18022845-DEC_00 - Small & Shear Move Score -->  -684.31961
+[02:29:39] >  18022845-DEC_00 - Anneal Loop [HEAT]  3/14 Score -->  -754.20137
+[02:29:39] >  Beginning Small & Shear Movers
+[02:29:39] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:29:39] >   | angle:     0.4 | bb_range: (231, 368)
+[02:29:54] >  18022845-DEC_00 - Small & Shear Move Score -->  -744.47275
+[02:29:54] >  18022845-DEC_00 - Anneal Loop [COOL]  4/14 Score -->  -744.47275
+[02:29:54] >  Beginning Small & Shear Movers
+[02:29:54] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:29:54] >   | angle:     0.4 | bb_range: (231, 368)
+[02:30:09] >  18022845-DEC_00 - Small & Shear Move Score -->  -737.10942
+[02:30:09] >  18022845-DEC_00 - Anneal Loop [COOL]  5/14 Score -->  -744.47275
+[02:30:09] >  Beginning Small & Shear Movers
+[02:30:09] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:30:09] >   | angle:     0.4 | bb_range: (231, 368)
+[02:30:24] >  18022845-DEC_00 - Small & Shear Move Score -->  -739.94856
+[02:30:24] >  18022845-DEC_00 - Anneal Loop [COOL]  6/14 Score -->  -739.94856
+[02:30:24] >  Beginning Small & Shear Movers
+[02:30:24] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:30:24] >   | angle:     0.4 | bb_range: (231, 368)
+[02:30:39] >  18022845-DEC_00 - Small & Shear Move Score -->  -738.41628
+[02:30:39] >  18022845-DEC_00 - Anneal Loop [COOL]  7/14 Score -->  -738.41628
+[02:30:39] >  Beginning Small & Shear Movers
+[02:30:39] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:30:39] >   | angle:     4.0 | bb_range: (231, 368)
+[02:30:55] >  18022845-DEC_00 - Small & Shear Move Score -->  -729.20495
+[02:30:55] >  18022845-DEC_00 - Anneal Loop [HEAT]  8/14 Score -->  -729.20495
+[02:30:55] >  Beginning Small & Shear Movers
+[02:30:55] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:30:55] >   | angle:     4.0 | bb_range: (231, 368)
+[02:31:11] >  18022845-DEC_00 - Small & Shear Move Score -->  -721.39935
+[02:31:11] >  18022845-DEC_00 - Anneal Loop [HEAT]  9/14 Score -->  -721.39935
+[02:31:11] >  Beginning Small & Shear Movers
+[02:31:11] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:   100.0
+[02:31:11] >   | angle:     4.0 | bb_range: (231, 368)
+[02:31:26] >  18022845-DEC_00 - Small & Shear Move Score -->  -707.75054
+[02:31:26] >  18022845-DEC_00 - Anneal Loop [HEAT] 10/14 Score -->  -721.39935
+[02:31:26] >  Beginning Small & Shear Movers
+[02:31:26] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:31:26] >   | angle:     0.4 | bb_range: (231, 368)
+[02:31:42] >  18022845-DEC_00 - Small & Shear Move Score -->  -717.92246
+[02:31:42] >  18022845-DEC_00 - Anneal Loop [COOL] 11/14 Score -->  -717.92246
+[02:31:42] >  Beginning Small & Shear Movers
+[02:31:42] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:31:42] >   | angle:     0.4 | bb_range: (231, 368)
+[02:31:57] >  18022845-DEC_00 - Small & Shear Move Score -->  -723.23221
+[02:31:57] >  18022845-DEC_00 - Anneal Loop [COOL] 12/14 Score -->  -723.23221
+[02:31:57] >  Beginning Small & Shear Movers
+[02:31:57] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:31:57] >   | angle:     0.4 | bb_range: (231, 368)
+[02:32:13] >  18022845-DEC_00 - Small & Shear Move Score -->  -724.79268
+[02:32:13] >  18022845-DEC_00 - Anneal Loop [COOL] 13/14 Score -->  -724.79268
+[02:32:13] >  Beginning Small & Shear Movers
+[02:32:13] >   `--> identifier: 18022845-DEC_00 | repeats:  5 | n_moves:  5 | kT:     5.0
+[02:32:13] >   | angle:     0.4 | bb_range: (231, 368)
+[02:32:28] >  18022845-DEC_00 - Small & Shear Move Score -->  -726.64292
+[02:32:28] >  18022845-DEC_00 - Anneal Loop [COOL] 14/14 Score -->  -726.64292
+[02:32:28] >  Perfoming A Minimization Loop  50
+[02:32:28] >  `--> identifier: 18022845-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[02:32:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[02:32:35] >  18022845-DEC_00 - Minimization Loop Score -->  -727.64278
+[02:32:35] >  Beginning Mutant Pack Mover
+[02:32:35] >   `--> identifier: 18022845-DEC_00 | resfile: Resfiles/ligand_rotamer.resfile
+[02:32:36] >  18022845-DEC_00 - Mutant Pack Score      -->  -727.34136
+[02:32:36] >  Perfoming A Minimization Loop  50
+[02:32:36] >  `--> identifier: 18022845-DEC_00 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[02:32:36] >   | chi_all:  0 | chi_range: None | chi_res: None
+[02:33:10] >  18022845-DEC_00 - Minimization Loop Score -->  -745.10934
+[02:33:10] >  18022845-DEC_00 - Mut & Min #01 Score    -->  -762.59235
+[02:33:10] >  Finished!
+[02:33:10] >  Score Log --v--v--v
+{'18022845-DEC_00': [(-752.7958815302052,
+                      '18022845-DEC_00 - Mutant Pack Score'),
+                     (-754.2013699899516,
+                      '18022845-DEC_00 - Minimization Loop Score'),
+                     (-667.1750581398894,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-754.201369989952,
+                      '18022845-DEC_00 - Anneal Loop [HEAT]  1/14 Score'),
+                     (-718.6348538120697,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-754.201369989952,
+                      '18022845-DEC_00 - Anneal Loop [HEAT]  2/14 Score'),
+                     (-684.3196096633609,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-754.201369989952,
+                      '18022845-DEC_00 - Anneal Loop [HEAT]  3/14 Score'),
+                     (-744.4727456268871,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-744.4727456268871,
+                      '18022845-DEC_00 - Anneal Loop [COOL]  4/14 Score'),
+                     (-737.1094172138324,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-744.4727456268869,
+                      '18022845-DEC_00 - Anneal Loop [COOL]  5/14 Score'),
+                     (-739.948560209827,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-739.948560209827,
+                      '18022845-DEC_00 - Anneal Loop [COOL]  6/14 Score'),
+                     (-738.4162773828141,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-738.4162773828141,
+                      '18022845-DEC_00 - Anneal Loop [COOL]  7/14 Score'),
+                     (-729.2049463003107,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-729.2049463003107,
+                      '18022845-DEC_00 - Anneal Loop [HEAT]  8/14 Score'),
+                     (-721.3993503059783,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-721.3993503059783,
+                      '18022845-DEC_00 - Anneal Loop [HEAT]  9/14 Score'),
+                     (-707.7505355285828,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-721.3993503059783,
+                      '18022845-DEC_00 - Anneal Loop [HEAT] 10/14 Score'),
+                     (-717.9224618578169,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-717.9224618578169,
+                      '18022845-DEC_00 - Anneal Loop [COOL] 11/14 Score'),
+                     (-723.2322079299903,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-723.2322079299903,
+                      '18022845-DEC_00 - Anneal Loop [COOL] 12/14 Score'),
+                     (-724.7926759647673,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-724.7926759647673,
+                      '18022845-DEC_00 - Anneal Loop [COOL] 13/14 Score'),
+                     (-726.6429172656614,
+                      '18022845-DEC_00 - Small & Shear Move Score'),
+                     (-726.6429172656614,
+                      '18022845-DEC_00 - Anneal Loop [COOL] 14/14 Score'),
+                     (-727.6427838891162,
+                      '18022845-DEC_00 - Minimization Loop Score'),
+                     (-727.3413571962059,
+                      '18022845-DEC_00 - Mutant Pack Score'),
+                     (-745.1093445226616,
+                      '18022845-DEC_00 - Minimization Loop Score'),
+                     (-762.5923498164782,
+                      '18022845-DEC_00 - Mut & Min #01 Score')]}
+[02:33:11] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

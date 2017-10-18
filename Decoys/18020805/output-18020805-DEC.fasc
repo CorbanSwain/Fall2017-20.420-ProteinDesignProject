@@ -1,0 +1,2 @@
+pdb name: Decoys/18020805/output-18020805-DEC     nstruct: 2
+filename: Decoys/18020805/output-18020805-DEC_0.pdb total_score: -769.56 rmsd: 0.34  fa_atr: -1628.299 fa_rep:   199.977 fa_sol:   965.398 fa_intra_rep:     3.284 fa_intra_sol_xover4:    49.412 lk_ball_wtd:   -40.800 fa_elec:  -487.697 pro_close:     0.879 hbond_sr_bb:  -166.585 hbond_lr_bb:   -10.083 hbond_bb_sc:   -40.968 hbond_sc:   -33.406 dslf_fa13:     0.000 omega:    17.483 fa_dun:   304.670 p_aa_pp:   -36.338 yhh_planarity:     0.021 ref:   108.860 rama_prepro:    24.635

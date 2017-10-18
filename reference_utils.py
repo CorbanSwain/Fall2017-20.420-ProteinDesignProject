@@ -1,0 +1,303 @@
+import os
+import time
+import numpy as np
+from bitstring import Bits
+import msgpack
+import msgpack_numpy
+import gzip
+from matplotlib.colors import LinearSegmentedColormap
+import multiprocessing
+import struct
+import h5py
+
+
+# from itertools import zip
+
+def open_hdf5(fn_h5):
+    return h5py.File(fn_h5, 'a', driver='stdio', libver='latest')
+
+
+# create_dataset(name, data=arr, dtype='int64')
+
+
+def attribute_names(obj):
+    return obj.__dict__
+    # return [a for a in dir(obj) if not a.startswith('__')]
+
+
+def write_args(fn, args):
+    with open(fn, 'w') as f:
+        f.write("\n".join(list(map(lambda i: str((i, getattr(args, i))), sorted(args.__dict__.keys())))))
+        # f.write("\n".join(list(map(lambda i: str((i, getattr(args, i))), args.__dict__.keys()))))
+        # f.write("\n".join(list(map(lambda i: str((i, getattr(args, i))),
+        #                            list(filter(lambda x: x[0] is not '_' and x[:2] is not '__', dir(args)))))))
+        return
+
+
+def float32_to_binary(num):
+    return ''.join(bin(c).replace('0b', '').rjust(8, '0') for c in struct.pack('!f', num))
+
+
+float32_to_binary_np = np.vectorize(float32_to_binary)
+
+mldd_dir = os.path.dirname(os.path.realpath(__file__))
+
+cdict = {'red': ((0.0, 1.0, 1.0),
+                 (0.25, 1.0, 1.0),
+                 (0.5, 0.0, 0.0),
+                 (1.0, 0.0, 0.0)),
+         'green': ((0.0, 0.0, 0.0),
+                   (0.25, 1.0, 1.0),
+                   (0.75, 1.0, 1.0),
+                   (1.0, 0.0, 0.0)),
+         'blue': ((0.0, 0.0, 0.0),
+                  (0.5, 0.0, 0.0),
+                  (0.75, 1.0, 1.0),
+                  (1.0, 1.0, 1.0))}
+rgb_cm_custom = LinearSegmentedColormap('rgb_cm', cdict)
+
+
+# parmap implementation for functions with non-trivial execution time
+def funmap(f, q_in, q_out):
+    while True:
+        i, x = q_in.get()
+        if i is None:
+            break
+        q_out.put((i, f(x)))
+    return
+
+
+def parmap(f, X, nprocs=multiprocessing.cpu_count()):
+    q_in = multiprocessing.Queue(1)
+    q_out = multiprocessing.Queue()
+    proc = [multiprocessing.Process(target=funmap, args=(f, q_in, q_out)) for _ in range(nprocs)]
+    for p in proc:
+        p.daemon = True
+        p.start()
+    [q_in.put((i, x)) for i, x in enumerate(X)]
+    [q_in.put((None, None)) for _ in range(nprocs)]
+    res = [q_out.get() for _ in range(len(X))]
+    [p.join() for p in proc]
+    return [x for i, x in sorted(res)]
+
+
+def time_stamp_fcn(): return time.strftime("%Y%m%d%H%M%S")
+
+
+class fn_fcm_trial_series:
+    def new_trail_series(self):
+        """
+        Names required:
+        save_dir
+        png: cost function with {active,inactive,unknown}
+        png: roc over epochs, final roc with threshold colored scatter
+        png: weight heatmaps
+        txt: weight csvs
+        """
+        return
+
+    def __init__(self):
+        return
+
+
+class debug_logger:
+    def writeNewfile(self, fn, input_string):
+        with open("%s/%s" % (mldd_dir.rsplit('/', 1)[0], fn), 'w') as f:
+            f.write(input_string)
+        return
+
+    def write(self, input_string):
+        with open(self.fn, 'a') as f:
+            f.write(input_string)
+        return
+
+    def __init__(self):
+        self.time_stamp = time.strftime("%Y%m%d%H%M%S")
+        self.fn = "%s/debug_log%s" % (mldd_dir.rsplit('/', 1)[0], self.time_stamp)
+        with open(self.fn, 'w') as f:
+            f.write(self.time_stamp + '\n' + '*' * 80 + '\n\n')
+        return
+
+
+def convertStoredToReady(stored):
+    ready = np.zeros(shape=(len(stored), 1024), dtype=np.float32)
+    for i in range(len(stored)):
+        for k in stored[i]:
+            ready[i, k] = 1.0
+    return ready
+
+
+def aveBits(bits):
+    n = bits.size
+    s = np.sum(bits)
+    p1 = s / float(n)
+    p0 = 1 - p1
+    if p0 == 0 or p1 == 0:
+        shannon_entropy = 0
+    else:
+        shannon_entropy = - (p1 * np.log2(p1) + p0 * np.log2(p0))
+    return n, s, shannon_entropy
+
+
+def flt32aveBits(flt32):
+    n = flt32.size * 32  # number of float32 elements * 32 bits per element
+    s = np.sum(flt32toBitSum_np(flt32))  # number of 1-valued bits in float32 array
+    p1 = s / float(n)
+    p0 = 1 - p1
+    shannon_entropy = - (p1 * np.log2(p1) + p0 * np.log2(p0))
+    return n, (shannon_entropy * n), shannon_entropy
+
+
+def flt32toBitSum(flt32):
+    return Bits(floatbe=flt32, length=32).count(1)
+
+
+flt32toBitSum_np = np.vectorize(flt32toBitSum)
+
+
+def flt32ToBin(flt32):
+    OUT = [[0 for _ in range(flt32.shape[1])] for _ in range(flt32.shape[0])]
+    for i in range(flt32.shape[0]):
+        for j in range(flt32.shape[1]):
+            OUT[i][j] = Bits(floatbe=flt32[i, j], length=32).bin
+        OUT[i] = [np.array(list(map(float, ''.join(OUT[i]))))]
+    OUT = np.concatenate(OUT)
+    return OUT
+
+
+def flt32ToBinFixedPoint(flt32):
+    most_sig_bit = int(np.floor(np.log2(np.max(np.absolute(flt32)))))
+    OUT = [[0 for _ in range(flt32.shape[1])] for _ in range(flt32.shape[0])]
+    for i in range(flt32.shape[0]):
+        for j in range(flt32.shape[1]):
+            bits = Bits(floatbe=flt32[i, j], length=32).bin
+            exp = Bits(bin=bits[1:9]).uint - 127 - most_sig_bit
+            if exp < 0:
+                mant = ('1' + bits[9:exp]).rjust(24, '0')
+            else:
+                mant = '1' + bits[9:]
+            OUT[i][j] = bits[0] + mant
+        OUT[i] = [np.array(list(map(float, ''.join(OUT[i]))))]
+    OUT = np.concatenate(OUT)
+    return OUT
+
+
+def flt32_to_bin_fixed_point_clipped(flt32, clip=25):
+    exp = np.floor(np.log2(np.absolute(flt32))).astype(np.int)
+    highest_floor_log2_abs = np.max(exp)
+    out = float32_to_binary_np(flt32)
+    rows = list(range(out.shape[0]))
+    for i in range(flt32.shape[0]):
+        for j in range(flt32.shape[1]):
+            out[i, j] = (out[i, j][0] + '0' * (highest_floor_log2_abs - exp[i, j]) + '1' + out[i, j][9:])[:clip]
+        rows[i] = [np.array(list(map(float, ''.join(out[i]))))]
+    out = np.concatenate(rows)
+    return out
+
+
+#
+# def flt32_to_bin_fixed_point_1(flt32, clip=25):
+#     exp = np.floor(np.log2(np.absolute(flt32))).astype(np.int)
+#     highest_floor_log2_abs = np.max(exp)
+#     out = float32_to_binary_np(flt32)
+#     for i in range(flt32.shape[0]):
+#         for j in range(flt32.shape[1]):
+#             out[i,j] = (out[i,j][0] + '0'*(highest_floor_log2_abs - exp[i,j]) + '1' + out[i,j][9:])[:clip]
+#     return np.concatenate(list(map(lambda i: np.array(list(''.join(i)), dtype=np.float32, ndmin=2), out)), axis=0)
+
+
+#
+# def flt32_to_bin_fixed_point_clipped(flt32, width):
+#     most_sig_bit = int(np.floor(np.log2(np.max(np.absolute(flt32)))))
+#     OUT = [[0 for _ in range(flt32.shape[1])] for _ in range(flt32.shape[0])]
+#     for i in range(flt32.shape[0]):
+#         for j in range(flt32.shape[1]):
+#             bits = Bits(floatbe=flt32[i, j], length=32).bin
+#             exp = Bits(bin=bits[1:9]).uint - 127 - most_sig_bit
+#             if exp < 0:
+#                 mant = ('1' + bits[9:exp]).rjust(24, '0')
+#             else:
+#                 mant = '1' + bits[9:]
+#             OUT[i][j] = (bits[0] + mant)[:width]
+#         OUT[i] = [np.array(list(map(float, ''.join(OUT[i]))))]
+#     OUT = np.concatenate(OUT)
+#     return OUT
+#
+
+def shannonColwzBitArray(bits):
+    shannon = np.concatenate(list(map(lambda i: np.array([[i, *aveBits(bits[:, i])]]), range(bits.shape[1]))))
+    return shannon
+
+
+def shannonColwzFlt32Array(flt32):
+    flt32bits = flt32ToBin(flt32)
+    shannon = np.concatenate(list(map(lambda i: np.array([[i, *aveBits(flt32bits[:, i])]]), range(flt32bits.shape[1]))))
+    return shannon
+
+
+def shannonColwzFlt32toFixedPointArray(flt32):
+    flt32bits = flt32ToBinFixedPoint(flt32)
+    shannon = np.concatenate(list(map(lambda i: np.array([[i, *aveBits(flt32bits[:, i])]]), range(flt32bits.shape[1]))))
+    return shannon
+
+
+msgpack_numpy.patch()
+gz_magic = b'\x1f\x8b\x08'
+
+
+def packb(data):
+    return gzip.compress(msgpack.packb(data))
+
+
+def unpackb(stream):
+    if stream.startswith(gz_magic):
+        return msgpack.unpackb(gzip.decompress(stream))
+    else:
+        return msgpack.unpackb(stream)
+
+
+def loadConfigFile():
+    print(os.path.dirname(os.path.realpath(__file__)))
+    with open(mldd_dir + '/mldd.cfg', 'r') as f: F = {key: value.strip() for (key, value) in
+                                                      list(map(lambda x: x.split('='), f.readlines()))}
+    return F
+
+# def flt32elementToBin(flt32e):  return np.array(list(map(float, Bits(floatbe=flt32e, length=32).bin)))
+# def flt32ToBin(flt32):          return np.concatenate(list(map(lambda i:[np.concatenate(list(map(lambda j:flt32elementToBin(flt32[i,j]), flt32[i,:])))], range(flt32.shape[0]))))
+
+def canonicalize_morgan(m):
+    n = m.GetNumAtoms()
+    tally_new = np.zeros(n, dtype=int)
+    valsetlen_old = 0
+    for i, a in enumerate(m.GetAtoms()):
+        tally_new[i] += len(a.GetBonds())
+    valsetlen_new = len(set(tally_new))
+    j = 0
+    while not valsetlen_new == valsetlen_old and j < 1000:
+        tally_old = np.copy(tally_new)
+        valsetlen_old = valsetlen_new
+        for i, a in enumerate(m.GetAtoms()):
+            tally_new[i] = np.sum(tally_old[list(map(lambda x: x.GetIdx(), a.GetNeighbors()))])
+        valsetlen_new = len(set(tally_new))
+        j += 1
+    # print('Canonicalization achieved after %d iterations' % j)
+    return list(
+        map(lambda x: x[1], sorted(list(zip(tally_new, range(len(tally_new)))), key=lambda x: x[0], reverse=True)))
+
+
+h5py_datatype_variable_int = h5py.special_dtype(vlen=np.dtype('int64'))
+
+
+def max_min_2d(a):
+    return np.unravel_index(a.argmax(), a.shape), a[np.unravel_index(a.argmax(), a.shape)], np.unravel_index(a.argmin(),
+                                                                                                             a.shape), \
+           a[np.unravel_index(a.argmin(), a.shape)]
+
+
+def main():
+    return 0
+
+
+if __name__ == "__main__":
+    main()
+
