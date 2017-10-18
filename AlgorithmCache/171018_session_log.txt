@@ -13133,3 +13133,2122 @@ Begins: 01:06:31 10-18-17
 [11:54:48] >  18111434-DEC_02 - Minimization Loop Score -->   -66.83715
 [11:54:48] >  18111434-DEC_02 - Mut & Min #06 Score    -->   -66.83715
 [11:54:48] >  Beginning Fast Relax
+[12:04:26] >  18111434-DEC_00 - Mut & Min, FastRelaxed Score -->  -762.29482
+[12:04:26] >  Beginning Decoy # 7
+[12:04:26] >  MMM.ID 18111434-DEC_07 - Beginning Mutation Minimization Mover
+[12:04:26] >   `--> identifier: 18111434-DEC_07 | mut_pattern: [[358, 279, 333, 280], [247, 280, 255, 273], [332, 254], [332, 344], [354, 254], [344, 339]] | kT:     1.0
+[12:04:26] >   | liberal: [True, True, False, False, False, False]
+[12:04:26] >  MMM.ID 18111434-DEC_07 - Loop  1/ 6
+[12:04:26] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.00
+[12:04:26] >  Beginning Mutant Pack Mover
+[12:04:26] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.00.resfile
+[12:04:27] >  18111434-DEC_07 - Mutant Pack Score      -->   364.23289
+[12:04:27] >  Perfoming A Minimization Loop  50
+[12:04:27] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:04:27] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:04:38] >  18111434-DEC_07 - Minimization Loop Score -->    87.95574
+[12:04:38] >  Beginning Anneal Loop Mover
+[12:04:38] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:04:38] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:02] >  18111434-DEC_05 - Mut & Min, FastRelaxed Score -->  -738.81503
+[12:05:03] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->    87.95574
+[12:05:03] >  Beginning Decoy # 8
+[12:05:03] >  MMM.ID 18111434-DEC_08 - Beginning Mutation Minimization Mover
+[12:05:03] >   `--> identifier: 18111434-DEC_08 | mut_pattern: [[273, 321, 251, 339], [333, 358, 279, 355], [275, 251], [250, 330], [276, 250], [358, 333]] | kT:     1.0
+[12:05:03] >   | liberal: [True, True, False, False, False, False]
+[12:05:03] >  MMM.ID 18111434-DEC_08 - Loop  1/ 6
+[12:05:03] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.00
+[12:05:03] >  Beginning Mutant Pack Mover
+[12:05:03] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.00.resfile
+[12:05:03] >  18111434-DEC_08 - Mutant Pack Score      -->   369.47760
+[12:05:03] >  Perfoming A Minimization Loop  50
+[12:05:03] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:03] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:06] >  18111434-DEC_01 - Mut & Min, FastRelaxed Score -->  -749.47589
+[12:05:07] >  Beginning Decoy # 9
+[12:05:07] >  MMM.ID 18111434-DEC_09 - Beginning Mutation Minimization Mover
+[12:05:07] >   `--> identifier: 18111434-DEC_09 | mut_pattern: [[255, 344, 247, 325], [321, 334, 344, 254], [276, 354], [325, 241], [279, 280], [251, 254]] | kT:     1.0
+[12:05:07] >   | liberal: [True, True, False, False, False, False]
+[12:05:07] >  MMM.ID 18111434-DEC_09 - Loop  1/ 6
+[12:05:07] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.00
+[12:05:07] >  Beginning Mutant Pack Mover
+[12:05:07] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.00.resfile
+[12:05:07] >  18111434-DEC_09 - Mutant Pack Score      -->   381.78665
+[12:05:07] >  Perfoming A Minimization Loop  50
+[12:05:07] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:07] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:14] >  18111434-DEC_08 - Minimization Loop Score -->    95.46265
+[12:05:14] >  Beginning Anneal Loop Mover
+[12:05:14] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:05:14] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:17] >  18111434-DEC_09 - Minimization Loop Score -->    96.92975
+[12:05:17] >  Beginning Anneal Loop Mover
+[12:05:17] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:05:17] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:22] >  18111434-DEC_04 - Mut & Min, FastRelaxed Score -->  -766.34211
+[12:05:22] >  18111434-DEC_06 - Mut & Min, FastRelaxed Score -->  -774.85141
+[12:05:23] >  Beginning Decoy # 10
+[12:05:23] >  MMM.ID 18111434-DEC_10 - Beginning Mutation Minimization Mover
+[12:05:23] >   `--> identifier: 18111434-DEC_10 | mut_pattern: [[354, 355, 330, 334], [275, 276, 330, 325], [343, 272], [358, 247], [247, 273], [273, 355]] | kT:     1.0
+[12:05:23] >   | liberal: [True, True, False, False, False, False]
+[12:05:23] >  MMM.ID 18111434-DEC_10 - Loop  1/ 6
+[12:05:23] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.00
+[12:05:23] >  Beginning Mutant Pack Mover
+[12:05:23] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.00.resfile
+[12:05:23] >  Beginning Decoy # 11
+[12:05:23] >  MMM.ID 18111434-DEC_11 - Beginning Mutation Minimization Mover
+[12:05:23] >   `--> identifier: 18111434-DEC_11 | mut_pattern: [[250, 276, 275, 272], [339, 251, 354, 241], [344, 355], [279, 334], [321, 325], [275, 330]] | kT:     1.0
+[12:05:23] >   | liberal: [True, True, False, False, False, False]
+[12:05:23] >  MMM.ID 18111434-DEC_11 - Loop  1/ 6
+[12:05:23] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.00
+[12:05:23] >  Beginning Mutant Pack Mover
+[12:05:23] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.00.resfile
+[12:05:23] >  18111434-DEC_10 - Mutant Pack Score      -->   151.82282
+[12:05:23] >  Perfoming A Minimization Loop  50
+[12:05:23] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:23] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:23] >  18111434-DEC_11 - Mutant Pack Score      -->   288.41563
+[12:05:23] >  Perfoming A Minimization Loop  50
+[12:05:23] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:23] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:28] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->    87.95574
+[12:05:34] >  18111434-DEC_10 - Minimization Loop Score -->    71.57722
+[12:05:34] >  Beginning Anneal Loop Mover
+[12:05:34] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:05:34] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:36] >  18111434-DEC_03 - Mut & Min, FastRelaxed Score -->  -765.35194
+[12:05:36] >  Beginning Decoy # 12
+[12:05:36] >  MMM.ID 18111434-DEC_12 - Beginning Mutation Minimization Mover
+[12:05:36] >   `--> identifier: 18111434-DEC_12 | mut_pattern: [[279, 343, 247, 344], [279, 355, 251, 325], [255, 339], [251, 321], [251, 255], [279, 333]] | kT:     1.0
+[12:05:36] >   | liberal: [True, True, False, False, False, False]
+[12:05:36] >  MMM.ID 18111434-DEC_12 - Loop  1/ 6
+[12:05:36] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.00
+[12:05:36] >  Beginning Mutant Pack Mover
+[12:05:36] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.00.resfile
+[12:05:36] >  18111434-DEC_11 - Minimization Loop Score -->    80.90782
+[12:05:36] >  Beginning Anneal Loop Mover
+[12:05:36] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:05:36] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:36] >  18111434-DEC_12 - Mutant Pack Score      -->   377.77556
+[12:05:36] >  Perfoming A Minimization Loop  50
+[12:05:36] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:36] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:39] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->   108.30900
+[12:05:40] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->    96.92975
+[12:05:47] >  18111434-DEC_12 - Minimization Loop Score -->   102.57955
+[12:05:47] >  Beginning Anneal Loop Mover
+[12:05:47] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:05:47] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:05:52] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->    87.95574
+[12:05:52] >  18111434-DEC_02 - Mut & Min, FastRelaxed Score -->  -761.18318
+[12:05:52] >  Beginning Decoy # 13
+[12:05:52] >  MMM.ID 18111434-DEC_13 - Beginning Mutation Minimization Mover
+[12:05:52] >   `--> identifier: 18111434-DEC_13 | mut_pattern: [[354, 241, 272, 276], [334, 330, 275, 333], [325, 355], [254, 354], [273, 354], [273, 241]] | kT:     1.0
+[12:05:52] >   | liberal: [True, True, False, False, False, False]
+[12:05:52] >  MMM.ID 18111434-DEC_13 - Loop  1/ 6
+[12:05:52] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.00
+[12:05:52] >  Beginning Mutant Pack Mover
+[12:05:52] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.00.resfile
+[12:05:53] >  18111434-DEC_13 - Mutant Pack Score      -->   278.72713
+[12:05:53] >  Perfoming A Minimization Loop  50
+[12:05:53] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:05:53] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:05:57] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->    71.57722
+[12:06:00] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->    80.90782
+[12:06:02] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->   108.30900
+[12:06:04] >  18111434-DEC_13 - Minimization Loop Score -->    79.37277
+[12:06:04] >  Beginning Anneal Loop Mover
+[12:06:04] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:06:04] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:06:04] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->    96.92975
+[12:06:09] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   102.57955
+[12:06:15] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->    85.30151
+[12:06:19] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->    71.57722
+[12:06:23] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->    80.90782
+[12:06:24] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->   102.70730
+[12:06:26] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->    67.03195
+[12:06:29] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->   108.21703
+[12:06:33] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   102.57955
+[12:06:40] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->    66.98250
+[12:06:44] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->    71.57722
+[12:06:49] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->    68.08429
+[12:06:49] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->    93.65928
+[12:06:50] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->    77.15244
+[12:06:54] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->    84.79009
+[12:06:58] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   102.57955
+[12:07:03] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->    57.01014
+[12:07:08] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->    46.58421
+[12:07:12] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->    73.32523
+[12:07:12] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->    58.76066
+[12:07:14] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->    77.15244
+[12:07:18] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->    84.79009
+[12:07:21] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->    85.10685
+[12:07:26] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->    57.01014
+[12:07:31] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->    29.97257
+[12:07:36] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->    53.33393
+[12:07:36] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->    73.89387
+[12:07:37] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->    75.11851
+[12:07:41] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->    81.87492
+[12:07:45] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->    70.59138
+[12:07:50] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->    57.01014
+[12:07:54] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->    38.50202
+[12:07:58] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->    69.52309
+[12:07:59] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->    46.62056
+[12:08:00] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->    73.77393
+[12:08:05] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->    73.66110
+[12:08:08] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->    71.64777
+[12:08:12] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->    57.01014
+[12:08:17] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->    22.14289
+[12:08:22] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->    40.08323
+[12:08:22] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->    69.52309
+[12:08:23] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->    73.32952
+[12:08:29] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->    73.66110
+[12:08:31] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->    67.71919
+[12:08:36] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->    57.01014
+[12:08:40] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->    24.73326
+[12:08:45] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->    69.52309
+[12:08:45] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->    68.12379
+[12:08:45] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->    40.08323
+[12:08:52] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->    73.66110
+[12:08:54] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->    67.71919
+[12:08:59] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->    55.84873
+[12:09:03] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->    24.73326
+[12:09:05] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->    40.08323
+[12:09:09] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->    69.52309
+[12:09:09] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->    59.68360
+[12:09:15] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->    74.68837
+[12:09:17] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   100.82660
+[12:09:22] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->    53.22875
+[12:09:25] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->    40.08323
+[12:09:26] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->    24.73326
+[12:09:32] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->    71.22205
+[12:09:32] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->    59.68360
+[12:09:38] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->    67.73479
+[12:09:40] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   100.82660
+[12:09:45] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->    49.49464
+[12:09:48] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->    46.73364
+[12:09:49] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->    24.10333
+[12:09:55] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->    57.37608
+[12:09:55] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->    59.68360
+[12:10:01] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->    54.60883
+[12:10:02] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->    96.70106
+[12:10:08] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->    45.00533
+[12:10:08] >  Perfoming A Minimization Loop  50
+[12:10:08] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:10:08] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:10:11] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->    52.03412
+[12:10:12] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->    19.41705
+[12:10:18] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->    58.51377
+[12:10:19] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->    58.18529
+[12:10:19] >  18111434-DEC_07 - Minimization Loop Score -->    41.60667
+[12:10:19] >  Beginning Mutant Pack Mover
+[12:10:19] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:10:19] >  18111434-DEC_07 - Mutant Pack Score      -->    41.60749
+[12:10:19] >  Perfoming A Minimization Loop  50
+[12:10:19] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:10:19] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:10:23] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->    52.18821
+[12:10:25] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->    82.50848
+[12:10:33] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->    40.89680
+[12:10:35] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->    17.36653
+[12:10:41] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->    68.84335
+[12:10:41] >  Perfoming A Minimization Loop  50
+[12:10:41] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:10:41] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:10:42] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->    59.80842
+[12:10:46] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->    52.18821
+[12:10:46] >  Perfoming A Minimization Loop  50
+[12:10:46] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:10:46] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:10:47] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->    89.28587
+[12:10:52] >  18111434-DEC_08 - Minimization Loop Score -->    63.20414
+[12:10:52] >  Beginning Mutant Pack Mover
+[12:10:52] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:10:52] >  18111434-DEC_08 - Mutant Pack Score      -->    62.89529
+[12:10:52] >  Perfoming A Minimization Loop  50
+[12:10:52] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:10:52] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:10:56] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->    27.80056
+[12:10:56] >  Perfoming A Minimization Loop  50
+[12:10:56] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:10:56] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:10:57] >  18111434-DEC_09 - Minimization Loop Score -->    49.71512
+[12:10:57] >  Beginning Mutant Pack Mover
+[12:10:57] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:10:57] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->    17.36653
+[12:10:57] >  Perfoming A Minimization Loop  50
+[12:10:57] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:10:57] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:10:57] >  18111434-DEC_09 - Mutant Pack Score      -->    49.54643
+[12:10:57] >  Perfoming A Minimization Loop  50
+[12:10:57] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:10:57] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:11:04] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->    54.43427
+[12:11:07] >  18111434-DEC_10 - Minimization Loop Score -->    16.75631
+[12:11:07] >  Beginning Mutant Pack Mover
+[12:11:07] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:11:07] >  18111434-DEC_10 - Mutant Pack Score      -->    16.14195
+[12:11:07] >  Perfoming A Minimization Loop  50
+[12:11:07] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:11:07] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:11:08] >  18111434-DEC_11 - Minimization Loop Score -->    25.41701
+[12:11:08] >  Beginning Mutant Pack Mover
+[12:11:08] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:11:08] >  18111434-DEC_11 - Mutant Pack Score      -->    25.25444
+[12:11:08] >  Perfoming A Minimization Loop  50
+[12:11:08] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:11:08] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:11:10] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->    70.07966
+[12:11:10] >  Perfoming A Minimization Loop  50
+[12:11:10] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:11:10] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:11:14] >  18111434-DEC_07 - Minimization Loop Score -->    -2.98663
+[12:11:14] >  18111434-DEC_07 - Mut & Min #01 Score    -->    -2.98663
+[12:11:14] >  MMM.ID 18111434-DEC_07 - Loop  2/ 6
+[12:11:14] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.01
+[12:11:14] >  Beginning Mutant Pack Mover
+[12:11:14] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.01.resfile
+[12:11:14] >  18111434-DEC_07 - Mutant Pack Score      -->     7.20258
+[12:11:14] >  Perfoming A Minimization Loop  50
+[12:11:14] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:11:14] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:11:22] >  18111434-DEC_12 - Minimization Loop Score -->    67.43319
+[12:11:22] >  Beginning Mutant Pack Mover
+[12:11:22] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:11:22] >  18111434-DEC_12 - Mutant Pack Score      -->    67.20867
+[12:11:22] >  Perfoming A Minimization Loop  50
+[12:11:22] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:11:22] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:11:26] >  18111434-DEC_07 - Minimization Loop Score -->     4.81789
+[12:11:26] >  Beginning Anneal Loop Mover
+[12:11:26] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:11:26] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:11:28] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->    50.68460
+[12:11:28] >  Perfoming A Minimization Loop  50
+[12:11:28] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:11:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:11:39] >  18111434-DEC_13 - Minimization Loop Score -->    47.53196
+[12:11:39] >  Beginning Mutant Pack Mover
+[12:11:39] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:11:39] >  18111434-DEC_13 - Mutant Pack Score      -->    47.53192
+[12:11:39] >  Perfoming A Minimization Loop  50
+[12:11:39] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:11:39] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:11:47] >  18111434-DEC_08 - Minimization Loop Score -->     6.12991
+[12:11:47] >  18111434-DEC_08 - Mut & Min #01 Score    -->     6.12991
+[12:11:47] >  MMM.ID 18111434-DEC_08 - Loop  2/ 6
+[12:11:47] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.01
+[12:11:47] >  Beginning Mutant Pack Mover
+[12:11:47] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.01.resfile
+[12:11:47] >  18111434-DEC_08 - Mutant Pack Score      -->     9.18528
+[12:11:47] >  Perfoming A Minimization Loop  50
+[12:11:47] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:11:47] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:11:49] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->    12.08352
+[12:11:54] >  18111434-DEC_09 - Minimization Loop Score -->    12.44294
+[12:11:54] >  18111434-DEC_09 - Mut & Min #01 Score    -->    12.44294
+[12:11:54] >  MMM.ID 18111434-DEC_09 - Loop  2/ 6
+[12:11:54] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.01
+[12:11:54] >  Beginning Mutant Pack Mover
+[12:11:54] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.01.resfile
+[12:11:54] >  18111434-DEC_09 - Mutant Pack Score      -->     9.20912
+[12:11:54] >  Perfoming A Minimization Loop  50
+[12:11:54] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:11:54] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:11:58] >  18111434-DEC_08 - Minimization Loop Score -->     7.68051
+[12:11:58] >  Beginning Anneal Loop Mover
+[12:11:58] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:11:58] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:04] >  18111434-DEC_09 - Minimization Loop Score -->     6.85817
+[12:12:04] >  Beginning Anneal Loop Mover
+[12:12:05] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:12:05] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:05] >  18111434-DEC_11 - Minimization Loop Score -->   -12.69901
+[12:12:05] >  18111434-DEC_11 - Mut & Min #01 Score    -->   -12.69901
+[12:12:05] >  MMM.ID 18111434-DEC_11 - Loop  2/ 6
+[12:12:05] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.01
+[12:12:05] >  Beginning Mutant Pack Mover
+[12:12:05] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.01.resfile
+[12:12:05] >  18111434-DEC_10 - Minimization Loop Score -->   -16.26546
+[12:12:05] >  18111434-DEC_10 - Mut & Min #01 Score    -->   -16.26546
+[12:12:05] >  MMM.ID 18111434-DEC_10 - Loop  2/ 6
+[12:12:05] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.01
+[12:12:05] >  Beginning Mutant Pack Mover
+[12:12:05] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.01.resfile
+[12:12:05] >  18111434-DEC_11 - Mutant Pack Score      -->    -5.62455
+[12:12:05] >  Perfoming A Minimization Loop  50
+[12:12:05] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:12:05] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:12:06] >  18111434-DEC_10 - Mutant Pack Score      -->   -19.45283
+[12:12:06] >  Perfoming A Minimization Loop  50
+[12:12:06] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:12:06] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:12:13] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->    12.08352
+[12:12:16] >  18111434-DEC_10 - Minimization Loop Score -->   -21.43506
+[12:12:16] >  Beginning Anneal Loop Mover
+[12:12:16] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:12:16] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:16] >  18111434-DEC_12 - Minimization Loop Score -->   -19.09579
+[12:12:16] >  18111434-DEC_12 - Mut & Min #01 Score    -->   -19.09579
+[12:12:16] >  MMM.ID 18111434-DEC_12 - Loop  2/ 6
+[12:12:16] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.01
+[12:12:16] >  Beginning Mutant Pack Mover
+[12:12:16] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.01.resfile
+[12:12:17] >  18111434-DEC_12 - Mutant Pack Score      -->   -19.41147
+[12:12:17] >  Perfoming A Minimization Loop  50
+[12:12:17] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:12:17] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:12:17] >  18111434-DEC_11 - Minimization Loop Score -->    -8.64285
+[12:12:17] >  Beginning Anneal Loop Mover
+[12:12:17] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:12:17] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:22] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->     7.68051
+[12:12:27] >  18111434-DEC_12 - Minimization Loop Score -->   -20.98811
+[12:12:27] >  Beginning Anneal Loop Mover
+[12:12:27] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:12:27] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:28] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->     6.85817
+[12:12:38] >  18111434-DEC_13 - Minimization Loop Score -->    -6.16801
+[12:12:38] >  18111434-DEC_13 - Mut & Min #01 Score    -->    -6.16801
+[12:12:38] >  MMM.ID 18111434-DEC_13 - Loop  2/ 6
+[12:12:38] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.01
+[12:12:38] >  Beginning Mutant Pack Mover
+[12:12:38] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.01.resfile
+[12:12:39] >  18111434-DEC_13 - Mutant Pack Score      -->    -3.57131
+[12:12:39] >  Perfoming A Minimization Loop  50
+[12:12:39] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:12:39] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:12:40] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->    16.33562
+[12:12:41] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->    -8.64285
+[12:12:43] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->   -21.43506
+[12:12:48] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->     7.68051
+[12:12:50] >  18111434-DEC_13 - Minimization Loop Score -->    -7.54482
+[12:12:50] >  Beginning Anneal Loop Mover
+[12:12:50] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:12:50] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:12:52] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   -20.98811
+[12:12:55] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->     6.85817
+[12:13:04] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->    13.12144
+[12:13:05] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->    -8.64285
+[12:13:07] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->   -21.43506
+[12:13:13] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->     7.68051
+[12:13:14] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->    -7.54482
+[12:13:16] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   -20.98811
+[12:13:20] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->     6.85817
+[12:13:25] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->    14.14446
+[12:13:28] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->    -8.64285
+[12:13:30] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->   -21.43506
+[12:13:35] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->    12.42898
+[12:13:37] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->    -7.54482
+[12:13:39] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   -20.98811
+[12:13:42] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->    21.18621
+[12:13:47] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->    17.22609
+[12:13:50] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->    -8.64285
+[12:13:52] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->   -19.28388
+[12:13:57] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->    10.82774
+[12:14:00] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->    -7.54482
+[12:14:02] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->   -22.42369
+[12:14:04] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->    15.48259
+[12:14:09] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->    13.82697
+[12:14:12] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->    -7.41008
+[12:14:14] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->   -18.76493
+[12:14:19] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->    12.22208
+[12:14:22] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->    -5.32817
+[12:14:24] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->   -23.83430
+[12:14:27] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->    15.44879
+[12:14:32] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->    24.59430
+[12:14:34] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->    -4.31084
+[12:14:36] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->   -17.10055
+[12:14:41] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->    13.76598
+[12:14:44] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->    -0.44469
+[12:14:46] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->   -18.38568
+[12:14:49] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->    14.01861
+[12:14:55] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->    24.59430
+[12:14:57] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->    -4.31084
+[12:14:58] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->    -5.22845
+[12:15:03] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->    13.76598
+[12:15:06] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->    -0.44469
+[12:15:07] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->   -13.47203
+[12:15:12] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->    14.01861
+[12:15:18] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->    24.59430
+[12:15:19] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->    -4.31084
+[12:15:21] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->    -5.22845
+[12:15:25] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->    13.76598
+[12:15:29] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->     5.86179
+[12:15:31] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->   -13.47203
+[12:15:35] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->    14.01861
+[12:15:40] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->    28.17260
+[12:15:43] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->    -4.31084
+[12:15:43] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->    -5.22845
+[12:15:49] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->    13.76598
+[12:15:52] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->     5.86179
+[12:15:54] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   -13.47203
+[12:15:57] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->    14.01861
+[12:16:02] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->    27.80889
+[12:16:06] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->    -4.31084
+[12:16:06] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->    -5.22845
+[12:16:11] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->    14.08678
+[12:16:15] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->     5.86179
+[12:16:18] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   -13.47203
+[12:16:20] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->     9.30161
+[12:16:24] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->    30.36286
+[12:16:28] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->    -5.44255
+[12:16:29] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->    -8.79108
+[12:16:34] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->    14.08678
+[12:16:38] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->     5.86179
+[12:16:40] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->   -15.66081
+[12:16:43] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->    12.82096
+[12:16:46] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->    30.36286
+[12:16:46] >  Perfoming A Minimization Loop  50
+[12:16:46] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:16:46] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:16:51] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->    -4.45541
+[12:16:52] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->    -6.00984
+[12:16:57] >  18111434-DEC_07 - Minimization Loop Score -->    28.30945
+[12:16:57] >  Beginning Mutant Pack Mover
+[12:16:57] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:16:57] >  18111434-DEC_07 - Mutant Pack Score      -->    27.39848
+[12:16:57] >  Perfoming A Minimization Loop  50
+[12:16:57] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:16:57] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:16:57] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->    15.44599
+[12:17:01] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->     2.76582
+[12:17:03] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->   -18.23198
+[12:17:05] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->     9.45368
+[12:17:13] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->    -7.75657
+[12:17:15] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->     0.12650
+[12:17:20] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->    17.26282
+[12:17:20] >  Perfoming A Minimization Loop  50
+[12:17:20] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:20] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:23] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->     0.92437
+[12:17:25] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->   -17.25974
+[12:17:28] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->     9.45368
+[12:17:28] >  Perfoming A Minimization Loop  50
+[12:17:28] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:30] >  18111434-DEC_08 - Minimization Loop Score -->    16.53888
+[12:17:30] >  Beginning Mutant Pack Mover
+[12:17:30] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:17:30] >  18111434-DEC_08 - Mutant Pack Score      -->    16.53888
+[12:17:30] >  Perfoming A Minimization Loop  50
+[12:17:30] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:17:30] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:17:35] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->    -6.26566
+[12:17:35] >  Perfoming A Minimization Loop  50
+[12:17:35] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:35] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:38] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->    -2.56926
+[12:17:38] >  Perfoming A Minimization Loop  50
+[12:17:38] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:38] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:39] >  18111434-DEC_09 - Minimization Loop Score -->     8.13754
+[12:17:39] >  Beginning Mutant Pack Mover
+[12:17:39] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:17:39] >  18111434-DEC_09 - Mutant Pack Score      -->     8.13754
+[12:17:39] >  Perfoming A Minimization Loop  50
+[12:17:39] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:17:39] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:17:46] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->     0.92437
+[12:17:46] >  18111434-DEC_11 - Minimization Loop Score -->    -9.30881
+[12:17:46] >  Beginning Mutant Pack Mover
+[12:17:46] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:17:47] >  18111434-DEC_11 - Mutant Pack Score      -->    -9.38283
+[12:17:47] >  Perfoming A Minimization Loop  50
+[12:17:47] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:17:47] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:17:48] >  18111434-DEC_10 - Minimization Loop Score -->    -2.98924
+[12:17:48] >  Beginning Mutant Pack Mover
+[12:17:48] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:17:48] >  18111434-DEC_10 - Mutant Pack Score      -->    -3.02651
+[12:17:48] >  Perfoming A Minimization Loop  50
+[12:17:48] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:17:48] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:17:48] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->   -15.68794
+[12:17:48] >  Perfoming A Minimization Loop  50
+[12:17:48] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:48] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:52] >  18111434-DEC_07 - Minimization Loop Score -->    -6.05946
+[12:17:52] >  18111434-DEC_07 - Mut & Min #02 Score    -->    -6.05946
+[12:17:52] >  MMM.ID 18111434-DEC_07 - Loop  3/ 6
+[12:17:52] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.02
+[12:17:52] >  Beginning Mutant Pack Mover
+[12:17:52] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.02.resfile
+[12:17:52] >  18111434-DEC_07 - Mutant Pack Score      -->    -1.50110
+[12:17:52] >  Perfoming A Minimization Loop  50
+[12:17:52] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:17:52] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:17:58] >  18111434-DEC_12 - Minimization Loop Score -->   -18.33791
+[12:17:58] >  Beginning Mutant Pack Mover
+[12:17:58] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:17:58] >  18111434-DEC_12 - Mutant Pack Score      -->   -18.33791
+[12:17:58] >  Perfoming A Minimization Loop  50
+[12:17:58] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:17:58] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:18:03] >  18111434-DEC_07 - Minimization Loop Score -->    -3.07392
+[12:18:03] >  Beginning Anneal Loop Mover
+[12:18:03] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:18:03] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:18:08] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->     6.75829
+[12:18:08] >  Perfoming A Minimization Loop  50
+[12:18:08] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:08] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:18] >  18111434-DEC_13 - Minimization Loop Score -->     6.18378
+[12:18:18] >  Beginning Mutant Pack Mover
+[12:18:18] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:18:18] >  18111434-DEC_13 - Mutant Pack Score      -->     5.07075
+[12:18:18] >  Perfoming A Minimization Loop  50
+[12:18:18] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:18:18] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:18:22] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->    -3.07392
+[12:18:25] >  18111434-DEC_08 - Minimization Loop Score -->   -38.54362
+[12:18:25] >  18111434-DEC_08 - Mut & Min #02 Score    -->   -38.54362
+[12:18:25] >  MMM.ID 18111434-DEC_08 - Loop  3/ 6
+[12:18:25] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.02
+[12:18:25] >  Beginning Mutant Pack Mover
+[12:18:25] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.02.resfile
+[12:18:25] >  18111434-DEC_08 - Mutant Pack Score      -->   -40.90234
+[12:18:25] >  Perfoming A Minimization Loop  50
+[12:18:25] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:25] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:35] >  18111434-DEC_09 - Minimization Loop Score -->   -17.59402
+[12:18:35] >  18111434-DEC_09 - Mut & Min #02 Score    -->   -17.59402
+[12:18:35] >  MMM.ID 18111434-DEC_09 - Loop  3/ 6
+[12:18:35] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.02
+[12:18:35] >  Beginning Mutant Pack Mover
+[12:18:35] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.02.resfile
+[12:18:35] >  18111434-DEC_09 - Mutant Pack Score      -->   -26.15176
+[12:18:35] >  Perfoming A Minimization Loop  50
+[12:18:35] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:35] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:36] >  18111434-DEC_08 - Minimization Loop Score -->   -43.11049
+[12:18:36] >  Beginning Anneal Loop Mover
+[12:18:36] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:18:36] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:18:38] >  18111434-DEC_10 - Minimization Loop Score -->   -39.10053
+[12:18:38] >  18111434-DEC_10 - Mut & Min #02 Score    -->   -39.10053
+[12:18:38] >  MMM.ID 18111434-DEC_10 - Loop  3/ 6
+[12:18:38] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.02
+[12:18:38] >  Beginning Mutant Pack Mover
+[12:18:38] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.02.resfile
+[12:18:38] >  18111434-DEC_10 - Mutant Pack Score      -->   -26.13270
+[12:18:38] >  Perfoming A Minimization Loop  50
+[12:18:38] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:38] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:42] >  18111434-DEC_11 - Minimization Loop Score -->   -27.01452
+[12:18:42] >  18111434-DEC_11 - Mut & Min #02 Score    -->   -27.01452
+[12:18:42] >  MMM.ID 18111434-DEC_11 - Loop  3/ 6
+[12:18:42] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.02
+[12:18:42] >  Beginning Mutant Pack Mover
+[12:18:42] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.02.resfile
+[12:18:42] >  18111434-DEC_11 - Mutant Pack Score      -->   -25.30602
+[12:18:42] >  Perfoming A Minimization Loop  50
+[12:18:42] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:42] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:45] >  18111434-DEC_09 - Minimization Loop Score -->   -27.06807
+[12:18:45] >  Beginning Anneal Loop Mover
+[12:18:45] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:18:45] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:18:45] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->    -3.07392
+[12:18:49] >  18111434-DEC_10 - Minimization Loop Score -->   -31.57756
+[12:18:49] >  Beginning Anneal Loop Mover
+[12:18:49] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:18:49] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:18:51] >  18111434-DEC_12 - Minimization Loop Score -->   -38.45536
+[12:18:51] >  18111434-DEC_12 - Mut & Min #02 Score    -->   -38.45536
+[12:18:51] >  MMM.ID 18111434-DEC_12 - Loop  3/ 6
+[12:18:51] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.02
+[12:18:51] >  Beginning Mutant Pack Mover
+[12:18:51] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.02.resfile
+[12:18:51] >  18111434-DEC_12 - Mutant Pack Score      -->   -38.32889
+[12:18:51] >  Perfoming A Minimization Loop  50
+[12:18:51] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:18:51] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:18:52] >  18111434-DEC_11 - Minimization Loop Score -->   -26.06645
+[12:18:52] >  Beginning Anneal Loop Mover
+[12:18:52] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:18:52] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:18:59] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->    -9.22539
+[12:19:01] >  18111434-DEC_12 - Minimization Loop Score -->   -38.99677
+[12:19:01] >  Beginning Anneal Loop Mover
+[12:19:01] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:19:01] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:19:09] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->    -3.07392
+[12:19:09] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->   -27.06807
+[12:19:12] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->   -31.57756
+[12:19:14] >  18111434-DEC_13 - Minimization Loop Score -->   -24.34715
+[12:19:14] >  18111434-DEC_13 - Mut & Min #02 Score    -->   -24.34715
+[12:19:14] >  MMM.ID 18111434-DEC_13 - Loop  3/ 6
+[12:19:14] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.02
+[12:19:14] >  Beginning Mutant Pack Mover
+[12:19:14] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.02.resfile
+[12:19:14] >  18111434-DEC_13 - Mutant Pack Score      -->   -22.02970
+[12:19:14] >  Perfoming A Minimization Loop  50
+[12:19:14] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:19:14] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:19:16] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->   -26.06645
+[12:19:25] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->    -9.22539
+[12:19:25] >  18111434-DEC_13 - Minimization Loop Score -->   -23.15933
+[12:19:25] >  Beginning Anneal Loop Mover
+[12:19:25] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:19:25] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:19:25] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   -19.45990
+[12:19:33] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->    -3.07392
+[12:19:35] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->   -27.06807
+[12:19:38] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->   -31.57756
+[12:19:41] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->   -26.06645
+[12:19:48] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->    -9.22539
+[12:19:48] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   -14.22243
+[12:19:49] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->   -23.15933
+[12:19:55] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->    -3.07392
+[12:19:58] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->   -27.06807
+[12:20:01] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->   -31.57756
+[12:20:04] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->   -19.64881
+[12:20:10] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->   -13.12435
+[12:20:11] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   -14.22243
+[12:20:13] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->   -23.15933
+[12:20:18] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->    -2.99624
+[12:20:21] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->   -26.31659
+[12:20:24] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->   -31.57756
+[12:20:27] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->   -19.52278
+[12:20:32] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->   -10.03708
+[12:20:34] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->   -14.22243
+[12:20:35] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->   -23.15933
+[12:20:40] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->    -2.99624
+[12:20:44] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->   -26.31659
+[12:20:47] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->   -26.00976
+[12:20:50] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->   -21.55782
+[12:20:55] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->   -14.63178
+[12:20:57] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->   -14.94871
+[12:20:58] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->   -23.15933
+[12:21:05] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->    -2.99624
+[12:21:09] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->   -23.07332
+[12:21:13] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->   -26.00976
+[12:21:16] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->   -21.53860
+[12:21:21] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->    -9.17357
+[12:21:23] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->   -17.90456
+[12:21:24] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->   -22.22172
+[12:21:30] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->    -2.99624
+[12:21:33] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->   -21.61645
+[12:21:35] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->   -26.00976
+[12:21:38] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->   -21.69100
+[12:21:43] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->    -9.17357
+[12:21:45] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->   -16.85755
+[12:21:46] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->   -22.42133
+[12:21:53] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->     6.54836
+[12:21:56] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->   -21.61645
+[12:21:58] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->   -26.00976
+[12:22:02] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->   -21.69100
+[12:22:06] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->    -9.17357
+[12:22:08] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->   -16.85755
+[12:22:08] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->   -22.42133
+[12:22:15] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->     8.91691
+[12:22:19] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->   -21.61645
+[12:22:22] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->   -26.00976
+[12:22:25] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->   -21.69100
+[12:22:30] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->    -9.17357
+[12:22:31] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->   -22.42133
+[12:22:31] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   -16.85755
+[12:22:38] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->    10.18991
+[12:22:43] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->   -21.61645
+[12:22:45] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->   -26.00976
+[12:22:49] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->   -21.69100
+[12:22:53] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->    -9.17357
+[12:22:54] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   -16.85755
+[12:22:55] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->   -22.42133
+[12:23:00] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->     8.56105
+[12:23:05] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->   -21.61645
+[12:23:08] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->   -25.62068
+[12:23:12] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->   -16.13669
+[12:23:15] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->    -4.04853
+[12:23:16] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->   -24.01850
+[12:23:18] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->   -22.42133
+[12:23:22] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->    -1.39535
+[12:23:22] >  Perfoming A Minimization Loop  50
+[12:23:22] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:23:22] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:23:28] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->   -21.61645
+[12:23:31] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->    -8.49293
+[12:23:33] >  18111434-DEC_07 - Minimization Loop Score -->    -2.05108
+[12:23:33] >  Beginning Mutant Pack Mover
+[12:23:33] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:23:33] >  18111434-DEC_07 - Mutant Pack Score      -->    -2.05108
+[12:23:33] >  Perfoming A Minimization Loop  50
+[12:23:33] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:23:33] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:23:34] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->   -19.57157
+[12:23:37] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->     0.37402
+[12:23:39] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->   -23.70587
+[12:23:41] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->   -19.26928
+[12:23:51] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->   -21.61645
+[12:23:54] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->    -5.04905
+[12:23:56] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->   -14.68335
+[12:23:59] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->     0.37402
+[12:23:59] >  Perfoming A Minimization Loop  50
+[12:23:59] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:23:59] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:02] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->   -29.79321
+[12:24:03] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->   -16.84873
+[12:24:09] >  18111434-DEC_08 - Minimization Loop Score -->    -1.20217
+[12:24:09] >  Beginning Mutant Pack Mover
+[12:24:09] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:09] >  18111434-DEC_08 - Mutant Pack Score      -->    -1.20217
+[12:24:09] >  Perfoming A Minimization Loop  50
+[12:24:09] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:09] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:24:14] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->   -21.73976
+[12:24:14] >  Perfoming A Minimization Loop  50
+[12:24:14] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:14] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:17] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->   -11.67084
+[12:24:17] >  Perfoming A Minimization Loop  50
+[12:24:17] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:17] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:19] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->     4.11603
+[12:24:19] >  Perfoming A Minimization Loop  50
+[12:24:19] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:19] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:24] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->   -28.41807
+[12:24:24] >  Perfoming A Minimization Loop  50
+[12:24:24] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:24] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:24] >  18111434-DEC_09 - Minimization Loop Score -->   -22.93723
+[12:24:24] >  Beginning Mutant Pack Mover
+[12:24:24] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:24] >  18111434-DEC_09 - Mutant Pack Score      -->   -23.38776
+[12:24:24] >  Perfoming A Minimization Loop  50
+[12:24:24] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:24] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:24:25] >  18111434-DEC_07 - Minimization Loop Score -->   -17.11476
+[12:24:25] >  18111434-DEC_07 - Mut & Min #03 Score    -->   -17.11476
+[12:24:25] >  MMM.ID 18111434-DEC_07 - Loop  4/ 6
+[12:24:25] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.03
+[12:24:25] >  Beginning Mutant Pack Mover
+[12:24:25] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.03.resfile
+[12:24:25] >  18111434-DEC_07 - Mutant Pack Score      -->    -9.89357
+[12:24:25] >  Perfoming A Minimization Loop  50
+[12:24:25] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:25] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:26] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->   -15.85569
+[12:24:27] >  18111434-DEC_10 - Minimization Loop Score -->   -12.66622
+[12:24:27] >  Beginning Mutant Pack Mover
+[12:24:27] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:28] >  18111434-DEC_10 - Mutant Pack Score      -->   -12.66622
+[12:24:28] >  Perfoming A Minimization Loop  50
+[12:24:28] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:28] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:24:30] >  18111434-DEC_11 - Minimization Loop Score -->    -2.21054
+[12:24:30] >  Beginning Mutant Pack Mover
+[12:24:30] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:30] >  18111434-DEC_11 - Mutant Pack Score      -->    -2.21054
+[12:24:30] >  Perfoming A Minimization Loop  50
+[12:24:30] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:30] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:24:34] >  18111434-DEC_12 - Minimization Loop Score -->   -29.39658
+[12:24:34] >  Beginning Mutant Pack Mover
+[12:24:34] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:34] >  18111434-DEC_12 - Mutant Pack Score      -->   -29.39658
+[12:24:34] >  Perfoming A Minimization Loop  50
+[12:24:34] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:34] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:24:36] >  18111434-DEC_07 - Minimization Loop Score -->   -10.56563
+[12:24:36] >  Beginning Anneal Loop Mover
+[12:24:36] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:24:36] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:24:48] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->   -15.85569
+[12:24:48] >  Perfoming A Minimization Loop  50
+[12:24:48] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:24:48] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:24:58] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->     2.06574
+[12:24:58] >  18111434-DEC_13 - Minimization Loop Score -->   -16.05879
+[12:24:58] >  Beginning Mutant Pack Mover
+[12:24:58] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:24:58] >  18111434-DEC_13 - Mutant Pack Score      -->   -16.05879
+[12:24:58] >  Perfoming A Minimization Loop  50
+[12:24:58] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:24:58] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:25:05] >  18111434-DEC_08 - Minimization Loop Score -->   -43.64863
+[12:25:05] >  18111434-DEC_08 - Mut & Min #03 Score    -->   -43.64863
+[12:25:05] >  MMM.ID 18111434-DEC_08 - Loop  4/ 6
+[12:25:05] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.03
+[12:25:05] >  Beginning Mutant Pack Mover
+[12:25:05] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.03.resfile
+[12:25:05] >  18111434-DEC_08 - Mutant Pack Score      -->   130.76870
+[12:25:05] >  Perfoming A Minimization Loop  50
+[12:25:05] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:05] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:17] >  18111434-DEC_08 - Minimization Loop Score -->   -13.37909
+[12:25:17] >  Beginning Anneal Loop Mover
+[12:25:17] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:25:17] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:25:20] >  18111434-DEC_09 - Minimization Loop Score -->   -42.88222
+[12:25:20] >  18111434-DEC_09 - Mut & Min #03 Score    -->   -42.88222
+[12:25:20] >  MMM.ID 18111434-DEC_09 - Loop  4/ 6
+[12:25:20] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.03
+[12:25:20] >  Beginning Mutant Pack Mover
+[12:25:20] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.03.resfile
+[12:25:20] >  18111434-DEC_09 - Mutant Pack Score      -->   -30.04585
+[12:25:20] >  Perfoming A Minimization Loop  50
+[12:25:20] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:20] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:22] >  18111434-DEC_10 - Minimization Loop Score -->   -44.98094
+[12:25:22] >  18111434-DEC_10 - Mut & Min #03 Score    -->   -44.98094
+[12:25:22] >  MMM.ID 18111434-DEC_10 - Loop  4/ 6
+[12:25:22] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.03
+[12:25:22] >  Beginning Mutant Pack Mover
+[12:25:22] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.03.resfile
+[12:25:22] >  18111434-DEC_10 - Mutant Pack Score      -->   -34.98267
+[12:25:22] >  Perfoming A Minimization Loop  50
+[12:25:22] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:22] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:22] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->     2.06574
+[12:25:28] >  18111434-DEC_12 - Minimization Loop Score -->   -60.88347
+[12:25:28] >  18111434-DEC_12 - Mut & Min #03 Score    -->   -60.88347
+[12:25:28] >  MMM.ID 18111434-DEC_12 - Loop  4/ 6
+[12:25:28] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.03
+[12:25:28] >  Beginning Mutant Pack Mover
+[12:25:28] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.03.resfile
+[12:25:28] >  18111434-DEC_11 - Minimization Loop Score -->   -39.58592
+[12:25:28] >  18111434-DEC_11 - Mut & Min #03 Score    -->   -39.58592
+[12:25:28] >  MMM.ID 18111434-DEC_11 - Loop  4/ 6
+[12:25:28] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.03
+[12:25:28] >  Beginning Mutant Pack Mover
+[12:25:28] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.03.resfile
+[12:25:28] >  18111434-DEC_12 - Mutant Pack Score      -->   -61.53587
+[12:25:28] >  Perfoming A Minimization Loop  50
+[12:25:28] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:28] >  18111434-DEC_11 - Mutant Pack Score      -->   -42.97046
+[12:25:28] >  Perfoming A Minimization Loop  50
+[12:25:28] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:31] >  18111434-DEC_09 - Minimization Loop Score -->   -35.70022
+[12:25:31] >  Beginning Anneal Loop Mover
+[12:25:31] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:25:31] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:25:32] >  18111434-DEC_10 - Minimization Loop Score -->   -38.89093
+[12:25:32] >  Beginning Anneal Loop Mover
+[12:25:32] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:25:32] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:25:38] >  18111434-DEC_12 - Minimization Loop Score -->   -61.90241
+[12:25:38] >  Beginning Anneal Loop Mover
+[12:25:38] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:25:38] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:25:39] >  18111434-DEC_11 - Minimization Loop Score -->   -43.97521
+[12:25:39] >  Beginning Anneal Loop Mover
+[12:25:39] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:25:39] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:25:41] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->   -13.37909
+[12:25:45] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->     2.06574
+[12:25:51] >  18111434-DEC_13 - Minimization Loop Score -->   -37.03098
+[12:25:51] >  18111434-DEC_13 - Mut & Min #03 Score    -->   -37.03098
+[12:25:51] >  MMM.ID 18111434-DEC_13 - Loop  4/ 6
+[12:25:51] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.03
+[12:25:51] >  Beginning Mutant Pack Mover
+[12:25:51] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.03.resfile
+[12:25:51] >  18111434-DEC_13 - Mutant Pack Score      -->   -26.27133
+[12:25:51] >  Perfoming A Minimization Loop  50
+[12:25:51] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:25:51] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:25:55] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->   -35.70022
+[12:25:57] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->   -38.89093
+[12:26:01] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   -61.90241
+[12:26:02] >  18111434-DEC_13 - Minimization Loop Score -->   -30.67577
+[12:26:02] >  Beginning Anneal Loop Mover
+[12:26:02] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:26:02] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:26:02] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->   -43.97521
+[12:26:04] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->    -5.19880
+[12:26:08] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->     2.06574
+[12:26:18] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->   -35.70022
+[12:26:19] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->   -38.89093
+[12:26:25] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   -61.90241
+[12:26:25] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->   -30.67577
+[12:26:26] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->   -43.97521
+[12:26:28] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->    -5.19880
+[12:26:31] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->    -2.88629
+[12:26:42] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->   -35.70022
+[12:26:43] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->   -38.89093
+[12:26:48] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   -61.90241
+[12:26:49] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->   -43.97521
+[12:26:49] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->   -30.67577
+[12:26:50] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->     0.04862
+[12:26:54] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->    -2.56930
+[12:27:08] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->   -35.03808
+[12:27:10] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->   -34.74364
+[12:27:14] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->   -56.33239
+[12:27:15] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->   -43.19958
+[12:27:16] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->     7.69356
+[12:27:16] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->   -30.67577
+[12:27:19] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->    -2.56930
+[12:27:30] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->   -35.03808
+[12:27:32] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->   -34.74364
+[12:27:37] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->   -56.25724
+[12:27:38] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->   -36.05366
+[12:27:38] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->    11.98218
+[12:27:39] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->   -30.67577
+[12:27:43] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->    -2.56930
+[12:27:53] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->   -31.15200
+[12:27:55] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->   -34.60102
+[12:27:59] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->   -56.25724
+[12:28:00] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->   -36.05366
+[12:28:01] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->    13.17975
+[12:28:02] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->   -26.81748
+[12:28:06] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->    -2.56930
+[12:28:16] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->   -25.78572
+[12:28:18] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->   -36.28489
+[12:28:22] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->   -54.18331
+[12:28:22] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->   -42.24833
+[12:28:24] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->    13.17975
+[12:28:24] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->   -27.27696
+[12:28:30] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->    -2.56930
+[12:28:40] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->   -25.78572
+[12:28:42] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->   -36.28489
+[12:28:45] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->   -42.24833
+[12:28:46] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->   -54.18331
+[12:28:46] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->   -22.29043
+[12:28:47] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->    13.17975
+[12:28:52] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->    -1.21544
+[12:29:03] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->   -20.28898
+[12:29:05] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->   -36.28489
+[12:29:09] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->   -42.24833
+[12:29:09] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   -36.04578
+[12:29:10] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->    13.17975
+[12:29:10] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->   -22.29043
+[12:29:15] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->    -2.28595
+[12:29:27] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->   -20.28898
+[12:29:29] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->   -36.28489
+[12:29:32] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->   -42.24833
+[12:29:32] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->    10.95120
+[12:29:33] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   -38.63119
+[12:29:34] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->   -22.29043
+[12:29:37] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->    -1.01084
+[12:29:50] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->   -16.10990
+[12:29:51] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->   -36.61638
+[12:29:55] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->   -36.47882
+[12:29:55] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->    12.02730
+[12:29:55] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->   -35.22927
+[12:29:57] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->   -22.29043
+[12:30:00] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->    -1.01084
+[12:30:00] >  Perfoming A Minimization Loop  50
+[12:30:00] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:30:00] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:30:10] >  18111434-DEC_07 - Minimization Loop Score -->    -1.78600
+[12:30:10] >  Beginning Mutant Pack Mover
+[12:30:10] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:30:10] >  18111434-DEC_07 - Mutant Pack Score      -->    -1.81446
+[12:30:10] >  Perfoming A Minimization Loop  50
+[12:30:10] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:30:10] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:30:12] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->   -16.29668
+[12:30:14] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->   -34.57351
+[12:30:17] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->    16.73875
+[12:30:17] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->   -36.60806
+[12:30:18] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->   -40.09236
+[12:30:20] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->   -22.72652
+[12:30:37] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->   -14.52881
+[12:30:38] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->   -30.78637
+[12:30:40] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->    19.43937
+[12:30:40] >  Perfoming A Minimization Loop  50
+[12:30:40] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:30:40] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:30:41] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->   -33.36728
+[12:30:41] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->   -39.39904
+[12:30:43] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->   -24.00641
+[12:30:51] >  18111434-DEC_08 - Minimization Loop Score -->    17.23886
+[12:30:51] >  Beginning Mutant Pack Mover
+[12:30:51] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:30:51] >  18111434-DEC_08 - Mutant Pack Score      -->    16.97464
+[12:30:51] >  Perfoming A Minimization Loop  50
+[12:30:51] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:30:51] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:00] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->   -17.80069
+[12:31:00] >  Perfoming A Minimization Loop  50
+[12:31:00] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:00] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:00] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->   -30.78637
+[12:31:00] >  Perfoming A Minimization Loop  50
+[12:31:00] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:00] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:03] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->   -33.53564
+[12:31:03] >  Perfoming A Minimization Loop  50
+[12:31:03] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:03] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:04] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->   -41.08203
+[12:31:04] >  Perfoming A Minimization Loop  50
+[12:31:04] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:04] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:04] >  18111434-DEC_07 - Minimization Loop Score -->   -20.74138
+[12:31:05] >  18111434-DEC_07 - Mut & Min #04 Score    -->   -20.74138
+[12:31:05] >  MMM.ID 18111434-DEC_07 - Loop  5/ 6
+[12:31:05] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.04
+[12:31:05] >  Beginning Mutant Pack Mover
+[12:31:05] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.04.resfile
+[12:31:05] >  18111434-DEC_07 - Mutant Pack Score      -->   -22.47127
+[12:31:05] >  Perfoming A Minimization Loop  50
+[12:31:05] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:05] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:06] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->   -22.88940
+[12:31:10] >  18111434-DEC_10 - Minimization Loop Score -->   -31.10690
+[12:31:10] >  Beginning Mutant Pack Mover
+[12:31:10] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:31:10] >  18111434-DEC_10 - Mutant Pack Score      -->   -31.12174
+[12:31:10] >  Perfoming A Minimization Loop  50
+[12:31:10] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:31:10] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:11] >  18111434-DEC_09 - Minimization Loop Score -->   -18.72966
+[12:31:11] >  Beginning Mutant Pack Mover
+[12:31:11] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:31:11] >  18111434-DEC_09 - Mutant Pack Score      -->   -18.72966
+[12:31:11] >  Perfoming A Minimization Loop  50
+[12:31:11] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:31:11] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:13] >  18111434-DEC_12 - Minimization Loop Score -->   -43.55079
+[12:31:13] >  Beginning Mutant Pack Mover
+[12:31:13] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:31:13] >  18111434-DEC_12 - Mutant Pack Score      -->   -45.01132
+[12:31:13] >  Perfoming A Minimization Loop  50
+[12:31:13] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:31:13] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:14] >  18111434-DEC_11 - Minimization Loop Score -->   -35.70585
+[12:31:14] >  Beginning Mutant Pack Mover
+[12:31:14] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:31:14] >  18111434-DEC_11 - Mutant Pack Score      -->   -35.70585
+[12:31:14] >  Perfoming A Minimization Loop  50
+[12:31:14] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:31:14] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:15] >  18111434-DEC_07 - Minimization Loop Score -->   -22.65371
+[12:31:15] >  Beginning Anneal Loop Mover
+[12:31:15] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:31:15] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:31:28] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->   -26.63075
+[12:31:28] >  Perfoming A Minimization Loop  50
+[12:31:28] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:28] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:31:39] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->   -22.65371
+[12:31:40] >  18111434-DEC_13 - Minimization Loop Score -->   -27.09093
+[12:31:40] >  Beginning Mutant Pack Mover
+[12:31:40] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:31:40] >  18111434-DEC_13 - Mutant Pack Score      -->   -27.13737
+[12:31:40] >  Perfoming A Minimization Loop  50
+[12:31:40] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:31:40] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:31:50] >  18111434-DEC_08 - Minimization Loop Score -->   -26.62329
+[12:31:50] >  18111434-DEC_08 - Mut & Min #04 Score    -->   -43.64863
+[12:31:50] >  MMM.ID 18111434-DEC_08 - Loop  5/ 6
+[12:31:50] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.04
+[12:31:50] >  Beginning Mutant Pack Mover
+[12:31:50] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.04.resfile
+[12:31:50] >  18111434-DEC_08 - Mutant Pack Score      -->   126.21672
+[12:31:50] >  Perfoming A Minimization Loop  50
+[12:31:50] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:31:50] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:01] >  18111434-DEC_08 - Minimization Loop Score -->   -17.22426
+[12:32:01] >  Beginning Anneal Loop Mover
+[12:32:01] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:01] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:02] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->   -22.65371
+[12:32:06] >  18111434-DEC_09 - Minimization Loop Score -->   -47.83930
+[12:32:06] >  18111434-DEC_09 - Mut & Min #04 Score    -->   -47.83930
+[12:32:06] >  MMM.ID 18111434-DEC_09 - Loop  5/ 6
+[12:32:06] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.04
+[12:32:06] >  Beginning Mutant Pack Mover
+[12:32:06] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.04.resfile
+[12:32:07] >  18111434-DEC_09 - Mutant Pack Score      -->   -51.07073
+[12:32:07] >  Perfoming A Minimization Loop  50
+[12:32:07] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:32:07] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:07] >  18111434-DEC_10 - Minimization Loop Score -->   -48.03610
+[12:32:07] >  18111434-DEC_10 - Mut & Min #04 Score    -->   -48.03610
+[12:32:07] >  MMM.ID 18111434-DEC_10 - Loop  5/ 6
+[12:32:07] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.04
+[12:32:07] >  Beginning Mutant Pack Mover
+[12:32:07] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.04.resfile
+[12:32:07] >  18111434-DEC_10 - Mutant Pack Score      -->   -41.43177
+[12:32:07] >  Perfoming A Minimization Loop  50
+[12:32:07] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:32:07] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:09] >  18111434-DEC_12 - Minimization Loop Score -->   -67.98634
+[12:32:09] >  18111434-DEC_12 - Mut & Min #04 Score    -->   -67.98634
+[12:32:09] >  MMM.ID 18111434-DEC_12 - Loop  5/ 6
+[12:32:09] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.04
+[12:32:09] >  Beginning Mutant Pack Mover
+[12:32:09] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.04.resfile
+[12:32:09] >  18111434-DEC_12 - Mutant Pack Score      -->   -65.04756
+[12:32:09] >  Perfoming A Minimization Loop  50
+[12:32:09] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:32:09] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:11] >  18111434-DEC_11 - Minimization Loop Score -->   -58.44019
+[12:32:12] >  18111434-DEC_11 - Mut & Min #04 Score    -->   -58.44019
+[12:32:12] >  MMM.ID 18111434-DEC_11 - Loop  5/ 6
+[12:32:12] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.04
+[12:32:12] >  Beginning Mutant Pack Mover
+[12:32:12] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.04.resfile
+[12:32:12] >  18111434-DEC_11 - Mutant Pack Score      -->   -53.31581
+[12:32:12] >  Perfoming A Minimization Loop  50
+[12:32:12] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:32:12] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:18] >  18111434-DEC_09 - Minimization Loop Score -->   -51.95064
+[12:32:18] >  Beginning Anneal Loop Mover
+[12:32:18] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:18] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:20] >  18111434-DEC_10 - Minimization Loop Score -->   -48.44837
+[12:32:20] >  Beginning Anneal Loop Mover
+[12:32:20] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:20] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:21] >  18111434-DEC_12 - Minimization Loop Score -->   -65.62489
+[12:32:21] >  Beginning Anneal Loop Mover
+[12:32:21] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:21] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:26] >  18111434-DEC_11 - Minimization Loop Score -->   -55.22087
+[12:32:26] >  Beginning Anneal Loop Mover
+[12:32:26] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:26] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:28] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->   -17.22426
+[12:32:29] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->   -22.65371
+[12:32:34] >  18111434-DEC_13 - Minimization Loop Score -->   -44.02502
+[12:32:34] >  18111434-DEC_13 - Mut & Min #04 Score    -->   -44.02502
+[12:32:34] >  MMM.ID 18111434-DEC_13 - Loop  5/ 6
+[12:32:34] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.04
+[12:32:34] >  Beginning Mutant Pack Mover
+[12:32:34] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.04.resfile
+[12:32:34] >  18111434-DEC_13 - Mutant Pack Score      -->   -42.71220
+[12:32:34] >  Perfoming A Minimization Loop  50
+[12:32:34] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:32:34] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:32:45] >  18111434-DEC_13 - Minimization Loop Score -->   -43.45221
+[12:32:45] >  Beginning Anneal Loop Mover
+[12:32:45] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:32:45] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:32:46] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->   -51.95064
+[12:32:47] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->   -48.44837
+[12:32:47] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   -65.62489
+[12:32:51] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->   -55.22087
+[12:32:52] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->    -6.31375
+[12:32:53] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->   -22.65371
+[12:33:08] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->   -43.45221
+[12:33:09] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->   -51.95064
+[12:33:10] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->   -48.44837
+[12:33:10] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   -53.81693
+[12:33:14] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->    -6.31375
+[12:33:14] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->   -55.22087
+[12:33:15] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->   -16.17319
+[12:33:29] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->   -43.45221
+[12:33:32] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->   -51.95064
+[12:33:32] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->   -48.44837
+[12:33:33] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   -53.81693
+[12:33:35] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->   -55.22087
+[12:33:36] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->    -6.31375
+[12:33:37] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->   -16.37679
+[12:33:52] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->   -43.45221
+[12:33:54] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->   -45.08929
+[12:33:54] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->   -48.44837
+[12:33:55] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->   -56.23943
+[12:33:57] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->    -6.93276
+[12:33:57] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->   -52.13694
+[12:33:59] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->   -16.37679
+[12:34:14] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->   -38.09347
+[12:34:16] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->   -45.08929
+[12:34:16] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->   -53.34013
+[12:34:17] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->   -46.13367
+[12:34:19] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->    -6.93276
+[12:34:19] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->   -52.23825
+[12:34:21] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->   -16.37679
+[12:34:36] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->   -36.19784
+[12:34:38] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->   -53.34013
+[12:34:38] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->   -47.32236
+[12:34:39] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->   -45.56244
+[12:34:41] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->   -52.23825
+[12:34:41] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->    -8.92837
+[12:34:44] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->   -16.37679
+[12:34:58] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->   -36.19784
+[12:35:00] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->   -47.32236
+[12:35:00] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->   -43.22645
+[12:35:01] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->   -45.18487
+[12:35:03] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->   -52.23825
+[12:35:04] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->    -8.92837
+[12:35:07] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->   -16.37679
+[12:35:20] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->   -32.86448
+[12:35:23] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->   -43.22645
+[12:35:23] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->   -47.32236
+[12:35:25] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->   -45.18487
+[12:35:26] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->   -44.75264
+[12:35:27] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->    -8.92837
+[12:35:28] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->   -16.37679
+[12:35:42] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->   -32.86448
+[12:35:45] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   -43.22645
+[12:35:46] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->   -47.32236
+[12:35:48] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->   -45.18487
+[12:35:49] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->   -44.75264
+[12:35:50] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->    -8.92837
+[12:35:50] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->   -13.90329
+[12:36:05] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->   -32.86448
+[12:36:08] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   -43.22645
+[12:36:08] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->   -47.32236
+[12:36:10] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->   -45.18487
+[12:36:11] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->   -44.75264
+[12:36:12] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->    -2.96919
+[12:36:12] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->    -8.68417
+[12:36:28] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->   -32.86448
+[12:36:30] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->   -43.74806
+[12:36:30] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->   -47.56722
+[12:36:32] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->   -42.55070
+[12:36:33] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->   -13.16631
+[12:36:33] >  Perfoming A Minimization Loop  50
+[12:36:33] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:36:33] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:36:34] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->   -44.75264
+[12:36:34] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->     1.37701
+[12:36:44] >  18111434-DEC_07 - Minimization Loop Score -->   -14.24590
+[12:36:44] >  Beginning Mutant Pack Mover
+[12:36:44] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:36:44] >  18111434-DEC_07 - Mutant Pack Score      -->   -14.24592
+[12:36:44] >  Perfoming A Minimization Loop  50
+[12:36:44] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:36:44] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:36:50] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->   -32.86448
+[12:36:52] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->   -40.04462
+[12:36:52] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->   -42.43057
+[12:36:54] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->   -42.55070
+[12:36:56] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->     1.37701
+[12:36:56] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->   -49.69274
+[12:37:11] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->   -32.86448
+[12:37:14] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->   -31.90563
+[12:37:14] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->   -42.43057
+[12:37:16] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->   -41.72307
+[12:37:17] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->     5.67124
+[12:37:17] >  Perfoming A Minimization Loop  50
+[12:37:17] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:17] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:18] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->   -47.63871
+[12:37:28] >  18111434-DEC_08 - Minimization Loop Score -->     4.31422
+[12:37:28] >  Beginning Mutant Pack Mover
+[12:37:28] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:37:28] >  18111434-DEC_08 - Mutant Pack Score      -->     4.31344
+[12:37:28] >  Perfoming A Minimization Loop  50
+[12:37:28] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:37:28] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:37:33] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->   -37.78375
+[12:37:34] >  18111434-DEC_07 - Minimization Loop Score -->   -34.66835
+[12:37:34] >  18111434-DEC_07 - Mut & Min #05 Score    -->   -34.66835
+[12:37:34] >  MMM.ID 18111434-DEC_07 - Loop  6/ 6
+[12:37:34] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_07.05
+[12:37:34] >  Beginning Mutant Pack Mover
+[12:37:34] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/decoy-18111434-DEC_07.05.resfile
+[12:37:35] >  18111434-DEC_07 - Mutant Pack Score      -->   -25.90078
+[12:37:35] >  Perfoming A Minimization Loop  50
+[12:37:35] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:35] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:36] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->   -36.14233
+[12:37:36] >  Perfoming A Minimization Loop  50
+[12:37:36] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:36] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:36] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->   -39.39415
+[12:37:36] >  Perfoming A Minimization Loop  50
+[12:37:36] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:36] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:38] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->   -39.70519
+[12:37:38] >  Perfoming A Minimization Loop  50
+[12:37:38] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:38] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:40] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->   -52.26514
+[12:37:40] >  Perfoming A Minimization Loop  50
+[12:37:40] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:40] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:37:45] >  18111434-DEC_07 - Minimization Loop Score -->   -29.92776
+[12:37:45] >  Beginning Anneal Loop Mover
+[12:37:45] >   `--> identifier: 18111434-DEC_07 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:37:45] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:37:45] >  18111434-DEC_12 - Minimization Loop Score -->   -38.97612
+[12:37:45] >  Beginning Mutant Pack Mover
+[12:37:45] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:37:45] >  18111434-DEC_12 - Mutant Pack Score      -->   -38.97612
+[12:37:45] >  Perfoming A Minimization Loop  50
+[12:37:45] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:37:45] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:37:46] >  18111434-DEC_09 - Minimization Loop Score -->   -40.06253
+[12:37:46] >  Beginning Mutant Pack Mover
+[12:37:46] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:37:46] >  18111434-DEC_09 - Mutant Pack Score      -->   -40.06253
+[12:37:46] >  Perfoming A Minimization Loop  50
+[12:37:46] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:37:46] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:37:48] >  18111434-DEC_10 - Minimization Loop Score -->   -40.23143
+[12:37:48] >  Beginning Mutant Pack Mover
+[12:37:48] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:37:48] >  18111434-DEC_10 - Mutant Pack Score      -->   -40.33992
+[12:37:48] >  Perfoming A Minimization Loop  50
+[12:37:48] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:37:48] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:37:50] >  18111434-DEC_11 - Minimization Loop Score -->   -53.61221
+[12:37:50] >  Beginning Mutant Pack Mover
+[12:37:50] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:37:50] >  18111434-DEC_11 - Mutant Pack Score      -->   -53.61221
+[12:37:50] >  Perfoming A Minimization Loop  50
+[12:37:50] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:37:50] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:37:55] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->   -39.05770
+[12:37:55] >  Perfoming A Minimization Loop  50
+[12:37:55] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:37:55] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:06] >  18111434-DEC_13 - Minimization Loop Score -->   -39.23627
+[12:38:06] >  Beginning Mutant Pack Mover
+[12:38:06] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:38:06] >  18111434-DEC_13 - Mutant Pack Score      -->   -39.23627
+[12:38:06] >  Perfoming A Minimization Loop  50
+[12:38:06] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:38:06] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:38:09] >  18111434-DEC_07 - Anneal Loop [HEAT]  1/14 Score -->   -20.85808
+[12:38:24] >  18111434-DEC_08 - Minimization Loop Score -->   -30.09645
+[12:38:24] >  18111434-DEC_08 - Mut & Min #05 Score    -->   -43.64863
+[12:38:24] >  MMM.ID 18111434-DEC_08 - Loop  6/ 6
+[12:38:24] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_08.05
+[12:38:24] >  Beginning Mutant Pack Mover
+[12:38:24] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/decoy-18111434-DEC_08.05.resfile
+[12:38:24] >  18111434-DEC_08 - Mutant Pack Score      -->   -42.57395
+[12:38:24] >  Perfoming A Minimization Loop  50
+[12:38:24] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:24] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:31] >  18111434-DEC_07 - Anneal Loop [HEAT]  2/14 Score -->   -20.85808
+[12:38:34] >  18111434-DEC_08 - Minimization Loop Score -->   -46.05543
+[12:38:34] >  Beginning Anneal Loop Mover
+[12:38:34] >   `--> identifier: 18111434-DEC_08 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:38:34] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:38:40] >  18111434-DEC_12 - Minimization Loop Score -->   -72.78939
+[12:38:40] >  18111434-DEC_12 - Mut & Min #05 Score    -->   -72.78939
+[12:38:40] >  MMM.ID 18111434-DEC_12 - Loop  6/ 6
+[12:38:40] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_12.05
+[12:38:40] >  Beginning Mutant Pack Mover
+[12:38:40] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/decoy-18111434-DEC_12.05.resfile
+[12:38:40] >  18111434-DEC_12 - Mutant Pack Score      -->    33.84121
+[12:38:40] >  Perfoming A Minimization Loop  50
+[12:38:40] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:40] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:40] >  18111434-DEC_10 - Minimization Loop Score -->   -59.44534
+[12:38:40] >  18111434-DEC_10 - Mut & Min #05 Score    -->   -59.44534
+[12:38:40] >  MMM.ID 18111434-DEC_10 - Loop  6/ 6
+[12:38:40] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_10.05
+[12:38:40] >  Beginning Mutant Pack Mover
+[12:38:40] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/decoy-18111434-DEC_10.05.resfile
+[12:38:40] >  18111434-DEC_10 - Mutant Pack Score      -->   -51.41088
+[12:38:40] >  Perfoming A Minimization Loop  50
+[12:38:40] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:40] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:41] >  18111434-DEC_09 - Minimization Loop Score -->   -58.41569
+[12:38:41] >  18111434-DEC_09 - Mut & Min #05 Score    -->   -58.41569
+[12:38:41] >  MMM.ID 18111434-DEC_09 - Loop  6/ 6
+[12:38:41] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_09.05
+[12:38:41] >  Beginning Mutant Pack Mover
+[12:38:41] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/decoy-18111434-DEC_09.05.resfile
+[12:38:41] >  18111434-DEC_09 - Mutant Pack Score      -->   -58.05156
+[12:38:41] >  Perfoming A Minimization Loop  50
+[12:38:41] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:41] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:45] >  18111434-DEC_11 - Minimization Loop Score -->   -67.88045
+[12:38:45] >  18111434-DEC_11 - Mut & Min #05 Score    -->   -67.88045
+[12:38:45] >  MMM.ID 18111434-DEC_11 - Loop  6/ 6
+[12:38:45] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_11.05
+[12:38:45] >  Beginning Mutant Pack Mover
+[12:38:45] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/decoy-18111434-DEC_11.05.resfile
+[12:38:45] >  18111434-DEC_11 - Mutant Pack Score      -->   -68.81321
+[12:38:45] >  Perfoming A Minimization Loop  50
+[12:38:45] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:45] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:38:50] >  18111434-DEC_12 - Minimization Loop Score -->   -16.61031
+[12:38:50] >  Beginning Anneal Loop Mover
+[12:38:50] >   `--> identifier: 18111434-DEC_12 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:38:50] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:38:51] >  18111434-DEC_10 - Minimization Loop Score -->   -54.08645
+[12:38:51] >  Beginning Anneal Loop Mover
+[12:38:51] >   `--> identifier: 18111434-DEC_10 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:38:51] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:38:51] >  18111434-DEC_09 - Minimization Loop Score -->   -58.34719
+[12:38:51] >  Beginning Anneal Loop Mover
+[12:38:51] >   `--> identifier: 18111434-DEC_09 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:38:51] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:38:54] >  18111434-DEC_07 - Anneal Loop [HEAT]  3/14 Score -->   -20.85808
+[12:38:55] >  18111434-DEC_11 - Minimization Loop Score -->   -69.14355
+[12:38:55] >  Beginning Anneal Loop Mover
+[12:38:55] >   `--> identifier: 18111434-DEC_11 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:38:55] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:38:57] >  18111434-DEC_08 - Anneal Loop [HEAT]  1/14 Score -->   -46.05543
+[12:38:59] >  18111434-DEC_13 - Minimization Loop Score -->   -58.27335
+[12:38:59] >  18111434-DEC_13 - Mut & Min #05 Score    -->   -58.27335
+[12:38:59] >  MMM.ID 18111434-DEC_13 - Loop  6/ 6
+[12:38:59] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_13.05
+[12:38:59] >  Beginning Mutant Pack Mover
+[12:38:59] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/decoy-18111434-DEC_13.05.resfile
+[12:38:59] >  18111434-DEC_13 - Mutant Pack Score      -->   -57.46466
+[12:38:59] >  Perfoming A Minimization Loop  50
+[12:38:59] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:38:59] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:39:09] >  18111434-DEC_13 - Minimization Loop Score -->   -58.69114
+[12:39:09] >  Beginning Anneal Loop Mover
+[12:39:09] >   `--> identifier: 18111434-DEC_13 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:39:09] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:39:12] >  18111434-DEC_12 - Anneal Loop [HEAT]  1/14 Score -->   -16.61031
+[12:39:14] >  18111434-DEC_09 - Anneal Loop [HEAT]  1/14 Score -->   -58.34719
+[12:39:14] >  18111434-DEC_10 - Anneal Loop [HEAT]  1/14 Score -->   -54.08645
+[12:39:15] >  18111434-DEC_07 - Anneal Loop [COOL]  4/14 Score -->   -23.00009
+[12:39:18] >  18111434-DEC_11 - Anneal Loop [HEAT]  1/14 Score -->   -69.14355
+[12:39:20] >  18111434-DEC_08 - Anneal Loop [HEAT]  2/14 Score -->   -46.05543
+[12:39:31] >  18111434-DEC_13 - Anneal Loop [HEAT]  1/14 Score -->   -58.69114
+[12:39:33] >  18111434-DEC_12 - Anneal Loop [HEAT]  2/14 Score -->   -16.61031
+[12:39:37] >  18111434-DEC_09 - Anneal Loop [HEAT]  2/14 Score -->   -58.34719
+[12:39:37] >  18111434-DEC_07 - Anneal Loop [COOL]  5/14 Score -->   -13.28433
+[12:39:38] >  18111434-DEC_10 - Anneal Loop [HEAT]  2/14 Score -->   -54.08645
+[12:39:42] >  18111434-DEC_11 - Anneal Loop [HEAT]  2/14 Score -->   -69.14355
+[12:39:44] >  18111434-DEC_08 - Anneal Loop [HEAT]  3/14 Score -->   -46.05543
+[12:39:53] >  18111434-DEC_13 - Anneal Loop [HEAT]  2/14 Score -->   -58.69114
+[12:39:57] >  18111434-DEC_12 - Anneal Loop [HEAT]  3/14 Score -->   -16.61031
+[12:40:00] >  18111434-DEC_07 - Anneal Loop [COOL]  6/14 Score -->   -19.80959
+[12:40:00] >  18111434-DEC_09 - Anneal Loop [HEAT]  3/14 Score -->   -58.34719
+[12:40:01] >  18111434-DEC_10 - Anneal Loop [HEAT]  3/14 Score -->   -54.08645
+[12:40:06] >  18111434-DEC_11 - Anneal Loop [HEAT]  3/14 Score -->   -69.14355
+[12:40:06] >  18111434-DEC_08 - Anneal Loop [COOL]  4/14 Score -->   -46.05543
+[12:40:17] >  18111434-DEC_13 - Anneal Loop [HEAT]  3/14 Score -->   -58.69114
+[12:40:20] >  18111434-DEC_12 - Anneal Loop [COOL]  4/14 Score -->   -16.30091
+[12:40:22] >  18111434-DEC_07 - Anneal Loop [COOL]  7/14 Score -->   -21.80021
+[12:40:23] >  18111434-DEC_09 - Anneal Loop [COOL]  4/14 Score -->   -52.27705
+[12:40:24] >  18111434-DEC_10 - Anneal Loop [COOL]  4/14 Score -->   -43.29373
+[12:40:28] >  18111434-DEC_11 - Anneal Loop [COOL]  4/14 Score -->   -69.14355
+[12:40:29] >  18111434-DEC_08 - Anneal Loop [COOL]  5/14 Score -->   -45.48249
+[12:40:39] >  18111434-DEC_13 - Anneal Loop [COOL]  4/14 Score -->   -56.14215
+[12:40:42] >  18111434-DEC_12 - Anneal Loop [COOL]  5/14 Score -->   -17.37274
+[12:40:45] >  18111434-DEC_07 - Anneal Loop [HEAT]  8/14 Score -->   -21.80021
+[12:40:46] >  18111434-DEC_09 - Anneal Loop [COOL]  5/14 Score -->   -52.27705
+[12:40:47] >  18111434-DEC_10 - Anneal Loop [COOL]  5/14 Score -->   -42.66807
+[12:40:51] >  18111434-DEC_11 - Anneal Loop [COOL]  5/14 Score -->   -68.57293
+[12:40:52] >  18111434-DEC_08 - Anneal Loop [COOL]  6/14 Score -->   -45.79963
+[12:41:01] >  18111434-DEC_13 - Anneal Loop [COOL]  5/14 Score -->   -52.80930
+[12:41:05] >  18111434-DEC_12 - Anneal Loop [COOL]  6/14 Score -->   -24.17723
+[12:41:08] >  18111434-DEC_07 - Anneal Loop [HEAT]  9/14 Score -->   -21.80021
+[12:41:09] >  18111434-DEC_10 - Anneal Loop [COOL]  6/14 Score -->   -42.66807
+[12:41:09] >  18111434-DEC_09 - Anneal Loop [COOL]  6/14 Score -->   -52.27705
+[12:41:13] >  18111434-DEC_11 - Anneal Loop [COOL]  6/14 Score -->   -68.18311
+[12:41:15] >  18111434-DEC_08 - Anneal Loop [COOL]  7/14 Score -->   -39.96734
+[12:41:24] >  18111434-DEC_13 - Anneal Loop [COOL]  6/14 Score -->   -51.89585
+[12:41:27] >  18111434-DEC_12 - Anneal Loop [COOL]  7/14 Score -->   -24.17723
+[12:41:31] >  18111434-DEC_07 - Anneal Loop [HEAT] 10/14 Score -->    -6.24166
+[12:41:32] >  18111434-DEC_10 - Anneal Loop [COOL]  7/14 Score -->   -42.13932
+[12:41:32] >  18111434-DEC_09 - Anneal Loop [COOL]  7/14 Score -->   -54.79220
+[12:41:36] >  18111434-DEC_11 - Anneal Loop [COOL]  7/14 Score -->   -68.18311
+[12:41:39] >  18111434-DEC_08 - Anneal Loop [HEAT]  8/14 Score -->   -39.96734
+[12:41:47] >  18111434-DEC_13 - Anneal Loop [COOL]  7/14 Score -->   -53.15561
+[12:41:50] >  18111434-DEC_12 - Anneal Loop [HEAT]  8/14 Score -->   -24.17723
+[12:41:53] >  18111434-DEC_07 - Anneal Loop [COOL] 11/14 Score -->    -6.24166
+[12:41:56] >  18111434-DEC_10 - Anneal Loop [HEAT]  8/14 Score -->   -42.13932
+[12:41:56] >  18111434-DEC_09 - Anneal Loop [HEAT]  8/14 Score -->   -54.79220
+[12:42:00] >  18111434-DEC_11 - Anneal Loop [HEAT]  8/14 Score -->   -68.18311
+[12:42:02] >  18111434-DEC_08 - Anneal Loop [HEAT]  9/14 Score -->   -39.96734
+[12:42:10] >  18111434-DEC_13 - Anneal Loop [HEAT]  8/14 Score -->   -53.15561
+[12:42:14] >  18111434-DEC_12 - Anneal Loop [HEAT]  9/14 Score -->   -24.17723
+[12:42:16] >  18111434-DEC_07 - Anneal Loop [COOL] 12/14 Score -->    -1.77109
+[12:42:19] >  18111434-DEC_10 - Anneal Loop [HEAT]  9/14 Score -->   -42.27497
+[12:42:20] >  18111434-DEC_09 - Anneal Loop [HEAT]  9/14 Score -->   -54.79220
+[12:42:23] >  18111434-DEC_11 - Anneal Loop [HEAT]  9/14 Score -->   -56.76177
+[12:42:26] >  18111434-DEC_08 - Anneal Loop [HEAT] 10/14 Score -->   -39.96734
+[12:42:33] >  18111434-DEC_13 - Anneal Loop [HEAT]  9/14 Score -->   -53.15561
+[12:42:36] >  18111434-DEC_12 - Anneal Loop [HEAT] 10/14 Score -->   -24.17723
+[12:42:38] >  18111434-DEC_07 - Anneal Loop [COOL] 13/14 Score -->     0.40088
+[12:42:40] >  18111434-DEC_10 - Anneal Loop [HEAT] 10/14 Score -->   -42.27497
+[12:42:43] >  18111434-DEC_09 - Anneal Loop [HEAT] 10/14 Score -->   -54.79220
+[12:42:46] >  18111434-DEC_11 - Anneal Loop [HEAT] 10/14 Score -->   -56.76177
+[12:42:49] >  18111434-DEC_08 - Anneal Loop [COOL] 11/14 Score -->   -41.70964
+[12:42:57] >  18111434-DEC_13 - Anneal Loop [HEAT] 10/14 Score -->   -53.15561
+[12:42:59] >  18111434-DEC_12 - Anneal Loop [COOL] 11/14 Score -->   -22.12836
+[12:43:00] >  18111434-DEC_07 - Anneal Loop [COOL] 14/14 Score -->    -0.92507
+[12:43:00] >  Perfoming A Minimization Loop  50
+[12:43:00] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:43:00] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:43:03] >  18111434-DEC_10 - Anneal Loop [COOL] 11/14 Score -->   -39.80925
+[12:43:06] >  18111434-DEC_09 - Anneal Loop [COOL] 11/14 Score -->   -50.87547
+[12:43:09] >  18111434-DEC_11 - Anneal Loop [COOL] 11/14 Score -->   -55.89031
+[12:43:10] >  18111434-DEC_07 - Minimization Loop Score -->    -2.49371
+[12:43:10] >  Beginning Mutant Pack Mover
+[12:43:10] >   `--> identifier: 18111434-DEC_07 | resfile: Resfiles/ligand_rotamer.resfile
+[12:43:10] >  18111434-DEC_07 - Mutant Pack Score      -->    -2.49371
+[12:43:10] >  Perfoming A Minimization Loop  50
+[12:43:10] >  `--> identifier: 18111434-DEC_07 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:43:10] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:43:11] >  18111434-DEC_08 - Anneal Loop [COOL] 12/14 Score -->   -40.86989
+[12:43:19] >  18111434-DEC_13 - Anneal Loop [COOL] 11/14 Score -->   -50.45546
+[12:43:21] >  18111434-DEC_12 - Anneal Loop [COOL] 12/14 Score -->   -22.36219
+[12:43:25] >  18111434-DEC_10 - Anneal Loop [COOL] 12/14 Score -->   -39.52682
+[12:43:29] >  18111434-DEC_09 - Anneal Loop [COOL] 12/14 Score -->   -50.87547
+[12:43:33] >  18111434-DEC_11 - Anneal Loop [COOL] 12/14 Score -->   -52.97613
+[12:43:35] >  18111434-DEC_08 - Anneal Loop [COOL] 13/14 Score -->   -40.86989
+[12:43:43] >  18111434-DEC_13 - Anneal Loop [COOL] 12/14 Score -->   -50.45546
+[12:43:45] >  18111434-DEC_12 - Anneal Loop [COOL] 13/14 Score -->   -22.36219
+[12:43:49] >  18111434-DEC_10 - Anneal Loop [COOL] 13/14 Score -->   -37.63009
+[12:43:53] >  18111434-DEC_09 - Anneal Loop [COOL] 13/14 Score -->   -45.91820
+[12:43:56] >  18111434-DEC_11 - Anneal Loop [COOL] 13/14 Score -->   -49.69583
+[12:43:57] >  18111434-DEC_08 - Anneal Loop [COOL] 14/14 Score -->   -40.86989
+[12:43:57] >  Perfoming A Minimization Loop  50
+[12:43:57] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:43:57] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:05] >  18111434-DEC_13 - Anneal Loop [COOL] 13/14 Score -->   -52.61305
+[12:44:05] >  18111434-DEC_07 - Minimization Loop Score -->   -32.98107
+[12:44:05] >  18111434-DEC_07 - Mut & Min #06 Score    -->   -32.98107
+[12:44:05] >  Beginning Fast Relax
+[12:44:08] >  18111434-DEC_08 - Minimization Loop Score -->   -41.32341
+[12:44:08] >  18111434-DEC_12 - Anneal Loop [COOL] 14/14 Score -->   -31.27085
+[12:44:08] >  Beginning Mutant Pack Mover
+[12:44:08] >   `--> identifier: 18111434-DEC_08 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:08] >  Perfoming A Minimization Loop  50
+[12:44:08] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:44:08] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:08] >  18111434-DEC_08 - Mutant Pack Score      -->   -41.32341
+[12:44:08] >  Perfoming A Minimization Loop  50
+[12:44:08] >  `--> identifier: 18111434-DEC_08 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:08] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:44:11] >  18111434-DEC_10 - Anneal Loop [COOL] 14/14 Score -->   -37.70864
+[12:44:11] >  Perfoming A Minimization Loop  50
+[12:44:11] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:44:11] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:15] >  18111434-DEC_09 - Anneal Loop [COOL] 14/14 Score -->   -45.21377
+[12:44:15] >  Perfoming A Minimization Loop  50
+[12:44:15] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:44:15] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:18] >  18111434-DEC_12 - Minimization Loop Score -->   -36.15307
+[12:44:18] >  Beginning Mutant Pack Mover
+[12:44:18] >   `--> identifier: 18111434-DEC_12 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:18] >  18111434-DEC_12 - Mutant Pack Score      -->   -36.15307
+[12:44:18] >  Perfoming A Minimization Loop  50
+[12:44:18] >  `--> identifier: 18111434-DEC_12 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:18] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:44:19] >  18111434-DEC_11 - Anneal Loop [COOL] 14/14 Score -->   -51.41141
+[12:44:19] >  Perfoming A Minimization Loop  50
+[12:44:19] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:44:19] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:22] >  18111434-DEC_10 - Minimization Loop Score -->   -38.16961
+[12:44:22] >  Beginning Mutant Pack Mover
+[12:44:22] >   `--> identifier: 18111434-DEC_10 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:22] >  18111434-DEC_10 - Mutant Pack Score      -->   -38.16961
+[12:44:22] >  Perfoming A Minimization Loop  50
+[12:44:22] >  `--> identifier: 18111434-DEC_10 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:22] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:44:28] >  18111434-DEC_09 - Minimization Loop Score -->   -48.77450
+[12:44:28] >  Beginning Mutant Pack Mover
+[12:44:28] >   `--> identifier: 18111434-DEC_09 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:28] >  18111434-DEC_09 - Mutant Pack Score      -->   -48.77450
+[12:44:28] >  Perfoming A Minimization Loop  50
+[12:44:28] >  `--> identifier: 18111434-DEC_09 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:28] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:44:29] >  18111434-DEC_13 - Anneal Loop [COOL] 14/14 Score -->   -52.61305
+[12:44:29] >  Perfoming A Minimization Loop  50
+[12:44:29] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:44:29] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:44:32] >  18111434-DEC_11 - Minimization Loop Score -->   -53.06197
+[12:44:32] >  Beginning Mutant Pack Mover
+[12:44:32] >   `--> identifier: 18111434-DEC_11 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:32] >  18111434-DEC_11 - Mutant Pack Score      -->   -53.29999
+[12:44:32] >  Perfoming A Minimization Loop  50
+[12:44:32] >  `--> identifier: 18111434-DEC_11 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:32] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:44:41] >  18111434-DEC_13 - Minimization Loop Score -->   -52.88952
+[12:44:41] >  Beginning Mutant Pack Mover
+[12:44:41] >   `--> identifier: 18111434-DEC_13 | resfile: Resfiles/ligand_rotamer.resfile
+[12:44:41] >  18111434-DEC_13 - Mutant Pack Score      -->   -52.88952
+[12:44:41] >  Perfoming A Minimization Loop  50
+[12:44:41] >  `--> identifier: 18111434-DEC_13 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:44:41] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:45:07] >  18111434-DEC_08 - Minimization Loop Score -->   -57.61144
+[12:45:07] >  18111434-DEC_08 - Mut & Min #06 Score    -->   -57.61144
+[12:45:07] >  Beginning Fast Relax
+[12:45:15] >  18111434-DEC_12 - Minimization Loop Score -->   -66.02995
+[12:45:15] >  18111434-DEC_12 - Mut & Min #06 Score    -->   -72.78939
+[12:45:15] >  Beginning Fast Relax
+[12:45:22] >  18111434-DEC_10 - Minimization Loop Score -->   -64.54334
+[12:45:22] >  18111434-DEC_10 - Mut & Min #06 Score    -->   -64.54334
+[12:45:22] >  Beginning Fast Relax
+[12:45:28] >  18111434-DEC_09 - Minimization Loop Score -->   -68.42397
+[12:45:28] >  18111434-DEC_09 - Mut & Min #06 Score    -->   -68.42397
+[12:45:28] >  Beginning Fast Relax
+[12:45:32] >  18111434-DEC_11 - Minimization Loop Score -->   -79.06727
+[12:45:32] >  18111434-DEC_11 - Mut & Min #06 Score    -->   -79.06727
+[12:45:32] >  Beginning Fast Relax
+[12:45:37] >  18111434-DEC_13 - Minimization Loop Score -->   -68.94430
+[12:45:37] >  18111434-DEC_13 - Mut & Min #06 Score    -->   -68.94430
+[12:45:37] >  Beginning Fast Relax
+[12:54:39] >  18111434-DEC_07 - Mut & Min, FastRelaxed Score -->  -754.43130
+[12:54:39] >  Beginning Decoy # 14
+[12:54:39] >  MMM.ID 18111434-DEC_14 - Beginning Mutation Minimization Mover
+[12:54:39] >   `--> identifier: 18111434-DEC_14 | mut_pattern: [[255, 273, 250, 321], [358, 241, 354, 276], [343, 276], [272, 358], [254, 272], [344, 321]] | kT:     1.0
+[12:54:39] >   | liberal: [True, True, False, False, False, False]
+[12:54:39] >  MMM.ID 18111434-DEC_14 - Loop  1/ 6
+[12:54:39] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.00
+[12:54:39] >  Beginning Mutant Pack Mover
+[12:54:39] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.00.resfile
+[12:54:39] >  18111434-DEC_14 - Mutant Pack Score      -->   370.75304
+[12:54:39] >  Perfoming A Minimization Loop  50
+[12:54:39] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:54:39] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:54:50] >  18111434-DEC_14 - Minimization Loop Score -->    95.51262
+[12:54:50] >  Beginning Anneal Loop Mover
+[12:54:50] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:54:50] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:55:15] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->    78.98506
+[12:55:37] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->    95.13083
+[12:55:43] >  18111434-DEC_12 - Mut & Min, FastRelaxed Score -->  -741.95017
+[12:55:44] >  Beginning Decoy # 15
+[12:55:44] >  MMM.ID 18111434-DEC_15 - Beginning Mutation Minimization Mover
+[12:55:44] >   `--> identifier: 18111434-DEC_15 | mut_pattern: [[358, 339, 325, 280], [247, 344, 280, 332], [358, 251], [330, 355], [333, 280], [330, 358]] | kT:     1.0
+[12:55:44] >   | liberal: [True, True, False, False, False, False]
+[12:55:44] >  MMM.ID 18111434-DEC_15 - Loop  1/ 6
+[12:55:44] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.00
+[12:55:44] >  Beginning Mutant Pack Mover
+[12:55:44] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.00.resfile
+[12:55:44] >  18111434-DEC_15 - Mutant Pack Score      -->   367.39511
+[12:55:44] >  Perfoming A Minimization Loop  50
+[12:55:44] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:55:44] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:55:55] >  18111434-DEC_15 - Minimization Loop Score -->    83.72493
+[12:55:55] >  Beginning Anneal Loop Mover
+[12:55:55] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:55:55] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:56:02] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->    95.13083
+[12:56:06] >  18111434-DEC_08 - Mut & Min, FastRelaxed Score -->  -765.25927
+[12:56:07] >  18111434-DEC_10 - Mut & Min, FastRelaxed Score -->  -771.02859
+[12:56:13] >  18111434-DEC_09 - Mut & Min, FastRelaxed Score -->  -762.84532
+[12:56:17] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->    83.72493
+[12:56:18] >  18111434-DEC_13 - Mut & Min, FastRelaxed Score -->  -769.60222
+[12:56:20] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->    86.57460
+[12:56:23] >  18111434-DEC_11 - Mut & Min, FastRelaxed Score -->  -776.45551
+[12:56:31] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->    83.72493
+[12:56:35] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->    86.57460
+[12:56:45] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->    70.08718
+[12:56:51] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->    81.99471
+[12:57:00] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->    48.37087
+[12:57:05] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->    63.77593
+[12:57:14] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->    38.08084
+[12:57:20] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->    92.64445
+[12:57:28] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->    28.97918
+[12:57:36] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->    92.64445
+[12:57:43] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->    28.97918
+[12:57:51] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->   113.54075
+[12:57:57] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->    28.97918
+[12:58:06] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->   117.31272
+[12:58:11] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->    28.97918
+[12:58:21] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->   115.11210
+[12:58:26] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->    28.97918
+[12:58:35] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->   115.11210
+[12:58:40] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->    27.28409
+[12:58:50] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->    80.90689
+[12:58:50] >  Perfoming A Minimization Loop  50
+[12:58:50] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:58:50] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:58:55] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->    27.51574
+[12:58:58] >  18111434-DEC_14 - Minimization Loop Score -->    74.73663
+[12:58:58] >  Beginning Mutant Pack Mover
+[12:58:58] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[12:58:58] >  18111434-DEC_14 - Mutant Pack Score      -->    74.66863
+[12:58:58] >  Perfoming A Minimization Loop  50
+[12:58:58] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:58:58] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:59:09] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->    29.63522
+[12:59:23] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->    30.96227
+[12:59:23] >  Perfoming A Minimization Loop  50
+[12:59:23] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:59:23] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:59:29] >  18111434-DEC_15 - Minimization Loop Score -->    28.88524
+[12:59:29] >  Beginning Mutant Pack Mover
+[12:59:29] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[12:59:29] >  18111434-DEC_15 - Mutant Pack Score      -->    28.86612
+[12:59:29] >  Perfoming A Minimization Loop  50
+[12:59:29] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[12:59:29] >   | chi_all:  0 | chi_range: None | chi_res: None
+[12:59:34] >  18111434-DEC_14 - Minimization Loop Score -->    11.09079
+[12:59:34] >  18111434-DEC_14 - Mut & Min #01 Score    -->    11.09079
+[12:59:34] >  MMM.ID 18111434-DEC_14 - Loop  2/ 6
+[12:59:34] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.01
+[12:59:34] >  Beginning Mutant Pack Mover
+[12:59:34] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.01.resfile
+[12:59:34] >  18111434-DEC_14 - Mutant Pack Score      -->     3.55905
+[12:59:34] >  Perfoming A Minimization Loop  50
+[12:59:34] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[12:59:34] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[12:59:41] >  18111434-DEC_14 - Minimization Loop Score -->     1.42330
+[12:59:41] >  Beginning Anneal Loop Mover
+[12:59:41] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[12:59:41] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[12:59:55] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->     1.42330
+[13:00:03] >  18111434-DEC_15 - Minimization Loop Score -->    -3.90728
+[13:00:03] >  18111434-DEC_15 - Mut & Min #01 Score    -->    -3.90728
+[13:00:03] >  MMM.ID 18111434-DEC_15 - Loop  2/ 6
+[13:00:03] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.01
+[13:00:03] >  Beginning Mutant Pack Mover
+[13:00:03] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.01.resfile
+[13:00:03] >  18111434-DEC_15 - Mutant Pack Score      -->    13.67517
+[13:00:03] >  Perfoming A Minimization Loop  50
+[13:00:03] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:00:03] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:00:09] >  18111434-DEC_15 - Minimization Loop Score -->    10.85966
+[13:00:09] >  Beginning Anneal Loop Mover
+[13:00:09] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:00:09] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:00:10] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->     1.42330
+[13:00:24] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->    10.85966
+[13:00:25] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->     1.42330
+[13:00:39] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->    10.85966
+[13:00:41] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->     0.61415
+[13:00:53] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->    10.85966
+[13:00:56] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->     3.45016
+[13:01:07] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->    13.88744
+[13:01:11] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->     1.31665
+[13:01:21] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->    20.02772
+[13:01:26] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->     1.31665
+[13:01:35] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->    22.82309
+[13:01:42] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->     1.31665
+[13:01:50] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->    32.03693
+[13:01:57] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->     1.31665
+[13:02:04] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->    58.93441
+[13:02:12] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->     1.31665
+[13:02:19] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->    58.93441
+[13:02:27] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->    -0.35495
+[13:02:33] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->    58.93441
+[13:02:42] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->     5.96209
+[13:02:48] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->    57.48265
+[13:02:57] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->    10.03621
+[13:03:02] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->    57.48265
+[13:03:12] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->    15.34861
+[13:03:12] >  Perfoming A Minimization Loop  50
+[13:03:12] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:03:12] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:03:16] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->    49.12776
+[13:03:19] >  18111434-DEC_14 - Minimization Loop Score -->    13.42372
+[13:03:19] >  Beginning Mutant Pack Mover
+[13:03:19] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[13:03:19] >  18111434-DEC_14 - Mutant Pack Score      -->    12.68400
+[13:03:19] >  Perfoming A Minimization Loop  50
+[13:03:19] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:03:19] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:03:30] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->    43.16256
+[13:03:30] >  Perfoming A Minimization Loop  50
+[13:03:30] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:03:30] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:03:36] >  18111434-DEC_15 - Minimization Loop Score -->    32.81454
+[13:03:36] >  Beginning Mutant Pack Mover
+[13:03:36] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[13:03:36] >  18111434-DEC_15 - Mutant Pack Score      -->    31.55416
+[13:03:36] >  Perfoming A Minimization Loop  50
+[13:03:36] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:03:36] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:03:54] >  18111434-DEC_14 - Minimization Loop Score -->   -19.91847
+[13:03:54] >  18111434-DEC_14 - Mut & Min #02 Score    -->   -19.91847
+[13:03:54] >  MMM.ID 18111434-DEC_14 - Loop  3/ 6
+[13:03:54] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.02
+[13:03:54] >  Beginning Mutant Pack Mover
+[13:03:54] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.02.resfile
+[13:03:54] >  18111434-DEC_14 - Mutant Pack Score      -->    -8.35908
+[13:03:54] >  Perfoming A Minimization Loop  50
+[13:03:54] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:03:54] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:04:01] >  18111434-DEC_14 - Minimization Loop Score -->   -13.73457
+[13:04:01] >  Beginning Anneal Loop Mover
+[13:04:01] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:04:01] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:04:11] >  18111434-DEC_15 - Minimization Loop Score -->    -2.91044
+[13:04:11] >  18111434-DEC_15 - Mut & Min #02 Score    -->    -2.91044
+[13:04:11] >  MMM.ID 18111434-DEC_15 - Loop  3/ 6
+[13:04:11] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.02
+[13:04:11] >  Beginning Mutant Pack Mover
+[13:04:11] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.02.resfile
+[13:04:11] >  18111434-DEC_15 - Mutant Pack Score      -->     1.65945
+[13:04:11] >  Perfoming A Minimization Loop  50
+[13:04:11] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:04:11] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:04:16] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->   -13.73457
+[13:04:17] >  18111434-DEC_15 - Minimization Loop Score -->    -0.84823
+[13:04:17] >  Beginning Anneal Loop Mover
+[13:04:17] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:04:17] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:04:32] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->   -13.73457
+[13:04:32] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->    -0.84823
+[13:04:46] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->    -0.84823
+[13:04:47] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->   -13.73457
+[13:05:01] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->    13.80404
+[13:05:02] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->   -11.31354
+[13:05:15] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->    15.33779
+[13:05:17] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->   -10.01067
+[13:05:29] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->    15.33779
+[13:05:32] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->    -7.25557
+[13:05:43] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->    24.47804
+[13:05:47] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->    -6.85223
+[13:05:57] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->    20.64847
+[13:06:02] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->    -6.85223
+[13:06:12] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->    20.64847
+[13:06:18] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->    -6.85223
+[13:06:27] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->    20.64847
+[13:06:34] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->    -6.85223
+[13:06:41] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->    20.64847
+[13:06:48] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->    -5.88423
+[13:06:56] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->    18.66897
+[13:07:03] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->     1.50247
+[13:07:10] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->    17.28842
+[13:07:17] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->     3.89587
+[13:07:25] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->    15.90912
+[13:07:31] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->     3.89587
+[13:07:31] >  Perfoming A Minimization Loop  50
+[13:07:31] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:07:31] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:07:38] >  18111434-DEC_14 - Minimization Loop Score -->     2.83312
+[13:07:38] >  Beginning Mutant Pack Mover
+[13:07:38] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[13:07:38] >  18111434-DEC_14 - Mutant Pack Score      -->     2.58455
+[13:07:38] >  Perfoming A Minimization Loop  50
+[13:07:38] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:07:38] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:07:39] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->    19.34784
+[13:07:39] >  Perfoming A Minimization Loop  50
+[13:07:39] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:07:39] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:07:45] >  18111434-DEC_15 - Minimization Loop Score -->    17.57758
+[13:07:45] >  Beginning Mutant Pack Mover
+[13:07:45] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[13:07:46] >  18111434-DEC_15 - Mutant Pack Score      -->    17.57758
+[13:07:46] >  Perfoming A Minimization Loop  50
+[13:07:46] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:07:46] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:08:13] >  18111434-DEC_14 - Minimization Loop Score -->   -26.78086
+[13:08:13] >  18111434-DEC_14 - Mut & Min #03 Score    -->   -26.78086
+[13:08:13] >  MMM.ID 18111434-DEC_14 - Loop  4/ 6
+[13:08:13] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.03
+[13:08:13] >  Beginning Mutant Pack Mover
+[13:08:13] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.03.resfile
+[13:08:13] >  18111434-DEC_14 - Mutant Pack Score      -->   -22.92250
+[13:08:13] >  Perfoming A Minimization Loop  50
+[13:08:13] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:08:13] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:08:20] >  18111434-DEC_15 - Minimization Loop Score -->   -13.93574
+[13:08:20] >  18111434-DEC_15 - Mut & Min #03 Score    -->   -13.93574
+[13:08:20] >  MMM.ID 18111434-DEC_15 - Loop  4/ 6
+[13:08:20] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.03
+[13:08:20] >  Beginning Mutant Pack Mover
+[13:08:20] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.03.resfile
+[13:08:20] >  18111434-DEC_15 - Mutant Pack Score      -->   -18.87024
+[13:08:20] >  Perfoming A Minimization Loop  50
+[13:08:20] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:08:20] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:08:20] >  18111434-DEC_14 - Minimization Loop Score -->   -25.98624
+[13:08:20] >  Beginning Anneal Loop Mover
+[13:08:20] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:08:20] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:08:26] >  18111434-DEC_15 - Minimization Loop Score -->   -19.66173
+[13:08:26] >  Beginning Anneal Loop Mover
+[13:08:26] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:08:26] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:08:35] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->   -25.98624
+[13:08:41] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->   -19.66173
+[13:08:50] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->   -25.98624
+[13:08:56] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->     2.76261
+[13:09:05] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->   -25.98624
+[13:09:11] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->    -2.39451
+[13:09:19] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->   -25.98624
+[13:09:26] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->    -6.35151
+[13:09:34] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->   -23.30774
+[13:09:40] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->    -2.48234
+[13:09:48] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->   -24.57179
+[13:09:55] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->    -1.96101
+[13:10:03] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->   -22.23820
+[13:10:10] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->    -3.37704
+[13:10:18] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->   -22.23820
+[13:10:25] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->    -3.37704
+[13:10:33] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->    -3.14401
+[13:10:40] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->    -3.37704
+[13:10:48] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->    -3.14401
+[13:10:55] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->     8.84914
+[13:11:03] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->    -8.17267
+[13:11:10] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->     8.84914
+[13:11:17] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->   -10.40024
+[13:11:24] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->     3.19014
+[13:11:32] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->   -10.36252
+[13:11:39] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->     3.89715
+[13:11:46] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->    -8.21864
+[13:11:46] >  Perfoming A Minimization Loop  50
+[13:11:46] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:11:46] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:11:53] >  18111434-DEC_14 - Minimization Loop Score -->    -9.01155
+[13:11:53] >  Beginning Mutant Pack Mover
+[13:11:53] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[13:11:53] >  18111434-DEC_14 - Mutant Pack Score      -->    -9.01155
+[13:11:53] >  Perfoming A Minimization Loop  50
+[13:11:53] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:11:53] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:11:53] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->    -2.72952
+[13:11:53] >  Perfoming A Minimization Loop  50
+[13:11:53] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:11:53] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:11:59] >  18111434-DEC_15 - Minimization Loop Score -->    -3.99323
+[13:11:59] >  Beginning Mutant Pack Mover
+[13:11:59] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[13:11:59] >  18111434-DEC_15 - Mutant Pack Score      -->    -4.31791
+[13:11:59] >  Perfoming A Minimization Loop  50
+[13:11:59] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:11:59] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:12:27] >  18111434-DEC_14 - Minimization Loop Score -->   -30.79695
+[13:12:27] >  18111434-DEC_14 - Mut & Min #04 Score    -->   -30.79695
+[13:12:27] >  MMM.ID 18111434-DEC_14 - Loop  5/ 6
+[13:12:27] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.04
+[13:12:27] >  Beginning Mutant Pack Mover
+[13:12:27] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.04.resfile
+[13:12:27] >  18111434-DEC_14 - Mutant Pack Score      -->   -32.23093
+[13:12:27] >  Perfoming A Minimization Loop  50
+[13:12:27] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:12:27] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:12:33] >  18111434-DEC_15 - Minimization Loop Score -->   -38.23954
+[13:12:33] >  18111434-DEC_15 - Mut & Min #04 Score    -->   -38.23954
+[13:12:33] >  MMM.ID 18111434-DEC_15 - Loop  5/ 6
+[13:12:33] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.04
+[13:12:33] >  Beginning Mutant Pack Mover
+[13:12:33] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.04.resfile
+[13:12:33] >  18111434-DEC_15 - Mutant Pack Score      -->    37.21120
+[13:12:33] >  Perfoming A Minimization Loop  50
+[13:12:33] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:12:33] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:12:34] >  18111434-DEC_14 - Minimization Loop Score -->   -32.82028
+[13:12:34] >  Beginning Anneal Loop Mover
+[13:12:34] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:12:34] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:12:39] >  18111434-DEC_15 - Minimization Loop Score -->   -29.97306
+[13:12:39] >  Beginning Anneal Loop Mover
+[13:12:39] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:12:39] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:12:49] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->   -32.82028
+[13:12:54] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->   -29.97306
+[13:13:04] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->   -32.82028
+[13:13:10] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->   -29.97306
+[13:13:19] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->   -28.07867
+[13:13:25] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->   -29.97306
+[13:13:34] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->   -24.23466
+[13:13:39] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->   -26.66844
+[13:13:48] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->   -21.89395
+[13:13:54] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->   -16.23287
+[13:14:02] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->   -19.96752
+[13:14:09] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->   -14.01830
+[13:14:17] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->   -22.90167
+[13:14:23] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->   -20.40449
+[13:14:32] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->   -22.90167
+[13:14:38] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->   -20.40449
+[13:14:47] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->   -22.90167
+[13:14:53] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->   -20.40449
+[13:15:02] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->   -22.90167
+[13:15:08] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->   -20.40449
+[13:15:17] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->   -13.04840
+[13:15:23] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->   -20.56183
+[13:15:31] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->   -16.75858
+[13:15:38] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->   -16.15478
+[13:15:45] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->   -14.19275
+[13:15:52] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->   -16.12351
+[13:16:00] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->   -18.41628
+[13:16:00] >  Perfoming A Minimization Loop  50
+[13:16:00] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:16:00] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:16:06] >  18111434-DEC_14 - Minimization Loop Score -->   -18.65867
+[13:16:06] >  Beginning Mutant Pack Mover
+[13:16:06] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[13:16:07] >  18111434-DEC_14 - Mutant Pack Score      -->   -18.65867
+[13:16:07] >  Perfoming A Minimization Loop  50
+[13:16:07] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:16:07] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:16:07] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->   -11.87189
+[13:16:07] >  Perfoming A Minimization Loop  50
+[13:16:07] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:16:07] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:16:13] >  18111434-DEC_15 - Minimization Loop Score -->   -13.68535
+[13:16:13] >  Beginning Mutant Pack Mover
+[13:16:13] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[13:16:13] >  18111434-DEC_15 - Mutant Pack Score      -->   -13.68535
+[13:16:13] >  Perfoming A Minimization Loop  50
+[13:16:13] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:16:13] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:16:42] >  18111434-DEC_14 - Minimization Loop Score -->   -41.48527
+[13:16:42] >  18111434-DEC_14 - Mut & Min #05 Score    -->   -41.48527
+[13:16:42] >  MMM.ID 18111434-DEC_14 - Loop  6/ 6
+[13:16:42] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_14.05
+[13:16:42] >  Beginning Mutant Pack Mover
+[13:16:42] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/decoy-18111434-DEC_14.05.resfile
+[13:16:42] >  18111434-DEC_14 - Mutant Pack Score      -->   -34.43305
+[13:16:42] >  Perfoming A Minimization Loop  50
+[13:16:42] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:16:42] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:16:47] >  18111434-DEC_15 - Minimization Loop Score -->   -45.66300
+[13:16:47] >  18111434-DEC_15 - Mut & Min #05 Score    -->   -45.66300
+[13:16:47] >  MMM.ID 18111434-DEC_15 - Loop  6/ 6
+[13:16:47] >  ResfileBuilder.build: Writing File --> decoy-18111434-DEC_15.05
+[13:16:47] >  Beginning Mutant Pack Mover
+[13:16:47] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/decoy-18111434-DEC_15.05.resfile
+[13:16:47] >  18111434-DEC_15 - Mutant Pack Score      -->    -7.12584
+[13:16:47] >  Perfoming A Minimization Loop  50
+[13:16:47] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:16:47] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:16:48] >  18111434-DEC_14 - Minimization Loop Score -->   -36.86491
+[13:16:48] >  Beginning Anneal Loop Mover
+[13:16:48] >   `--> identifier: 18111434-DEC_14 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:16:48] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:16:54] >  18111434-DEC_15 - Minimization Loop Score -->    -9.96190
+[13:16:54] >  Beginning Anneal Loop Mover
+[13:16:54] >   `--> identifier: 18111434-DEC_15 | cycles:  2 | kT: 10 | heat_time:  3 | anneal_time:  4 | angle_max:     4.0 | kT_max:   100.0
+[13:16:54] >   | seqRepeats:  5 | numSmallShearRepeats:  5 | kT_ratio: 20 | angle_ratio: 10 | bb_range: (231, 368)
+[13:17:03] >  18111434-DEC_14 - Anneal Loop [HEAT]  1/14 Score -->   -36.86491
+[13:17:09] >  18111434-DEC_15 - Anneal Loop [HEAT]  1/14 Score -->    -9.96190
+[13:17:18] >  18111434-DEC_14 - Anneal Loop [HEAT]  2/14 Score -->   -36.86491
+[13:17:24] >  18111434-DEC_15 - Anneal Loop [HEAT]  2/14 Score -->    -9.96190
+[13:17:34] >  18111434-DEC_14 - Anneal Loop [HEAT]  3/14 Score -->   -27.48655
+[13:17:39] >  18111434-DEC_15 - Anneal Loop [HEAT]  3/14 Score -->    -9.96190
+[13:17:48] >  18111434-DEC_14 - Anneal Loop [COOL]  4/14 Score -->   -34.82796
+[13:17:54] >  18111434-DEC_15 - Anneal Loop [COOL]  4/14 Score -->    -9.96190
+[13:18:02] >  18111434-DEC_14 - Anneal Loop [COOL]  5/14 Score -->   -32.94547
+[13:18:08] >  18111434-DEC_15 - Anneal Loop [COOL]  5/14 Score -->     0.01583
+[13:18:17] >  18111434-DEC_14 - Anneal Loop [COOL]  6/14 Score -->   -32.43667
+[13:18:23] >  18111434-DEC_15 - Anneal Loop [COOL]  6/14 Score -->     0.58561
+[13:18:31] >  18111434-DEC_14 - Anneal Loop [COOL]  7/14 Score -->   -32.43667
+[13:18:37] >  18111434-DEC_15 - Anneal Loop [COOL]  7/14 Score -->    14.18715
+[13:18:47] >  18111434-DEC_14 - Anneal Loop [HEAT]  8/14 Score -->     3.02227
+[13:18:53] >  18111434-DEC_15 - Anneal Loop [HEAT]  8/14 Score -->    14.18715
+[13:19:02] >  18111434-DEC_14 - Anneal Loop [HEAT]  9/14 Score -->     3.02227
+[13:19:08] >  18111434-DEC_15 - Anneal Loop [HEAT]  9/14 Score -->    14.18715
+[13:19:16] >  18111434-DEC_14 - Anneal Loop [HEAT] 10/14 Score -->     3.02227
+[13:19:23] >  18111434-DEC_15 - Anneal Loop [HEAT] 10/14 Score -->    14.18715
+[13:19:31] >  18111434-DEC_14 - Anneal Loop [COOL] 11/14 Score -->    20.13553
+[13:19:38] >  18111434-DEC_15 - Anneal Loop [COOL] 11/14 Score -->    14.18715
+[13:19:45] >  18111434-DEC_14 - Anneal Loop [COOL] 12/14 Score -->     5.82073
+[13:19:52] >  18111434-DEC_15 - Anneal Loop [COOL] 12/14 Score -->    14.15046
+[13:19:59] >  18111434-DEC_14 - Anneal Loop [COOL] 13/14 Score -->     4.61124
+[13:20:07] >  18111434-DEC_15 - Anneal Loop [COOL] 13/14 Score -->     7.22968
+[13:20:14] >  18111434-DEC_14 - Anneal Loop [COOL] 14/14 Score -->     4.61124
+[13:20:14] >  Perfoming A Minimization Loop  50
+[13:20:14] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:20:14] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:20:21] >  18111434-DEC_14 - Minimization Loop Score -->    -4.05146
+[13:20:21] >  Beginning Mutant Pack Mover
+[13:20:21] >   `--> identifier: 18111434-DEC_14 | resfile: Resfiles/ligand_rotamer.resfile
+[13:20:21] >  18111434-DEC_14 - Mutant Pack Score      -->    -4.05146
+[13:20:21] >  Perfoming A Minimization Loop  50
+[13:20:21] >  `--> identifier: 18111434-DEC_14 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:20:21] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:20:22] >  18111434-DEC_15 - Anneal Loop [COOL] 14/14 Score -->     4.55412
+[13:20:22] >  Perfoming A Minimization Loop  50
+[13:20:22] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  0 | bb_range: None | bb_res: None
+[13:20:22] >   | chi_all:  0 | chi_range: None | chi_res: SpecRes
+[13:20:28] >  18111434-DEC_15 - Minimization Loop Score -->    -8.06494
+[13:20:28] >  Beginning Mutant Pack Mover
+[13:20:28] >   `--> identifier: 18111434-DEC_15 | resfile: Resfiles/ligand_rotamer.resfile
+[13:20:28] >  18111434-DEC_15 - Mutant Pack Score      -->    -8.41931
+[13:20:28] >  Perfoming A Minimization Loop  50
+[13:20:28] >  `--> identifier: 18111434-DEC_15 | repeats: 50 | kT:     1.0 | bb_all:  1 | bb_range: None | bb_res: None
+[13:20:28] >   | chi_all:  0 | chi_range: None | chi_res: None
+[13:20:55] >  18111434-DEC_14 - Minimization Loop Score -->   -39.41557
+[13:20:55] >  18111434-DEC_14 - Mut & Min #06 Score    -->   -41.48527
+[13:20:55] >  Beginning Fast Relax
+[13:21:02] >  18111434-DEC_15 - Minimization Loop Score -->   -39.26120
+[13:21:02] >  18111434-DEC_15 - Mut & Min #06 Score    -->   -45.66300
+[13:21:02] >  Beginning Fast Relax
+[13:27:21] >  18111434-DEC_14 - Mut & Min, FastRelaxed Score -->  -748.45237
+[13:27:26] >  18111434-DEC_15 - Mut & Min, FastRelaxed Score -->  -774.21441
+[13:27:26] >  Finished!
+[13:27:26] >  Score Log --v--v--v
+{'NOID': [(363.6084525531624, 'NOID - Original Pose Score'),
+          (-762.5923498164782, 'NOID - Fast Relaxed Pose Score')]}
+[13:27:26] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

@@ -740,12 +740,12 @@ def main():
     log(pprint.pformat(scoreDict),noStamp=True)
 
 if __name__ == '__main__':
-    logBegin()
-    main()
-    logEnd()
+    # logBegin()
+    # main()
+    # logEnd()
     print('Commiting Project')
     subprocess.call(('bash ~/gg.sh \"Auto Commit After Program Completion '
-                     '(Run ID --> {})\"'.format(dateId)),
+                     '(Run ID --> {})\"'.format('something')),
                     shell=True)
 
 
