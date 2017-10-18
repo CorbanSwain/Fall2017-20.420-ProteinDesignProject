@@ -1,12 +1,12 @@
-# decoy-00.03.resfile
+# decoy-01.01.resfile
 NATRO
 START
 
 # Auto Generated Resfile by ResfileBuilder class
-# 20:44:03 10-17-17
+# 20:52:05 10-17-17
 
 # Mutable Residues:
-241  A  PIKAA AILM
 343  A  PIKAA WY
-330  A  PIKAA AILV
-358  A  PIKAA RH
+251  A  PIKAA D
+355  A  PIKAA AILV
+332  A  PIKAA AILM

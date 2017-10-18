@@ -24,8 +24,10 @@ def now(formatNum=0):
         return datetime.now().strftime('%H:%M:%S %m-%d-%y')
     elif formatNum == 1:
         return datetime.now().strftime('%y%m%d')
-    else:
+    elif formatNum == 2:
         return datetime.now().strftime('%H:%M:%S')
+    elif formatNum == 3:
+        return datetime.now().strftime('%d%H%M%S')
 
 def mkDir(directory):
     if not os.path.isdir(directory):
@@ -132,6 +134,11 @@ def printScore(pose,title,scorefxn=defaultScorefxn):
     print(output)
     
 def loadInPose(fileName):
+    fileName = os.path.join(pdbCache,fileName)
+    if os.path.isfile(fileName):
+        pose = loadInPose(fileName)
+    else:
+        raise FileExistsError(fileName + ' is not a file')
     dprint('Loading In `{}` and Creating Pose'.format(fileName))
     params = ['LG.params']
     pose = Pose()
@@ -154,15 +161,20 @@ def createPyMolMover():
 
 
 class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
+
+
     scorefxn = defaultScorefxn
+
     def __init__(self):
         super().__init__()
-
+        self.identifier = 'NO_ID'
     
     def __str__(self):
         info = []
         for key,val in self.__dict__.items():
-            if (key in ['movemap','annealLoop']): continue
+            if (key in ['movemap', 'annealLoop',
+                        'chi_res', 'bb_res']):
+                continue
             
             infoStr = '{}: '.format(key)
             if isinstance(val,int):
@@ -181,7 +193,10 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     def get_name(self):
         return self.__class__.__name__
 
+    def getIdName(self):
+        return self.get_name() + '.ID-' + self.identifier
 
+    
 class FastRelaxMover(CustomMover):
 
     
@@ -365,6 +380,7 @@ class MutantPackMover(CustomMover):
         parse_resfile(pose, task, self.resfile)
         pack_mv = PackRotamersMover(self.scorefxn, task)
         pack_mv.apply(pose)
+        printScore(pose)
 
     def get_name(self):
         return self.__class__.__name__
@@ -539,9 +555,11 @@ class MutationMinimizationMover(CustomMover):
             min_mv.bb_all = True
             min_mv.repeats = 50
 
-            # temp assignments
-            min_mv.repeats, repack_mv.repeats = (1, 1)
-            SmallShearMover.min_repeats = 1
+            # debug assignments
+            debug = False
+            if debug:
+                min_mv.repeats, repack_mv.repeats = (1, 1)
+                SmallShearMover.min_repeats = 1
             
             seq_mv = SequenceMover()
             seq_mv.add_mover(mut_mv)
@@ -573,52 +591,78 @@ class MutationMinimizationMover(CustomMover):
             ind = random.randint(0, length - 1 - i)
             sample.append(temp_list[ind])
             del temp_list[ind]
-        return sample, temp_list   
+        return sample, temp_list
+
+    @staticmethod
+    def makeMutPattern(numDecoys, resPerDecoyList):
+        rand_samples = [[] for __ in range(numDecoys)]
+        for i, num_res in enumerate(resPerDecoy):
+            remaining_res = []
+            for decoyNum in range(numDecoys):
+                if len(remaining_res) < num_res:
+                    remaining_res = list(pocketResNums)
+                if True:
+                    smp, remaining_res = MutationMinimizationMover.\
+                                         randSample(num_res, remaining_res)
+                else:
+                    smp, __ = MutationMinimizationMover.\
+                              randSample(num_res, pocketResNums)
+                    rand_samples[decoyNum].append(smp)
+        return rand_samples
 
 def main():
+    date_id = now(3)
     original_pdb_file = 'new_3vi8_complex.pdb'
-    startPose = loadInPose(original_pdb_file)
-    
-    numDecoys = 2
-    resPerDecoy = [4,4,4,4]
-    rand_samples = [[] for __ in range(numDecoys)]
-    for i, num_res in enumerate(resPerDecoy):
-        remaining_res = []
-        for decoyNum in range(numDecoys):
-            if len(remaining_res) < num_res:
-                remaining_res = list(pocketResNums)
-            if True:
-                smp, remaining_res = MutationMinimizationMover.\
-                                     randSample(num_res, remaining_res)
-            else:
-                smp, __ = MutationMinimizationMover.\
-                          randSample(num_res, pocketResNums)
-            rand_samples[decoyNum].append(smp)
+    try:
+        origPose = loadInPose(original_pdb_file)
+    except FileExistsError as err:
+        print('main: Failed, cannot load in initial pose')
+
+    fast_relaxed_pdb_file = '3vi8_complex_fastRelaxed.pdb'
+    try:
+        fastRelaxedPose = loadInPose(fast_relaxed_pdb_file)
+    except FileExistsError as err:
+        fRelaxPose = poseFrom(startPose)
+        fastRelax(fRelaxPose)
+        fRelaxPose.dump_pdb(fRelaxFile)
+        namePose(fRelaxPose,'orig_relaxed')
+
+    numDecoys = 3
+    resPerDecoyList = [4,4,4,4]
+    rand_samples = MutationMinimizationMover.makeMutPattern(
+        numDecoys, resPerDecoyList)
     print('main: rand_samples:')
     log('Random Samples Arr:')
     pprint.pprint(rand_samples)
     log(pprint.pformat(rand_samples))
+    
     annealLoop_mv = AnnealLoopMover()
     annealLoop_mv.bb_range = (pocketResNums[0], pocketResNums[-1])
     MutationMinimizationMover.annealLoop = annealLoop_mv
 
+    mm_mvs = []
+    for i in range(numDecoys):
+        mm_mv = MutationMinimizationMover()
+        mm_mv.identifier =  date_id  + '-' + 'DEC{:02d}'.format(i)
+        mm_mv.mut_pattern = rand_samples[i]
+        mm_mvs.append(mm_mv)
+    
     dprint('Making Job Distributor')
     mkDir('Decoys')
-    file_template = os.path.join('Decoys','output-{}')
-    file_template = file_template.format(now(1))
+    file_template = os.path.join('Decoys','output-{}-{}')
+    file_template = file_template.format(now(1),now(2))
     jd = PyJobDistributor(file_template,numDecoys,defaultScorefxn)
+    print('main: JD sequence = ',jd.sequence)
     working_pose = Pose()
     ind = 0
-
+    
     while True:
         dprint('Beginning Decoy # {:d}'.format(ind + 1))
         working_pose.assign(startPose)
-        mm_mv = MutationMinimizationMover()
-        mm_mv.mut_pattern = rand_samples[ind]
-        mm_mv.apply(working_pose)
+
+        # mm_mv.apply(working_pose)
         ind += 1
-        print('main: JD In Progress: ', jd.current_in_progress_name)
-        print('main: JD Complete? ', jd.job_complete)
+        print('main: JD  sequence ', jd.sequence)
         if jd.job_complete: break
         jd.output_decoy(working_pose)
 
