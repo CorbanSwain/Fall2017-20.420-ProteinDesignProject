@@ -236,6 +236,8 @@ class FastRelaxMover(CustomMover):
     
     
 class RepMinMover(CustomMover):
+
+
     chain = 'A'
     printCutoff = 15
     
@@ -295,6 +297,8 @@ class RepMinMover(CustomMover):
 
         
 class SmallShearMover(CustomMover):
+
+
     min_repeats = 10
 
     def __init__(self):
@@ -468,8 +472,9 @@ class ResfileBuilder:
                 poseNum = self.pose.pdb_info().pdb2pose(self.chain,res)
                 aa = self.pose.residue(poseNum).name1()
                 mutRes = mutDict[aa]
-                line = line.format(''.join(mutRes))
-                rfile.write(line)
+                if len(mutRes) > 0:
+                    line = line.format(''.join(mutRes))
+                    rfile.write(line)
 
     @classmethod
     def pocketRotamerResfile(cls):
@@ -714,7 +719,7 @@ def main():
     #     if jd.job_complete: breakOnNext = True
 
 
-    ## MC Version
+    ## Multiprocessor Version
     n = len(mm_mvs)
     # working_poses = [poseFrom(startPose) for __ in range(n)]
 
@@ -722,18 +727,12 @@ def main():
         pose = poseFrom(startPose)
         dprint('Beginning Decoy # {:d}'.format(i))
         mm_mvs[i].apply(pose)
-        fname = file_template + '_{:02d}'.format(i)
+        fname = file_template + '_{:02d}.pdb'.format(i)
         pose.dump_scored_pdb(fname,defaultScorefxn)
+        return
 
     parmap(run,range(n))
-        
-    # while True:
-    #     jd.output_decoy(working_poses[ind])
-    #     ind += 1
-    #     if breakOnNext: break
-    #     if jd.job_complete: breakOnNext = True   
-        
-
+         
     dprint('Finished!')
     log('Score Log --v--v--v')
     log(pprint.pformat(scoreDict),noStamp=True)
