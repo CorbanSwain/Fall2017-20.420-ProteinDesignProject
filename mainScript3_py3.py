@@ -73,7 +73,7 @@ setupCaches()
 def makeSequenceGlobals():
     if madeGlobal('madeSeqGlobals'):
             return
-    global pocketResNums, firstResNum, lastResNum,  oneIndexedRes,\
+    global pocketResNums, firstResNum, lastResNum,  oneIndexedRes, scoreDict,\
         allAa, aaGroupings, adnlAa, conservMutMap, liberalMutMap, madeSeqGlobals
     
     pocketResNums = [241, 247, 250, 251, 254, 255, 272, 273, 275, 276, 279, 280,
@@ -106,13 +106,17 @@ def makeSequenceGlobals():
             del temp_list[j]
             conservMutMap[aa] = temp_list
             liberalMutMap[aa] = temp_list + adnlAa[i]
+    scoreDict = {}
     madeSeqGlobals = True
 makeSequenceGlobals()
 
-def log(text=''):
+def log(text='',noStamp=False):
     with open(sesCache,'a') as f:
         for line in text.splitlines():
-            f.writelines('[{}] >  {}\n'.format(now(2),line))
+            if noStamp:
+                f.writelines(line + '\n')
+            else:
+                f.writelines('[{}] >  {}\n'.format(now(2),line))
 
 def logBegin():
     with open(sesCache,'a') as f:
@@ -127,10 +131,15 @@ def dprint(text):
     text = ' {} '.format(text)
     print('[{}] {}'.format(now(),text.center(70,'*')))
         
-def printScore(pose,title,scorefxn=defaultScorefxn):
-    title = title + ' Score'
-    output = '{} --> {:11.5f}'.format(title.ljust(30), scorefxn(pose))
+def printScore(pose,title,identifier='NOID',scorefxn=defaultScorefxn):
+    title = identifier + ' - ' + title + ' Score'
+    score = scorefxn(pose)
+    output = '{} --> {:11.5f}'.format(title.ljust(40), score)
     log(output)
+    if identifier in scoreDict:
+        scoreDict[identifier].append((score, title))
+    else:
+        scoreDict[identifier] = [(score, title)]
     print(output)
     
 def loadInPose(fileName):
@@ -172,8 +181,7 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
     def __str__(self):
         info = []
         for key,val in self.__dict__.items():
-            if (key in ['movemap', 'annealLoop',
-                        'chi_res', 'bb_res']):
+            if (key in ['movemap']):
                 continue
             
             infoStr = '{}: '.format(key)
@@ -183,12 +191,19 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
                 infoStr += '{:7.1f}'
             else:
                 infoStr += '{}'
-            # print('Val: {} | InfoStr.format: {}'.\
-            #       format(val,infoStr.format(val)))
-            infoStr = infoStr.format(val)
+
+            didFormat = False
+            if key in ['bb_range', 'chi_range']:
+                if val not None:
+                    if len(val) > 0:
+                        infoStr.format('SpecRes')
+                        didFormat = True
+            if not didFormat:
+                infoStr = infoStr.format(val)
             info.append(infoStr)
+
         return ' | '.join(info)
-        # return pprint.pformat(info)
+
     
     def get_name(self):
         return self.__class__.__name__
@@ -213,7 +228,8 @@ class FastRelaxMover(CustomMover):
     
 class RepMinMover(CustomMover):
     chain = 'A'
-
+    printCutoff = 15
+    
     def __init__(self):
         super().__init__()
         self.repeats = 10
@@ -251,7 +267,7 @@ class RepMinMover(CustomMover):
             movemap.set_chi(True) 
             
     def apply(self,pose):
-        if self.repeats > 0:
+        if self.repeats > self.printCutoff:
             dprint('Perfoming A Minimization Loop {:3d}'.format(self.repeats))
             log( '`--> {}'.format(self))
         movemap = MoveMap()
@@ -265,10 +281,8 @@ class RepMinMover(CustomMover):
         trial_mv = TrialMover(min_mv,mc)
         rep_mv = RepeatMover(trial_mv,self.repeats)
         rep_mv.apply(pose)
-        dprint('')
-        print(('RepMinMover.apply: pose after applying mover '
-               '\n -----> {}').format(pose))
-        dprint('')
+        if self.repeats > self.printCutoff:
+            printScore(pose,'Minimization Loop',self.identifier)
 
         
 class SmallShearMover(CustomMover):
@@ -283,7 +297,7 @@ class SmallShearMover(CustomMover):
         self.bb_range = None
         
     def apply(self, pose):
-        dprint('Running Small and Shear Movers'.format(self.repeats))
+        dprint('Beginning Small & Shear Movers'.format(self.repeats))
         log(' `--> {}'.format(self))
 
         min_mv = RepMinMover()
@@ -292,6 +306,7 @@ class SmallShearMover(CustomMover):
         else:
             min_mv.bb_range = self.bb_range
         min_mv.repeats = self.min_repeats
+        min_mv.identifier = self.identifier
 
         movemap = min_mv.movemap
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
@@ -317,6 +332,7 @@ class SmallShearMover(CustomMover):
         seq_total.add_mover(trial_B)
         rep_mv = RepeatMover(seq_total, self.repeats)
         rep_mv.apply(pose)
+        printScore(pose,'Small & Shear Move',self.identifier)
 
         
 class AnnealLoopMover(CustomMover):
@@ -337,7 +353,7 @@ class AnnealLoopMover(CustomMover):
         self.bb_range = None
                 
     def apply(self,pose):
-        dprint('Beginning Anneal Mover')
+        dprint('Beginning Anneal Loop Mover')
         log(' `--> {}'.format(self))
         angles = ([self.angle_max] * self.heat_time
                   + [self.angle_max / self.angle_ratio] * self.anneal_time)
@@ -349,21 +365,25 @@ class AnnealLoopMover(CustomMover):
         ss_mv = SmallShearMover()
         ss_mv.repeats = self.seqRepeats
         ss_mv.n_moves = self.numSmallShearRepeats
+        ss_mv.identifier = self.identifier
         if self.bb_range is not None:
             ss_mv.bb_range = self.bb_range
             
         mc = MonteCarlo(pose, self.scorefxn, self.kT)
        
         for i in range(n):
-            dprint('Beginning Loop # {:2d}/{:2d}'.format(i+1,n))
             ind = i % cycleLen
+            if ind < self.heat_time: htcld = 'HEAT'
+            else: htcld = 'COOL'
             angle = angles[ind]
             kT2 = kT2s[ind]
             ss_mv.angle = angle
             ss_mv.kT = kT2
             ss_mv.apply(pose)
             mc.boltzmann(pose)
-            printScore(pose,'Iteration # {:2d}'.format(i+1))
+            printScore(pose,
+                       'Anneal Loop [{}] {:2d}/{:2d}'.format(htcld,i+1,n),
+                       self.identifier)
 
 
 class MutantPackMover(CustomMover):
@@ -374,16 +394,13 @@ class MutantPackMover(CustomMover):
         self.resfile = None
 
     def apply(self,pose):
-        dprint('Performing Mutant Pack Mover')
+        dprint('Beginning Mutant Pack Mover')
         log(' `--> {}'.format(self))
         task = TaskFactory.create_packer_task(pose)
         parse_resfile(pose, task, self.resfile)
         pack_mv = PackRotamersMover(self.scorefxn, task)
         pack_mv.apply(pose)
-        printScore(pose)
-
-    def get_name(self):
-        return self.__class__.__name__
+        printScore(pose,'Mutant Pack',self.identifier)
 
 
 class ResfileBuilder:
@@ -508,9 +525,8 @@ class ResfileBuilder:
 
 class MutationMinimizationMover(CustomMover):
 
-
+    anneal_bb_range = None
     decoy_count = 0
-    annealLoop = None
     fast_relax_mv = FastRelaxMover()
 
     def __init__(self):
@@ -521,7 +537,7 @@ class MutationMinimizationMover(CustomMover):
         MutationMinimizationMover.decoy_count += 1
         
     def apply(self, pose):
-        dprint(('MMM {:2d} - Beginning Mutation '
+        dprint(('MMM.ID {:2d} - Beginning Mutation '
                 'Minimization Mover').format(self.identifier))
         log(' `--> {}'.format(self))
         mc = MonteCarlo(pose, self.scorefxn, self.kT)
@@ -531,10 +547,6 @@ class MutationMinimizationMover(CustomMover):
                 self.identifier, i+1, n))
             # for each decoy create a mover that:
             #   1. mutates the specified residues with resfile
-            dprint('')
-            print(('MutationMinimizationMover.apply: sending pose'
-                  ' to Resfile Builder\n -----> {}').format(pose))
-            dprint('')
             r_file = ResfileBuilder.resfileFromDecoySpecs(
                 pose, mut_residues,
                 self.identifier, i)
@@ -544,16 +556,21 @@ class MutationMinimizationMover(CustomMover):
             repack_mv = RepMinMover()
             repack_mv.chi_res = pocketResNums
             repack_mv.repeats = 50
+            repack_mv.identifier = self.identifier
             #   3. do small/shear anneal loop
-            anneal_mv = self.annealLoop
+            anneal_mv = AnnealLoopMover()
+            anneal_mv.bb_range = self.anneal_bb_range
+            anneal_mv.identifier = self.identifier
             #   4. minimize pocket rotamers (same as 2)
             #   5. pack ligand
             lig_mv = MutantPackMover()
             lig_mv.resfile = ResfileBuilder.ligandRotamerResfile()
+            lig_mv.identifier = self.identifier
             #   5. minimize backmobe
             min_mv = RepMinMover()
             min_mv.bb_all = True
             min_mv.repeats = 50
+            min_mv.identifier = self.identifier
 
             # debug assignments
             debug = False
@@ -569,18 +586,13 @@ class MutationMinimizationMover(CustomMover):
             seq_mv.add_mover(lig_mv)
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
-            printScore(pose, 'MMM Pre Mutation Mover')
-            dprint('')
-            print(('MutationMinimizationMover.apply: pose before '
-                   '\n -----> {}').format(pose))
-            dprint('')
             trial_mv.apply(pose)
-            dprint('')
-            print(('MutationMinimizationMover.apply: pose after '
-                   '\n -----> {}').format(pose))
-            dprint('')
-            printScore(pose, 'MMM Post Mutation Mover')
+            printScore(pose,
+                       'Mut & Min #{:02d}'.format(i),
+                       self.identifier)
+            
         self.fast_relax_mv.apply(pose)
+        printScore(pose,'Mut & Min, FastRelaxed',identifier)
 
     @staticmethod
     def randSample(n,lst):
@@ -610,63 +622,73 @@ class MutationMinimizationMover(CustomMover):
                     rand_samples[decoyNum].append(smp)
         return rand_samples
 
-def main():
+def setup():
+    dprint('Setting Things Up')
     date_id = now(3)
+
     original_pdb_file = 'new_3vi8_complex.pdb'
     try:
         origPose = loadInPose(original_pdb_file)
+        namePose(origPose,'original')
     except FileExistsError as err:
-        print('main: Failed, cannot load in initial pose')
+        print('setup: Failed, cannot load in initial pose')
 
     fast_relaxed_pdb_file = '3vi8_complex_fastRelaxed.pdb'
     try:
         fastRelaxedPose = loadInPose(fast_relaxed_pdb_file)
     except FileExistsError as err:
-        fRelaxPose = poseFrom(startPose)
+        fastRelaxedPose = poseFrom(startPose)
         fastRelax(fRelaxPose)
         fRelaxPose.dump_pdb(fRelaxFile)
         namePose(fRelaxPose,'orig_relaxed')
 
-    numDecoys = 3
-    resPerDecoyList = [4,4,4,4]
+    numDecoys = 1
+    resPerDecoyList = [1]
     rand_samples = MutationMinimizationMover.makeMutPattern(
         numDecoys, resPerDecoyList)
-    print('main: rand_samples:')
     log('Random Samples Arr:')
-    pprint.pprint(rand_samples)
-    log(pprint.pformat(rand_samples))
-    
-    annealLoop_mv = AnnealLoopMover()
-    annealLoop_mv.bb_range = (pocketResNums[0], pocketResNums[-1])
-    MutationMinimizationMover.annealLoop = annealLoop_mv
+    log(pprint.pformat(rand_samples),noStamp=True)
 
+    MutationMinimizationMover.anneal_bb_range =(
+        pocketResNums[0] - 10,
+        pocketResNums[-1] + 10)
     mm_mvs = []
     for i in range(numDecoys):
         mm_mv = MutationMinimizationMover()
-        mm_mv.identifier =  date_id  + '-' + 'DEC{:02d}'.format(i)
+        mm_mv.identifier =  date_id  + '-' + 'DEC_{:02d}'.format(i)
         mm_mv.mut_pattern = rand_samples[i]
         mm_mvs.append(mm_mv)
-    
-    dprint('Making Job Distributor')
+
     mkDir('Decoys')
-    file_template = os.path.join('Decoys','output-{}-{}')
-    file_template = file_template.format(now(1),now(2))
-    jd = PyJobDistributor(file_template,numDecoys,defaultScorefxn)
+    
+    return (date_id, origPose, fastRelaxedPose, mm_mvs)
+    
+def main():
+    dateId, origPose, fastRelaxedPose, mm_mvs = setup()
+    startPose = fastRelaxedPose
+    
+    file_template = os.path.join('Decoys',
+                                 'output-{}-DEC'.format(dateId))
+    jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
     print('main: JD sequence = ',jd.sequence)
     working_pose = Pose()
+
     ind = 0
-    
-    while True:
+    while not jd.job_complete:
+        if ind < len(mm_mvs):
+            print('main: ERROR! Ran out or MM Movers before '
+                  'the ent of the job distributor')
         dprint('Beginning Decoy # {:d}'.format(ind + 1))
-        working_pose.assign(startPose)
-
-        # mm_mv.apply(working_pose)
-        ind += 1
         print('main: JD  sequence ', jd.sequence)
-        if jd.job_complete: break
+        working_pose.assign(startPose)
+        # mm_mv.apply(working_pose)
         jd.output_decoy(working_pose)
+        ind += 1
+    dprint('Finished!')
+    log('Score Log --v--v--v')
+    log(pprint.pformat(scoreDict),noStamp=True)
 
-if __name__=='__main__':
+if __name__ == '__main__':
     logBegin()
     main()
     logEnd()
