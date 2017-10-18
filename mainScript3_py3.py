@@ -306,8 +306,8 @@ class SmallShearMover(CustomMover):
         self.bb_range = None
         
     def apply(self, pose):
-        dprint('Beginning Small & Shear Movers'.format(self.repeats))
-        log(' `--> {}'.format(self))
+        # dprint('Beginning Small & Shear Movers'.format(self.repeats))
+        # log(' `--> {}'.format(self))
 
         min_mv = RepMinMover()
         if self.bb_range is None:
@@ -341,7 +341,7 @@ class SmallShearMover(CustomMover):
         seq_total.add_mover(trial_B)
         rep_mv = RepeatMover(seq_total, self.repeats)
         rep_mv.apply(pose)
-        printScore(pose,'Small & Shear Move',self.identifier)
+        # printScore(pose,'Small & Shear Move',self.identifier)
 
         
 class AnnealLoopMover(CustomMover):
@@ -583,7 +583,7 @@ class MutationMinimizationMover(CustomMover):
             min_mv.identifier = self.identifier
 
             # debug assignments
-            debug = True
+            debug = False
             if debug:
                 min_mv.repeats, repack_mv.repeats = (1, 1)
                 SmallShearMover.min_repeats = 1
@@ -601,8 +601,8 @@ class MutationMinimizationMover(CustomMover):
                        'Mut & Min #{:02d}'.format(i+1),
                        self.identifier)
             
-        # self.fast_relax_mv.apply(pose)
-        # printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
+        self.fast_relax_mv.apply(pose)
+        printScore(pose,'Mut & Min, FastRelaxed',self.identifier)
 
     @staticmethod
     def randSample(n,lst):
