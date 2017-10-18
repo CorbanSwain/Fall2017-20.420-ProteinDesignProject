@@ -3,10 +3,10 @@ NATRO
 START
 
 # Auto Generated Resfile by ResfileBuilder class
-# 09:03:24 10-17-17
+# 12:24:15 10-17-17
 
 # Mutable Residues:
-273  A  PIKAA WY
-334  A  PIKAA FW
-241  A  PIKAA ALMV
-325  A  PIKAA AILV
+280  A  PIKAA NCQT
+339  A  PIKAA ALMV
+344  A  PIKAA AIMV
+354  A  PIKAA ALMV

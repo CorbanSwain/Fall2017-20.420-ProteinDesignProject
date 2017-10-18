@@ -236,7 +236,7 @@ class RepMinMover(CustomMover):
             movemap.set_chi(True) 
             
     def apply(self,pose):
-        if self.repeats > 10:
+        if self.repeats > 0:
             dprint('Perfoming A Minimization Loop {:3d}'.format(self.repeats))
             log( '`--> {}'.format(self))
         movemap = MoveMap()
@@ -249,11 +249,15 @@ class RepMinMover(CustomMover):
         mc = MonteCarlo(pose,self.scorefxn,self.kT)
         trial_mv = TrialMover(min_mv,mc)
         rep_mv = RepeatMover(trial_mv,self.repeats)
-        rep_mv.apply(pose)   
+        rep_mv.apply(pose)
+        dprint('')
+        print(('RepMinMover.apply: pose after applying mover '
+               '\n -----> {}').format(pose))
+        dprint('')
 
         
 class SmallShearMover(CustomMover):
-
+    min_repeats = 10
 
     def __init__(self):
         super().__init__()
@@ -272,7 +276,7 @@ class SmallShearMover(CustomMover):
             min_mv.bb_all = True
         else:
             min_mv.bb_range = self.bb_range
-        min_mv.repeats = 10
+        min_mv.repeats = self.min_repeats
 
         movemap = min_mv.movemap
         small_mv = SmallMover(movemap, self.kT, self.n_moves)
@@ -491,6 +495,7 @@ class MutationMinimizationMover(CustomMover):
 
     decoy_count = 0
     annealLoop = None
+    fast_relax_mv = FastRelaxMover()
 
     def __init__(self):
         super().__init__()
@@ -503,7 +508,7 @@ class MutationMinimizationMover(CustomMover):
         dprint(('MMM {:2d} - Beginning Mutation '
                 'Minimization Mover').format(self.identifier))
         log(' `--> {}'.format(self))
-        mc = MonteCarlo(self.scorefxn, self.kT)
+        mc = MonteCarlo(pose, self.scorefxn, self.kT)
         n = len(self.mut_pattern)
         for i, mut_residues in enumerate(self.mut_pattern):
             log('MMM {:2d} - Loop {:2d}/{:2d}'.format(
@@ -534,6 +539,10 @@ class MutationMinimizationMover(CustomMover):
             min_mv.bb_all = True
             min_mv.repeats = 50
 
+            # temp assignments
+            min_mv.repeats, repack_mv.repeats = (1, 1)
+            SmallShearMover.min_repeats = 1
+            
             seq_mv = SequenceMover()
             seq_mv.add_mover(mut_mv)
             seq_mv.add_mover(repack_mv)
@@ -543,9 +552,17 @@ class MutationMinimizationMover(CustomMover):
             seq_mv.add_mover(min_mv)
             trial_mv = TrialMover(seq_mv, mc)
             printScore(pose, 'MMM Pre Mutation Mover')
+            dprint('')
+            print(('MutationMinimizationMover.apply: pose before '
+                   '\n -----> {}').format(pose))
+            dprint('')
             trial_mv.apply(pose)
+            dprint('')
+            print(('MutationMinimizationMover.apply: pose after '
+                   '\n -----> {}').format(pose))
+            dprint('')
             printScore(pose, 'MMM Post Mutation Mover')
-        FastRelaxMover().apply(pose)
+        self.fast_relax_mv.apply(pose)
 
     @staticmethod
     def randSample(n,lst):
