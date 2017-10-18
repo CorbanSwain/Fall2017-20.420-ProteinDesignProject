@@ -694,23 +694,24 @@ def setup():
 def main():
     global dateId
     dateId, origPose, fastRelaxedPose, mm_mvs = setup()
-    startPose = origPose
+    startPose = fastRelaxedPose
     printScore(origPose,'Original Pose')
     printScore(fastRelaxedPose,'Fast Relaxed Pose')
     file_template = os.path.join('Decoys',dateId,
                                  'output-{}-DEC'.format(dateId))
+
+    ######################################################################
+    ### Single Stream Version
     # jd = PyJobDistributor(file_template, len(mm_mvs), defaultScorefxn)
     # print('main: JD sequence = ',jd.sequence)
     # jd.native_pose = startPose
-    working_pose = Pose()
-    ind = 0 
-    breakOnNext = False
-    ## Single Stream Version
+    # working_pose = Pose()
+    # ind = 0 
+    # breakOnNext = False
     # while True:
     #     if ind > len(mm_mvs):
     #         raise IndexError('Ran out or MM Movers before '
     #                          'the end of the job distributor.')
-        
     #     dprint('Beginning Decoy # {:d}'.format(ind + 1))
     #     print('main: JD  sequence ', jd.sequence) # debug
     #     working_pose.assign(startPose)
@@ -719,11 +720,11 @@ def main():
     #     ind += 1
     #     if breakOnNext: break
     #     if jd.job_complete: breakOnNext = True
+    ######################################################################
 
-
-    ## Multiprocessor Version
+    ######################################################################
+    ### Multiprocessor Version
     n = len(mm_mvs)
-    # working_poses = [poseFrom(startPose) for __ in range(n)]
 
     def run(i):
         pose = poseFrom(startPose)
@@ -732,20 +733,20 @@ def main():
         fname = file_template + '_{:02d}.pdb'.format(i)
         pose.dump_scored_pdb(fname,defaultScorefxn)
         return
-
     parmap(run,range(n))
-         
+    ######################################################################
+
     dprint('Finished!')
     log('Score Log --v--v--v')
     log(pprint.pformat(scoreDict),noStamp=True)
 
 if __name__ == '__main__':
-    # logBegin()
-    # main()
-    # logEnd()
+    logBegin()
+    main()
+    logEnd()
     print('Commiting Project')
     subprocess.call(('bash ~/gg.sh \"Auto Commit After Program Completion '
-                     '(Run ID --> {})\"'.format('something')),
+                     '(Run ID --> {})\"'.format(dateId)),
                     shell=True)
 
 
