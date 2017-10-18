@@ -2,6 +2,7 @@
 # mainScript3_py3.py
 
 import os
+import subprocess
 import re
 import random
 import pprint
@@ -691,6 +692,7 @@ def setup():
     return (date_id, origPose, fastRelaxedPose, mm_mvs)
     
 def main():
+    global dateId
     dateId, origPose, fastRelaxedPose, mm_mvs = setup()
     startPose = origPose
     printScore(origPose,'Original Pose')
@@ -741,6 +743,10 @@ if __name__ == '__main__':
     logBegin()
     main()
     logEnd()
+    print('Commiting Project')
+    subprocess.call(('bash ~/gg.sh \"Auto Commit After Program Completion '
+                     '(Run ID --> {})\"'.format(dateId)),
+                    shell=True)
 
 
  
