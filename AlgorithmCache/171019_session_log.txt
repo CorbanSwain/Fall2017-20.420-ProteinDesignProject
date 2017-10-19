@@ -396,3 +396,24 @@ Begins: 03:07:07 10-19-17
 [03:44:43] >  deltadelta(RoseEng) =   -28.30040
 [03:44:43] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
+[04:07:08] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[04:07:08] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[04:07:08] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[04:07:09] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[04:07:10] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[04:07:10] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[04:07:11] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[04:07:11] >  MUTATION: @ 255, V ---> A
+[04:07:11] >  MUTATION: @ 276, C ---> S
+[04:07:11] >  MUTATION: @ 279, T ---> Y
+[04:07:11] >  MUTATION: @ 339, I ---> V
+[04:07:12] >  [[('Starting Complex', -762.5923498164782),
+[04:07:12] >    ('Starting Prot Alone', -760.8971351432157)],
+[04:07:12] >   [('Mutant Complex', -791.0749642299298),
+[04:07:12] >    ('Mutant Protein Alone', -761.0793485241854)]]
+[04:07:12] >  deltadelta(RoseEng) =   -28.30040
+[04:07:12] >  deltadeltaG (kcal/mol) =    -6.16131
+[04:07:12] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

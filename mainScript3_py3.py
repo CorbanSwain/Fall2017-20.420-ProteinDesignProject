@@ -768,7 +768,7 @@ def comparePDBs():
 
     n = len(fname)
     # parmap(relaxNoLigands,range(n))
-
+    print('\n\n\n')
     for i in range(n):
         poses[i][1] = loadInPose(fname[i],needParams=False)
 
@@ -791,10 +791,16 @@ def comparePDBs():
     pprint.pprint(paired)
     log(pprint.pformat(paired))
 
-    deldelG = ((scores[0][1] - scores[0][0])
+    deldelRose = ((scores[0][1] - scores[0][0])
                - (scores[1][1] - scores[1][0]))
-    print('deltadelta(RoseEng) = {:11.5f}'.format(deldelG))
-    log('deltadelta(RoseEng) = {:11.5f}'.format(deldelG))
+    print('deltadelta(RoseEng) = {:11.5f}'.format(deldelRose))
+    log('deltadelta(RoseEng) = {:11.5f}'.format(deldelRose))
+
+    deldelG = ((0.57 * deldelRose) - 600) / 100
+    print('deltadeltaG (kcal/mol) = {:11.5f}'.format(deldelG))
+    log('deltadeltaG (kcal/mol) = {:11.5f}'.format(deldelG))
+
+    print('\n\n\n')
        
     
 if __name__ == '__main__':
