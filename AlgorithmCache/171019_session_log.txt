@@ -1,0 +1,378 @@
+AlgorithmCache/171019_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 03:07:07 10-19-17
+
+
+
+[03:07:07] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:07:07] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex.pdb` and Creating Pose
+[03:07:08] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+
+
+[03:09:08] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:09:08] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:09:08] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:09:09] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:09:10] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:09:11] >  Beginning Fast Relax
+[03:09:11] >  Beginning Fast Relax
+[03:15:33] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:15:34] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:23:12] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:23:12] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:23:13] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:23:13] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:23:14] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+
+
+[03:23:33] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:23:33] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:23:34] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:23:35] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:23:35] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:23:36] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:23:37] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:26:46] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:26:46] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:26:46] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:26:47] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:26:47] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:26:48] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:26:49] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:28:10] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:28:10] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:28:10] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:28:11] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:28:12] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:28:12] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:28:13] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:28:58] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:28:58] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:28:58] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:28:59] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:29:00] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:29:00] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:29:01] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:29:45] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:29:45] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:29:46] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:29:47] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:29:47] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:29:48] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:29:49] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:31:39] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:31:39] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:31:39] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:31:40] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:31:41] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:31:41] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:31:42] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+
+
+[03:32:31] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:32:31] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:32:31] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:32:32] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:32:33] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:32:33] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:32:34] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[03:32:34] >  MUTATION: @   1, Z ---> Z
+[03:32:34] >  MUTATION: @ 202, D ---> D
+[03:32:34] >  MUTATION: @ 203, L ---> L
+[03:32:34] >  MUTATION: @ 204, K ---> K
+[03:32:34] >  MUTATION: @ 205, S ---> S
+[03:32:34] >  MUTATION: @ 206, L ---> L
+[03:32:34] >  MUTATION: @ 207, A ---> A
+[03:32:34] >  MUTATION: @ 208, K ---> K
+[03:32:34] >  MUTATION: @ 209, R ---> R
+[03:32:34] >  MUTATION: @ 210, I ---> I
+[03:32:34] >  MUTATION: @ 211, Y ---> Y
+[03:32:34] >  MUTATION: @ 212, E ---> E
+[03:32:34] >  MUTATION: @ 213, A ---> A
+[03:32:34] >  MUTATION: @ 214, Y ---> Y
+[03:32:34] >  MUTATION: @ 215, L ---> L
+[03:32:34] >  MUTATION: @ 216, K ---> K
+[03:32:34] >  MUTATION: @ 217, N ---> N
+[03:32:34] >  MUTATION: @ 218, F ---> F
+[03:32:34] >  MUTATION: @ 219, N ---> N
+[03:32:34] >  MUTATION: @ 220, M ---> M
+[03:32:34] >  MUTATION: @ 221, N ---> N
+[03:32:34] >  MUTATION: @ 222, K ---> K
+[03:32:34] >  MUTATION: @ 223, V ---> V
+[03:32:34] >  MUTATION: @ 224, K ---> K
+[03:32:34] >  MUTATION: @ 225, A ---> A
+[03:32:34] >  MUTATION: @ 226, R ---> R
+[03:32:34] >  MUTATION: @ 227, V ---> V
+[03:32:34] >  MUTATION: @ 228, I ---> I
+[03:32:34] >  MUTATION: @ 229, L ---> L
+[03:32:34] >  MUTATION: @ 230, S ---> S
+[03:32:34] >  MUTATION: @ 238, P ---> P
+[03:32:34] >  MUTATION: @ 239, F ---> F
+[03:32:34] >  MUTATION: @ 240, V ---> V
+[03:32:34] >  MUTATION: @ 241, I ---> I
+[03:32:34] >  MUTATION: @ 242, H ---> H
+[03:32:34] >  MUTATION: @ 243, D ---> D
+[03:32:34] >  MUTATION: @ 244, M ---> M
+[03:32:34] >  MUTATION: @ 245, E ---> E
+[03:32:34] >  MUTATION: @ 246, T ---> T
+[03:32:34] >  MUTATION: @ 247, L ---> L
+[03:32:34] >  MUTATION: @ 248, C ---> C
+[03:32:34] >  MUTATION: @ 249, M ---> M
+[03:32:34] >  MUTATION: @ 250, A ---> A
+[03:32:34] >  MUTATION: @ 251, E ---> E
+[03:32:34] >  MUTATION: @ 252, K ---> K
+[03:32:34] >  MUTATION: @ 253, T ---> T
+[03:32:34] >  MUTATION: @ 254, L ---> L
+[03:32:34] >  MUTATION: @ 256, A ---> A
+[03:32:34] >  MUTATION: @ 257, K ---> K
+[03:32:34] >  MUTATION: @ 258, L ---> L
+[03:32:34] >  MUTATION: @ 259, V ---> V
+[03:32:34] >  MUTATION: @ 260, A ---> A
+[03:32:34] >  MUTATION: @ 261, N ---> N
+[03:32:34] >  MUTATION: @ 262, G ---> G
+[03:32:34] >  MUTATION: @ 265, N ---> N
+[03:32:34] >  MUTATION: @ 266, K ---> K
+[03:32:34] >  MUTATION: @ 267, E ---> E
+[03:32:34] >  MUTATION: @ 268, A ---> A
+[03:32:34] >  MUTATION: @ 269, E ---> E
+[03:32:34] >  MUTATION: @ 270, V ---> V
+[03:32:34] >  MUTATION: @ 271, R ---> R
+[03:32:34] >  MUTATION: @ 272, I ---> I
+[03:32:34] >  MUTATION: @ 273, F ---> F
+[03:32:34] >  MUTATION: @ 274, H ---> H
+[03:32:34] >  MUTATION: @ 275, C ---> C
+[03:32:34] >  MUTATION: @ 277, Q ---> Q
+[03:32:34] >  MUTATION: @ 278, C ---> C
+[03:32:34] >  MUTATION: @ 280, S ---> S
+[03:32:34] >  MUTATION: @ 281, V ---> V
+[03:32:34] >  MUTATION: @ 282, E ---> E
+[03:32:34] >  MUTATION: @ 283, T ---> T
+[03:32:34] >  MUTATION: @ 284, V ---> V
+[03:32:34] >  MUTATION: @ 285, T ---> T
+[03:32:34] >  MUTATION: @ 286, E ---> E
+[03:32:34] >  MUTATION: @ 287, L ---> L
+[03:32:34] >  MUTATION: @ 288, T ---> T
+[03:32:34] >  MUTATION: @ 289, E ---> E
+[03:32:34] >  MUTATION: @ 290, F ---> F
+[03:32:34] >  MUTATION: @ 291, A ---> A
+[03:32:34] >  MUTATION: @ 292, K ---> K
+[03:32:34] >  MUTATION: @ 293, A ---> A
+[03:32:34] >  MUTATION: @ 294, I ---> I
+[03:32:34] >  MUTATION: @ 295, P ---> P
+[03:32:34] >  MUTATION: @ 296, G ---> G
+[03:32:34] >  MUTATION: @ 297, F ---> F
+[03:32:34] >  MUTATION: @ 298, A ---> A
+[03:32:34] >  MUTATION: @ 299, N ---> N
+[03:32:34] >  MUTATION: @ 300, L ---> L
+[03:32:34] >  MUTATION: @ 301, D ---> D
+[03:32:34] >  MUTATION: @ 302, L ---> L
+[03:32:34] >  MUTATION: @ 303, N ---> N
+[03:32:34] >  MUTATION: @ 304, D ---> D
+[03:32:34] >  MUTATION: @ 305, Q ---> Q
+[03:32:34] >  MUTATION: @ 306, V ---> V
+[03:32:34] >  MUTATION: @ 307, T ---> T
+[03:32:34] >  MUTATION: @ 308, L ---> L
+[03:32:34] >  MUTATION: @ 309, L ---> L
+[03:32:34] >  MUTATION: @ 310, K ---> K
+[03:32:34] >  MUTATION: @ 311, Y ---> Y
+[03:32:34] >  MUTATION: @ 312, G ---> G
+[03:32:34] >  MUTATION: @ 313, V ---> V
+[03:32:34] >  MUTATION: @ 314, Y ---> Y
+[03:32:34] >  MUTATION: @ 315, E ---> E
+[03:32:34] >  MUTATION: @ 316, A ---> A
+[03:32:34] >  MUTATION: @ 317, I ---> I
+[03:32:34] >  MUTATION: @ 318, F ---> F
+[03:32:34] >  MUTATION: @ 319, A ---> A
+[03:32:34] >  MUTATION: @ 320, M ---> M
+[03:32:34] >  MUTATION: @ 321, L ---> L
+[03:32:34] >  MUTATION: @ 322, S ---> S
+[03:32:34] >  MUTATION: @ 323, S ---> S
+[03:32:34] >  MUTATION: @ 324, V ---> V
+[03:32:34] >  MUTATION: @ 325, M ---> M
+[03:32:34] >  MUTATION: @ 326, N ---> N
+[03:32:34] >  MUTATION: @ 327, K ---> K
+[03:32:34] >  MUTATION: @ 328, D ---> D
+[03:32:34] >  MUTATION: @ 329, G ---> G
+[03:32:34] >  MUTATION: @ 330, M ---> M
+[03:32:34] >  MUTATION: @ 331, L ---> L
+[03:32:34] >  MUTATION: @ 332, V ---> V
+[03:32:34] >  MUTATION: @ 333, A ---> A
+[03:32:34] >  MUTATION: @ 334, Y ---> Y
+[03:32:34] >  MUTATION: @ 335, G ---> G
+[03:32:34] >  MUTATION: @ 336, N ---> N
+[03:32:34] >  MUTATION: @ 337, G ---> G
+[03:32:34] >  MUTATION: @ 338, F ---> F
+[03:32:34] >  MUTATION: @ 340, T ---> T
+[03:32:34] >  MUTATION: @ 341, R ---> R
+[03:32:34] >  MUTATION: @ 342, E ---> E
+[03:32:34] >  MUTATION: @ 343, F ---> F
+[03:32:34] >  MUTATION: @ 344, L ---> L
+[03:32:34] >  MUTATION: @ 345, K ---> K
+[03:32:34] >  MUTATION: @ 346, S ---> S
+[03:32:34] >  MUTATION: @ 347, L ---> L
+[03:32:34] >  MUTATION: @ 348, R ---> R
+[03:32:34] >  MUTATION: @ 349, K ---> K
+[03:32:34] >  MUTATION: @ 350, P ---> P
+[03:32:34] >  MUTATION: @ 351, F ---> F
+[03:32:34] >  MUTATION: @ 352, C ---> C
+[03:32:34] >  MUTATION: @ 353, D ---> D
+[03:32:34] >  MUTATION: @ 354, I ---> I
+[03:32:34] >  MUTATION: @ 355, M ---> M
+[03:32:34] >  MUTATION: @ 356, E ---> E
+[03:32:34] >  MUTATION: @ 357, P ---> P
+[03:32:34] >  MUTATION: @ 358, K ---> K
+[03:32:34] >  MUTATION: @ 359, F ---> F
+[03:32:34] >  MUTATION: @ 360, D ---> D
+[03:32:34] >  MUTATION: @ 361, F ---> F
+[03:32:34] >  MUTATION: @ 362, A ---> A
+[03:32:34] >  MUTATION: @ 363, M ---> M
+[03:32:34] >  MUTATION: @ 364, K ---> K
+[03:32:34] >  MUTATION: @ 365, F ---> F
+[03:32:34] >  MUTATION: @ 366, N ---> N
+[03:32:34] >  MUTATION: @ 367, A ---> A
+[03:32:34] >  MUTATION: @ 368, L ---> L
+[03:32:34] >  MUTATION: @ 369, E ---> E
+[03:32:34] >  MUTATION: @ 370, L ---> L
+[03:32:34] >  MUTATION: @ 371, D ---> D
+[03:32:34] >  MUTATION: @ 372, D ---> D
+[03:32:34] >  MUTATION: @ 373, S ---> S
+[03:32:34] >  MUTATION: @ 374, D ---> D
+[03:32:34] >  MUTATION: @ 375, I ---> I
+[03:32:34] >  MUTATION: @ 376, S ---> S
+[03:32:34] >  MUTATION: @ 377, L ---> L
+[03:32:34] >  MUTATION: @ 378, F ---> F
+[03:32:34] >  MUTATION: @ 379, V ---> V
+[03:32:34] >  MUTATION: @ 380, A ---> A
+[03:32:34] >  MUTATION: @ 381, A ---> A
+[03:32:34] >  MUTATION: @ 382, I ---> I
+[03:32:34] >  MUTATION: @ 383, I ---> I
+[03:32:34] >  MUTATION: @ 384, C ---> C
+[03:32:34] >  MUTATION: @ 385, C ---> C
+[03:32:34] >  MUTATION: @ 386, G ---> G
+[03:32:34] >  MUTATION: @ 387, D ---> D
+[03:32:34] >  MUTATION: @ 388, R ---> R
+[03:32:34] >  MUTATION: @ 389, P ---> P
+[03:32:34] >  MUTATION: @ 390, G ---> G
+[03:32:34] >  MUTATION: @ 391, L ---> L
+[03:32:34] >  MUTATION: @ 392, L ---> L
+[03:32:34] >  MUTATION: @ 393, N ---> N
+[03:32:34] >  MUTATION: @ 394, V ---> V
+[03:32:34] >  MUTATION: @ 395, G ---> G
+[03:32:34] >  MUTATION: @ 396, H ---> H
+[03:32:34] >  MUTATION: @ 397, I ---> I
+[03:32:34] >  MUTATION: @ 398, E ---> E
+[03:32:34] >  MUTATION: @ 399, K ---> K
+[03:32:34] >  MUTATION: @ 400, M ---> M
+[03:32:34] >  MUTATION: @ 401, Q ---> Q
+[03:32:34] >  MUTATION: @ 402, E ---> E
+[03:32:34] >  MUTATION: @ 403, G ---> G
+[03:32:34] >  MUTATION: @ 404, I ---> I
+[03:32:34] >  MUTATION: @ 405, V ---> V
+[03:32:34] >  MUTATION: @ 406, H ---> H
+[03:32:34] >  MUTATION: @ 407, V ---> V
+[03:32:34] >  MUTATION: @ 408, L ---> L
+[03:32:34] >  MUTATION: @ 409, R ---> R
+[03:32:34] >  MUTATION: @ 410, L ---> L
+[03:32:34] >  MUTATION: @ 411, H ---> H
+[03:32:34] >  MUTATION: @ 412, L ---> L
+[03:32:34] >  MUTATION: @ 413, Q ---> Q
+[03:32:34] >  MUTATION: @ 414, S ---> S
+[03:32:34] >  MUTATION: @ 415, N ---> N
+[03:32:34] >  MUTATION: @ 416, H ---> H
+[03:32:34] >  MUTATION: @ 417, P ---> P
+[03:32:34] >  MUTATION: @ 418, D ---> D
+[03:32:34] >  MUTATION: @ 419, D ---> D
+[03:32:34] >  MUTATION: @ 420, I ---> I
+[03:32:34] >  MUTATION: @ 421, F ---> F
+[03:32:34] >  MUTATION: @ 422, L ---> L
+[03:32:34] >  MUTATION: @ 423, F ---> F
+[03:32:34] >  MUTATION: @ 424, P ---> P
+[03:32:34] >  MUTATION: @ 425, K ---> K
+[03:32:34] >  MUTATION: @ 426, L ---> L
+[03:32:34] >  MUTATION: @ 427, L ---> L
+[03:32:34] >  MUTATION: @ 428, Q ---> Q
+[03:32:34] >  MUTATION: @ 429, K ---> K
+[03:32:34] >  MUTATION: @ 430, M ---> M
+[03:32:34] >  MUTATION: @ 431, A ---> A
+[03:32:34] >  MUTATION: @ 432, D ---> D
+[03:32:34] >  MUTATION: @ 433, L ---> L
+[03:32:34] >  MUTATION: @ 434, R ---> R
+[03:32:34] >  MUTATION: @ 435, Q ---> Q
+[03:32:34] >  MUTATION: @ 436, L ---> L
+[03:32:34] >  MUTATION: @ 437, V ---> V
+[03:32:34] >  MUTATION: @ 438, T ---> T
+[03:32:34] >  MUTATION: @ 439, E ---> E
+[03:32:34] >  MUTATION: @ 440, H ---> H
+[03:32:34] >  MUTATION: @ 441, A ---> A
+[03:32:34] >  MUTATION: @ 442, Q ---> Q
+[03:32:34] >  MUTATION: @ 443, L ---> L
+[03:32:34] >  MUTATION: @ 444, V ---> V
+[03:32:34] >  MUTATION: @ 445, Q ---> Q
+[03:32:34] >  MUTATION: @ 446, I ---> I
+[03:32:34] >  MUTATION: @ 447, I ---> I
+[03:32:34] >  MUTATION: @ 448, K ---> K
+[03:32:34] >  MUTATION: @ 449, K ---> K
+[03:32:34] >  MUTATION: @ 450, T ---> T
+[03:32:34] >  MUTATION: @ 451, E ---> E
+[03:32:34] >  MUTATION: @ 452, S ---> S
+[03:32:34] >  MUTATION: @ 453, D ---> D
+[03:32:34] >  MUTATION: @ 454, A ---> A
+[03:32:34] >  MUTATION: @ 455, A ---> A
+[03:32:34] >  MUTATION: @ 456, L ---> L
+[03:32:34] >  MUTATION: @ 457, H ---> H
+[03:32:34] >  MUTATION: @ 458, P ---> P
+[03:32:34] >  MUTATION: @ 459, L ---> L
+[03:32:34] >  MUTATION: @ 460, L ---> L
+[03:32:34] >  MUTATION: @ 461, Q ---> Q
+[03:32:34] >  MUTATION: @ 462, E ---> E
+[03:32:34] >  MUTATION: @ 463, I ---> I
+[03:32:34] >  MUTATION: @ 464, Y ---> Y
+[03:32:34] >  MUTATION: @ 465, R ---> R
+[03:32:34] >  MUTATION: @ 466, D ---> D
+[03:32:34] >  MUTATION: @ 467, M ---> M
+[03:32:34] >  MUTATION: @ 468, Y ---> Y
+[03:32:35] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[03:33:36] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:33:36] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:33:37] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:33:38] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:33:38] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:33:39] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:33:39] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[03:33:40] >  MUTATION: @ 255, V ---> A
+[03:33:40] >  MUTATION: @ 276, C ---> S
+[03:33:40] >  MUTATION: @ 279, T ---> Y
+[03:33:40] >  MUTATION: @ 339, I ---> V
+[03:33:40] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+[03:35:29] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[03:35:29] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[03:35:30] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[03:35:30] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[03:35:31] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[03:35:32] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[03:35:32] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[03:35:33] >  MUTATION: @ 255, V ---> A
+[03:35:33] >  MUTATION: @ 276, C ---> S
+[03:35:33] >  MUTATION: @ 279, T ---> Y
+[03:35:33] >  MUTATION: @ 339, I ---> V
+[03:35:33] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

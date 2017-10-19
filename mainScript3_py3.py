@@ -7,6 +7,7 @@ import re
 import random
 import pprint
 from datetime import datetime
+import itertools
 
 from pyrosetta import *
 from pyrosetta.toolbox import generate_resfile_from_pose
@@ -153,14 +154,15 @@ def printScore(pose,title,identifier='NOID',scorefxn=defaultScorefxn):
         scoreDict[identifier] = [(score, title)]
     print(output)
     
-def loadInPose(fileName):
+def loadInPose(fileName,needParams=True):
     fileName = os.path.join(pdbCache,fileName)
     if not os.path.isfile(fileName):
         raise FileExistsError(fileName + ' is not a file')
     dprint('Loading In `{}` and Creating Pose'.format(fileName))
-    params = ['LG.params']
     pose = Pose()
-    generate_nonstandard_residue_set(pose, params)
+    if needParams:
+        params = ['LG.params']
+        generate_nonstandard_residue_set(pose, params)
     pose_from_file(pose,fileName)
     return pose
 
@@ -740,9 +742,59 @@ def main():
     log('Score Log --v--v--v')
     log(pprint.pformat(scoreDict),noStamp=True)
 
+def comparePDBs():
+    global dateId
+    dateId = now(3)
+
+    original = loadInPose('3vi8_complex_fastRelaxed.pdb')
+    new = loadInPose('lowest_e_decoy.pdb')
+
+    original_no_lig = loadInPose('3vi8_complex_fastRelaxed_no_ligand.pdb')
+    new_no_lig = loadInPose('lowest_e_decoy_no_ligand.pdb')
+
+    names = [['Starting Complex', 'Starting Prot Alone'],
+             ['Mutant Complex', 'Mutant Protein Alone']]
+    poses = [[original, original_no_lig],
+             [new, new_no_lig]]
+    fname = ['new_3vi8_complex_no_ligand_relaxed',
+             'lowest_e_decoy_no_ligand_relaxed']
+
+    # def relaxNoLigands(i):
+    #     pose = poseFrom(poses[i][1])
+    #     FastRelaxMover().apply(pose)
+    #     pose.dump_scored_pdb(os.path.join('AlgorithmCache',
+    #                                       'PDBs',fname[i],),
+    #                          defaultScorefxn)
+
+    n = len(fname)
+    # parmap(relaxNoLigands,range(n))
+
+    for i in range(n):
+        poses[i][1] = loadInPose(fname[i],needParams=False)
+
+    sequences = [p.sequence() for p, __ in poses]
+    paired = zip(sequences[0],sequences[1])
+    for i,(a, b) in enumerate(paired):
+        # print('i,(a,b) : {},({},{})'.format(i,a,b))
+        if not a == b:
+            pdb_num = poses[0][0].pdb_info().pose2pdb(i+1).split(' ')
+            pdb_num = int(pdb_num[0])
+            # print('pdb_num : {}'.format(pdb_num))
+            out = ('MUTATION: @ {:3d},'
+                   ' {} ---> {}'.format(pdb_num,a,b))
+            print(out)
+            log(out)
+
+    scores = [[defaultScorefxn(p) for p in pair] for pair in poses]
+
+    paired = [[list(zip(n,s))] for n,s in zip(names,scores)]
+    pprint.pprint(paired)
+       
+    
 if __name__ == '__main__':
     logBegin()
-    main()
+    # main()
+    comparePDBs()
     logEnd()
     print('Commiting Project')
     subprocess.call(('bash ~/gg.sh \"Auto Commit After Program Completion '
