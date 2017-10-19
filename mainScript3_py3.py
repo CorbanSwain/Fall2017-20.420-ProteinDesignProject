@@ -768,9 +768,11 @@ def comparePDBs():
 
     n = len(fname)
     # parmap(relaxNoLigands,range(n))
-    print('\n\n\n')
+
     for i in range(n):
         poses[i][1] = loadInPose(fname[i],needParams=False)
+
+    print('\n\n\n')
 
     sequences = [p.sequence() for p, __ in poses]
     paired = zip(sequences[0],sequences[1])
