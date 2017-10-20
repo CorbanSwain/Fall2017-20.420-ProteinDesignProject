@@ -1,0 +1,7 @@
+# Ignore Emacs Temp Saves
+\#*
+.\#*
+*~
+.idea/
+.DS_Store
+molfile2params*/
