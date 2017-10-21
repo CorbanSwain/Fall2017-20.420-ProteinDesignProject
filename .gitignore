@@ -2,6 +2,12 @@
 \#*
 .\#*
 *~
+
+# Ignore PyCharm Files
 .idea/
+
+
+# Ignore Mac Preference Files
 .DS_Store
-molfile2params*/
+
+# 
