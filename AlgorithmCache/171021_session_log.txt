@@ -24,3 +24,42 @@ Begins: 10:24:13 10-21-17
 [10:24:22] >  deltadeltaG (kcal/mol) =    -6.16131
 [10:24:22] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
+[10:32:12] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[10:32:12] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[10:32:13] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[10:32:14] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[10:32:15] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[10:32:16] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[10:32:17] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[10:32:18] >  MUTATION: @ 255, V ---> A
+[10:32:18] >  MUTATION: @ 276, C ---> S
+[10:32:18] >  MUTATION: @ 279, T ---> Y
+[10:32:18] >  MUTATION: @ 339, I ---> V
+[10:32:19] >  [[('Starting Complex', -762.5923499480789),
+[10:32:19] >    ('Starting Prot Alone', -760.8971352333806)],
+[10:32:19] >   [('Mutant Complex', -791.0749641152731),
+[10:32:19] >    ('Mutant Protein Alone', -761.0793486511704)]]
+[10:32:19] >  deltadelta(RoseEng) =   -28.30040
+
+
+[10:32:54] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[10:32:54] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[10:32:55] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[10:32:56] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[10:32:57] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[10:32:59] >  Loading In `AlgorithmCache/PDBs/new_3vi8_complex_no_ligand_relaxed` and Creating Pose
+[10:33:00] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand_relaxed` and Creating Pose
+[10:33:01] >  MUTATION: @ 255, V ---> A
+[10:33:01] >  MUTATION: @ 276, C ---> S
+[10:33:01] >  MUTATION: @ 279, T ---> Y
+[10:33:01] >  MUTATION: @ 339, I ---> V
+[10:33:02] >  [[('Starting Complex', -762.5923499480789),
+[10:33:02] >    ('Starting Prot Alone', -760.8971352333806)],
+[10:33:02] >   [('Mutant Complex', -791.0749641152731),
+[10:33:02] >    ('Mutant Protein Alone', -761.0793486511704)]]
+[10:33:02] >  deltadelta(RoseEng) =   -28.30040
+[10:33:02] >  deltadeltaG (kcal/mol) =    -0.01613
+[10:33:02] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

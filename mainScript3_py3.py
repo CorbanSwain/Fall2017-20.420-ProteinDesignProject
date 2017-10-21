@@ -778,12 +778,15 @@ def comparePDBs():
     pprint.pprint(paired)
     log(pprint.pformat(paired))
 
-    deldelRose = ((scores[0][1] - scores[0][0])
-               - (scores[1][1] - scores[1][0]))
+    reu_to_g = lambda x: ((0.57 * x) - 600) / 1000
+    calc_del_del = lambda x: (x[0][1] - x[0][0]) - (x[1][1] - x[1][0])
+
+    deldelRose = calc_del_del(scores)
     print('deltadelta(RoseEng) = {:11.5f}'.format(deldelRose))
     log('deltadelta(RoseEng) = {:11.5f}'.format(deldelRose))
 
-    deldelG = ((0.57 * deldelRose) - 600) / 100
+    del_gs = [[reu_to_g(p) for p in pair] for pair in scores]
+    deldelG = calc_del_del(del_gs)
     print('deltadeltaG (kcal/mol) = {:11.5f}'.format(deldelG))
     log('deltadeltaG (kcal/mol) = {:11.5f}'.format(deldelG))
 
