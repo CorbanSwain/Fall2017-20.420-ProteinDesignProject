@@ -183,8 +183,6 @@ def createPyMolMover():
 
 
 class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
-
-
     scorefxn = defaultScorefxn
 
     def __init__(self):
@@ -218,7 +216,6 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
         info[n//2] = info[n//2] + '\n'
         return ' | '.join(info)
 
-    
     def get_name(self):
         return self.__class__.__name__
 
@@ -227,11 +224,8 @@ class CustomMover(pyrosetta.rosetta.protocols.moves.Mover):
 
     
 class FastRelaxMover(CustomMover):
-
-    
     def __init__(self):
         super().__init__()
-
 
     def apply(self,pose):
         dprint('Beginning Fast Relax')
@@ -300,8 +294,6 @@ class RepMinMover(CustomMover):
 
         
 class SmallShearMover(CustomMover):
-
-
     min_repeats = 10
 
     def __init__(self):
@@ -352,8 +344,6 @@ class SmallShearMover(CustomMover):
 
         
 class AnnealLoopMover(CustomMover):
-
-
     def __init__(self):
         super().__init__()
         self.cycles = 2        
@@ -403,8 +393,6 @@ class AnnealLoopMover(CustomMover):
 
 
 class MutantPackMover(CustomMover):
-
-
     def __init__(self):
         super().__init__()
         self.resfile = None
@@ -420,8 +408,6 @@ class MutantPackMover(CustomMover):
 
 
 class ResfileBuilder:
-
-    
     resfile_dir = 'Resfiles'
     resfile_ext = 'resfile'
     rotamer_tag = 'NATAA'
@@ -540,7 +526,6 @@ class ResfileBuilder:
 
 
 class MutationMinimizationMover(CustomMover):
-
     anneal_bb_range = None
     decoy_count = 0
     fast_relax_mv = FastRelaxMover()
