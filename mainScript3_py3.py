@@ -76,8 +76,9 @@ def setupCaches():
 
 setupCaches()
 
+
 # FIXME - Integrate into ResfileBuilder Class
-def makeSequenceGlobals():
+def make_sequence_globals():
     if madeGlobal('madeSeqGlobals'):
             return
     global pocketResNums, firstResNum, lastResNum,  oneIndexedRes, scoreDict,\
@@ -88,22 +89,22 @@ def makeSequenceGlobals():
     firstResNum = 202
     lastResNum = 468
     oneIndexedRes = [i - firstResNum + 1 for i in pocketResNums]
-    allAa = ['A','C','D','E','F','G','H','I','K','L',\
+    allAa = ['A','C','D','E','F','G','H','I','K','L',
              'M','N','P','Q','R','S','T','V','W','Y']
     print(len(allAa))
-    aaGroupings = [['A','I','L','M','V'],\
-                   ['F','W','Y'],\
-                   ['N','C','Q','T','S'],\
-                   ['D','E'],\
-                   ['R','H','K'],\
-                   ['G'],\
+    aaGroupings = [['A','I','L','M','V'],
+                   ['F','W','Y'],
+                   ['N','C','Q','T','S'],
+                   ['D','E'],
+                   ['R','H','K'],
+                   ['G'],
                    ['P']]
-    adnlAa = [['F','W','Y','G'],\
-              ['A','I','L','M','V','G'],\
-              ['Y','W','G'],\
-              ['R','H','K','G'],\
-              ['D','E','G'],\
-              ['A','S'],\
+    adnlAa = [['F','W','Y','G'],
+              ['A','I','L','M','V','G'],
+              ['Y','W','G'],
+              ['R','H','K','G'],
+              ['D','E','G'],
+              ['A','S'],
               ['G']]
     conservMutMap = {}
     liberalMutMap = {}
@@ -115,12 +116,13 @@ def makeSequenceGlobals():
             liberalMutMap[aa] = temp_list + adnlAa[i]
     scoreDict = {}
     madeSeqGlobals = True
-makeSequenceGlobals()
+make_sequence_globals()
 
-def log(text='',noStamp=False):
+
+def log(text='', no_stamp=False):
     with open(sesCache,'a') as f:
         for line in text.splitlines():
-            if noStamp:
+            if no_stamp:
                 f.writelines(line + '\n')
             else:
                 f.writelines('[{}] >  {}\n'.format(now(2),line))
@@ -239,8 +241,6 @@ class FastRelaxMover(CustomMover):
     
     
 class RepMinMover(CustomMover):
-
-
     chain = 'A'
     printCutoff = 15
     
@@ -670,7 +670,7 @@ def setup():
     rand_samples = MutationMinimizationMover.makeMutPattern(
         numDecoys, resPerDecoyList)
     log('Random Samples Arr:')
-    log(pprint.pformat(rand_samples),noStamp=True)
+    log(pprint.pformat(rand_samples), no_stamp=True)
 
     MutationMinimizationMover.anneal_bb_range =(
         pocketResNums[0] - 10,
@@ -740,7 +740,7 @@ def main():
 
     dprint('Finished!')
     log('Score Log --v--v--v')
-    log(pprint.pformat(scoreDict),noStamp=True)
+    log(pprint.pformat(scoreDict), no_stamp=True)
 
 def comparePDBs():
     global dateId
