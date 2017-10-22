@@ -741,8 +741,8 @@ def comparePDBs():
              ['Mutant Complex', 'Mutant Protein Alone']]
     poses = [[original, original_no_lig],
              [new, new_no_lig]]
-    fname = ['new_3vi8_complex_no_ligand_relaxed',
-             'lowest_e_decoy_no_ligand_relaxed']
+    fname = ['new_3vi8_complex_no_ligand_relaxed.pdb',
+             'lowest_e_decoy_no_ligand_relaxed.pdb']
 
     # def relaxNoLigands(i):
     #     pose = poseFrom(poses[i][1])
@@ -751,11 +751,11 @@ def comparePDBs():
     #                                       'PDBs',fname[i],),
     #                          defaultScorefxn)
     #
-    # n = len(fname)
+    n = len(fname)
     # # parmap(relaxNoLigands,range(n))
     #
-    # for i in range(n):
-    #     poses[i][1] = loadInPose(fname[i],needParams=False)
+    for i in range(n):
+         poses[i][1] = loadInPose(fname[i],needParams=False)
 
     sequences = [p.sequence() for p, __ in poses]
     paired = zip(sequences[0],sequences[1])
