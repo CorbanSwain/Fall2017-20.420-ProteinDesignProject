@@ -1,0 +1,24 @@
+AlgorithmCache/171022_session_log.txt
+
+Protein Design Algorithm Trials, Session Log
+Begins: 16:44:58 10-22-17
+
+
+
+[16:44:58] >  vvvvvvvvvvvvvvvvvvvvvvvvvv Beginning Script vvvvvvvvvvvvvvvvvvvvvvvvvv
+[16:44:58] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed.pdb` and Creating Pose
+[16:45:01] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy.pdb` and Creating Pose
+[16:45:02] >  Loading In `AlgorithmCache/PDBs/3vi8_complex_fastRelaxed_no_ligand.pdb` and Creating Pose
+[16:45:03] >  Loading In `AlgorithmCache/PDBs/lowest_e_decoy_no_ligand.pdb` and Creating Pose
+[16:45:04] >  MUTATION: @ 255, V ---> A
+[16:45:04] >  MUTATION: @ 276, C ---> S
+[16:45:04] >  MUTATION: @ 279, T ---> Y
+[16:45:04] >  MUTATION: @ 339, I ---> V
+[16:45:05] >  [[('Starting Complex', -762.5923499480789),
+[16:45:05] >    ('Starting Prot Alone', -734.1190180081439)],
+[16:45:05] >   [('Mutant Complex', -791.0749641152731),
+[16:45:05] >    ('Mutant Protein Alone', -760.4879001265483)]]
+[16:45:05] >  deltadelta(RoseEng) =    -2.11373
+[16:45:05] >  deltadeltaG (kcal/mol) =    -0.00120
+[16:45:05] >  ^^^^^^^^^^^^^^^^^^^^^^^^^^ Script Complete! ^^^^^^^^^^^^^^^^^^^^^^^^^^
+

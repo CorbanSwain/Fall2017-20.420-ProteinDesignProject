@@ -51,7 +51,7 @@ main
         plot([0, numsteps],[0 0],'k-','LineWidth',1)
         p = plot(0:numsteps, [0, 0, 0; ...
             (relaxed_score_timecourse(:,[1, 7, 10]) - initial)],...
-            '.-')
+            '.-');
         xlim([0, numsteps])
         xlabel('Algorithm Step');
         set(gca,'XTick',1:7:numsteps);

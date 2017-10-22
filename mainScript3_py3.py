@@ -750,18 +750,16 @@ def comparePDBs():
     #     pose.dump_scored_pdb(os.path.join('AlgorithmCache',
     #                                       'PDBs',fname[i],),
     #                          defaultScorefxn)
-
-    n = len(fname)
-    # parmap(relaxNoLigands,range(n))
-
-    for i in range(n):
-        poses[i][1] = loadInPose(fname[i],needParams=False)
-
-    print('\n\n\n')
+    #
+    # n = len(fname)
+    # # parmap(relaxNoLigands,range(n))
+    #
+    # for i in range(n):
+    #     poses[i][1] = loadInPose(fname[i],needParams=False)
 
     sequences = [p.sequence() for p, __ in poses]
     paired = zip(sequences[0],sequences[1])
-    for i,(a, b) in enumerate(paired):
+    for i, (a, b) in enumerate(paired):
         # print('i,(a,b) : {},({},{})'.format(i,a,b))
         if not a == b:
             pdb_num = poses[0][0].pdb_info().pose2pdb(i+1).split(' ')
@@ -778,8 +776,9 @@ def comparePDBs():
     pprint.pprint(paired)
     log(pprint.pformat(paired))
 
-    reu_to_g = lambda x: ((0.57 * x) - 600) / 1000
-    calc_del_del = lambda x: (x[0][1] - x[0][0]) - (x[1][1] - x[1][0])
+    def reu_to_g(x): return ((0.57 * x) - 600) / 1000
+
+    def calc_del_del(x): return (x[0][1] - x[0][0]) - (x[1][1] - x[1][0])
 
     deldelRose = calc_del_del(scores)
     print('deltadelta(RoseEng) = {:11.5f}'.format(deldelRose))
